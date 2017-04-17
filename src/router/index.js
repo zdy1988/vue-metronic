@@ -18,6 +18,13 @@ export default new VueRouter({
       component: function (resolve) {
         require(['@/components/Hello2'], resolve)
       }
+    },
+    {
+      path: '/layout',
+      name: 'Layout',
+      component: function (resolve) {
+        require(['@/layout/index'], resolve)
+      }
     }
   ]
 })
