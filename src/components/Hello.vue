@@ -55,7 +55,3 @@ a {
   color: #42b983;
 }
 </style>
-<style lang="sass">
-  @import "../assets/sass/bootstrap"
-  @import "../assets/sass/layouts/layout/layout"
-</style>
