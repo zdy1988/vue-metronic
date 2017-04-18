@@ -2,7 +2,7 @@
  Core script to handle the entire theme and core functions
  **/
 import $ from 'jquery'
-import App from '../global/app.js'
+import App from '../global/app'
 import Cookies from 'js-cookie'
 
 var layoutImgPath = 'layouts/layout/img/'
@@ -248,15 +248,6 @@ var handleSidebarMenu = function () {
 
     e.preventDefault()
   })
-
-  //  handle menu close for angularjs version
-  if (App.isAngularJsApp()) {
-    $('.page-sidebar-menu li > a').on('click', function (e) {
-      if (App.getViewPort().width < resBreakpointMd && $(this).next().hasClass('sub-menu') === false) {
-        $('.page-header .responsive-toggler').click()
-      }
-    })
-  }
 
   //  handle ajax links within sidebar menu
   $('.page-sidebar').on('click', ' li > a.ajaxify', function (e) {
@@ -555,7 +546,7 @@ var handle100HeightContent = function () {
   })
 }
 
-export class Layout {
+let Layout = new class {
   //  Main init methods to initialize the layout
   // IMPORTANT!!!: Do not modify the core handlers call order.
 
@@ -576,10 +567,6 @@ export class Layout {
     handleFixedSidebar() //  handles fixed sidebar menu
     handleSidebarMenu() //  handles main menu
     handleSidebarToggler() //  handles sidebar hide/show
-
-    if (App.isAngularJsApp()) {
-      handleSidebarMenuActiveLink('match', null, $state) //  init sidebar active links
-    }
 
     App.addResizeHandler(handleFixedSidebar) //  reinitialize fixed sidebar on window resize
   }
@@ -667,4 +654,6 @@ export class Layout {
   getLayoutCssPath () {
     return App.getAssetsPath() + layoutCssPath
   }
-}
+}()
+
+export default Layout

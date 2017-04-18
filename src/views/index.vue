@@ -4808,7 +4808,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="mt-widget-2">
-                          <div class="mt-head" style="background-image: url(../assets/img/pages/background/32.jpg);">
+                          <div class="mt-head" :style="{backgroundImage: 'url(' + img + ')'}">
                             <div class="mt-head-label">
                               <button type="button" class="btn btn-success">Manhattan</button>
                             </div>
@@ -4846,7 +4846,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="mt-widget-2">
-                          <div class="mt-head" style="background-image: url(../assets/img/pages/background/43.jpg);">
+                          <div class="mt-head" :style="{backgroundImage: 'url(' + img + ')'}">
                             <div class="mt-head-label">
                               <button type="button" class="btn btn-danger">London</button>
                             </div>
@@ -5733,22 +5733,19 @@
   </div>
 </template>
 <script>
-  import $ from 'jquery'
-  import 'bootstrap'
-
-  import App from '../assets/scripts/global/app.js'
-  import Layout from '../assets/scripts/layout/layout.js'
-  import QuickNav from '../assets/scripts/global/quick-nav.js'
-  import QuickSidebar from '../assets/scripts/global/quick-sidebar.js'
+  import App from '../assets/scripts/global/app'
+  import Layout from '../assets/scripts/layout/layout'
+  import QuickNav from '../assets/scripts/global/quick-nav'
+  import QuickSidebar from '../assets/scripts/global/quick-sidebar'
 
   export default{
     data () {
       return {
-        msg: 'hello vue'
+        msg: 'hello vue',
+        img: require('../assets/img/pages/background/32.jpg')
       }
     },
-    created () {
-      console.log($)
+    mounted () {
       App.init()
       Layout.init()
       QuickSidebar.init()
@@ -5756,8 +5753,14 @@
     }
   }
 </script>
+<style lang='less'>
+  @import "../../node_modules/font-awesome/less/font-awesome";
+  @import "../../node_modules/simple-line-icons/less/simple-line-icons";
+</style>
 <style lang='sass'>
   @import "../assets/sass/bootstrap"
+  @import "../assets/sass/global/components"
+
   @import "../assets/sass/layouts/layout/layout"
   @import "../assets/sass/layouts/layout/themes/default"
 </style>

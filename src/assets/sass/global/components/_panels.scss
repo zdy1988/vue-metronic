@@ -2,7 +2,7 @@
 Customized Bootstrap Panels
 ***/
 
-.panel {  
+.panel {
 
     @if $theme-type == "default" {
         -webkit-box-shadow: none !important;
@@ -15,7 +15,7 @@ Customized Bootstrap Panels
     }
 
     .panel-body {
-        font-size: 13px; 
+        font-size: 13px;
     }
 
     .panel-title > a:hover {
@@ -35,7 +35,7 @@ Customized Bootstrap Panels
         }
 
         .accordion-toggle.accordion-toggle-styled {
-            background: url("../img/accordion-plusminus.png") no-repeat;
+            background: url(#{$global-img-path}accordion-plusminus.png) no-repeat;
             background-position: right -19px;
             margin-right: 15px;
         }
@@ -52,7 +52,7 @@ Accordions
 
 .panel-heading {
     background:#eee;
-    
+
     a {
         text-decoration:none;
     }
@@ -60,13 +60,13 @@ Accordions
     a:active,
     a:focus,
     a:hover {
-        text-decoration:none;  
+        text-decoration:none;
     }
 }
 
 @if $theme-type == "material-design" {
     .panel {
-        @extend .md-shadow-z-1;        
-        border: 0; 
+        @extend .md-shadow-z-1;
+        border: 0;
     }
 }

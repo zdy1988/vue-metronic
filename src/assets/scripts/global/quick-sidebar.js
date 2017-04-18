@@ -152,7 +152,7 @@ var handleQuickSidebarSettings = function () {
   App.addResizeHandler(initSettingsSlimScroll) // reinitialize on window resize
 }
 
-export class QuickSidebar {
+let QuickSidebar = new class {
   init () {
     // layout handlers
     handleQuickSidebarToggler() // handles quick sidebar's toggler
@@ -160,4 +160,6 @@ export class QuickSidebar {
     handleQuickSidebarAlerts() // handles quick sidebar's alerts
     handleQuickSidebarSettings() // handles quick sidebar's setting
   }
-}
+}()
+
+export default QuickSidebar

@@ -2,6 +2,9 @@
 Core script to handle the entire theme and core functions
 **/
 import $ from 'jquery'
+import 'bootstrap'
+import 'bootstrap-switch'
+import 'jquery-slimscroll'
 import AutoSize from 'autosize'
 import Toastr from 'toastr'
 
@@ -327,11 +330,11 @@ var handleTabs = function () {
   // activate tab if tab id provided in the URL
   if (encodeURI(location.hash)) {
     var tabid = encodeURI(location.hash.substr(1))
-    $('a[href="#"' + tabid + ']').parents('.tab-pane:hidden').each(function () {
+    $('a[href="#' + tabid + '"]').parents('.tab-pane:hidden').each(function () {
       var tabid = $(this).attr('id')
-      $('a[href="#"' + tabid + ']').click()
+      $('a[href="#' + tabid + '"]').click()
     })
-    $('a[href="#"' + tabid + ']').click()
+    $('a[href="#' + tabid + '"]').click()
   }
 
   if ($().tabdrop) {
@@ -570,7 +573,7 @@ var handleHeight = function () {
   })
 }
 
-export class App {
+let App = new class {
   // main function to initiate the theme
   init () {
     // IMPORTANT!!!: Do not modify the core handlers call order.
@@ -599,7 +602,7 @@ export class App {
     handleCounterup() // handle counterup instances
 
     // Handle group element heights
-    this.addResizeHandler(handleHeight) // handle auto calculating height on window resize
+    App.addResizeHandler(handleHeight) // handle auto calculating height on window resize
 
     // Hacks
     handleFixInputPlaceholderForIE() // IE8 & IE9 input placeholder issue fix
@@ -1002,4 +1005,6 @@ export class App {
 
     return sizes[size] ? sizes[size] : 0
   }
-}
+}()
+
+export default App

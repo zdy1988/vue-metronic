@@ -20,10 +20,17 @@ export default new VueRouter({
       }
     },
     {
+      path: '/views',
+      name: 'Views',
+      component: function (resolve) {
+        require(['@/views/index'], resolve)
+      }
+    },
+    {
       path: '/layout',
       name: 'Layout',
       component: function (resolve) {
-        require(['@/layout/index'], resolve)
+        require(['@/views/layout'], resolve)
       }
     }
   ]

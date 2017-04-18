@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-export class QuickNav {
+let QuickNav = new class {
   init () {
     if ($('.quick-nav').length > 0) {
       var stretchyNavs = $('.quick-nav')
@@ -19,4 +19,6 @@ export class QuickNav {
       })
     }
   }
-}
+}()
+
+export default QuickNav
