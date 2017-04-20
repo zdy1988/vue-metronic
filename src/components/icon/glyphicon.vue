@@ -1,5 +1,5 @@
 <template>
-  <i :class="['glyphicon','glyphicon-'+type]"
+  <i :class="['glyphicon','glyphicon-'+type,className]"
      :style="{'color': color}">
   </i>
 </template>
@@ -10,7 +10,8 @@
   export default{
     props: {
       type: { type: String, required: true },
-      color: { type: String }
+      color: { type: String },
+      className: { type: String }
     }
   }
 </script>

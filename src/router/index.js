@@ -13,7 +13,9 @@ export default new VueRouter({
       component: resolve => require(['@/views/layout'], resolve),
       children: [
         {path: '/', component: resolve => require(['@/views/dashboard'], resolve)},
-        {path: 'ui_icons', component: resolve => require(['@/views/ui_icons'], resolve)}
+        {path: 'ui_portlets', component: resolve => require(['@/views/ui_portlets'], resolve)},
+        {path: 'ui_icons', component: resolve => require(['@/views/ui_icons'], resolve)},
+        {path: 'ui_buttons', component: resolve => require(['@/views/ui_buttons'], resolve)}
       ]
     }
   ]
