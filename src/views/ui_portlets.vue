@@ -1,21 +1,21 @@
 <template>
 <div>
-  <portlet mode='box' theme='red'>
+  <portlet mode='box' color='red'>
     {{msg}}
   </portlet>
-  <portlet mode='light' theme='red'>
+  <portlet mode='light' color='red'>
     {{msg}}
   </portlet>
-  <portlet mode='box' theme='blue-hoki' title='Portlet' summary='This Summary...' icon='user'>
+  <portlet mode='box' color='blue-hoki' title='Portlet' summary='This Summary...' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='solid' theme='blue-hoki' title='Portlet' icon='user'>
+  <portlet mode='solid' color='blue-hoki' title='Portlet' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='light' theme='red' title='Portlet' icon='user'>
+  <portlet mode='light' color='red' title='Portlet' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='light' theme='red' bordered title='Portlet' icon='user'>
+  <portlet mode='light' color='red' bordered title='Portlet' icon='user'>
     {{msg}}
   </portlet>
 </div>
