@@ -1,7 +1,7 @@
 <template>
 <row>
-  <modal :show='showModal'></modal>
-  <button @click="showModal = !showModal">点击</button>
+  <modal :show="showModal" @propsChange="change"></modal>
+  <button @click="showModal = true">点击</button>
 </row>
 </template>
 <script>
@@ -17,6 +17,11 @@
     components: {
       Modal,
       Row
+    },
+    methods: {
+      change: function (propName, newVal, oldVal) {
+        this.showModal = newVal
+      }
     }
   }
 </script>

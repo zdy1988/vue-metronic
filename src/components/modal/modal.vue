@@ -21,11 +21,13 @@
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
+  import propsync from '@/mixins/propsync'
 
   export default{
+    mixins: [propsync],
     props: {
       title: {type: String, default: 'This Title'},
-      show: {type: Boolean, required: true, validator: (value) => { return is.inArray(value, [true, false]) }}
+      show: {type: Boolean, required: true, twoWay: true, validator: (value) => { return is.inArray(value, [true, false]) }}
     },
     computed: {
       classes () {
@@ -39,7 +41,7 @@
     },
     methods: {
       close () {
-        this.show = false
+        this.show_sync = false
       }
     }
   }
