@@ -8,7 +8,7 @@
         <!-- BEGIN LOGO -->
         <div class="page-logo">
           <a href="index.html">
-            <img src="../assets/img/layouts/layout/logo.png" alt="logo" class="logo-default" /> </a>
+            <img src="../../static/img/layouts/layout/logo.png" alt="logo" class="logo-default" /> </a>
           <div class="menu-toggler sidebar-toggler">
             <span></span>
           </div>
@@ -143,7 +143,7 @@
                     <li>
                       <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/img/layouts/layout3/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                        <img src="../../static/img/layouts/layout3/avatar2.jpg" class="img-circle" alt=""> </span>
                         <span class="subject">
                                                         <span class="from"> Lisa Wong </span>
                                                         <span class="time">Just Now </span>
@@ -154,7 +154,7 @@
                     <li>
                       <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/img/layouts/layout3/avatar3.jpg" class="img-circle" alt=""> </span>
+                                                        <img src="../../static/img/layouts/layout3/avatar3.jpg" class="img-circle" alt=""> </span>
                         <span class="subject">
                                                         <span class="from"> Richard Doe </span>
                                                         <span class="time">16 mins </span>
@@ -165,7 +165,7 @@
                     <li>
                       <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/img/layouts/layout3/avatar1.jpg" class="img-circle" alt=""> </span>
+                                                        <img src="../../static/img/layouts/layout3/avatar1.jpg" class="img-circle" alt=""> </span>
                         <span class="subject">
                                                         <span class="from"> Bob Nilson </span>
                                                         <span class="time">2 hrs </span>
@@ -176,7 +176,7 @@
                     <li>
                       <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/img/layouts/layout3/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                        <img src="../../static/img/layouts/layout3/avatar2.jpg" class="img-circle" alt=""> </span>
                         <span class="subject">
                                                         <span class="from"> Lisa Wong </span>
                                                         <span class="time">40 mins </span>
@@ -187,7 +187,7 @@
                     <li>
                       <a href="#">
                                                     <span class="photo">
-                                                        <img src="../assets/img/layouts/layout3/avatar3.jpg" class="img-circle" alt=""> </span>
+                                                        <img src="../../static/img/layouts/layout3/avatar3.jpg" class="img-circle" alt=""> </span>
                         <span class="subject">
                                                         <span class="from"> Richard Doe </span>
                                                         <span class="time">46 mins </span>
@@ -315,7 +315,7 @@
             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
             <li class="dropdown dropdown-user">
               <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                <img alt="" class="img-circle" src="../assets/img/layouts/layout/avatar3_small.jpg" />
+                <img alt="" class="img-circle" src="../../static/img/layouts/layout/avatar3_small.jpg" />
                 <span class="username username-hide-on-mobile"> Nick </span>
                 <i class="fa fa-angle-down"></i>
               </a>
@@ -1749,14 +1749,14 @@
                     <div class="media-status">
                       <span class="badge badge-success">8</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar3.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar3.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Bob Nilson</h4>
                       <div class="media-heading-sub"> Project Manager </div>
                     </div>
                   </li>
                   <li class="media">
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar1.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar1.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Nick Larson</h4>
                       <div class="media-heading-sub"> Art Director </div>
@@ -1766,14 +1766,14 @@
                     <div class="media-status">
                       <span class="badge badge-danger">3</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar4.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar4.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Deon Hubert</h4>
                       <div class="media-heading-sub"> CTO </div>
                     </div>
                   </li>
                   <li class="media">
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar2.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar2.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Ella Wong</h4>
                       <div class="media-heading-sub"> CEO </div>
@@ -1786,7 +1786,7 @@
                     <div class="media-status">
                       <span class="badge badge-warning">2</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar6.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar6.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Lara Kunis</h4>
                       <div class="media-heading-sub"> CEO, Loop Inc </div>
@@ -1797,7 +1797,7 @@
                     <div class="media-status">
                       <span class="label label-sm label-success">new</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar7.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar7.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Ernie Kyllonen</h4>
                       <div class="media-heading-sub"> Project Manager,
@@ -1805,7 +1805,7 @@
                     </div>
                   </li>
                   <li class="media">
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar8.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar8.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Lisa Stone</h4>
                       <div class="media-heading-sub"> CTO, Keort Inc </div>
@@ -1816,14 +1816,14 @@
                     <div class="media-status">
                       <span class="badge badge-success">7</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar9.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar9.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Deon Portalatin</h4>
                       <div class="media-heading-sub"> CFO, H&D LTD </div>
                     </div>
                   </li>
                   <li class="media">
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar10.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar10.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Irina Savikova</h4>
                       <div class="media-heading-sub"> CEO, Tizda Motors Inc </div>
@@ -1833,7 +1833,7 @@
                     <div class="media-status">
                       <span class="badge badge-danger">4</span>
                     </div>
-                    <img class="media-object" src="../assets/img/layouts/layout/avatar11.jpg" alt="...">
+                    <img class="media-object" src="../../static/img/layouts/layout/avatar11.jpg" alt="...">
                     <div class="media-body">
                       <h4 class="media-heading">Maria Gomez</h4>
                       <div class="media-heading-sub"> Manager, Infomatic Inc </div>
@@ -1850,7 +1850,7 @@
                   </div>
                   <div class="page-quick-sidebar-chat-user-messages">
                     <div class="post out">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar3.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar3.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1859,7 +1859,7 @@
                       </div>
                     </div>
                     <div class="post in">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar2.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar2.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Ella Wong</a>
@@ -1868,7 +1868,7 @@
                       </div>
                     </div>
                     <div class="post out">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar3.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar3.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1877,7 +1877,7 @@
                       </div>
                     </div>
                     <div class="post in">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar2.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar2.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Ella Wong</a>
@@ -1886,7 +1886,7 @@
                       </div>
                     </div>
                     <div class="post out">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar3.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar3.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1895,7 +1895,7 @@
                       </div>
                     </div>
                     <div class="post in">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar2.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar2.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Ella Wong</a>
@@ -1904,7 +1904,7 @@
                       </div>
                     </div>
                     <div class="post out">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar3.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar3.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Bob Nilson</a>
@@ -1913,7 +1913,7 @@
                       </div>
                     </div>
                     <div class="post in">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar2.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar2.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Ella Wong</a>
@@ -1922,7 +1922,7 @@
                       </div>
                     </div>
                     <div class="post out">
-                      <img class="avatar" alt="" src="../assets/img/layouts/layout/avatar3.jpg" />
+                      <img class="avatar" alt="" src="../../static/img/layouts/layout/avatar3.jpg" />
                       <div class="message">
                         <span class="arrow"></span>
                         <a href="javascript:;" class="name">Bob Nilson</a>
@@ -2320,7 +2320,7 @@
     data () {
       return {
         msg: 'hello vue',
-        img: require('../assets/img/pages/background/32.jpg')
+        img: require('../../static/img/pages/background/32.jpg')
       }
     },
     mounted () {

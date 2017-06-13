@@ -1,6 +1,6 @@
 <template>
 <row>
-  <modal :show="showModal" @onDataChange="change">
+  <modal :show="showModal" :close="closeModal">
     Modal body goes here
   </modal>
   <button @click="showModal = true">点击</button>
@@ -21,8 +21,8 @@
       Row
     },
     methods: {
-      change: function (propName, newVal, oldVal) {
-        this.showModal = newVal
+      closeModal: function () {
+        this.showModal = false
       }
     }
   }

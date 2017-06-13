@@ -93,8 +93,8 @@ $screen-sm-max:              		($screen-md-min - 1) !default;  // 991px
 $screen-md-max:              		($screen-lg-min - 1) !default;  // 1199px
 
 //## Image  paths
-$global-img-path:           		'/assets/img/global/' !default;
-$page-img-path:           			'/assets/img/pages/' !default;
-$page-media-path:           		'/assets/media/' !default;
+$global-img-path:           		'/static/img/global/' !default;
+$page-img-path:           			'/static/img/pages/' !default;
+$page-media-path:           		'/static/media/' !default;
 
 @import "_bootstrap-override";

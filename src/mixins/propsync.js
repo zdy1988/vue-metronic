@@ -3,7 +3,7 @@
  * Update by https://github.com/xxcanghai/cnblogsFiles/blob/master/vue-mixins/propsync.js
  */
 
-const isEnableName = 'twoWay'
+const isEnableName = 'propsync'
 
 function getDataName (propName) {
   return propName + '_sync'
@@ -34,7 +34,7 @@ export default {
           that[dataName] = newVal
         }, {})
         that.$watch(dataName, (newVal, oldVal) => {
-          that.$emit('onDataChange', prop, newVal, oldVal)
+          that.$emit('onPropsChange', prop, newVal, oldVal)
         }, {})
       }
     })

@@ -2,10 +2,10 @@
   <div>
     <transition name="modal-fade">
       <div :class="classes" v-if="show" tabindex="-1" role="basic" aria-hidden="true" style="display:block">
-        <div class="modal-dialog">
+        <div :class="['modal-dialog','modal-'+size]">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"  @click="close"></button>
               <h4 class="modal-title">{{title}}</h4>
             </div>
             <div class="modal-body">
@@ -13,7 +13,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn dark btn-outline" @click="close">Close</button>
-              <button type="button" class="btn green">Save changes</button>
+              <slot name="footer"></slot>
             </div>
           </div>
         </div>
@@ -27,15 +27,15 @@
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
-  import propsync from '@/mixins/propsync'
 
   export default{
-    mixins: [propsync],
     props: {
       title: {type: String, default: 'Modal Title'},
-      show: {type: Boolean, required: true, twoWay: true, validator: (value) => { return is.inArray(value, [true, false]) }},
+      show: {type: Boolean, required: true, validator: (value) => { return is.inArray(value, [true, false]) }},
+      close: {type: Function, required: true},
       mask: {type: Boolean, default: true, validator: (value) => { return is.inArray(value, [true, false]) }},
-      className: {type: String, twoWay: false}
+      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }},
+      className: {type: String}
     },
     computed: {
       classes () {
@@ -43,11 +43,6 @@
           'modal': true,
           [this.className]: !!this.className
         })
-      }
-    },
-    methods: {
-      close () {
-        this.show_sync = false
       }
     }
   }
@@ -58,7 +53,7 @@
     transition: all .3s ease;
   }
   .modal-fade-leave-active {
-    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
   .modal-fade-enter, .modal-fade-leave-to {
     transform: translateY(-30px);
@@ -68,7 +63,7 @@
     transition: all .3s ease;
   }
   .mask-fade-leave-active {
-    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
   .mask-fade-enter, .mask-fade-leave-to {
     opacity: 0;
