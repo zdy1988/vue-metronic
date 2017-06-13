@@ -1,6 +1,8 @@
 <template>
 <row>
-  <modal :show="showModal" @propsChange="change"></modal>
+  <modal :show="showModal" @onDataChange="change">
+    Modal body goes here
+  </modal>
   <button @click="showModal = true">点击</button>
 </row>
 </template>

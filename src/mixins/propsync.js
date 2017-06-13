@@ -34,7 +34,7 @@ export default {
           that[dataName] = newVal
         }, {})
         that.$watch(dataName, (newVal, oldVal) => {
-          that.$emit('propsChange', prop, newVal, oldVal)
+          that.$emit('onDataChange', prop, newVal, oldVal)
         }, {})
       }
     })
