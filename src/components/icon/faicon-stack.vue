@@ -1,27 +1,24 @@
 <template>
-  <i :class="classes"></i>
+  <span :class="classes">
+    <slot></slot>
+  </span>
 </template>
-<style lang='less'>
-  @import "../../../node_modules/simple-line-icons/less/simple-line-icons";
-</style>
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
-  import icons from '@/untils/icons'
   import colors from '@/untils/colors'
 
   export default{
     props: {
-      type: {type: String, required: true, validator: (value) => { return is.inArray(value, icons) }},
       color: {type: String, validator: (value) => { return is.inArray(value, colors) }},
-      className: {type: String}
+      size: {type: String, default: 'lg', validator: (value) => { return is.inArray(value, ['lg', '2x', '3x', '4x', '5x']) }}
     },
     computed: {
       classes () {
         return classNames({
-          [`icon-${this.type}`]: true,
+          'fa-stack': true,
           [`font-${this.color}`]: !!this.color,
-          [this.className]: !!this.className
+          [`fa-${this.size}`]: !!this.size
         })
       }
     }

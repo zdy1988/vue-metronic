@@ -59,14 +59,14 @@
       }
     },
     methods: {
-      remove: function (e) {
+      remove (e) {
         e.preventDefault()
         if ($('body').hasClass('page-portlet-fullscreen')) {
           $('body').removeClass('page-portlet-fullscreen')
         }
         $(this.$el).remove()
       },
-      fullscreen: function (e) {
+      fullscreen (e) {
         e.preventDefault()
         function getViewPort () {
           var e = window
@@ -99,13 +99,13 @@
           portlet.children('.portlet-body').css('height', height)
         }
       },
-      reload: function (e) {
+      reload (e) {
         this.$emit('onReload', e, this)
       },
-      config: function (e) {
+      config (e) {
         this.$emit('onConfig', e, this)
       },
-      fold: function (e) {
+      fold (e) {
         e.preventDefault()
         var $el = $(e.target).closest('.portlet').children('.portlet-body')
         if ($(e.target).hasClass('collapse')) {

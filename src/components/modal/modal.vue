@@ -45,7 +45,7 @@
       }
     },
     created: function () {
-      this.$watch('show', function (val) {
+      this.$watch('show', (val) => {
         if (val === true) {
           this.$emit('onOpen', this)
         } else {
@@ -54,7 +54,7 @@
       })
     },
     methods: {
-      close: function () {
+      close () {
         this.$emit('update:show', false)
       }
     },

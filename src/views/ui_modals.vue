@@ -91,7 +91,6 @@
           </td>
         </tr>
         </tbody></table>
-
     </portlet>
   </Column>
 </row>
