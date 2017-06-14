@@ -9,10 +9,10 @@
 
   export default{
     props: {
-      xs: {type: Number, validator: (value) => { return is.within(value, 1, 12) }},
-      sm: {type: Number, validator: (value) => { return is.within(value, 1, 12) }},
-      md: {type: Number, validator: (value) => { return is.within(value, 1, 12) }},
-      lg: {type: Number, validator: (value) => { return is.within(value, 1, 12) }}
+      xs: {type: Number, validator: (value) => { return is.within(value, 0, 13) }},
+      sm: {type: Number, validator: (value) => { return is.within(value, 0, 13) }},
+      md: {type: Number, validator: (value) => { return is.within(value, 0, 13) }},
+      lg: {type: Number, validator: (value) => { return is.within(value, 0, 13) }}
     },
     computed: {
       classes () {

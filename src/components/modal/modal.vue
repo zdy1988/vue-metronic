@@ -19,23 +19,22 @@
         </div>
       </div>
     </transition>
-    <transition name="mask-fade" v-if='mask'>
-      <div class="modal-backdrop in" v-if="show" ></div>
-    </transition>
+    <masker :show="show" v-if="mask"></masker>
   </div>
 </template>
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
 
+  import Masker from '@/components/common/masker'
+
   export default{
     props: {
+      className: {type: String},
       title: {type: String, default: 'Modal Title'},
-      show: {type: Boolean, required: true, validator: (value) => { return is.inArray(value, [true, false]) }},
-      close: {type: Function, required: true},
-      mask: {type: Boolean, default: true, validator: (value) => { return is.inArray(value, [true, false]) }},
-      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }},
-      className: {type: String}
+      show: {type: Boolean, required: true},
+      mask: {type: Boolean, default: true},
+      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }}
     },
     computed: {
       classes () {
@@ -44,6 +43,23 @@
           [this.className]: !!this.className
         })
       }
+    },
+    created: function () {
+      this.$watch('show', function (val) {
+        if (val === true) {
+          this.$emit('onOpen', this)
+        } else {
+          this.$emit('onClose', this)
+        }
+      })
+    },
+    methods: {
+      close: function () {
+        this.$emit('update:show', false)
+      }
+    },
+    components: {
+      Masker
     }
   }
 </script>
@@ -57,15 +73,6 @@
   }
   .modal-fade-enter, .modal-fade-leave-to {
     transform: translateY(-30px);
-    opacity: 0;
-  }
-  .mask-fade-enter-active {
-    transition: all .3s ease;
-  }
-  .mask-fade-leave-active {
-    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
-  .mask-fade-enter, .mask-fade-leave-to {
     opacity: 0;
   }
 </style>

@@ -38,8 +38,5 @@ export default {
         }, {})
       }
     })
-  },
-  destroyed: function () {
-
   }
 }

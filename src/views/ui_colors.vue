@@ -5,7 +5,7 @@
       <div :class="['color-view','bg-'+color,'bg-font-'+color,'bold','uppercase']"> {{colors2[color].base}} </div>
       <div :class="['color-info','bg-white','c-font-14','sbold']"> {{color}} </div>
     </div>
-    <modal :show="modals[color].showModal" :close="modals[color].closeModal" :title="color" size="lg">
+    <modal :show="modals[color].showModal" @update:show="val => modals[color].showModal = val" :title="color" size="lg">
       <div class="tabbable-line">
         <ul class="nav nav-tabs uppercase bold">
           <li class="active">
@@ -124,9 +124,6 @@
             var self = colors2
             colors.forEach(function (color) {
               self[color].showModal = false
-              self[color].closeModal = function () {
-                self[color].showModal = false
-              }
             })
             return self
           }

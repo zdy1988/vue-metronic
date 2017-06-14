@@ -1,6 +1,6 @@
 <template>
 <div>
-  <portlet mode='box' color='red'>
+  <portlet mode='box' color='green-sharp'>
     {{msg}}
   </portlet>
   <portlet mode='light' color='red'>
@@ -21,7 +21,7 @@
 </div>
 </template>
 <script>
-  import Portlet from '@/components/portlet/portlet.vue'
+  import Portlet from '@/components/portlet/portlet'
   export default{
     data () {
       return {
