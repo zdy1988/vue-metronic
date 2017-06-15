@@ -4,20 +4,20 @@ Utilities
 
 /* Rounded Element */
 .rounded-2 {
-  border-radius: 2px !important;  
+  border-radius: 2px !important;
 }
 
 .rounded-3 {
-  border-radius: 3px !important;  
+  border-radius: 3px !important;
 }
 
 .rounded-4 {
-  border-radius: 4px !important;    
+  border-radius: 4px !important;
 }
 
 /* Circle Element */
 .circle {
-  border-radius: 25px !important;  
+  border-radius: 25px !important;
 }
 
 .circle-right {
@@ -45,6 +45,13 @@ Utilities
 .display-none,
 .display-hide {
     display: none;
+}
+
+.float-left {
+  float: left;
+}
+.float-right{
+  float:right;
 }
 
 .hidden {
@@ -78,7 +85,7 @@ Utilities
 } @else {
     .thin {
         font-weight: 300 !important;
-    }  
+    }
 }
 
 .uppercase {
@@ -117,7 +124,7 @@ Utilities
     display: inline;
 }
 
-.inline-block { 
+.inline-block {
     display: inline-block;
 }
 
@@ -231,19 +238,19 @@ Responsive Utils
     .hidden-1024 {
         display: none;
     }
-} 
+}
 
 @media (max-width: 480px) {
     .hidden-480 {
         display: none;
     }
-} 
+}
 
 @media (max-width: 320px) {
     .hidden-320 {
         display: none;
     }
-}   
+}
 
 /***
 Demo Utils
@@ -332,7 +339,7 @@ Custom vertical inline menu
           border-left:solid 2px #c4d5df;
         }
 
-        &:hover a { 
+        &:hover a {
             background:#e0eaf0;
             text-decoration:none;
         }
@@ -347,7 +354,7 @@ Custom vertical inline menu
         }
 
         &.active i {
-            background:#0c91e5 !important;  
+            background:#0c91e5 !important;
         }
 
         &.active a,
@@ -370,19 +377,19 @@ Custom vertical inline menu
             border-left: 6px solid #169ef4;
             position: absolute;
             top: 12px;
-            right: -5px;    
+            right: -5px;
         }
     }
 }
 
-@if $theme-type == "material-design" {  
+@if $theme-type == "material-design" {
     .ver-inline-menu {
         @include border-radius($general-border-radius);
-        @extend .md-shadow-z-2;               
+        @extend .md-shadow-z-2;
     }
 }
 
-@media (max-width: $screen-xs-max) { 
+@media (max-width: $screen-xs-max) {
     .ver-inline-menu {
         > li {
             &.active {
@@ -403,9 +410,9 @@ Separated List
     margin-bottom: 15px;
 
     > div {
-            
-        &:last-child {  
-            border-right: 0; 
+
+        &:last-child {
+            border-right: 0;
         }
     }
 
@@ -436,7 +443,7 @@ Number & Chart Stats
         .number {
             font-size: 27px;
             line-height: 27px;
-            color: #7D8C9D;            
+            color: #7D8C9D;
         }
     }
 
@@ -447,9 +454,9 @@ Number & Chart Stats
 
     > div {
         border-right: 1px solid #f5f5f5;
-            
+
         &:last-child {
-            border-right: 0; 
+            border-right: 0;
         }
     }
 
@@ -486,7 +493,7 @@ Number & Chart Stats
 
     .stat-chart {
         float: left;
-    }   
+    }
 }
 
 /***
@@ -507,7 +514,7 @@ General User Record Listing
             margin-bottom: 5px;
             @include clearfix();
 
-            > .item-details {      
+            > .item-details {
                 display: inline-block;
                 float: left;
 
@@ -518,7 +525,7 @@ General User Record Listing
                     @include border-radius(100%);
                 }
 
-                > .item-name {  
+                > .item-name {
                     display: inline-block;
                     margin-right: 10px;
                 }
@@ -553,9 +560,9 @@ File dropzone
 
 .file-drop-zone {
     border: 2px dashed #ddd;
-    padding: 30px; 
+    padding: 30px;
     text-align: center;
-    
+
     &.file-drop-zone-over {
         border-color: #aaa;
     }

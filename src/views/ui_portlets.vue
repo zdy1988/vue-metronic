@@ -1,5 +1,8 @@
 <template>
 <div>
+  <portlet>
+    {{msg}}
+  </portlet>
   <portlet mode='box' color='green-sharp'>
     {{msg}}
   </portlet>

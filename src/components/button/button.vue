@@ -7,17 +7,17 @@
   import classNames from 'classnames'
   export default{
     props: {
-      btnType: { type: String, twoWay: false, default: 'button' },
-      color: { type: String, twoWay: false, default: 'default' },
-      style: { type: String, twoWay: false },
-      stripe: { type: Boolean, twoWay: false },
-      shape: { type: String, twoWay: false },
-      outLine: { type: Boolean, twoWay: false },
-      size: { type: String, twoWay: false },
-      fullWidth: { type: Boolean, twoWay: false },
-      upperCase: { type: Boolean, twoWay: false },
-      readOnly: { type: Boolean, twoWay: false },
-      className: { type: String, twoWay: false }
+      btnType: { type: String, default: 'button' },
+      color: { type: String, default: 'default' },
+      style: { type: String },
+      stripe: { type: Boolean },
+      shape: { type: String },
+      outLine: { type: Boolean },
+      size: { type: String },
+      fullWidth: { type: Boolean },
+      upperCase: { type: Boolean },
+      readOnly: { type: Boolean },
+      className: { type: String }
     },
     computed: {
       classes () {

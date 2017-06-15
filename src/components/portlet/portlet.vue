@@ -36,8 +36,8 @@
       title: {type: String, default: 'Portlet Title'},
       summary: {type: String},
       icon: {type: String},
-      mode: {type: String, required: true, validator: (value) => { return is.inArray(value, ['box', 'solid', 'light']) }},
-      color: {type: String, required: true, validator: (value) => { return is.inArray(value, colors) }},
+      mode: {type: String, default: 'box', validator: (value) => { return is.inArray(value, ['box', 'solid', 'light']) }},
+      color: {type: String, default: 'dark', validator: (value) => { return is.inArray(value, colors) }},
       bordered: {type: Boolean},
       tools: {type: Boolean, default: true}
     },
