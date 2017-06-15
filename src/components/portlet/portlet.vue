@@ -2,7 +2,7 @@
   <div :class="classes">
     <div class="portlet-title">
       <div :class="caption">
-        <icon :type="icon" :class-name="caption" v-if="!!icon"></icon>
+        <icon :type="icon" :class="caption" v-if="!!icon"></icon>
         <span class="caption-subject sbold"> {{title}}</span>
         <span class="caption-helper" v-if="!!summary"> {{summary}}</span>
       </div>
@@ -32,14 +32,14 @@
 
   export default{
     props: {
-      className: {type: String},
       title: {type: String, default: 'Portlet Title'},
       summary: {type: String},
       icon: {type: String},
       mode: {type: String, default: 'box', validator: (value) => { return is.inArray(value, ['box', 'solid', 'light']) }},
       color: {type: String, default: 'dark', validator: (value) => { return is.inArray(value, colors) }},
       bordered: {type: Boolean},
-      tools: {type: Boolean, default: true}
+      tools: {type: Boolean, default: true},
+      klass: {type: String}
     },
     computed: {
       classes () {
@@ -48,7 +48,7 @@
           [this.mode]: !!this.mode,
           [this.color]: !!this.color && this.mode !== 'light',
           'bordered': !!this.bordered,
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       },
       caption () {

@@ -14,14 +14,14 @@
     props: {
       type: {type: String, required: true, validator: (value) => { return is.inArray(value, icons) }},
       color: {type: String, validator: (value) => { return is.inArray(value, colors) }},
-      className: {type: String}
+      klass: {type: String}
     },
     computed: {
       classes () {
         return classNames({
           [`icon-${this.type}`]: true,
           [`font-${this.color}`]: !!this.color,
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       }
     }

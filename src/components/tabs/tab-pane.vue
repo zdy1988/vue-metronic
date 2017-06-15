@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="fade" mode="out-in">
     <div class="tab-pane" :class="{active:active}" v-show="active" ref="tabPanel">
       <slot></slot>
     </div>
@@ -23,7 +23,7 @@
     }
   }
 </script>
-<style>
+<style scoped>
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s
   }

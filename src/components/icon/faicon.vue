@@ -21,7 +21,7 @@
       rotate: {type: Number, validator: (value) => { return is.inArray(value, [90, 180, 270]) }},
       flip: {type: String, validator: (value) => { return is.inArray(value, ['horizontal', 'vertical']) }},
       stack: {type: String, validator: (value) => { return is.inArray(value, ['1x', '2x']) }},
-      className: {type: String}
+      klass: {type: String}
     },
     computed: {
       classes () {
@@ -37,7 +37,7 @@
           [`fa-rotate-${this.rotate}`]: !!this.rotate,
           [`fa-flip-${this.flip}`]: !!this.flip,
           [`fa-stack-${this.stack}`]: !!this.stack,
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       }
     }

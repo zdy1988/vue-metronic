@@ -30,26 +30,26 @@
 
   export default{
     props: {
-      className: {type: String},
       title: {type: String, default: 'Modal Title'},
       show: {type: Boolean, required: true},
       mask: {type: Boolean, default: true},
-      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }}
+      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }},
+      klass: {type: String}
     },
     computed: {
       classes () {
         return classNames({
           'modal': true,
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       }
     },
     created: function () {
       this.$watch('show', (val) => {
         if (val === true) {
-          this.$emit('onOpen', this)
+          this.$emit('onOpen')
         } else {
-          this.$emit('onClose', this)
+          this.$emit('onClose')
         }
       })
     },

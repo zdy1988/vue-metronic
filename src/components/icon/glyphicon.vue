@@ -14,7 +14,7 @@
     props: {
       type: {type: String, required: true, validator: (value) => { return is.inArray(value, glyphicons) }},
       color: {type: String, validator: (value) => { return is.inArray(value, colors) }},
-      className: {type: String}
+      klass: {type: String}
     },
     computed: {
       classes () {
@@ -22,7 +22,7 @@
           'glyphicon': true,
           [`glyphicon-${this.type}`]: true,
           [`font-${this.color}`]: !!this.color,
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       }
     }

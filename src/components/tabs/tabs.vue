@@ -38,7 +38,7 @@
       position: {type: String, default: 'top', validator: (value) => { return is.inArray(value, ['top', 'left', 'right', 'bottom']) }},
       reversed: {type: Boolean, default: false},
       justified: {type: Boolean, default: false},
-      className: {type: String}
+      klass: {type: String}
     },
     computed: {
       tabClasses () {
@@ -46,7 +46,7 @@
           'row': true,
           [`tabbable-${this.mode}`]: !!this.mode,
           'nav-justified': !!this.justified && !!this.position !== 'left' && !!this.position !== 'right',
-          [this.className]: !!this.className
+          [this.klass]: !!this.klass
         })
       },
       navClasses () {

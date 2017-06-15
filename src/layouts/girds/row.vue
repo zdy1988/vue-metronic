@@ -1,12 +1,22 @@
 <template>
-<div class="row">
+<div :class="classes">
   <slot></slot>
 </div>
 </template>
 <script>
+  import classNames from 'classnames'
+
   export default{
     props: {
-      gutter: {type: Number, default: 0}
+      klass: {type: String}
+    },
+    computed: {
+      classes () {
+        return classNames({
+          'row': true,
+          [this.klass]: !!this.klass
+        })
+      }
     }
   }
 </script>
