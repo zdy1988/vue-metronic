@@ -6,6 +6,7 @@
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
+
   export default{
     props: {
       orientation: {type: String, default: 'horizontal', validator: (value) => { return is.inArray(value, ['vertical', 'horizontal']) }},

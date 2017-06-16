@@ -1,15 +1,15 @@
 <template>
   <a href="javascript:;" v-if="itself === 'a'" :type="type" :class="classes" :disabled="disabled || loading" @click="_click">
-    <slideFade :animate="loadingAnimate">
+    <slide-fade :animate-closed="loadingAnimateClosed">
       <span v-if="!loading" key="slot"><slot></slot></span>
       <span v-else key="loading">{{loadingText}}</span>
-    </slideFade>
+    </slide-fade>
   </a>
   <button v-else :type="type" :class="classes" :disabled="disabled || loading" @click="_click">
-    <slideFade :animate="loadingAnimate">
+    <slide-fade :animate-closed="loadingAnimateClosed">
       <span v-if="!loading" key="slot"><slot></slot></span>
       <span v-else key="loading">{{loadingText}}</span>
-    </slideFade>
+    </slide-fade>
   </button>
 </template>
 <script>
@@ -17,7 +17,7 @@
   import is from 'is_js'
   import colors from '@/untils/colors'
 
-  import SlideFade from '@/components/transition/slide-fade'
+  import SlideFade from '@/components/animate/slide-fade'
 
   export default{
     data () {
@@ -37,7 +37,7 @@
       disabled: {type: Boolean},
       loading: {type: Boolean, default: false},
       loadingText: {type: String, default: 'Loading...'},
-      loadingAnimate: {type: Boolean, default: false},
+      loadingAnimateClosed: {type: Boolean, default: false},
       klass: {type: String}
     },
     computed: {

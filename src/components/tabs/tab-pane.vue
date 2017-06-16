@@ -6,7 +6,7 @@
   </fade>
 </template>
 <script>
-  import Fade from '@/components/transition/fade'
+  import Fade from '@/components/animate/fade'
 
   export default {
     data () {

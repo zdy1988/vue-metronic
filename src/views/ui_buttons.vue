@@ -8,7 +8,7 @@
               <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
-                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中..." :loading-animate="true">Default</btn>
+                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中..." :loading-animate-closed="false">Default</btn>
                   <btn theme="primary" >Primary</btn>
                   <btn theme="success" >Success</btn>
                   <btn theme="info" >Info</btn>

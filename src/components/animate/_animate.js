@@ -4,11 +4,11 @@
 export default {
   props: {
     mode: {type: String, default: 'out-in'},
-    animate: {type: Boolean, default: true}
+    animateClosed: {type: Boolean, default: false}
   },
   computed: {
     name () {
-      return this.animate ? this.$options.name : ''
+      return this.animateClosed ? '' : this.$options.name
     }
   }
 }

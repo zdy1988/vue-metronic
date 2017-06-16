@@ -12,10 +12,10 @@
   }
 </style>
 <script>
-  import _transition from './_transition'
+  import _animate from './_animate'
 
   export default{
-    mixins: [_transition],
+    mixins: [_animate],
     name: 'fade'
   }
 </script>
