@@ -8,7 +8,7 @@
               <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
-                  <btn theme="default" @click.native="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中..." :loading-animate="true">Default</btn>
                   <btn theme="primary" >Primary</btn>
                   <btn theme="success" >Success</btn>
                   <btn theme="info" >Info</btn>
@@ -111,10 +111,10 @@
                   <btn block color="purple" >Button</btn>
                   <btn block outline color="blue" >Button</btn>
                   <btn block outline color="red" >Button</btn>
-                  <btn block outline btn-type="submit" color="purple">Submit</btn>
-                  <btn block outline  btn-type="submit" color="yellow-mint">Submit</btn>
-                  <btn block outline  btn-type="submit" color="red-mint">Submit</btn>
-                  <btn block outline  btn-type="submit" color="green-sharp">Submit</btn>
+                  <btn block outline type="submit" color="purple">Submit</btn>
+                  <btn block outline type="submit" color="yellow-mint">Submit</btn>
+                  <btn block outline type="submit" color="red-mint">Submit</btn>
+                  <btn block outline type="submit" color="green-sharp">Submit</btn>
                 </div>
               </portlet>
               <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp">
@@ -667,6 +667,215 @@
                 </tabs>
               </portlet>
             </column>
+            <column :md="6">
+              <portlet title="BUTTON GROUPS" icon="settings" color="red" mode="light" bordered>
+                <h4 class="block">Basic Example</h4>
+                <div class="clearfix">
+                  <btn-group>
+                    <btn>Left</btn>
+                    <btn>Middle</btn>
+                    <btn>Right</btn>
+                  </btn-group>
+                  <btn-group>
+                    <btn color="red">Left</btn>
+                    <btn color="yellow">Middle</btn>
+                    <btn color="green">Right</btn>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Toolbar</h4>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group>
+                      <btn>1</btn>
+                      <btn>2</btn>
+                      <btn>3</btn>
+                      <btn>4</btn>
+                    </btn-group>
+                    <btn-group>
+                      <btn>5</btn>
+                      <btn>6</btn>
+                      <btn>7</btn>
+                    </btn-group>
+                    <btn-group>
+                      <btn>8</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group>
+                      <btn color="red">1</btn>
+                      <btn color="green">2</btn>
+                      <btn color="blue">3</btn>
+                      <btn color="yellow">4</btn>
+                    </btn-group>
+                    <btn-group>
+                      <btn color="purple">5</btn>
+                      <btn color="dark">6</btn>
+                      <btn color="default">7</btn>
+                    </btn-group>
+                    <btn-group>
+                      <btn color="red">8</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Group Sizing</h4>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="lg">
+                      <btn color="red">Left</btn>
+                      <btn color="green">Middle</btn>
+                      <btn color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group>
+                      <btn color="red">Left</btn>
+                      <btn color="green">Middle</btn>
+                      <btn color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="sm">
+                      <btn color="red">Left</btn>
+                      <btn color="green">Middle</btn>
+                      <btn color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="xs">
+                      <btn color="red">Left</btn>
+                      <btn color="green">Middle</btn>
+                      <btn color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Nesting Button Group</h4>
+                  <btn-group>
+                    <btn theme="default">
+                      <fa type="user"></fa> Profile
+                    </btn>
+                    <btn theme="default">
+                      <fa type="cogs"></fa> Settings
+                    </btn>
+                    <btn theme="default">
+                      <fa type="bullhorn"></fa> Feeds
+                    </btn>
+                    <btn-dropdown text="More" theme="default">
+                      <btn color="white">Dropdown link</btn>
+                      <btn color="white">Dropdown link</btn>
+                    </btn-dropdown>
+                    <btn-dropdown text="Up" dropup theme="default">
+                      <btn color="white">Dropdown link</btn>
+                      <btn color="white">Dropdown link</btn>
+                    </btn-dropdown>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <btn-group>
+                    <btn color="red">
+                      <fa type="user"></fa>  Profile
+                    </btn>
+                    <btn color="green">
+                      <fa type="cogs"></fa>  Settings
+                    </btn>
+                    <btn color="purple">
+                      <fa type="bullhorn"></fa> Feeds
+                    </btn>
+                    <btn-dropdown text="More" color="blue">
+                      <btn color="white">Dropdown link</btn>
+                      <btn color="red">Dropdown link</btn>
+                    </btn-dropdown>
+                    <btn-dropdown text="Up" dropup theme="default">
+                      <btn color="white" @click="doClick">Dropdown link</btn>
+                      <btn color="white" @click="doClick">Dropdown link</btn>
+                    </btn-dropdown>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Vertical variation</h4>
+                  <btn-group vertical>
+                    <btn>Button</btn>
+                    <btn-dropdown text="Actions" style="default">
+                      <btn color="white" @click="doClick">Button1</btn>
+                      <btn color="red" @click="doClick">Button2</btn>
+                      <btn @click="doClick">Button3</btn>
+                      <btn @click="doClick">Button4</btn>
+                    </btn-dropdown>
+                    <btn>Button</btn>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"></div>
+                  <btn-group vertical>
+                    <btn color="green">Button</btn>
+                    <btn-dropdown color="red">
+                      <btn color="white">Button1</btn>
+                      <btn color="red">Button2</btn>
+                      <btn>Button3</btn>
+                      <btn>Button4</btn>
+                    </btn-dropdown>
+                    <btn color="dark">Button</btn>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Justified Link Variation</h4>
+                  <btn-group justified>
+                    <btn>Left</btn>
+                    <btn>Middle</btn>
+                    <btn>Right</btn>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <btn-group justified>
+                    <btn @click="doClick" color="red">Left</btn>
+                    <btn @click="doClick" color="blue">Middle</btn>
+                    <btn @click="doClick" color="green">Right</btn>
+                  </btn-group>
+                </div>
+              </portlet>
+              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered>
+                <h4 class="block">Dropdown buttons</h4>
+                <btn-dropdown text="Tools" theme="default" textAlign="left">
+                  <btn color="white">Settings</btn>
+                  <btn color="white">Preferences</btn>
+                  <btn color="white">Window Options</btn>
+                  <btn color="white">Help</btn>
+                </btn-dropdown>
+                <btn-dropdown text="Primary" color="red" textAlign="left">
+                  <btn color="white">Action</btn>
+                  <btn color="white">Another action</btn>
+                  <btn color="white">Something else here</btn>
+                  <li class="divider"> </li>
+                  <btn color="white">Separated link</btn>
+                </btn-dropdown>
+                <btn-dropdown text="Primary" color="purple" textAlign="left">
+                  <btn color="white">Action</btn>
+                  <btn color="white">Another action</btn>
+                  <btn color="white">Something else here</btn>
+                  <li class="divider"> </li>
+                  <btn color="white">Separated link</btn>
+                </btn-dropdown>
+                <h4 class="block">Dropdown button with icons</h4>
+                <btn-toolbar>
+                  <btn-dropdown text="User" theme="default" icon="user" textAlign="left">
+                    <btn color="white">Edit</btn>
+                    <btn color="white">Delete</btn>
+                    <btn color="white">Ban</btn>
+                    <btn color="white">Make admin</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="User" color="purple" icon="user" textAlign="left">
+                    <btn color="white">
+                      <fa type="plus"></fa> Add
+                    </btn>
+                    <btn color="white">
+                      <fa type="edit"></fa> Edit
+                    </btn>
+                    <btn color="white">
+                      <fa type="remove"></fa> Delete
+                    </btn>
+                    <btn color="white">
+                      Full Settings
+                    </btn>
+                  </btn-dropdown>
+                </btn-toolbar>
+              </portlet>
+            </column>
           </row>
         </tab-pane>
         <tab-pane name="Circle Buttons"></tab-pane>
@@ -680,10 +889,13 @@
   import Icon from '@/components/icon/icon'
   import Fa from '@/components/icon/faicon'
   import Glyphicon from '@/components/icon/glyphicon'
-  import Btn from '@/components/button/button'
   import Portlet from '@/components/portlet/portlet'
   import Tabs from '@/components/tabs/tabs'
   import TabPane from '@/components/tabs/tab-pane'
+  import Btn from '@/components/button/btn'
+  import BtnGroup from '@/components/button/btn-group'
+  import BtnToolbar from '@/components/button/btn-toolbar'
+  import BtnDropdown from '@/components/button/btn-dropdown'
 
   export default{
     data () {
@@ -692,6 +904,9 @@
       }
     },
     methods: {
+      doClick () {
+        console.log('test')
+      },
       showLoading () {
         var _this = this
         this.loading = true
@@ -706,10 +921,13 @@
       Icon,
       Fa,
       Glyphicon,
-      Btn,
       Portlet,
       Tabs,
-      TabPane
+      TabPane,
+      Btn,
+      BtnGroup,
+      BtnToolbar,
+      BtnDropdown
     }
   }
 </script>

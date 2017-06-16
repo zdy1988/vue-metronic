@@ -1,8 +1,8 @@
 <template>
   <div>
     <transition name="modal-fade">
-      <div :class="classes" v-if="show" tabindex="-1" role="basic" aria-hidden="true" style="display:block">
-        <div :class="['modal-dialog','modal-'+size]">
+      <div :class="classes" v-if="show" :style="{display:'block', zIndex:zindex}">
+        <div :class="dialogClasses">
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true"  @click="close"></button>
@@ -12,23 +12,29 @@
               <slot></slot>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn dark btn-outline" @click="close">Close</button>
+              <btn color="dark" outline @click="close">Close</btn>
               <slot name="footer"></slot>
             </div>
           </div>
         </div>
       </div>
     </transition>
-    <masker :show="show" v-if="mask"></masker>
+    <masker :show="show" v-if="mask" :zindex="zindex"></masker>
   </div>
 </template>
 <script>
   import classNames from 'classnames'
   import is from 'is_js'
 
-  import Masker from '@/components/common/masker'
+  import Btn from '@/components/button/btn'
+  import Masker from '@/components/element/masker'
 
   export default{
+    data () {
+      return {
+        zindex: 10050
+      }
+    },
     props: {
       title: {type: String, default: 'Modal Title'},
       show: {type: Boolean, required: true},
@@ -42,24 +48,37 @@
           'modal': true,
           [this.klass]: !!this.klass
         })
+      },
+      dialogClasses () {
+        return classNames({
+          'modal-dialog': true,
+          [`modal-${this.size}`]: !!this.size
+        })
       }
-    },
-    created: function () {
-      this.$watch('show', (val) => {
-        if (val === true) {
-          this.$emit('onOpen')
-        } else {
-          this.$emit('onClose')
-        }
-      })
     },
     methods: {
       close () {
-        this.$emit('update:show', false)
+        this.$emit('close')
       }
     },
     components: {
+      Btn,
       Masker
+    },
+    watch: {
+      show (val) {
+        if (val) {
+          var z = 10500
+          this.$parent.$children.forEach((child) => {
+            if (child.$options._componentTag === 'modal' && child.show) {
+              z += 1
+            }
+          })
+          this.zindex = z
+        } else {
+          this.zindex = 10500
+        }
+      }
     }
   }
 </script>

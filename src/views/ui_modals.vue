@@ -7,8 +7,8 @@
         <tr>
           <td> Basic Example </td>
           <td>
-            <a class="btn red btn-outline sbold" @click="show = true"> View Demo </a>
-            <modal :show="show" @update:show="val => show = val" @onOpen="statusChange" @onClose="statusChange">
+            <btn color="red" outline klass="sbold" @click="show = true"> View Demo </btn>
+            <modal :show="show" @close="show = false">
               Modal body goes here
             </modal>
           </td>
@@ -16,8 +16,8 @@
         <tr>
           <td> Large Width Example </td>
           <td>
-            <a class="btn purple btn-outline sbold" @click="show2 = true"> View Demo </a>
-            <modal :show="show2" @update:show="val => show2 = val" size="lg">
+            <btn color="purple" outline klass="sbold" @click="show2 = true"> View Demo </btn>
+            <modal :show="show2" @close="show2 = false" size="lg">
               Modal body goes here
             </modal>
           </td>
@@ -25,8 +25,8 @@
         <tr>
           <td> Small Width Example </td>
           <td>
-            <a class="btn blue btn-outline sbold" @click="show3 = true"> View Demo </a>
-            <modal :show="show3" @update:show="val => show3 = val" size="sm">
+            <btn color="blue" outline klass="sbold" @click="show3 = true"> View Demo </btn>
+            <modal :show="show3" @close="show3 = false" size="sm">
               Modal body goes here
             </modal>
           </td>
@@ -34,8 +34,8 @@
         <tr>
           <td> Full Width Example </td>
           <td>
-            <a class="btn dark btn-outline sbold" @click="show4 = true"> View Demo </a>
-            <modal :show="show4" @update:show="val => show4 = val" size="full">
+            <btn color="dark" outline klass="sbold" @click="show4 = true"> View Demo </btn>
+            <modal :show="show4" @close="show4 = false" size="full">
               Modal body goes here
             </modal>
           </td>
@@ -43,8 +43,8 @@
         <tr>
           <td> No Masker </td>
           <td>
-            <a class="btn yellow btn-outline sbold" @click="show5 = true"> View Demo </a>
-            <modal :show="show5" @update:show="val => show5 = val" :mask="false">
+            <btn color="yellow" outline klass="sbold" @click="show5 = true"> View Demo </btn>
+            <modal :show="show5" @close="show5 = false" :mask="false">
               Modal body goes here
             </modal>
           </td>
@@ -52,11 +52,11 @@
         <tr>
           <td> Footer Inside </td>
           <td>
-            <a class="btn green btn-outline sbold" @click="show6 = true"> View Demo </a>
-            <modal :show="show6" @update:show="val => show6 = val">
+            <btn color="green" outline klass="sbold" @click="show6 = true"> View Demo </btn>
+            <modal :show="show6" @close="show6 = false">
               Modal body goes here
-              <a class="btn yellow btn-outline sbold" @click="show = true" slot="footer"> View Demo 1 </a>
-              <a class="btn yellow btn-outline sbold" @click="show2 = true" slot="footer"> View Demo 2 </a>
+              <btn color="yellow" outline klass="sbold" @click="show = true" slot="footer"> View Demo </btn>
+              <btn color="yellow" outline klass="sbold" @click="show2 = true" slot="footer"> View Demo </btn>
             </modal>
           </td>
         </tr>
@@ -100,6 +100,7 @@
   import Column from '@/layouts/girds/column'
   import Portlet from '@/components/portlet/portlet'
   import Modal from '@/components/modal/modal'
+  import Btn from '@/components/button/btn'
 
   export default{
     data () {
@@ -113,16 +114,12 @@
         show7: false
       }
     },
-    methods: {
-      statusChange: (v) => {
-        console.log(v)
-      }
-    },
     components: {
       Modal,
       Row,
       Column,
-      Portlet
+      Portlet,
+      Btn
     }
   }
 </script>

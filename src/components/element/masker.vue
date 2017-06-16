@@ -1,6 +1,6 @@
 <template>
   <transition name="mask-fade">
-    <div :class="['modal-backdrop','bg-'+color]" :style="{opacity:opacity}" v-if="show"></div>
+    <div :class="['modal-backdrop','bg-'+color]" :style="{opacity:opacity, zIndex:zindex-1}" v-show="show"></div>
   </transition>
 </template>
 <script>
@@ -11,7 +11,8 @@
     props: {
       show: {type: Boolean, default: false, required: true},
       color: {type: String, default: 'dark', validator: (value) => { return is.inArray(value, colors) }},
-      opacity: {type: Number, default: 0.5}
+      opacity: {type: Number, default: 0.5},
+      zindex: {type: Number, default: 10049}
     }
   }
 </script>

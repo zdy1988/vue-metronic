@@ -1,11 +1,15 @@
 <template>
-  <button :type="type" :class="classes" :disabled="disabled || loading">
-    <transition name="slide-fade">
-      <span v-if="!loading"><slot></slot></span>
-    </transition>
-    <transition name="slide-fade">
-      <span v-if="loading">{{loadingText}}</span>
-    </transition>
+  <a href="javascript:;" v-if="itself === 'a'" :type="type" :class="classes" :disabled="disabled || loading" @click="_click">
+    <slideFade :animate="loadingAnimate">
+      <span v-if="!loading" key="slot"><slot></slot></span>
+      <span v-else key="loading">{{loadingText}}</span>
+    </slideFade>
+  </a>
+  <button v-else :type="type" :class="classes" :disabled="disabled || loading" @click="_click">
+    <slideFade :animate="loadingAnimate">
+      <span v-if="!loading" key="slot"><slot></slot></span>
+      <span v-else key="loading">{{loadingText}}</span>
+    </slideFade>
   </button>
 </template>
 <script>
@@ -13,9 +17,16 @@
   import is from 'is_js'
   import colors from '@/untils/colors'
 
+  import SlideFade from '@/components/transition/slide-fade'
+
   export default{
+    data () {
+      return {
+        itself: 'button'
+      }
+    },
     props: {
-      type: {type: String, default: 'button', validator: (value) => { return is.inArray(value, ['button', 'submit', 'reset']) }},
+      type: {type: String, default: 'button', validator: (value) => { return is.inArray(value, ['a', 'button', 'submit', 'reset']) }},
       color: {type: String, default: 'default', validator: (value) => { return is.inArray(value, colors) }},
       theme: {type: String, validator: (value) => { return is.inArray(value, ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link']) }},
       stripe: {type: Boolean},
@@ -26,6 +37,7 @@
       disabled: {type: Boolean},
       loading: {type: Boolean, default: false},
       loadingText: {type: String, default: 'Loading...'},
+      loadingAnimate: {type: Boolean, default: false},
       klass: {type: String}
     },
     computed: {
@@ -43,18 +55,17 @@
           [this.klass]: !!this.klass
         })
       }
+    },
+    methods: {
+      _click (e) {
+        this.$emit('click', e)
+      }
+    },
+    components: {
+      SlideFade
+    },
+    mounted () {
+      this.itself = this.type
     }
   }
 </script>
-<style scoped>
-  .slide-fade-enter-active {
-    transition: all .3s ease;
-  }
-  .slide-fade-leave-active {
-    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
-  .slide-fade-enter, .slide-fade-leave-active {
-    transform: translateX(10px);
-    opacity: 0;
-  }
-</style>

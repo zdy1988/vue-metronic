@@ -28,7 +28,7 @@
   import is from 'is_js'
   import colors from '@/untils/colors'
 
-  import Icon from '@/components/icon/icon.vue'
+  import Icon from '@/components/icon/icon'
 
   export default{
     props: {

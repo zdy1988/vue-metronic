@@ -1,11 +1,13 @@
 <template>
-  <transition name="fade" mode="out-in">
+  <fade>
     <div class="tab-pane" :class="{active:active}" v-show="active" ref="tabPanel">
       <slot></slot>
     </div>
-  </transition>
+  </fade>
 </template>
 <script>
+  import Fade from '@/components/transition/fade'
+
   export default {
     data () {
       return {
@@ -20,14 +22,9 @@
       if (this.cur) {
         this.active = this.cur
       }
+    },
+    components: {
+      Fade
     }
   }
 </script>
-<style scoped>
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s
-  }
-  .fade-enter, .fade-leave-active {
-    opacity: 0
-  }
-</style>
