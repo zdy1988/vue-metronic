@@ -5,14 +5,14 @@
         <div :class="dialogClasses">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"  @click="close"></button>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"  @click="_close"></button>
               <h4 class="modal-title">{{title}}</h4>
             </div>
             <div class="modal-body">
               <slot></slot>
             </div>
             <div class="modal-footer">
-              <btn color="dark" outline @click="close">Close</btn>
+              <btn color="dark" outline @click="_close">Close</btn>
               <slot name="footer"></slot>
             </div>
           </div>
@@ -57,7 +57,7 @@
       }
     },
     methods: {
-      close () {
+      _close () {
         this.$emit('close')
       }
     },

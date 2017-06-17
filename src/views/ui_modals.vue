@@ -96,8 +96,7 @@
 </row>
 </template>
 <script>
-  import Row from '@/layouts/girds/row'
-  import Column from '@/layouts/girds/column'
+  import {Row, Column} from '@/layouts/girds'
   import Portlet from '@/components/portlet/portlet'
   import Modal from '@/components/modal/modal'
   import Btn from '@/components/button/btn'

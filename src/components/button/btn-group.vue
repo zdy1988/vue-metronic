@@ -10,7 +10,7 @@
   export default{
     props: {
       orientation: {type: String, default: 'horizontal', validator: (value) => { return is.inArray(value, ['vertical', 'horizontal']) }},
-      shape: {type: String},
+      shape: {type: String, validator: (value) => { return is.inArray(value, ['circle']) }},
       size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'xs']) }},
       justified: {type: Boolean, default: false},
       klass: {type: String}

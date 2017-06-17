@@ -1,6 +1,6 @@
 <template>
   <transition name="mask-fade">
-    <div :class="['modal-backdrop','bg-'+color]" :style="{opacity:opacity, zIndex:zindex-1}" v-show="show"></div>
+    <div :class="['modal-backdrop','bg-'+color]" :style="{opacity:opacity, zIndex:zindex-1}" v-if="show"></div>
   </transition>
 </template>
 <script>

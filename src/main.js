@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './app'
 import router from './router'
+import animated from './animates/animated-vue'
 
 Vue.config.productionTip = false
 
@@ -13,3 +14,5 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+Vue.use(animated)

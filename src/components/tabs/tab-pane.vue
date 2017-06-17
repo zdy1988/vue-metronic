@@ -1,13 +1,11 @@
 <template>
-  <fade>
+  <animated-fade-in>
     <div class="tab-pane" :class="{active:active}" v-show="active" ref="tabPanel">
       <slot></slot>
     </div>
-  </fade>
+  </animated-fade-in>
 </template>
 <script>
-  import Fade from '@/components/animate/fade'
-
   export default {
     data () {
       return {
@@ -22,9 +20,6 @@
       if (this.cur) {
         this.active = this.cur
       }
-    },
-    components: {
-      Fade
     }
   }
 </script>

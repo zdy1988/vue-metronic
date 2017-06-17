@@ -94,14 +94,10 @@
 </row>
 </template>
 <script>
-  import colors from '@/untils/colors'
-  import colors2 from '@/untils/colors2'
-
-  import Row from '@/layouts/girds/row'
-  import Column from '@/layouts/girds/column'
-  import Modal from '@/components/modal/modal'
-  import Tabs from '@/components/tabs/tabs'
-  import TabPane from '@/components/tabs/tab-pane'
+  import {colors, colors2} from '@/untils'
+  import {Row, Column} from '@/layouts/girds'
+  import {Modal} from '@/components/modal'
+  import {Tabs, TabPane} from '@/components/tabs'
 
   export default{
     data () {

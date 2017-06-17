@@ -42,17 +42,11 @@
 </row>
 </template>
 <script>
-  import Row from '@/layouts/girds/row'
-  import Column from '@/layouts/girds/column'
-  import Icon from '@/components/icon/icon'
-  import Fa from '@/components/icon/faicon'
-  import Glyphicon from '@/components/icon/glyphicon'
-  import Tabs from '@/components/tabs/tabs'
-  import TabPane from '@/components/tabs/tab-pane'
+  import {Row, Column} from '@/layouts/girds'
+  import {Icon, Fa, Glyphicon} from '@/components/icon'
+  import {Tabs, TabPane} from '@/components/tabs'
 
-  import icons from '@/untils/icons'
-  import faicons from '@/untils/faicons'
-  import glyphicons from '@/untils/glyphicons'
+  import {icons, faicons, glyphicons} from '@/untils'
 
   export default{
     data () {

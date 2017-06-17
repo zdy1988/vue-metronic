@@ -136,11 +136,9 @@
   </row>
 </template>
 <script>
-  import Row from '@/layouts/girds/row'
-  import Column from '@/layouts/girds/column'
+  import {Row, Column} from '@/layouts/girds'
   import Portlet from '@/components/portlet/portlet'
-  import Tabs from '@/components/tabs/tabs'
-  import TabPane from '@/components/tabs/tab-pane'
+  import {Tabs, TabPane} from '@/components/tabs'
 
   export default{
     data () {

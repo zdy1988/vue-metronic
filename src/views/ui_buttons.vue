@@ -5,10 +5,10 @@
         <tab-pane name="Square Buttons" cur>
           <row>
             <column :md="6">
-              <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp">
+              <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
-                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中..." :loading-animate-closed="false">Default</btn>
+                  <btn theme="default">Default</btn>
                   <btn theme="primary" >Primary</btn>
                   <btn theme="success" >Success</btn>
                   <btn theme="info" >Info</btn>
@@ -27,8 +27,6 @@
                     <btn color="yellow" >yellow</btn>
                     <btn color="purple" >purple</btn>
                     <btn color="dark" >dark</btn>
-                  </p>
-                  <p>
                     <btn color="red-mint" >red-mint</btn>
                     <btn color="blue-hoki" >blue-hoki</btn>
                     <btn color="green-haze" >green-haze</btn>
@@ -48,8 +46,6 @@
                     <btn color="yellow" outline >yellow</btn>
                     <btn color="purple" outline >purple</btn>
                     <btn color="dark" outline >dark</btn>
-                  </p>
-                  <p>
                     <btn color="red-mint" outline  >red-mint</btn>
                     <btn color="blue-hoki" outline  >blue-hoki</btn>
                     <btn color="green-haze" outline  >green-haze</btn>
@@ -67,8 +63,6 @@
                     <btn color="green-meadow" >Green Meadow</btn>
                     <btn color="red-sunglo" >Red Sunglo</btn>
                     <btn color="yellow-crusta" >Yellow Crusta</btn>
-                  </p>
-                  <p>
                     <btn color="purple-plum" >Purple Plum</btn>
                     <btn color="grey-cascade" >Grey Cascade</btn>
                   </p>
@@ -76,15 +70,13 @@
                 <div class="clearfix">
                   <h4 class="block">Button Stripe</h4>
                   <p>
-                    <btn stripe color="blue-hoki" >Blue Hoki</btn>
-                    <btn stripe color="blue-madison" >Blue Madison</btn>
-                    <btn stripe color="green-meadow" >Green Meadow</btn>
-                    <btn stripe color="red-sunglo" >Red Sunglo</btn>
-                    <btn stripe color="yellow-crusta" >Yellow Crusta</btn>
-                  </p>
-                  <p>
-                    <btn stripe color="purple-plum" >Purple Plum</btn>
-                    <btn stripe color="grey-cascade" >Grey Cascade</btn>
+                    <btn stripe="blue-hoki" color="default" >Blue Hoki</btn>
+                    <btn stripe="blue" color="default" >Blue</btn>
+                    <btn stripe="green-meadow" color="default" >Green Meadow</btn>
+                    <btn stripe="red-sunglo" color="default" >Red Sunglo</btn>
+                    <btn stripe="yellow-crusta" color="default" >Yellow Crusta</btn>
+                    <btn stripe="purple-plum" color="default" >Purple Plum</btn>
+                    <btn stripe="dark" color="default" >Dark</btn>
                   </p>
                 </div>
                 <div class="clearfix">
@@ -117,7 +109,7 @@
                   <btn block outline type="submit" color="green-sharp">Submit</btn>
                 </div>
               </portlet>
-              <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp">
+              <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <tabs mode="line">
                   <tab-pane name="Fontawesome" cur>
                     <div class="clearfix">
@@ -138,8 +130,6 @@
                         <btn color="yellow" size="lg">
                           Yellow<fa type="search"></fa>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="lg">
                           Purple<fa type="times"></fa>
                         </btn>
@@ -169,8 +159,6 @@
                         <btn color="yellow">
                           Yellow<fa type="search"></fa>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple">
                           Purple<fa type="times"></fa>
                         </btn>
@@ -200,8 +188,6 @@
                         <btn color="yellow" size="sm">
                           Yellow<fa type="search"></fa>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="sm">
                           Purple<fa type="times"></fa>
                         </btn>
@@ -231,8 +217,6 @@
                         <btn color="yellow" size="xs">
                           Yellow<fa type="search"></fa>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="xs">
                           Purple<fa type="times"></fa>
                         </btn>
@@ -293,8 +277,6 @@
                         <btn color="yellow" size="lg">
                           Yellow <icon type="anchor"></icon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="lg">
                           Purple <icon type="bell"></icon>
                         </btn>
@@ -324,8 +306,6 @@
                         <btn color="yellow">
                           Yellow <icon type="anchor"></icon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple">
                           Purple <icon type="bell"></icon>
                         </btn>
@@ -355,8 +335,6 @@
                         <btn color="yellow" size="sm">
                           Yellow <icon type="anchor"></icon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="sm">
                           Purple <icon type="bell"></icon>
                         </btn>
@@ -386,8 +364,6 @@
                         <btn color="yellow" size="xs">
                           Yellow <icon type="anchor"></icon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="xs">
                           Purple <icon type="bell"></icon>
                         </btn>
@@ -448,8 +424,6 @@
                         <btn color="yellow" size="lg">
                           Yellow <glyphicon type="pencil"></glyphicon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="lg">
                           Purple <glyphicon type="bell"></glyphicon>
                         </btn>
@@ -479,8 +453,6 @@
                         <btn color="yellow">
                           Yellow <glyphicon type="pencil"></glyphicon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple">
                           Purple <glyphicon type="bell"></glyphicon>
                         </btn>
@@ -510,8 +482,6 @@
                         <btn color="yellow" size="sm">
                           Yellow <glyphicon type="pencil"></glyphicon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="sm">
                           Purple <glyphicon type="bell"></glyphicon>
                         </btn>
@@ -541,8 +511,6 @@
                         <btn color="yellow" size="xs">
                           Yellow <glyphicon type="pencil"></glyphicon>
                         </btn>
-                      </p>
-                      <p>
                         <btn color="purple" size="xs">
                           Purple <glyphicon type="bell"></glyphicon>
                         </btn>
@@ -791,10 +759,10 @@
                   </btn-group>
                 </div>
                 <div class="clearfix">
-                  <h4 class="block">Vertical variation</h4>
-                  <btn-group vertical>
+                  <h4 class="block">Orientation Vertical</h4>
+                  <btn-group orientation="vertical">
                     <btn>Button</btn>
-                    <btn-dropdown text="Actions" style="default">
+                    <btn-dropdown text="Actions">
                       <btn color="white" @click="doClick">Button1</btn>
                       <btn color="red" @click="doClick">Button2</btn>
                       <btn @click="doClick">Button3</btn>
@@ -803,9 +771,9 @@
                     <btn>Button</btn>
                   </btn-group>
                   <div class="clearfix margin-bottom-10"></div>
-                  <btn-group vertical>
+                  <btn-group orientation="vertical">
                     <btn color="green">Button</btn>
-                    <btn-dropdown color="red">
+                    <btn-dropdown color="red" text="Actions">
                       <btn color="white">Button1</btn>
                       <btn color="red">Button2</btn>
                       <btn>Button3</btn>
@@ -835,28 +803,30 @@
                   <btn color="white">Settings</btn>
                   <btn color="white">Preferences</btn>
                   <btn color="white">Window Options</btn>
+                  <btn-dropdown-divider></btn-dropdown-divider>
                   <btn color="white">Help</btn>
                 </btn-dropdown>
                 <btn-dropdown text="Primary" color="red" textAlign="left">
                   <btn color="white">Action</btn>
                   <btn color="white">Another action</btn>
                   <btn color="white">Something else here</btn>
-                  <li class="divider"> </li>
+                  <btn-dropdown-divider></btn-dropdown-divider>
                   <btn color="white">Separated link</btn>
                 </btn-dropdown>
                 <btn-dropdown text="Primary" color="purple" textAlign="left">
                   <btn color="white">Action</btn>
                   <btn color="white">Another action</btn>
                   <btn color="white">Something else here</btn>
-                  <li class="divider"> </li>
+                  <btn-dropdown-divider></btn-dropdown-divider>
                   <btn color="white">Separated link</btn>
                 </btn-dropdown>
                 <h4 class="block">Dropdown button with icons</h4>
                 <btn-toolbar>
-                  <btn-dropdown text="User" theme="default" icon="user" textAlign="left">
+                  <btn-dropdown text="User" icon="user" textAlign="left">
                     <btn color="white">Edit</btn>
                     <btn color="white">Delete</btn>
                     <btn color="white">Ban</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Make admin</btn>
                   </btn-dropdown>
                   <btn-dropdown text="User" color="purple" icon="user" textAlign="left">
@@ -869,33 +839,1252 @@
                     <btn color="white">
                       <fa type="remove"></fa> Delete
                     </btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">
                       Full Settings
                     </btn>
                   </btn-dropdown>
                 </btn-toolbar>
               </portlet>
+              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered klass="util-btn-group-margin-bottom-5">
+                <div class="clearfix">
+                  <h4 class="block">Default Bootstrap Style</h4>
+                  <btn-dropdown text="" textAlign="left">
+                    <btn slot="before">Default</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="primary" textAlign="left">
+                    <btn slot="before" theme="primary">Primary</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="success" textAlign="left">
+                    <btn slot="before" theme="success">Success</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="info" textAlign="left">
+                    <btn slot="before" theme="info">Info</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="warning" textAlign="left">
+                    <btn slot="before" theme="warning">Warning</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="danger" textAlign="left">
+                    <btn slot="before" theme="danger">Danger</btn>
+                    <btn color="white">Settings</btn>
+                    <btn color="white">Preferences</btn>
+                    <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Help</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Metronic Style</h4>
+                  <btn-dropdown color="default">
+                    <btn color="default" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="blue">
+                    <btn color="blue" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="green">
+                    <btn color="green" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="red">
+                    <btn color="red" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="yellow">
+                    <btn color="yellow" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="dark">
+                    <btn color="dark" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="purple">
+                    <btn color="purple" slot="before">Default</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Dropdowns with Multilevel Submenu</h4>
+                  <btn-dropdown color="blue">
+                    <btn color="blue" slot="before">Dropdown</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="green" dropup>
+                    <btn color="green" slot="before">Dropup</btn>
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Sizing</h4>
+                  <btn-dropdown text="Large button" size="lg">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Small button" size="sm">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Extra Small button" size="xs">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <!-- Large button group -->
+                  <btn-dropdown text="Large button" color="red" size="lg">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Small button" color="blue" size="sm">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Extra Small button" color="green" size="xs">
+                    <btn color="white">Action</btn>
+                    <btn color="white">Another action</btn>
+                    <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                    <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+              </portlet>
+              <portlet title="Button States" icon="settings" color="green-sharp" mode="light" bordered>
+                <h4>Loading State</h4>
+                <div class="clearfix">
+                  <btn theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn color="red" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn color="blue" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                </div>
+              </portlet>
             </column>
           </row>
         </tab-pane>
-        <tab-pane name="Circle Buttons"></tab-pane>
+        <tab-pane name="Circle Buttons">
+          <row>
+            <column :md="6">
+              <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+                <div class="clearfix">
+                  <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
+                  <btn shape="circle" theme="default">Default</btn>
+                  <btn shape="circle" theme="primary" >Primary</btn>
+                  <btn shape="circle" theme="success" >Success</btn>
+                  <btn shape="circle" theme="info" >Info</btn>
+                  <btn shape="circle" theme="warning" >Warning</btn>
+                  <btn shape="circle" theme="danger" >Danger</btn>
+                  <btn shape="circle" theme="link" >Link</btn>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Metronic Custom Buttons</h4>
+                  <p>
+                    <btn >default</btn>
+                    <btn shape="circle" color="default" >default</btn>
+                    <btn shape="circle" color="red" >red</btn>
+                    <btn shape="circle" color="blue" >blue</btn>
+                    <btn shape="circle" color="green" >green</btn>
+                    <btn shape="circle" color="yellow" >yellow</btn>
+                    <btn shape="circle" color="purple" >purple</btn>
+                    <btn shape="circle" color="dark" >dark</btn>
+                    <btn shape="circle" color="red-mint" >red-mint</btn>
+                    <btn shape="circle" color="blue-hoki" >blue-hoki</btn>
+                    <btn shape="circle" color="green-haze" >green-haze</btn>
+                    <btn shape="circle" color="yellow-mint" >yellow-mint</btn>
+                    <btn shape="circle" color="purple-sharp" >purple-sharp</btn>
+                    <btn shape="circle" color="grey-mint" >grey-mint</btn>
+                  </p>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Metronic Outline Buttons</h4>
+                  <p>
+                    <btn shape="circle" outline>default</btn>
+                    <btn shape="circle" color="default" outline >default</btn>
+                    <btn shape="circle" color="red" outline >red</btn>
+                    <btn shape="circle" color="blue" outline >blue</btn>
+                    <btn shape="circle" color="green" outline >green</btn>
+                    <btn shape="circle" color="yellow" outline >yellow</btn>
+                    <btn shape="circle" color="purple" outline >purple</btn>
+                    <btn shape="circle" color="dark" outline >dark</btn>
+                    <btn shape="circle" color="red-mint" outline  >red-mint</btn>
+                    <btn shape="circle" color="blue-hoki" outline  >blue-hoki</btn>
+                    <btn shape="circle" color="green-haze" outline  >green-haze</btn>
+                    <btn shape="circle" color="yellow-mint" outline  >yellow-mint</btn>
+                    <btn shape="circle" color="purple-sharp" outline  >purple-sharp</btn>
+                    <btn shape="circle" color="grey-mint" outline  >grey-mint</btn>
+                  </p>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">More Button Colors(go to
+                    <a href="ui_colors.html"> ui_colors.html </a> for more colors) </h4>
+                  <p>
+                    <btn shape="circle" color="blue-hoki" >Blue Hoki</btn>
+                    <btn shape="circle" color="blue-madison" >Blue Madison</btn>
+                    <btn shape="circle" color="green-meadow" >Green Meadow</btn>
+                    <btn shape="circle" color="red-sunglo" >Red Sunglo</btn>
+                    <btn shape="circle" color="yellow-crusta" >Yellow Crusta</btn>
+                    <btn shape="circle" color="purple-plum" >Purple Plum</btn>
+                    <btn shape="circle" color="grey-cascade" >Grey Cascade</btn>
+                  </p>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Stripe</h4>
+                  <p>
+                    <btn shape="circle" stripe="blue-hoki" color="default" >Blue Hoki</btn>
+                    <btn shape="circle" stripe="blue" color="default" >Blue</btn>
+                    <btn shape="circle" stripe="green-meadow" color="default" >Green Meadow</btn>
+                    <btn shape="circle" stripe="red-sunglo" color="default" >Red Sunglo</btn>
+                    <btn shape="circle" stripe="yellow-crusta" color="default" >Yellow Crusta</btn>
+                    <btn shape="circle" stripe="purple-plum" color="default" >Purple Plum</btn>
+                    <btn shape="circle" stripe="dark" color="default" >Dark</btn>
+                  </p>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Disabled</h4>
+                  <btn shape="circle" disabled color="default" >default</btn>
+                  <btn shape="circle" disabled color="red" >red</btn>
+                  <btn shape="circle" disabled color="blue" >blue</btn>
+                  <btn shape="circle" disabled color="green" >green</btn>
+                  <btn shape="circle" disabled color="yellow" >yellow</btn>
+                  <btn shape="circle" disabled color="purple" >purple</btn>
+                  <btn shape="circle" disabled color="dark" >dark</btn>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Sizes</h4>
+                  <btn shape="circle" size="lg" color="default" >Large button</btn>
+                  <btn shape="circle" color="red" >Default button</btn>
+                  <btn shape="circle" size="sm" color="blue" >Small button</btn>
+                  <btn shape="circle" size="xs" color="green" >Extra small button</btn>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Block Buttons</h4>
+                  <btn shape="circle" block theme="default" >Button</btn>
+                  <btn shape="circle" block color="red" >Button</btn>
+                  <btn shape="circle" block color="purple" >Button</btn>
+                  <btn shape="circle" block outline color="blue" >Button</btn>
+                  <btn shape="circle" block outline color="red" >Button</btn>
+                  <btn shape="circle" block outline type="submit" color="purple">Submit</btn>
+                  <btn shape="circle" block outline type="submit" color="yellow-mint">Submit</btn>
+                  <btn shape="circle" block outline type="submit" color="red-mint">Submit</btn>
+                  <btn shape="circle" block outline type="submit" color="green-sharp">Submit</btn>
+                </div>
+              </portlet>
+              <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+                <tabs mode="line">
+                  <tab-pane name="Fontawesome" cur>
+                    <div class="clearfix">
+                      <h4 class="block">Large Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="lg">
+                          Default<fa type="user"></fa>
+                        </btn>
+                        <btn shape="circle" color="red" size="lg">
+                          Red<fa type="edit"></fa>
+                        </btn>
+                        <btn shape="circle" color="blue" size="lg">
+                          Blue<fa type="file-o"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green<fa type="font"></fa>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="lg">
+                          Yellow<fa type="search"></fa>
+                        </btn>
+                        <btn shape="circle" color="purple" size="lg">
+                          Purple<fa type="times"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green<fa type="plus"></fa>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="lg">
+                          Dark<fa type="link"></fa>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Default Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default">
+                          Default<fa type="user"></fa>
+                        </btn>
+                        <btn shape="circle" color="red">
+                          Red<fa type="edit"></fa>
+                        </btn>
+                        <btn shape="circle" color="blue">
+                          Blue<fa type="file-o"></fa>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green<fa type="font"></fa>
+                        </btn>
+                        <btn shape="circle" color="yellow">
+                          Yellow<fa type="search"></fa>
+                        </btn>
+                        <btn shape="circle" color="purple">
+                          Purple<fa type="times"></fa>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green<fa type="plus"></fa>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade">
+                          Dark<fa type="link"></fa>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Small Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="sm">
+                          Default<fa type="user"></fa>
+                        </btn>
+                        <btn shape="circle" color="red" size="sm">
+                          Red<fa type="edit"></fa>
+                        </btn>
+                        <btn shape="circle" color="blue" size="sm">
+                          Blue<fa type="file-o"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="sm">
+                          Green<fa type="font"></fa>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="sm">
+                          Yellow<fa type="search"></fa>
+                        </btn>
+                        <btn shape="circle" color="purple" size="sm">
+                          Purple<fa type="times"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="sm">
+                          Green<fa type="plus"></fa>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="sm">
+                          Dark<fa type="link"></fa>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Extra Small</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="xs">
+                          Default<fa type="user"></fa>
+                        </btn>
+                        <btn shape="circle" color="red" size="xs">
+                          Red<fa type="edit"></fa>
+                        </btn>
+                        <btn shape="circle" color="blue" size="xs">
+                          Blue<fa type="file-o"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="xs">
+                          Green<fa type="font"></fa>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="xs">
+                          Yellow<fa type="search"></fa>
+                        </btn>
+                        <btn shape="circle" color="purple" size="xs">
+                          Purple<fa type="times"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="xs">
+                          Green<fa type="plus"></fa>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="xs">
+                          Dark<fa type="link"></fa>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Icon Only Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="icon-only">
+                          <fa type="user"></fa>
+                        </btn>
+                        <btn shape="circle" color="red" size="icon-only">
+                          <fa type="edit"></fa>
+                        </btn>
+                        <btn shape="circle" color="blue" size="icon-only">
+                          <fa type="file-o"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="icon-only">
+                          <fa type="font"></fa>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="icon-only">
+                          <fa type="search"></fa>
+                        </btn>
+                        <btn shape="circle" color="purple" size="icon-only">
+                          <fa type="times"></fa>
+                        </btn>
+                        <btn shape="circle" color="green" size="icon-only">
+                          <fa type="plus"></fa>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="icon-only">
+                          <fa type="link"></fa>
+                        </btn>
+                      </p>
+                    </div>
+                  </tab-pane>
+                  <tab-pane name="Simple Line">
+                    <div class="clearfix">
+                      <h4 class="block">Large Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="lg">
+                          Default <icon type="social-dribbble"></icon>
+                        </btn>
+                        <btn shape="circle" color="red" size="lg">
+                          Red <icon type="crop"></icon>
+                        </btn>
+                        <btn shape="circle" color="blue" size="lg">
+                          Blue <icon type="screen-desktop"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green <icon type="badge"></icon>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="lg">
+                          Yellow <icon type="anchor"></icon>
+                        </btn>
+                        <btn shape="circle" color="purple" size="lg">
+                          Purple <icon type="bell"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green <icon type="present"></icon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="lg">
+                          Dark <icon type="pin"></icon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Default Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default">
+                          Default <icon type="social-dribbble"></icon>
+                        </btn>
+                        <btn shape="circle" color="red">
+                          Red <icon type="crop"></icon>
+                        </btn>
+                        <btn shape="circle" color="blue">
+                          Blue <icon type="screen-desktop"></icon>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green <icon type="badge"></icon>
+                        </btn>
+                        <btn shape="circle" color="yellow">
+                          Yellow <icon type="anchor"></icon>
+                        </btn>
+                        <btn shape="circle" color="purple">
+                          Purple <icon type="bell"></icon>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green <icon type="present"></icon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade">
+                          Dark <icon type="pin"></icon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Small Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="sm">
+                          Default <icon type="social-dribbble"></icon>
+                        </btn>
+                        <btn shape="circle" color="red" size="sm">
+                          Red <icon type="crop"></icon>
+                        </btn>
+                        <btn shape="circle" color="blue" size="sm">
+                          Blue <icon type="screen-desktop"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="sm">
+                          Green <icon type="badge"></icon>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="sm">
+                          Yellow <icon type="anchor"></icon>
+                        </btn>
+                        <btn shape="circle" color="purple" size="sm">
+                          Purple <icon type="bell"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="sm">
+                          Green <icon type="present"></icon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="sm">
+                          Dark <icon type="pin"></icon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Extra Small</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="xs">
+                          Default <icon type="social-dribbble"></icon>
+                        </btn>
+                        <btn shape="circle" color="red" size="xs">
+                          Red <icon type="crop"></icon>
+                        </btn>
+                        <btn shape="circle" color="blue" size="xs">
+                          Blue <icon type="screen-desktop"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="xs">
+                          Green <icon type="badge"></icon>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="xs">
+                          Yellow <icon type="anchor"></icon>
+                        </btn>
+                        <btn shape="circle" color="purple" size="xs">
+                          Purple <icon type="bell"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="xs">
+                          Green <icon type="present"></icon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="xs">
+                          Dark <icon type="pin"></icon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Icon Only Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="icon-only">
+                          <icon type="social-dribbble"></icon>
+                        </btn>
+                        <btn shape="circle" color="red" size="icon-only">
+                          <icon type="crop"></icon>
+                        </btn>
+                        <btn shape="circle" color="blue" size="icon-only">
+                          <icon type="screen-desktop"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="icon-only">
+                          <icon type="badge"></icon>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="icon-only">
+                          <icon type="anchor"></icon>
+                        </btn>
+                        <btn shape="circle" color="purple" size="icon-only">
+                          <icon type="bell"></icon>
+                        </btn>
+                        <btn shape="circle" color="green" size="icon-only">
+                          <icon type="present"></icon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="icon-only">
+                          <icon type="pin"></icon>
+                        </btn>
+                      </p>
+                    </div>
+                  </tab-pane>
+                  <tab-pane name="Glyphicon">
+                    <div class="clearfix">
+                      <h4 class="block">Large Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default" size="lg">
+                          Default <glyphicon type="cog"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="red" size="lg">
+                          Red <glyphicon type="calendar"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="blue" size="lg">
+                          Blue <glyphicon type="font"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green <glyphicon type="gift"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="yellow" size="lg">
+                          Yellow <glyphicon type="pencil"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="purple" size="lg">
+                          Purple <glyphicon type="bell"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="green" size="lg">
+                          Green <glyphicon type="tag"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade" size="lg">
+                          Dark <glyphicon type="user"></glyphicon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Default Buttons</h4>
+                      <p>
+                        <btn shape="circle" color="default">
+                          Default <glyphicon type="cog"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="red">
+                          Red <glyphicon type="calendar"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="blue">
+                          Blue <glyphicon type="font"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green <glyphicon type="gift"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="yellow">
+                          Yellow <glyphicon type="pencil"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="purple">
+                          Purple <glyphicon type="bell"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="green">
+                          Green <glyphicon type="tag"></glyphicon>
+                        </btn>
+                        <btn shape="circle" color="grey-cascade">
+                          Dark <glyphicon type="user"></glyphicon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Small Buttons</h4>
+                      <p>
+                        <btn color="default" size="sm">
+                          Default <glyphicon type="cog"></glyphicon>
+                        </btn>
+                        <btn color="red" size="sm">
+                          Red <glyphicon type="calendar"></glyphicon>
+                        </btn>
+                        <btn color="blue" size="sm">
+                          Blue <glyphicon type="font"></glyphicon>
+                        </btn>
+                        <btn color="green" size="sm">
+                          Green <glyphicon type="gift"></glyphicon>
+                        </btn>
+                        <btn color="yellow" size="sm">
+                          Yellow <glyphicon type="pencil"></glyphicon>
+                        </btn>
+                        <btn color="purple" size="sm">
+                          Purple <glyphicon type="bell"></glyphicon>
+                        </btn>
+                        <btn color="green" size="sm">
+                          Green <glyphicon type="tag"></glyphicon>
+                        </btn>
+                        <btn color="grey-cascade" size="sm">
+                          Dark <glyphicon type="user"></glyphicon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Extra Small</h4>
+                      <p>
+                        <btn color="default" size="xs">
+                          Default <glyphicon type="cog"></glyphicon>
+                        </btn>
+                        <btn color="red" size="xs">
+                          Red <glyphicon type="calendar"></glyphicon>
+                        </btn>
+                        <btn color="blue" size="xs">
+                          Blue <glyphicon type="font"></glyphicon>
+                        </btn>
+                        <btn color="green" size="xs">
+                          Green <glyphicon type="gift"></glyphicon>
+                        </btn>
+                        <btn color="yellow" size="xs">
+                          Yellow <glyphicon type="pencil"></glyphicon>
+                        </btn>
+                        <btn color="purple" size="xs">
+                          Purple <glyphicon type="bell"></glyphicon>
+                        </btn>
+                        <btn color="green" size="xs">
+                          Green <glyphicon type="tag"></glyphicon>
+                        </btn>
+                        <btn color="grey-cascade" size="xs">
+                          Dark <glyphicon type="user"></glyphicon>
+                        </btn>
+                      </p>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Icon Only Buttons</h4>
+                      <p>
+                        <btn color="default" size="icon-only">
+                          <glyphicon type="cog"></glyphicon>
+                        </btn>
+                        <btn color="red" size="icon-only">
+                          <glyphicon type="calendar"></glyphicon>
+                        </btn>
+                        <btn color="blue" size="icon-only">
+                          <glyphicon type="font"></glyphicon>
+                        </btn>
+                        <btn color="green" size="icon-only">
+                          <glyphicon type="gift"></glyphicon>
+                        </btn>
+                        <btn color="yellow" size="icon-only">
+                          <glyphicon type="pencil"></glyphicon>
+                        </btn>
+                        <btn color="purple" size="icon-only">
+                          <glyphicon type="bell"></glyphicon>
+                        </btn>
+                        <btn color="green" size="icon-only">
+                          <glyphicon type="tag"></glyphicon>
+                        </btn>
+                        <btn color="grey-cascade" size="icon-only">
+                          <glyphicon type="user"></glyphicon>
+                        </btn>
+                      </p>
+                    </div>
+                  </tab-pane>
+                  <tab-pane name="Metro">
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Large Icons Buttons</h4>
+                      <btn shape="circle" size="lg" color="default" klass="m-icon-big">
+                        Submit <i class="m-icon-big-swapleft"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="green" klass="m-icon-big">
+                        Submit <i class="m-icon-big-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="blue" klass="m-icon-big">
+                        Submit <i class="m-icon-big-swapdown m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="dark" klass="m-icon-big">
+                        Submit <i class="m-icon-big-swapup m-icon-white"></i>
+                      </btn>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Large Icons Only Buttons</h4>
+                      <btn shape="circle" size="lg" color="default" klass="m-icon-big m-icon-only">
+                        <i class="m-icon-big-swapleft"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="green" klass="m-icon-big m-icon-only">
+                        <i class="m-icon-big-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="blue" klass="m-icon-big m-icon-only">
+                        <i class="m-icon-big-swapdown m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="dark" klass="m-icon-big m-icon-only">
+                        <i class="m-icon-big-swapup m-icon-white"></i>
+                      </btn>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Block Large Icons</h4>
+                      <btn shape="circle" size="lg" color="blue" block klass="m-icon-big">Button
+                        <i class="m-icon-big-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" size="lg" color="green" block klass="m-icon-big"> Link
+                        <i class="m-icon-big-swapright m-icon-white"></i>
+                      </btn>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Defualt Icons Buttons</h4>
+                      <btn shape="circle" color="default" klass="m-icon"> Submit
+                        <i class="m-icon-swapleft"></i>
+                      </btn>
+                      <btn shape="circle" color="green" klass="m-icon"> Submit
+                        <i class="m-icon-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" color="blue" klass="m-icon"> Submit
+                        <i class="m-icon-swapdown m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" color="dark" klass="m-icon"> Submit
+                        <i class="m-icon-swapup m-icon-white"></i>
+                      </btn>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Defualt Icons Only Buttons</h4>
+                      <btn shape="circle"color="default" klass="m-icon m-icon-only">
+                        <i class="m-icon-swapleft"></i>
+                      </btn>
+                      <btn shape="circle" color="green" klass="m-icon m-icon-only">
+                        <i class="m-icon-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" color="blue" klass="m-icon m-icon-only">
+                        <i class="m-icon-swapdown m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" color="dark" klass="m-icon m-icon-only">
+                        <i class="m-icon-swapup m-icon-white"></i>
+                      </btn>
+                    </div>
+                    <div class="clearfix">
+                      <h4 class="block">Navigation Block Defualt Icons</h4>
+                      <btn shape="circle" color="blue" block klass="m-icon">Button
+                        <i class="m-icon-swapright m-icon-white"></i>
+                      </btn>
+                      <btn shape="circle" color="green" block klass="m-icon"> Link
+                        <i class="m-icon-swapright m-icon-white"></i>
+                      </btn>
+                    </div>
+                  </tab-pane>
+                </tabs>
+              </portlet>
+            </column>
+            <column :md="6">
+              <portlet title="BUTTON GROUPS" icon="settings" color="red" mode="light" bordered>
+                <h4 class="block">Basic Example</h4>
+                <div class="clearfix">
+                  <btn-group shape="circle">
+                    <btn>Left</btn>
+                    <btn>Middle</btn>
+                    <btn>Right</btn>
+                  </btn-group>
+                  <btn-group shape="circle">
+                     <btn color="red">Left</btn>
+                     <btn color="yellow">Middle</btn>
+                     <btn color="green">Right</btn>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Toolbar</h4>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group shape="circle">
+                      <btn>1</btn>
+                      <btn>2</btn>
+                      <btn>3</btn>
+                      <btn>4</btn>
+                    </btn-group>
+                    <btn-group shape="circle">
+                      <btn>5</btn>
+                      <btn>6</btn>
+                      <btn>7</btn>
+                    </btn-group>
+                    <btn-group>
+                      <btn shape="circle">8</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group>
+                       <btn shape="circle" color="red">1</btn>
+                       <btn shape="circle" color="green">2</btn>
+                       <btn shape="circle" color="blue">3</btn>
+                       <btn shape="circle" color="yellow">4</btn>
+                    </btn-group>
+                    <btn-group>
+                       <btn shape="circle" color="purple">5</btn>
+                       <btn shape="circle" color="dark">6</btn>
+                       <btn shape="circle" color="default">7</btn>
+                    </btn-group>
+                    <btn-group>
+                       <btn shape="circle" color="red">8</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Button Group Sizing</h4>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="lg">
+                       <btn shape="circle" color="red">Left</btn>
+                       <btn shape="circle" color="green">Middle</btn>
+                       <btn shape="circle" color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group>
+                       <btn shape="circle" color="red">Left</btn>
+                       <btn shape="circle" color="green">Middle</btn>
+                       <btn shape="circle" color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="sm">
+                       <btn shape="circle" color="red">Left</btn>
+                       <btn shape="circle" color="green">Middle</btn>
+                       <btn shape="circle" color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                  <btn-toolbar klass="margin-bottom-10">
+                    <btn-group size="xs">
+                       <btn shape="circle" color="red">Left</btn>
+                       <btn shape="circle" color="green">Middle</btn>
+                       <btn shape="circle" color="blue">Right</btn>
+                    </btn-group>
+                  </btn-toolbar>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Nesting Button Group</h4>
+                  <btn-group shape="circle">
+                     <btn theme="default">
+                      <fa type="user"></fa> Profile
+                    </btn>
+                     <btn theme="default">
+                      <fa type="cogs"></fa> Settings
+                    </btn>
+                     <btn theme="default">
+                      <fa type="bullhorn"></fa> Feeds
+                    </btn>
+                    <btn-dropdown text="More" theme="default">
+                       <btn color="white">Dropdown link</btn>
+                       <btn color="white">Dropdown link</btn>
+                    </btn-dropdown>
+                    <btn-dropdown text="Up" dropup theme="default">
+                       <btn color="white">Dropdown link</btn>
+                       <btn color="white">Dropdown link</btn>
+                    </btn-dropdown>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <btn-group shape="circle">
+                     <btn color="red">
+                      <fa type="user"></fa>  Profile
+                    </btn>
+                     <btn color="green">
+                      <fa type="cogs"></fa>  Settings
+                    </btn>
+                     <btn color="purple">
+                      <fa type="bullhorn"></fa> Feeds
+                    </btn>
+                    <btn-dropdown text="More" color="blue">
+                       <btn shape="circle" color="white">Dropdown link</btn>
+                       <btn shape="circle" color="red">Dropdown link</btn>
+                    </btn-dropdown>
+                    <btn-dropdown text="Up" dropup theme="default">
+                       <btn shape="circle" color="white" @click="doClick">Dropdown link</btn>
+                       <btn shape="circle" color="white" @click="doClick">Dropdown link</btn>
+                    </btn-dropdown>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Orientation Vertical</h4>
+                  <btn-group orientation="vertical" shape="circle">
+                    <btn>Button</btn>
+                    <btn-dropdown text="Actions">
+                       <btn color="white" @click="doClick">Button1</btn>
+                       <btn color="red" @click="doClick">Button2</btn>
+                       <btn @click="doClick">Button3</btn>
+                       <btn @click="doClick">Button4</btn>
+                    </btn-dropdown>
+                    <btn>Button</btn>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"></div>
+                  <btn-group orientation="vertical" shape="circle">
+                    <btn color="green">Button</btn>
+                    <btn-dropdown color="red" text="Actions">
+                       <btn color="white">Button1</btn>
+                       <btn color="red">Button2</btn>
+                      <btn>Button3</btn>
+                      <btn>Button4</btn>
+                    </btn-dropdown>
+                    <btn color="dark">Button</btn>
+                  </btn-group>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Justified Link Variation</h4>
+                  <btn-group justified shape="circle">
+                    <btn>Left</btn>
+                    <btn>Middle</btn>
+                    <btn>Right</btn>
+                  </btn-group>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <btn-group justified shape="circle">
+                    <btn @click="doClick" color="red">Left</btn>
+                    <btn @click="doClick" color="blue">Middle</btn>
+                    <btn @click="doClick" color="green">Right</btn>
+                  </btn-group>
+                </div>
+              </portlet>
+              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered>
+                <h4 class="block">Dropdown buttons</h4>
+                <btn-dropdown text="Tools" theme="default" textAlign="left" shape="circle">
+                  <btn color="white">Settings</btn>
+                  <btn color="white">Preferences</btn>
+                  <btn color="white">Window Options</btn>
+                  <btn-dropdown-divider></btn-dropdown-divider>
+                  <btn color="white">Help</btn>
+                </btn-dropdown>
+                <btn-dropdown text="Primary" color="red" textAlign="left" shape="circle">
+                   <btn shape="circle" color="white">Action</btn>
+                   <btn shape="circle" color="white">Another action</btn>
+                   <btn shape="circle" color="white">Something else here</btn>
+                  <btn-dropdown-divider></btn-dropdown-divider>
+                   <btn shape="circle" color="white">Separated link</btn>
+                </btn-dropdown>
+                <btn-dropdown text="Primary" color="purple" textAlign="left" shape="circle">
+                   <btn shape="circle" color="white">Action</btn>
+                   <btn shape="circle" color="white">Another action</btn>
+                   <btn shape="circle" color="white">Something else here</btn>
+                  <btn-dropdown-divider></btn-dropdown-divider>
+                   <btn shape="circle" color="white">Separated link</btn>
+                </btn-dropdown>
+                <h4 class="block">Dropdown button with icons</h4>
+                <btn-toolbar>
+                  <btn-dropdown text="User" icon="user" textAlign="left" shape="circle">
+                     <btn shape="circle" color="white">Edit</btn>
+                     <btn shape="circle" color="white">Delete</btn>
+                     <btn shape="circle" color="white">Ban</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn shape="circle" color="white">Make admin</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="User" color="purple" icon="user" textAlign="left" shape="circle">
+                     <btn shape="circle" color="white">
+                      <fa type="plus"></fa> Add
+                    </btn>
+                     <btn shape="circle" color="white">
+                      <fa type="edit"></fa> Edit
+                    </btn>
+                     <btn shape="circle" color="white">
+                      <fa type="remove"></fa> Delete
+                    </btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn shape="circle" color="white">
+                      Full Settings
+                    </btn>
+                  </btn-dropdown>
+                </btn-toolbar>
+              </portlet>
+              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered klass="util-btn-group-margin-bottom-5">
+                <div class="clearfix">
+                  <h4 class="block">Default Bootstrap Style</h4>
+                  <btn-dropdown text="" textAlign="left" shape="circle">
+                     <btn slot="before">Default</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="white">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="primary" textAlign="left" shape="circle">
+                     <btn slot="before" theme="primary">Primary</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="white">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="success" textAlign="left" shape="circle">
+                     <btn slot="before" theme="success">Success</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="white">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="info" textAlign="left" shape="circle">
+                     <btn slot="before" theme="info">Info</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="white">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="warning" textAlign="left" shape="circle">
+                     <btn slot="before" theme="warning">Warning</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="white">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="" theme="danger" textAlign="left" shape="circle">
+                     <btn slot="before" theme="danger">Danger</btn>
+                     <btn color="white">Settings</btn>
+                     <btn color="whte">Preferences</btn>
+                     <btn color="white">Window Options</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Help</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Metronic Style</h4>
+                  <btn-dropdown color="default"shape="circle">
+                     <btn color="default" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="blue" shape="circle">
+                     <btn color="blue" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="green" shape="circle">
+                     <btn color="green" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="red" shape="circle">
+                     <btn color="red" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="yellow" shape="circle">
+                     <btn color="yellow" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="dark" shape="circle">
+                     <btn color="dark" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="purple" shape="circle">
+                     <btn color="purple" slot="before">Default</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Dropdowns with Multilevel Submenu</h4>
+                  <btn-dropdown color="blue" shape="circle">
+                     <btn color="blue" slot="before">Dropdown</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown color="green" dropup shape="circle">
+                     <btn color="green" slot="before">Dropup</btn>
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+                <div class="clearfix">
+                  <h4 class="block">Sizing</h4>
+                  <btn-dropdown text="Large button" size="lg" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Small button" size="sm" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Extra Small button" size="xs" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <div class="clearfix margin-bottom-10"> </div>
+                  <!-- Large button group -->
+                  <btn-dropdown text="Large button" color="red" size="lg" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Small button" color="blue" size="sm" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                  <btn-dropdown text="Extra Small button" color="green" size="xs" shape="circle">
+                     <btn color="white">Action</btn>
+                     <btn color="white">Another action</btn>
+                     <btn color="white">Something else here</btn>
+                    <btn-dropdown-divider></btn-dropdown-divider>
+                     <btn color="white">Separated link</btn>
+                  </btn-dropdown>
+                </div>
+              </portlet>
+              <portlet title="Button States" icon="settings" color="green-sharp" mode="light" bordered>
+                <h4>Loading State</h4>
+                <div class="clearfix">
+                   <btn shape="circle" theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                   <btn shape="circle" theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                   <btn shape="circle" color="red" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                   <btn shape="circle" color="blue" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                </div>
+              </portlet>
+            </column>
+          </row>
+        </tab-pane>
       </tabs>
     </column>
   </row>
 </template>
+<style>
+  .util-btn-group-margin-bottom-5 .btn-group, .util-btn-margin-bottom-5 .btn{
+    margin-bottom: 5px!important;
+  }
+</style>
 <script>
-  import Row from '@/layouts/girds/row'
-  import Column from '@/layouts/girds/column'
-  import Icon from '@/components/icon/icon'
-  import Fa from '@/components/icon/faicon'
-  import Glyphicon from '@/components/icon/glyphicon'
-  import Portlet from '@/components/portlet/portlet'
-  import Tabs from '@/components/tabs/tabs'
-  import TabPane from '@/components/tabs/tab-pane'
-  import Btn from '@/components/button/btn'
-  import BtnGroup from '@/components/button/btn-group'
-  import BtnToolbar from '@/components/button/btn-toolbar'
-  import BtnDropdown from '@/components/button/btn-dropdown'
+  import {Row, Column} from '@/layouts/girds'
+  import {Icon, Fa, Glyphicon} from '@/components/icon'
+  import {Portlet} from '@/components/portlet'
+  import {Tabs, TabPane} from '@/components/tabs'
+  import {Btn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider} from '@/components/button'
 
   export default{
     data () {
@@ -927,7 +2116,8 @@
       Btn,
       BtnGroup,
       BtnToolbar,
-      BtnDropdown
+      BtnDropdown,
+      BtnDropdownDivider
     }
   }
 </script>

@@ -1,10 +1,12 @@
 <template>
-  <div :class="classes" @click="_toggle">
-    <btn :color="color" :theme="theme">
+  <div :class="classes">
+    <slot name="before"></slot>
+    <btn :color="color" :theme="theme" :size="size" :shape="shape" @click="_toggle">
       <fa :type="icon" v-if="icon"></fa>
       {{text}}
       <i :class="{'fa':true,'fa-angle-down':!dropup,'fa-angle-up':!!dropup}"></i>
     </btn>
+    <slot name="after"></slot>
     <div class="dropdown-menu" v-if="open" @mouseleave="_close">
       <slot></slot>
     </div>
@@ -14,14 +16,15 @@
   .btn-group > div.dropdown-menu .btn {
     width: 100%;
     float: right;
+    border: 0;
   }
-  .btn-group.btn-left > div.dropdown-menu .btn {
+  .btn-group.btn-text-left > div.dropdown-menu .btn {
     text-align: left;
   }
-  .btn-group.btn-center > div.dropdown-menu .btn {
+  .btn-group.btn-text-center > div.dropdown-menu .btn {
     text-align: center;
   }
-  .btn-group.btn-right > div.dropdown-menu .btn {
+  .btn-group.btn-text-right > div.dropdown-menu .btn {
     text-align: right;
   }
 </style>
@@ -34,11 +37,13 @@
 
   export default{
     props: {
-      text: {type: String, default: 'DropDown'},
-      textAlign: {type: String, default: 'center', validator: (value) => { return is.inArray(value, ['left', 'center', 'right']) }},
-      color: {type: String, default: 'default'},
-      theme: {type: String},
+      text: {type: String, default: ''},
+      textAlign: {type: String, default: 'left', validator: (value) => { return is.inArray(value, ['left', 'center', 'right']) }},
+      color: {type: String},
+      shape: {type: String, validator: (value) => { return is.inArray(value, ['circle']) }},
+      theme: {type: String, default: 'default'},
       icon: {type: String, validator: (value) => { return is.inArray(value, faicons) }},
+      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'xs']) }},
       dropup: {type: Boolean, default: false},
       klass: {type: String}
     },
@@ -48,7 +53,7 @@
           'btn-group': true,
           'open': this.open,
           'dropup': !!this.dropup,
-          [`btn-${this.textAlign}`]: !!this.textAlign,
+          [`btn-text-${this.textAlign}`]: !!this.textAlign,
           [this.klass]: !!this.klass
         })
       }

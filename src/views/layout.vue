@@ -2331,6 +2331,9 @@
     }
   }
 </script>
+<style>
+  @import "../animates/animated-vue/css/animated-vue.css";
+</style>
 <style lang='less'>
   @import "../../node_modules/font-awesome/less/font-awesome";
   @import "../../node_modules/simple-line-icons/less/simple-line-icons";
