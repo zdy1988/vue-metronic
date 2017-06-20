@@ -7,6 +7,7 @@
 </template>
 <script>
   export default {
+    name: 'TabPane',
     data () {
       return {
         active: false

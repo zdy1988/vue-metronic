@@ -2,7 +2,7 @@
   <div :class="classes">
     <div class="portlet-title">
       <div :class="caption">
-        <icon :type="icon" :class="caption" v-if="!!icon"></icon>
+        <icon :name="icon" :class="caption" v-if="!!icon"></icon>
         <span class="caption-subject sbold"> {{title}}</span>
         <span class="caption-helper" v-if="!!summary"> {{summary}}</span>
       </div>
@@ -24,38 +24,37 @@
 </template>
 <script>
   import $ from 'jquery'
-  import classNames from 'classnames'
-  import is from 'is_js'
   import colors from '@/untils/colors'
 
   import Icon from '@/components/icon/icon'
 
   export default{
+    name: 'Portlet',
     props: {
       title: {type: String, default: 'Portlet Title'},
       summary: {type: String},
       icon: {type: String},
-      mode: {type: String, default: 'box', validator: (value) => { return is.inArray(value, ['box', 'solid', 'light']) }},
-      color: {type: String, default: 'dark', validator: (value) => { return is.inArray(value, colors) }},
+      mode: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
+      color: {type: String, default: 'dark', validator: value => colors.indexOf(value) > -1},
       bordered: {type: Boolean},
       tools: {type: Boolean, default: true},
       klass: {type: String}
     },
     computed: {
       classes () {
-        return classNames({
-          'portlet': true,
-          [this.mode]: !!this.mode,
-          [this.color]: !!this.color && this.mode !== 'light',
-          'bordered': !!this.bordered,
-          [this.klass]: !!this.klass
-        })
+        return [
+          {'portlet': true},
+          {[this.mode]: !!this.mode},
+          {[this.color]: !!this.color && this.mode !== 'light'},
+          {'bordered': !!this.bordered},
+          {[this.klass]: !!this.klass}
+        ]
       },
       caption () {
-        return classNames({
-          'caption': true,
-          [`font-${this.color}`]: !!this.color && this.mode === 'light'
-        })
+        return [
+          {'caption': true},
+          {[`font-${this.color}`]: !!this.color && this.mode === 'light'}
+        ]
       }
     },
     methods: {

@@ -23,13 +23,11 @@
   </div>
 </template>
 <script>
-  import classNames from 'classnames'
-  import is from 'is_js'
-
   import Btn from '@/components/button/btn'
   import Masker from '@/components/element/masker'
 
   export default{
+    name: 'Modal',
     data () {
       return {
         zindex: 10050
@@ -39,21 +37,21 @@
       title: {type: String, default: 'Modal Title'},
       show: {type: Boolean, required: true},
       mask: {type: Boolean, default: true},
-      size: {type: String, validator: (value) => { return is.inArray(value, ['lg', 'sm', 'full']) }},
+      size: {type: String, validator: value => ['lg', 'sm', 'full'].indexOf(value) > -1},
       klass: {type: String}
     },
     computed: {
       classes () {
-        return classNames({
-          'modal': true,
-          [this.klass]: !!this.klass
-        })
+        return [
+          {'modal': true},
+          {[this.klass]: !!this.klass}
+        ]
       },
       dialogClasses () {
-        return classNames({
-          'modal-dialog': true,
-          [`modal-${this.size}`]: !!this.size
-        })
+        return [
+          {'modal-dialog': true},
+          {[`modal-${this.size}`]: !!this.size}
+        ]
       }
     },
     methods: {
@@ -70,7 +68,7 @@
         if (val) {
           var z = 10500
           this.$parent.$children.forEach((child) => {
-            if (child.$options._componentTag === 'modal' && child.show) {
+            if (child.$options.name === 'Modal' && child.show) {
               z += 1
             }
           })

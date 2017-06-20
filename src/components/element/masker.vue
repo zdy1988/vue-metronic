@@ -4,13 +4,13 @@
   </transition>
 </template>
 <script>
-  import is from 'is_js'
   import colors from '@/untils/colors'
 
   export default{
+    name: 'Masker',
     props: {
       show: {type: Boolean, default: false, required: true},
-      color: {type: String, default: 'dark', validator: (value) => { return is.inArray(value, colors) }},
+      color: {type: String, default: 'dark', validator: value => colors.indexOf(value) > -1},
       opacity: {type: Number, default: 0.5},
       zindex: {type: Number, default: 10049}
     }

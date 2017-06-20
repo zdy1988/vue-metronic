@@ -11,10 +11,8 @@ export {
 
 import icons from './icons'
 import faicons from './faicons'
-import glyphicons from './glyphicons'
 
 export {
   icons,
-  faicons,
-  glyphicons
+  faicons
 }

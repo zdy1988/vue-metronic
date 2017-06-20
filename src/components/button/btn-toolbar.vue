@@ -4,17 +4,17 @@
   </div>
 </template>
 <script>
-  import classNames from 'classnames'
   export default{
+    name: 'BtnToolbar',
     props: {
       klass: {type: String}
     },
     computed: {
       classes () {
-        return classNames({
-          'btn-toolbar': true,
-          [this.klass]: !!this.klass
-        })
+        return [
+          {'btn-toolbar': true},
+          {[this.klass]: !!this.klass}
+        ]
       }
     }
   }

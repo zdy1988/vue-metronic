@@ -4,7 +4,6 @@
 </div>
 </template>
 <script>
-  import classNames from 'classnames'
   import is from 'is_js'
 
   export default{
@@ -17,13 +16,13 @@
     },
     computed: {
       classes () {
-        return classNames({
-          [`col-xs-${this.xs}`]: !!this.xs,
-          [`col-sm-${this.sm}`]: !!this.sm,
-          [`col-md-${this.md}`]: !!this.md,
-          [`col-lg-${this.lg}`]: !!this.lg,
-          [this.klass]: !!this.klass
-        })
+        return [
+          {[`col-xs-${this.xs}`]: !!this.xs},
+          {[`col-sm-${this.sm}`]: !!this.sm},
+          {[`col-md-${this.md}`]: !!this.md},
+          {[`col-lg-${this.lg}`]: !!this.lg},
+          {[this.klass]: !!this.klass}
+        ]
       }
     }
   }

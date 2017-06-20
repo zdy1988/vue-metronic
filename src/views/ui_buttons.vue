@@ -116,28 +116,28 @@
                       <h4 class="block">Large Buttons</h4>
                       <p>
                         <btn color="default" size="lg">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn color="red" size="lg">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn color="blue" size="lg">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn color="green" size="lg">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn color="yellow" size="lg">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn color="purple" size="lg">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn color="green" size="lg">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn color="grey-cascade" size="lg">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -145,28 +145,28 @@
                       <h4 class="block">Default Buttons</h4>
                       <p>
                         <btn color="default">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn color="red">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn color="blue">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn color="green">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn color="yellow">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn color="purple">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn color="green">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn color="grey-cascade">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -174,28 +174,28 @@
                       <h4 class="block">Small Buttons</h4>
                       <p>
                         <btn color="default" size="sm">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn color="red" size="sm">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn color="blue" size="sm">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn color="green" size="sm">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn color="yellow" size="sm">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn color="purple" size="sm">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn color="green" size="sm">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn color="grey-cascade" size="sm">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -203,28 +203,28 @@
                       <h4 class="block">Extra Small</h4>
                       <p>
                         <btn color="default" size="xs">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn color="red" size="xs">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn color="blue" size="xs">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn color="green" size="xs">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn color="yellow" size="xs">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn color="purple" size="xs">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn color="green" size="xs">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn color="grey-cascade" size="xs">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -232,28 +232,28 @@
                       <h4 class="block">Icon Only Buttons</h4>
                       <p>
                         <btn color="default" size="icon-only">
-                          <fa type="user"></fa>
+                          <fa name="user"></fa>
                         </btn>
                         <btn color="red" size="icon-only">
-                          <fa type="edit"></fa>
+                          <fa name="edit"></fa>
                         </btn>
                         <btn color="blue" size="icon-only">
-                          <fa type="file-o"></fa>
+                          <fa name="file-o"></fa>
                         </btn>
                         <btn color="green" size="icon-only">
-                          <fa type="font"></fa>
+                          <fa name="font"></fa>
                         </btn>
                         <btn color="yellow" size="icon-only">
-                          <fa type="search"></fa>
+                          <fa name="search"></fa>
                         </btn>
                         <btn color="purple" size="icon-only">
-                          <fa type="times"></fa>
+                          <fa name="times"></fa>
                         </btn>
                         <btn color="green" size="icon-only">
-                          <fa type="plus"></fa>
+                          <fa name="plus"></fa>
                         </btn>
                         <btn color="grey-cascade" size="icon-only">
-                          <fa type="link"></fa>
+                          <fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -263,28 +263,28 @@
                       <h4 class="block">Large Buttons</h4>
                       <p>
                         <btn color="default" size="lg">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn color="red" size="lg">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn color="blue" size="lg">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn color="green" size="lg">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn color="yellow" size="lg">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn color="purple" size="lg">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn color="green" size="lg">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn color="grey-cascade" size="lg">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -292,28 +292,28 @@
                       <h4 class="block">Default Buttons</h4>
                       <p>
                         <btn color="default">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn color="red">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn color="blue">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn color="green">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn color="yellow">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn color="purple">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn color="green">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn color="grey-cascade">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -321,28 +321,28 @@
                       <h4 class="block">Small Buttons</h4>
                       <p>
                         <btn color="default" size="sm">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn color="red" size="sm">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn color="blue" size="sm">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn color="green" size="sm">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn color="yellow" size="sm">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn color="purple" size="sm">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn color="green" size="sm">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn color="grey-cascade" size="sm">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -350,28 +350,28 @@
                       <h4 class="block">Extra Small</h4>
                       <p>
                         <btn color="default" size="xs">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn color="red" size="xs">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn color="blue" size="xs">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn color="green" size="xs">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn color="yellow" size="xs">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn color="purple" size="xs">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn color="green" size="xs">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn color="grey-cascade" size="xs">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -379,175 +379,28 @@
                       <h4 class="block">Icon Only Buttons</h4>
                       <p>
                         <btn color="default" size="icon-only">
-                          <icon type="social-dribbble"></icon>
+                          <icon name="social-dribbble"></icon>
                         </btn>
                         <btn color="red" size="icon-only">
-                          <icon type="crop"></icon>
+                          <icon name="crop"></icon>
                         </btn>
                         <btn color="blue" size="icon-only">
-                          <icon type="screen-desktop"></icon>
+                          <icon name="screen-desktop"></icon>
                         </btn>
                         <btn color="green" size="icon-only">
-                          <icon type="badge"></icon>
+                          <icon name="badge"></icon>
                         </btn>
                         <btn color="yellow" size="icon-only">
-                          <icon type="anchor"></icon>
+                          <icon name="anchor"></icon>
                         </btn>
                         <btn color="purple" size="icon-only">
-                          <icon type="bell"></icon>
+                          <icon name="bell"></icon>
                         </btn>
                         <btn color="green" size="icon-only">
-                          <icon type="present"></icon>
+                          <icon name="present"></icon>
                         </btn>
                         <btn color="grey-cascade" size="icon-only">
-                          <icon type="pin"></icon>
-                        </btn>
-                      </p>
-                    </div>
-                  </tab-pane>
-                  <tab-pane name="Glyphicon">
-                    <div class="clearfix">
-                      <h4 class="block">Large Buttons</h4>
-                      <p>
-                        <btn color="default" size="lg">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="lg">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="lg">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="lg">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="lg">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="lg">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="lg">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="lg">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Default Buttons</h4>
-                      <p>
-                        <btn color="default">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Small Buttons</h4>
-                      <p>
-                        <btn color="default" size="sm">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="sm">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="sm">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="sm">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="sm">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="sm">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="sm">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="sm">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Extra Small</h4>
-                      <p>
-                        <btn color="default" size="xs">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="xs">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="xs">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="xs">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="xs">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="xs">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="xs">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="xs">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Icon Only Buttons</h4>
-                      <p>
-                        <btn color="default" size="icon-only">
-                          <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="icon-only">
-                          <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="icon-only">
-                          <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="icon-only">
-                          <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="icon-only">
-                          <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="icon-only">
-                          <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="icon-only">
-                          <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="icon-only">
-                          <glyphicon type="user"></glyphicon>
+                          <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -720,13 +573,13 @@
                   <h4 class="block">Nesting Button Group</h4>
                   <btn-group>
                     <btn theme="default">
-                      <fa type="user"></fa> Profile
+                      <fa name="user"></fa> Profile
                     </btn>
                     <btn theme="default">
-                      <fa type="cogs"></fa> Settings
+                      <fa name="cogs"></fa> Settings
                     </btn>
                     <btn theme="default">
-                      <fa type="bullhorn"></fa> Feeds
+                      <fa name="bullhorn"></fa> Feeds
                     </btn>
                     <btn-dropdown text="More" theme="default">
                       <btn color="white">Dropdown link</btn>
@@ -740,13 +593,13 @@
                   <div class="clearfix margin-bottom-10"> </div>
                   <btn-group>
                     <btn color="red">
-                      <fa type="user"></fa>  Profile
+                      <fa name="user"></fa>  Profile
                     </btn>
                     <btn color="green">
-                      <fa type="cogs"></fa>  Settings
+                      <fa name="cogs"></fa>  Settings
                     </btn>
                     <btn color="purple">
-                      <fa type="bullhorn"></fa> Feeds
+                      <fa name="bullhorn"></fa> Feeds
                     </btn>
                     <btn-dropdown text="More" color="blue">
                       <btn color="white">Dropdown link</btn>
@@ -831,13 +684,13 @@
                   </btn-dropdown>
                   <btn-dropdown text="User" color="purple" icon="user" textAlign="left">
                     <btn color="white">
-                      <fa type="plus"></fa> Add
+                      <fa name="plus"></fa> Add
                     </btn>
                     <btn color="white">
-                      <fa type="edit"></fa> Edit
+                      <fa name="edit"></fa> Edit
                     </btn>
                     <btn color="white">
-                      <fa type="remove"></fa> Delete
+                      <fa name="remove"></fa> Delete
                     </btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">
@@ -1053,7 +906,7 @@
                 <div class="clearfix">
                   <h4 class="block">Metronic Custom Buttons</h4>
                   <p>
-                    <btn >default</btn>
+                    <btn shape="circle">default</btn>
                     <btn shape="circle" color="default" >default</btn>
                     <btn shape="circle" color="red" >red</btn>
                     <btn shape="circle" color="blue" >blue</btn>
@@ -1150,28 +1003,28 @@
                       <h4 class="block">Large Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="lg">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn shape="circle" color="red" size="lg">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn shape="circle" color="blue" size="lg">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="lg">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn shape="circle" color="yellow" size="lg">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn shape="circle" color="purple" size="lg">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="lg">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="lg">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -1179,28 +1032,28 @@
                       <h4 class="block">Default Buttons</h4>
                       <p>
                         <btn shape="circle" color="default">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn shape="circle" color="red">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn shape="circle" color="blue">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn shape="circle" color="green">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn shape="circle" color="yellow">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn shape="circle" color="purple">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn shape="circle" color="green">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn shape="circle" color="grey-cascade">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -1208,28 +1061,28 @@
                       <h4 class="block">Small Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="sm">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn shape="circle" color="red" size="sm">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn shape="circle" color="blue" size="sm">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="sm">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn shape="circle" color="yellow" size="sm">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn shape="circle" color="purple" size="sm">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="sm">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="sm">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -1237,28 +1090,28 @@
                       <h4 class="block">Extra Small</h4>
                       <p>
                         <btn shape="circle" color="default" size="xs">
-                          Default<fa type="user"></fa>
+                          Default<fa name="user"></fa>
                         </btn>
                         <btn shape="circle" color="red" size="xs">
-                          Red<fa type="edit"></fa>
+                          Red<fa name="edit"></fa>
                         </btn>
                         <btn shape="circle" color="blue" size="xs">
-                          Blue<fa type="file-o"></fa>
+                          Blue<fa name="file-o"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="xs">
-                          Green<fa type="font"></fa>
+                          Green<fa name="font"></fa>
                         </btn>
                         <btn shape="circle" color="yellow" size="xs">
-                          Yellow<fa type="search"></fa>
+                          Yellow<fa name="search"></fa>
                         </btn>
                         <btn shape="circle" color="purple" size="xs">
-                          Purple<fa type="times"></fa>
+                          Purple<fa name="times"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="xs">
-                          Green<fa type="plus"></fa>
+                          Green<fa name="plus"></fa>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="xs">
-                          Dark<fa type="link"></fa>
+                          Dark<fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -1266,28 +1119,28 @@
                       <h4 class="block">Icon Only Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="icon-only">
-                          <fa type="user"></fa>
+                          <fa name="user"></fa>
                         </btn>
                         <btn shape="circle" color="red" size="icon-only">
-                          <fa type="edit"></fa>
+                          <fa name="edit"></fa>
                         </btn>
                         <btn shape="circle" color="blue" size="icon-only">
-                          <fa type="file-o"></fa>
+                          <fa name="file-o"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="icon-only">
-                          <fa type="font"></fa>
+                          <fa name="font"></fa>
                         </btn>
                         <btn shape="circle" color="yellow" size="icon-only">
-                          <fa type="search"></fa>
+                          <fa name="search"></fa>
                         </btn>
                         <btn shape="circle" color="purple" size="icon-only">
-                          <fa type="times"></fa>
+                          <fa name="times"></fa>
                         </btn>
                         <btn shape="circle" color="green" size="icon-only">
-                          <fa type="plus"></fa>
+                          <fa name="plus"></fa>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="icon-only">
-                          <fa type="link"></fa>
+                          <fa name="link"></fa>
                         </btn>
                       </p>
                     </div>
@@ -1297,28 +1150,28 @@
                       <h4 class="block">Large Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="lg">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn shape="circle" color="red" size="lg">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn shape="circle" color="blue" size="lg">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="lg">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn shape="circle" color="yellow" size="lg">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn shape="circle" color="purple" size="lg">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="lg">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="lg">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -1326,28 +1179,28 @@
                       <h4 class="block">Default Buttons</h4>
                       <p>
                         <btn shape="circle" color="default">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn shape="circle" color="red">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn shape="circle" color="blue">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn shape="circle" color="green">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn shape="circle" color="yellow">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn shape="circle" color="purple">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn shape="circle" color="green">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn shape="circle" color="grey-cascade">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -1355,28 +1208,28 @@
                       <h4 class="block">Small Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="sm">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn shape="circle" color="red" size="sm">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn shape="circle" color="blue" size="sm">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="sm">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn shape="circle" color="yellow" size="sm">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn shape="circle" color="purple" size="sm">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="sm">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="sm">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -1384,28 +1237,28 @@
                       <h4 class="block">Extra Small</h4>
                       <p>
                         <btn shape="circle" color="default" size="xs">
-                          Default <icon type="social-dribbble"></icon>
+                          Default <icon name="social-dribbble"></icon>
                         </btn>
                         <btn shape="circle" color="red" size="xs">
-                          Red <icon type="crop"></icon>
+                          Red <icon name="crop"></icon>
                         </btn>
                         <btn shape="circle" color="blue" size="xs">
-                          Blue <icon type="screen-desktop"></icon>
+                          Blue <icon name="screen-desktop"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="xs">
-                          Green <icon type="badge"></icon>
+                          Green <icon name="badge"></icon>
                         </btn>
                         <btn shape="circle" color="yellow" size="xs">
-                          Yellow <icon type="anchor"></icon>
+                          Yellow <icon name="anchor"></icon>
                         </btn>
                         <btn shape="circle" color="purple" size="xs">
-                          Purple <icon type="bell"></icon>
+                          Purple <icon name="bell"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="xs">
-                          Green <icon type="present"></icon>
+                          Green <icon name="present"></icon>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="xs">
-                          Dark <icon type="pin"></icon>
+                          Dark <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -1413,175 +1266,28 @@
                       <h4 class="block">Icon Only Buttons</h4>
                       <p>
                         <btn shape="circle" color="default" size="icon-only">
-                          <icon type="social-dribbble"></icon>
+                          <icon name="social-dribbble"></icon>
                         </btn>
                         <btn shape="circle" color="red" size="icon-only">
-                          <icon type="crop"></icon>
+                          <icon name="crop"></icon>
                         </btn>
                         <btn shape="circle" color="blue" size="icon-only">
-                          <icon type="screen-desktop"></icon>
+                          <icon name="screen-desktop"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="icon-only">
-                          <icon type="badge"></icon>
+                          <icon name="badge"></icon>
                         </btn>
                         <btn shape="circle" color="yellow" size="icon-only">
-                          <icon type="anchor"></icon>
+                          <icon name="anchor"></icon>
                         </btn>
                         <btn shape="circle" color="purple" size="icon-only">
-                          <icon type="bell"></icon>
+                          <icon name="bell"></icon>
                         </btn>
                         <btn shape="circle" color="green" size="icon-only">
-                          <icon type="present"></icon>
+                          <icon name="present"></icon>
                         </btn>
                         <btn shape="circle" color="grey-cascade" size="icon-only">
-                          <icon type="pin"></icon>
-                        </btn>
-                      </p>
-                    </div>
-                  </tab-pane>
-                  <tab-pane name="Glyphicon">
-                    <div class="clearfix">
-                      <h4 class="block">Large Buttons</h4>
-                      <p>
-                        <btn shape="circle" color="default" size="lg">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="red" size="lg">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="blue" size="lg">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="green" size="lg">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="yellow" size="lg">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="purple" size="lg">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="green" size="lg">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="grey-cascade" size="lg">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Default Buttons</h4>
-                      <p>
-                        <btn shape="circle" color="default">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="red">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="blue">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="green">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="yellow">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="purple">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="green">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn shape="circle" color="grey-cascade">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Small Buttons</h4>
-                      <p>
-                        <btn color="default" size="sm">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="sm">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="sm">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="sm">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="sm">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="sm">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="sm">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="sm">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Extra Small</h4>
-                      <p>
-                        <btn color="default" size="xs">
-                          Default <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="xs">
-                          Red <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="xs">
-                          Blue <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="xs">
-                          Green <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="xs">
-                          Yellow <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="xs">
-                          Purple <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="xs">
-                          Green <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="xs">
-                          Dark <glyphicon type="user"></glyphicon>
-                        </btn>
-                      </p>
-                    </div>
-                    <div class="clearfix">
-                      <h4 class="block">Icon Only Buttons</h4>
-                      <p>
-                        <btn color="default" size="icon-only">
-                          <glyphicon type="cog"></glyphicon>
-                        </btn>
-                        <btn color="red" size="icon-only">
-                          <glyphicon type="calendar"></glyphicon>
-                        </btn>
-                        <btn color="blue" size="icon-only">
-                          <glyphicon type="font"></glyphicon>
-                        </btn>
-                        <btn color="green" size="icon-only">
-                          <glyphicon type="gift"></glyphicon>
-                        </btn>
-                        <btn color="yellow" size="icon-only">
-                          <glyphicon type="pencil"></glyphicon>
-                        </btn>
-                        <btn color="purple" size="icon-only">
-                          <glyphicon type="bell"></glyphicon>
-                        </btn>
-                        <btn color="green" size="icon-only">
-                          <glyphicon type="tag"></glyphicon>
-                        </btn>
-                        <btn color="grey-cascade" size="icon-only">
-                          <glyphicon type="user"></glyphicon>
+                          <icon name="pin"></icon>
                         </btn>
                       </p>
                     </div>
@@ -1754,13 +1460,13 @@
                   <h4 class="block">Nesting Button Group</h4>
                   <btn-group shape="circle">
                      <btn theme="default">
-                      <fa type="user"></fa> Profile
+                      <fa name="user"></fa> Profile
                     </btn>
                      <btn theme="default">
-                      <fa type="cogs"></fa> Settings
+                      <fa name="cogs"></fa> Settings
                     </btn>
                      <btn theme="default">
-                      <fa type="bullhorn"></fa> Feeds
+                      <fa name="bullhorn"></fa> Feeds
                     </btn>
                     <btn-dropdown text="More" theme="default">
                        <btn color="white">Dropdown link</btn>
@@ -1774,13 +1480,13 @@
                   <div class="clearfix margin-bottom-10"> </div>
                   <btn-group shape="circle">
                      <btn color="red">
-                      <fa type="user"></fa>  Profile
+                      <fa name="user"></fa>  Profile
                     </btn>
                      <btn color="green">
-                      <fa type="cogs"></fa>  Settings
+                      <fa name="cogs"></fa>  Settings
                     </btn>
                      <btn color="purple">
-                      <fa type="bullhorn"></fa> Feeds
+                      <fa name="bullhorn"></fa> Feeds
                     </btn>
                     <btn-dropdown text="More" color="blue">
                        <btn shape="circle" color="white">Dropdown link</btn>
@@ -1865,13 +1571,13 @@
                   </btn-dropdown>
                   <btn-dropdown text="User" color="purple" icon="user" textAlign="left" shape="circle">
                      <btn shape="circle" color="white">
-                      <fa type="plus"></fa> Add
+                      <fa name="plus"></fa> Add
                     </btn>
                      <btn shape="circle" color="white">
-                      <fa type="edit"></fa> Edit
+                      <fa name="edit"></fa> Edit
                     </btn>
                      <btn shape="circle" color="white">
-                      <fa type="remove"></fa> Delete
+                      <fa name="remove"></fa> Delete
                     </btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn shape="circle" color="white">
@@ -2081,7 +1787,7 @@
 </style>
 <script>
   import {Row, Column} from '@/layouts/girds'
-  import {Icon, Fa, Glyphicon} from '@/components/icon'
+  import {Icon, Fa} from '@/components/icon'
   import {Portlet} from '@/components/portlet'
   import {Tabs, TabPane} from '@/components/tabs'
   import {Btn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider} from '@/components/button'
@@ -2109,7 +1815,6 @@
       Column,
       Icon,
       Fa,
-      Glyphicon,
       Portlet,
       Tabs,
       TabPane,

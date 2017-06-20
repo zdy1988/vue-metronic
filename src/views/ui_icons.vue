@@ -34,26 +34,22 @@
           </span>
         </row>
       </tab-pane>
-      <tab-pane name=" Glyphicons ">
-
-      </tab-pane>
     </tabs>
   </column>
 </row>
 </template>
 <script>
   import {Row, Column} from '@/layouts/girds'
-  import {Icon, Fa, Glyphicon} from '@/components/icon'
+  import {Icon, Fa} from '@/components/icon'
   import {Tabs, TabPane} from '@/components/tabs'
 
-  import {icons, faicons, glyphicons} from '@/untils'
+  import {icons, faicons} from '@/untils'
 
   export default{
     data () {
       return {
         icons: icons,
-        faicons: faicons,
-        glyphicons: glyphicons
+        faicons: faicons
       }
     },
     components: {
@@ -61,7 +57,6 @@
       Column,
       Icon,
       Fa,
-      Glyphicon,
       Tabs,
       TabPane
     }

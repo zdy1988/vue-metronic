@@ -4,23 +4,32 @@
   </span>
 </template>
 <script>
-  import classNames from 'classnames'
-  import is from 'is_js'
   import colors from '@/untils/colors'
 
   export default{
+    name: 'FaStack',
     props: {
-      color: {type: String, validator: (value) => { return is.inArray(value, colors) }},
-      size: {type: String, default: 'lg', validator: (value) => { return is.inArray(value, ['lg', '2x', '3x', '4x', '5x']) }},
+      color: {type: String, validator: value => colors.indexOf(value) > -1},
+      size: {type: String, default: 'lg', validator: value => ['lg', '2x', '3x', '4x', '5x'].indexOf(value) > -1},
       klass: {type: String}
     },
     computed: {
       classes () {
-        return classNames({
-          'fa-stack': true,
-          [`font-${this.color}`]: !!this.color,
-          [`fa-${this.size}`]: !!this.size,
-          [this.klass]: !!this.klass
+        return [
+          {'fa-stack': true},
+          {[`font-${this.color}`]: !!this.color},
+          {[`fa-${this.size}`]: !!this.size},
+          {[this.klass]: !!this.klass}
+        ]
+      }
+    },
+    mounted () {
+      if (this.$children.length >= 2) {
+        var index = 1
+        this.$children.forEach(function (child) {
+          if (child.$options.name === 'Fa') {
+            child.stack = index + 'x'
+          }
         })
       }
     }
