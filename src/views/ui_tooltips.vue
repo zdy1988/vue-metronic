@@ -55,10 +55,87 @@
             </tooltip>
           </column>
           <column :md=4 class="text-center">
-            <tooltip :content="msg" placement="top" :triggers="['focus','hover']">
+            <tooltip :content="msg" placement="top" :triggers="['hover','focus']">
               <btn>focus + hover</btn>
             </tooltip>
           </column>
+        </row>
+        <h4 class="block">Content via properties or slots</h4>
+        <row>
+          <column :md=6 class="text-center">
+            <tooltip :content="tooltipContent" placement="top" :triggers="['focus']">
+              <btn>Using properties</btn>
+            </tooltip>
+          </column>
+          <column :md=6 class="text-center">
+            <tooltip placement="top" :triggers="['focus']">
+              <btn>Using slots</btn>
+              <div slot="content">
+                Embedding content
+                <span style="color: red;">using slots</span>
+                affords you
+              </div>
+            </tooltip>
+          </column>
+        </row>
+        <h4 class="block">Delay</h4>
+        <row>
+          <column :md=4 class="text-center">
+            <tooltip :delay="1000" content="Sorry, I'm a little sleepy." triggers="focus">
+              <btn>1000ms</btn>
+            </tooltip>
+          </column>
+          <column :md=4 class="text-center">
+            <tooltip :delay="{show: 1000, hide: 0}" content="This will disappear right away!" triggers="focus">
+              <btn>1000ms on show</btn>
+            </tooltip>
+          </column>
+          <column :md=4 class="text-center">
+            <tooltip :delay="{show: 0, hide: 1000}" content="This will disappear after a second's delay." triggers="focus">
+              <btn>1000ms on hide</btn>
+            </tooltip>
+          </column>
+        </row>
+        <h4 class="block">Popover</h4>
+        <row>
+          <row>
+            <column :md=3 class="text-center">
+              <popover placement="top">
+                <btn>top</btn>
+                <div slot="content">
+                  <btn>{{msg}}</btn>
+                </div>
+              </popover>
+            </column>
+            <column :md=3 class="text-center">
+              <popover placement="left">
+                <btn>left</btn>
+                <div slot="content">
+                  <btn>{{msg}}</btn>
+                </div>
+              </popover>
+            </column>
+            <column :md=3 class="text-center">
+              <popover placement="right">
+                <btn>right</btn>
+                <div slot="content">
+                  <btn>{{msg}}</btn>
+                </div>
+              </popover>
+            </column>
+            <column :md=3 class="text-center">
+              <popover placement="bottom">
+                <btn>bottom</btn>
+                <div slot="content">
+                  <btn>{{msg}}</btn>
+                  <btn>{{msg}}</btn>
+                  <btn>{{msg}}</btn>
+                  <btn>{{msg}}</btn>
+                  <btn>{{msg}}</btn>
+                </div>
+              </popover>
+            </column>
+          </row>
         </row>
       </portlet>
     </column>
@@ -69,12 +146,14 @@
   import {Portlet} from '@/components/portlet'
   import Btn from '@/components/button/btn'
   import Tooltip from '@/components/tooltip/tooltip'
+  import Popover from '@/components/popover/popover'
 
   export default{
     data () {
       return {
         msg: 'hello vue!',
-        placement: 'top'
+        placement: 'top',
+        tooltipContent: 'Embedding content using properties is easier as well as simpler to make dynamic.'
       }
     },
     components: {
@@ -82,7 +161,8 @@
       Column,
       Portlet,
       Btn,
-      Tooltip
+      Tooltip,
+      Popover
     }
   }
 </script>

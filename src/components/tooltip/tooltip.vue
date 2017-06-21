@@ -1,12 +1,10 @@
 <template>
   <div>
-    <div ref="trigger" style="display:inline-block;">
-      <slot></slot>
-    </div>
+    <span ref="trigger"><slot></slot></span>
     <div :class="classes" ref="popover">
       <div class="tooltip-arrow"></div>
       <div class="tooltip-inner">
-        {{content}}
+        <slot name="content"><span v-html="content"></span></slot>
       </div>
     </div>
   </div>
@@ -24,7 +22,7 @@
       classes () {
         return [
           {'tooltip': true},
-          {'fade in': this.visible},
+          {'in show': this.visible},
           {[this.placement]: !!this.placement}
         ]
       }

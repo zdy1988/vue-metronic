@@ -20,6 +20,7 @@ export default {
   data () {
     return {
       visible: this.show,
+      debounce: 300,
       lastEvent: null
     }
   },
@@ -120,7 +121,7 @@ export default {
       removeTriggers.forEach(item => this.removeListener(item))
     },
     eventHandler (e) {
-      if (this.normalizedTriggers.length > 1) {
+      if (this.normalizedTriggers.length > 1 && this.debounce > 0 && this.lastEvent !== null && e.timeStamp <= this.lastEvent + this.debounce) {
         return
       }
       for (const trigger in TRIGGER_LISTENERS) {
@@ -128,6 +129,7 @@ export default {
           if (event === e.type) {
             const action = TRIGGER_LISTENERS[trigger][event]
             this[action].call()
+            this.lastEvent = e.timeStamp
             return
           }
         }
@@ -166,9 +168,12 @@ export default {
       }
     },
     refreshPosition () {
-      if (!this.$tether) {
+      if (this.$tether) {
         this.$nextTick(() => {
+          var display = this.$popover.style.display
+          this.$popover.style.display = 'block'
           this.$tether.position()
+          this.$popover.style.display = display
         })
       }
     },
@@ -191,13 +196,9 @@ export default {
       })
     },
     _hide () {
-      this._delay(true, () => {
+      this._delay(false, () => {
         clearTimeout(this.$timeout)
         this.visible = false
-        this.$timeout = setTimeout(() => {
-          clearTimeout(this.$timeout)
-          this.destroyTether()
-        }, 150)
       })
     },
     _toggle (show) {
