@@ -3,6 +3,7 @@
  */
 
 import Btn from './btn'
+import LinkBtn from './link-btn'
 import BtnGroup from './btn-group'
 import BtnToolbar from './btn-toolbar'
 import BtnDropdown from './btn-dropdown'
@@ -10,6 +11,7 @@ import BtnDropdownDivider from './btn-dropdown-divider'
 
 export {
   Btn,
+  LinkBtn,
   BtnGroup,
   BtnToolbar,
   BtnDropdown,

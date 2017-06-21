@@ -1,19 +1,19 @@
 <template>
-  <button :type="type" :class="classes" :disabled="disabled || loading" @click="_click">
+  <a :href="href" :class="classes" :disabled="disabled || loading" @click="_click">
     <animated-swing>
       <span v-if="!loading" key="slot"><slot></slot></span>
       <span v-else key="loading">{{loadingText}}</span>
     </animated-swing>
-  </button>
+  </a>
 </template>
 <script>
   import _btn from './_btn'
 
   export default{
-    name: 'Btn',
+    name: 'LinkBtn',
     mixins: [_btn],
     props: {
-      type: {type: String, default: 'button', validator: value => ['button', 'submit', 'reset'].indexOf(value) > -1}
+      href: {type: String, default: 'javascript:;'}
     }
   }
 </script>

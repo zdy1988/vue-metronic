@@ -29,8 +29,8 @@
     mounted () {
       if (this.justified) {
         this.$children.forEach((child) => {
-          if (child.$options.name === 'Btn') {
-            child.itself = 'a'
+          if (child.$options.name !== 'LinkBtn') {
+            console.error('attribute "justified" only support type "LinkBtn"!')
           }
         })
       }

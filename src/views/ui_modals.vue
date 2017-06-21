@@ -87,9 +87,7 @@
         <tr>
           <td> Long Modals </td>
           <td>
-            <tooltip content="test for tooltip">
-              <a class=" btn dark btn-outline sbold" data-toggle="modal" href="#long"> View Demo </a>
-            </tooltip>
+            <a class=" btn dark btn-outline sbold" data-toggle="modal" href="#long"> View Demo </a>
           </td>
         </tr>
         </tbody></table>
@@ -102,7 +100,6 @@
   import Portlet from '@/components/portlet/portlet'
   import Modal from '@/components/modal/modal'
   import Btn from '@/components/button/btn'
-  import Tooltip from '@/components/tooltip/tooltip'
 
   export default{
     data () {
@@ -121,8 +118,7 @@
       Row,
       Column,
       Portlet,
-      Btn,
-      Tooltip
+      Btn
     }
   }
 </script>

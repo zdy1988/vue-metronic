@@ -638,15 +638,15 @@
                 <div class="clearfix">
                   <h4 class="block">Justified Link Variation</h4>
                   <btn-group justified>
-                    <btn>Left</btn>
-                    <btn>Middle</btn>
-                    <btn>Right</btn>
+                    <link-btn>Left</link-btn>
+                    <link-btn>Middle</link-btn>
+                    <link-btn>Right</link-btn>
                   </btn-group>
                   <div class="clearfix margin-bottom-10"> </div>
                   <btn-group justified>
-                    <btn @click="doClick" color="red">Left</btn>
-                    <btn @click="doClick" color="blue">Middle</btn>
-                    <btn @click="doClick" color="green">Right</btn>
+                    <link-btn @click="doClick" color="red">Left</link-btn>
+                    <link-btn @click="doClick" color="blue">Middle</link-btn>
+                    <link-btn @click="doClick" color="green">Right</link-btn>
                   </btn-group>
                 </div>
               </portlet>
@@ -1525,15 +1525,15 @@
                 <div class="clearfix">
                   <h4 class="block">Justified Link Variation</h4>
                   <btn-group justified shape="circle">
-                    <btn>Left</btn>
-                    <btn>Middle</btn>
-                    <btn>Right</btn>
+                    <link-btn>Left</link-btn>
+                    <link-btn>Middle</link-btn>
+                    <link-btn>Right</link-btn>
                   </btn-group>
                   <div class="clearfix margin-bottom-10"> </div>
                   <btn-group justified shape="circle">
-                    <btn @click="doClick" color="red">Left</btn>
-                    <btn @click="doClick" color="blue">Middle</btn>
-                    <btn @click="doClick" color="green">Right</btn>
+                    <link-btn @click="doClick" color="red">Left</link-btn>
+                    <link-btn @click="doClick" color="blue">Middle</link-btn>
+                    <link-btn @click="doClick" color="green">Right</link-btn>
                   </btn-group>
                 </div>
               </portlet>
@@ -1790,7 +1790,7 @@
   import {Icon, Fa} from '@/components/icon'
   import {Portlet} from '@/components/portlet'
   import {Tabs, TabPane} from '@/components/tabs'
-  import {Btn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider} from '@/components/button'
+  import {Btn, LinkBtn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider} from '@/components/button'
 
   export default{
     data () {
@@ -1819,6 +1819,7 @@
       Tabs,
       TabPane,
       Btn,
+      LinkBtn,
       BtnGroup,
       BtnToolbar,
       BtnDropdown,

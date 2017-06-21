@@ -16,7 +16,8 @@ export default new VueRouter({
         {path: 'ui_modals', component: resolve => require(['@/views/ui_modals'], resolve)},
         {path: 'ui_icons', component: resolve => require(['@/views/ui_icons'], resolve)},
         {path: 'ui_buttons', component: resolve => require(['@/views/ui_buttons'], resolve)},
-        {path: 'ui_tabs', component: resolve => require(['@/views/ui_tabs'], resolve)}
+        {path: 'ui_tabs', component: resolve => require(['@/views/ui_tabs'], resolve)},
+        {path: 'ui_tooltips', component: resolve => require(['@/views/ui_tooltips'], resolve)}
       ]
     }
   ]
