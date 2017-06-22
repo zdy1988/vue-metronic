@@ -46,7 +46,7 @@
     props: {
       id: {type: String},
       name: {type: String},
-      value: {type: String},
+      value: null,
       type: {type: String, default: 'text'},
       size: {type: String, default: '', validator: value => ['', 'lg', 'sm'].indexOf(value) > -1},
       disabled: {type: Boolean},
@@ -93,29 +93,27 @@
       }
     },
     methods: {
-      format (value) {
+      _input (e) {
+        this.$emit('input', e.target.value)
+      },
+      _change (e) {
+        const value = e.target.value
         if (this.formatter) {
           const formattedValue = this.formatter(value)
           if (formattedValue !== value) {
-            value = formattedValue
-            this.$refs.input.value = value
+            this.$refs.input.value = formattedValue
+            this.$emit('input', formattedValue)
           }
         }
-        return value
-      },
-      _input (e) {
-        const value = this.format(e.target.value)
-        this.$emit('input', value)
-      },
-      _change (e) {
-        const value = this.format(e.target.value)
-        this.$emit('input', value)
-        this.$emit('change', value)
+        this.$emit('change', e)
       },
       _keyup (e) {
         this.$emit('keyup', e)
       },
       _focus (e) {
+        setTimeout(function () {
+          e.target.select()
+        }, 0)
         this.$emit('focus', e)
       },
       _blur (e) {
