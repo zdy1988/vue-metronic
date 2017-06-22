@@ -12,7 +12,7 @@
     name: 'Fa',
     data () {
       return {
-        stack: {type: String}
+        stack: ''
       }
     },
     props: {

@@ -7,7 +7,7 @@
   </button>
 </template>
 <script>
-  import _btn from './_btn'
+  import _btn from './mixins/_btn'
 
   export default{
     name: 'Btn',
