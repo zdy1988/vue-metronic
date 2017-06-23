@@ -5,7 +5,7 @@
         <tab-pane name="Square Buttons" cur>
           <row>
             <column :md="6">
-              <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+              <portlet title="BUTTONS" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
                   <btn theme="default">Default</btn>
@@ -109,7 +109,7 @@
                   <btn block outline type="submit" color="green-sharp">Submit</btn>
                 </div>
               </portlet>
-              <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+              <portlet title="ICONIC" icon="globe" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <tabs mode="line">
                   <tab-pane name="Fontawesome" cur>
                     <div class="clearfix">
@@ -489,7 +489,7 @@
               </portlet>
             </column>
             <column :md="6">
-              <portlet title="BUTTON GROUPS" icon="settings" color="red" mode="light" bordered>
+              <portlet title="BUTTON GROUPS" icon="settings" color="red" theme="light" bordered>
                 <h4 class="block">Basic Example</h4>
                 <div class="clearfix">
                   <btn-group>
@@ -650,7 +650,7 @@
                   </btn-group>
                 </div>
               </portlet>
-              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered>
+              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4 class="block">Dropdown buttons</h4>
                 <btn-dropdown text="Tools" theme="default" textAlign="left">
                   <btn color="white">Settings</btn>
@@ -699,7 +699,7 @@
                   </btn-dropdown>
                 </btn-toolbar>
               </portlet>
-              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered klass="util-btn-group-margin-bottom-5">
+              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered klass="util-btn-group-margin-bottom-5">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Style</h4>
                   <btn-dropdown text="" textAlign="left">
@@ -877,7 +877,7 @@
                   </btn-dropdown>
                 </div>
               </portlet>
-              <portlet title="Button States" icon="settings" color="green-sharp" mode="light" bordered>
+              <portlet title="Button States" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4>Loading State</h4>
                 <div class="clearfix">
                   <btn theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
@@ -892,7 +892,7 @@
         <tab-pane name="Circle Buttons">
           <row>
             <column :md="6">
-              <portlet title="BUTTONS" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+              <portlet title="BUTTONS" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
                   <btn shape="circle" theme="default">Default</btn>
@@ -996,7 +996,7 @@
                   <btn shape="circle" block outline type="submit" color="green-sharp">Submit</btn>
                 </div>
               </portlet>
-              <portlet title="ICONIC" icon="globe" summary="tasks summary..." mode="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
+              <portlet title="ICONIC" icon="globe" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <tabs mode="line">
                   <tab-pane name="Fontawesome" cur>
                     <div class="clearfix">
@@ -1376,7 +1376,7 @@
               </portlet>
             </column>
             <column :md="6">
-              <portlet title="BUTTON GROUPS" icon="settings" color="red" mode="light" bordered>
+              <portlet title="BUTTON GROUPS" icon="settings" color="red" theme="light" bordered>
                 <h4 class="block">Basic Example</h4>
                 <div class="clearfix">
                   <btn-group shape="circle">
@@ -1537,7 +1537,7 @@
                   </btn-group>
                 </div>
               </portlet>
-              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered>
+              <portlet title="DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4 class="block">Dropdown buttons</h4>
                 <btn-dropdown text="Tools" theme="default" textAlign="left" shape="circle">
                   <btn color="white">Settings</btn>
@@ -1586,7 +1586,7 @@
                   </btn-dropdown>
                 </btn-toolbar>
               </portlet>
-              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" mode="light" bordered klass="util-btn-group-margin-bottom-5">
+              <portlet title="BUTTON DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered klass="util-btn-group-margin-bottom-5">
                 <div class="clearfix">
                   <h4 class="block">Default Bootstrap Style</h4>
                   <btn-dropdown text="" textAlign="left" shape="circle">
@@ -1764,7 +1764,7 @@
                   </btn-dropdown>
                 </div>
               </portlet>
-              <portlet title="Button States" icon="settings" color="green-sharp" mode="light" bordered>
+              <portlet title="Button States" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4>Loading State</h4>
                 <div class="clearfix">
                    <btn shape="circle" theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>

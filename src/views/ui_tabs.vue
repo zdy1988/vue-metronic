@@ -1,7 +1,7 @@
 <template>
   <row>
     <column :md=6>
-      <portlet icon="social-dribbble" title="DEFAULT TABS" mode="light" color="purple-soft" bordered>
+      <portlet icon="social-dribbble" title="DEFAULT TABS" theme="light" color="purple-soft" bordered>
         <tabs>
           <tab-pane name='Section 1' cur>
             <p> Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
@@ -42,7 +42,7 @@
           </tab-pane>
         </tabs>
       </portlet>
-      <portlet icon="bubble" title="DEFAULT PILLS" mode="light" color="green-sharp" bordered>
+      <portlet icon="bubble" title="DEFAULT PILLS" theme="light" color="green-sharp" bordered>
         <tabs mode="pills">
           <tab-pane name='Section 1' cur>
             <p> Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
@@ -63,7 +63,7 @@
           </tab-pane>
         </tabs>
       </portlet>
-      <portlet title="TABS POSITION" mode="light" color="grey-salsa" bordered :tools="false">
+      <portlet title="TABS POSITION" theme="light" color="grey-salsa" bordered :tools="false">
         <select v-model="position" slot="actions" @change="change">
           <option value="top">top</option>
           <option value="left">left</option>

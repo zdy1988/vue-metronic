@@ -1,7 +1,7 @@
 <template>
   <row>
     <column :md=6>
-      <portlet title="TOOLTIPS" icon="settings" color="green-sharp" mode="light" bordered klass="util-btn-group-margin-bottom-5">
+      <portlet title="TOOLTIPS" icon="settings" color="green-sharp" theme="light" bordered klass="util-btn-group-margin-bottom-5">
         <h4 class="block">Placement</h4>
         <row>
           <column :md=3 class="text-center">

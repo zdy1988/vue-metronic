@@ -4,8 +4,8 @@ Custom buttons based on bootstrap SASS
 
 .btn {
 	outline: none !important;
-    @if $theme-type == "default" { 
-	   box-shadow: none !important;   
+    @if $theme-type == "default" {
+	   box-shadow: none !important;
     }
 
     &:hover {
@@ -18,7 +18,7 @@ Custom buttons based on bootstrap SASS
 }
 
 /***
-Custom color buttons 
+Custom color buttons
 ***/
 
 @each $name, $colors in $component-colors {
@@ -26,15 +26,15 @@ Custom color buttons
         @include button-variant(map-get($colors, font), map-get($colors, base), map-get($colors, base));
     }
 
-    .btn.btn-outline.#{$name} {  
+    .btn.btn-outline.#{$name} {
         border-color: map-get($colors, base);
         color: map-get($colors, base);
         background: none;
 
         &:hover,
-        &:active,  
+        &:active,
         &:active:hover,
-        &:active:focus,     
+        &:active:focus,
         &:focus,
         &.active {
             border-color: map-get($colors, base);
@@ -42,10 +42,10 @@ Custom color buttons
             background-color: map-get($colors, base);
         }
     }
-  
-    .btn.#{$name}-stripe { 
+
+    .btn.#{$name}-stripe {
         border-left: 4px solid map-get($colors, base) !important;
-    }  
+    }
 
 
     .btn.#{$name}.btn-no-border:not(.active) {
@@ -57,7 +57,7 @@ Custom color buttons
 /* Circle Buttons */
 
 .btn-circle {
-  border-radius: 25px !important;  
+  border-radius: 25px !important;
   overflow: hidden;
 }
 
@@ -126,27 +126,27 @@ Custom color buttons
     }
 }
 
-@if $theme-type == "material-design" { 
-    $uppercase-padding:               8px 14px 7px 14px !default;  
+@if $theme-type == "material-design" {
+    $uppercase-padding:               8px 14px 7px 14px !default;
     $uppercase-padding-lg:            12px 26px 10px 26px !default;
     $uppercase-padding-sm:            6px 18px 6px 18px !default;
-    $uppercase-padding-xs:            3px 8px 3px 8px !default; 
+    $uppercase-padding-xs:            3px 8px 3px 8px !default;
 
     .btn:not(.md-skip, .bs-select-all, .bs-deselect-all) {
         font-size: 12px;
         font-weight: 600;
-        text-transform: uppercase;    
+        text-transform: uppercase;
         transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-        @include border-radius($general-border-radius);          
-        overflow: hidden;  
-        position: relative;  
+        @include border-radius($general-border-radius);
+        overflow: hidden;
+        position: relative;
         user-select: none;
-        
-        @extend .md-shadow-z-1;    
 
-        .btn-group > & {   
+        @extend .md-shadow-z-1;
+
+        .btn-group > & {
             @extend .md-shadow-z-1;
-        }  
+        }
 
         .search-form &,
         .btn-theme-panel & {
@@ -155,18 +155,18 @@ Custom color buttons
         }
 
         &.btn-link {
-            box-shadow: none;  
-            color: $link-color;      
+            box-shadow: none;
+            color: $link-color;
 
             &:hover {
                 text-decoration: none;
 
                 @extend .md-shadow-z-1;
             }
-        } 
+        }
 
         &:hover {
-            @extend .md-shadow-z-2-hover;            
+            @extend .md-shadow-z-2-hover;
         }
 
         &:active {
@@ -198,7 +198,7 @@ Custom color buttons
 
         &.btn-icon-only {
             padding-left: 0;
-            padding-right: 0;  
+            padding-right: 0;
 
             > i {
                 margin-left: 0;

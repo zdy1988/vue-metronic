@@ -1,7 +1,7 @@
 <template>
 <row>
   <Column :md=12>
-    <portlet mode='light' :icon='user' color='green-sharp' bordered title='Bootstrap Modal Demos' icon='bubble'>
+    <portlet theme='light' :icon='user' color='green-sharp' bordered title='Bootstrap Modal Demos' icon='bubble'>
       <table class="table table-hover table-striped table-bordered">
         <tbody>
         <tr>

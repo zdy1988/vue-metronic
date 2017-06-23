@@ -3,22 +3,22 @@
   <portlet>
     {{msg}}
   </portlet>
-  <portlet mode='box' color='green-sharp'>
+  <portlet theme='box' color='green-sharp'>
     {{msg}}
   </portlet>
-  <portlet mode='light' color='red'>
+  <portlet theme='light' color='red'>
     {{msg}}
   </portlet>
-  <portlet mode='box' color='blue-hoki' title='Portlet' summary='This Summary...' icon='user'>
+  <portlet theme='box' color='blue-hoki' title='Portlet' summary='This Summary...' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='solid' color='blue-hoki' title='Portlet' icon='user'>
+  <portlet theme='solid' color='blue-hoki' title='Portlet' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='light' color='red' title='Portlet' icon='user'>
+  <portlet theme='light' color='red' title='Portlet' icon='user'>
     {{msg}}
   </portlet>
-  <portlet mode='light' color='red' bordered title='Portlet' icon='user'>
+  <portlet theme='light' color='red' bordered title='Portlet' icon='user'>
     {{msg}}
   </portlet>
 </div>

@@ -34,7 +34,7 @@
       title: {type: String, default: 'Portlet Title'},
       summary: {type: String},
       icon: {type: String},
-      mode: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
+      theme: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
       color: {type: String, default: 'dark', validator: value => colors.indexOf(value) > -1},
       bordered: {type: Boolean},
       tools: {type: Boolean, default: true},
@@ -44,8 +44,8 @@
       classes () {
         return [
           {'portlet': true},
-          {[this.mode]: !!this.mode},
-          {[this.color]: !!this.color && this.mode !== 'light'},
+          {[this.theme]: !!this.theme},
+          {[this.color]: !!this.color && this.theme !== 'light'},
           {'bordered': !!this.bordered},
           {[this.klass]: !!this.klass}
         ]
@@ -53,7 +53,7 @@
       caption () {
         return [
           {'caption': true},
-          {[`font-${this.color}`]: !!this.color && this.mode === 'light'}
+          {[`font-${this.color}`]: !!this.color && this.theme === 'light'}
         ]
       }
     },

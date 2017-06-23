@@ -1,6 +1,6 @@
 <template>
   <div :class="iconGroupClasses" v-if="icon">
-    <fa :name="icon" v-if="icon"></fa>
+    <fa :name="icon" :color="iconColor" :spin="iconSpin" v-if="icon"></fa>
     <input ref="input"
            :is="type==='textarea'?'textarea':'input'"
            :class="classes"
@@ -33,16 +33,20 @@
   import Fa from '@/components/icon/faicon'
 
   export default {
+    name: 'Inp',
     props: {
       value: null,
       type: {type: String, default: 'text'},
       size: {type: String, default: '', validator: value => ['', 'lg', 'sm'].indexOf(value) > -1},
+      widthSize: {type: String, default: '', validator: value => ['', 'xlarge', 'large', 'medium', 'small', 'xsmall'].indexOf(value) > -1},
       disabled: {type: Boolean},
       readonly: {type: Boolean},
       placeholder: {type: String},
       formatter: {type: Function},
       icon: {type: String},
       iconPosition: {type: String, default: 'left', validator: value => ['left', 'right'].indexOf(value) > -1},
+      iconColor: {type: String},
+      iconSpin: {type: String},
       klass: {type: String}
     },
     computed: {
@@ -50,6 +54,7 @@
         return [
           {'form-control': true},
           {[`input-${this.size}`]: !!this.size},
+          {[`input-${this.widthSize}`]: !!this.widthSize},
           {[this.klass]: !!this.klass}
         ]
       },
