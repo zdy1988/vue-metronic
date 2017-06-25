@@ -1,5 +1,5 @@
 <template>
-  <div class="form-group row">
+  <div :class="classes">
     <label :class="labelClasses" v-if="label">{{label}}</label>
 
     <div :class="inputOrientationClasses">
@@ -8,19 +8,33 @@
     </div>
   </div>
 </template>
+<style>
+  @media (min-width: 992px) {
+    .form-group.form-group-horizontal .control-label{
+      text-align: right;
+      margin-bottom: 0;
+      padding-top: 7px;
+    }
+  }
+</style>
 <script>
   export default{
-    name: 'FmGroup',
+    name: 'Formbox',
     props: {
-      label: {type: String, required: true},
+      label: {type: String},
       help: {type: String},
       horizontal: {type: Boolean, default: false}
     },
     computed: {
+      classes () {
+        return [
+          {'form-group row': true},
+          {'form-group-horizontal': this.horizontal}
+        ]
+      },
       labelClasses () {
         return [
           {'control-label': true},
-          {'text-left': !this.horizontal},
           {'col-md-12': !this.horizontal},
           {'col-md-3': this.horizontal}
         ]

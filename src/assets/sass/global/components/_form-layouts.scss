@@ -46,7 +46,7 @@ Form Layouts
 
 .control-label {
   margin-top: 1px;
-  font-weight: normal;  
+  font-weight: normal;
 }
 
 .control-label,
@@ -74,18 +74,18 @@ Form Layouts
     }
 
     .form-actions {
-        padding: 20px 20px; 
+        padding: 20px 20px;
         margin: 0;
         background-color: #f5f5f5;
 
         @if $theme-type == "default" {
             border-top: 1px solid $general-panel-border-color;
         }
-        
+
         *zoom: 1;
 
         .portlet.light & {
-            background: none;   
+            background: none;
             padding-left: 0;
             padding-right: 0;
         }
@@ -95,10 +95,10 @@ Form Layouts
         }
 
         .portlet & {
-            @include border-radius(0 0 $general-border-radius $general-border-radius);   
+            @include border-radius(0 0 $general-border-radius $general-border-radius);
         }
 
-        @include clearfix(); 
+        @include clearfix();
 
         &.right {
             padding-left: 0;
@@ -114,7 +114,7 @@ Form Layouts
             padding-left: 20px;
             padding-right: 0;
             text-align: left;
-            
+
             .portlet.light & {
                 padding-left: 0;
             }
@@ -148,7 +148,7 @@ Form Layouts
                 margin-top: 3px;
                 float: left !important;
             }
-        }    
+        }
     }
 
     .form-section {
@@ -157,7 +157,7 @@ Form Layouts
 
         .form-fit & {
             margin-left: 20px;
-            margin-right: 20px;    
+            margin-right: 20px;
         }
 
         @if $theme-type == "default" {
@@ -170,7 +170,7 @@ Form Layouts
 
 .checkbox,
 .form-horizontal .checkbox {
-    padding: 0;   
+    padding: 0;
 
     > label {
         padding-left: 0;
@@ -226,13 +226,13 @@ Form Layouts
 
 /* Rows seperated form layout */
 
-.form .form-row-seperated  {
+.form.form-row-seperated  {
     .portlet-body {
         padding: 0;
     }
 
     .form-group {
-        margin: 0; 
+        margin: 0;
         border-bottom: 1px solid #efefef;
         padding: 15px 0;
 
@@ -248,7 +248,7 @@ Form Layouts
     }
 
     .form-body {
-        padding: 0;    
+        padding: 0;
     }
 
     .form-actions {
@@ -259,19 +259,19 @@ Form Layouts
 
 /* Form bordered */
 
-.form .form-bordered {
+.form.form-bordered {
 
     .form-group {
         margin: 0;
         border-bottom: 1px solid #efefef;
 
-        > div {  
-            padding: 15px; 
+        > div {
+            padding: 15px;
             border-left: 1px solid #efefef;
 
             @media (max-width: $screen-sm-max) { /* 991px */
-                border-left: 0;  
-            }    
+                border-left: 0;
+            }
         }
 
         &.last {
@@ -298,12 +298,15 @@ Form Layouts
     .form-body {
         margin: 0;
         padding: 0;
+        border: 1px solid #efefef;
+        border-bottom: 0;
     }
 
     .form-actions {
         margin-top: 0;
         padding-left: 16px !important;
         padding-right: 16px !important;
+        border-top: 0;
 
         @media (max-width: $screen-sm-max) { /* 991px */
             padding-left: 15px !important;
@@ -314,7 +317,7 @@ Form Layouts
 
 /* Horizontal bordered form */
 
-.form .form-horizontal.form-bordered {
+.form.form-bordered {
     &.form-row-stripped {
         .form-group:nth-child(even) {
             background-color: #fcfcfc;
@@ -336,7 +339,7 @@ Form Layouts
 
         .form-group:nth-child(even) {
             background-color: #fcfcfc;
-        } 
+        }
     }
 }
 

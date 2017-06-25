@@ -33,12 +33,13 @@
   import Fa from '@/components/icon/faicon'
 
   export default {
-    name: 'Inp',
+    name: 'Inputbox',
     props: {
       value: null,
       type: {type: String, default: 'text'},
-      size: {type: String, default: '', validator: value => ['', 'lg', 'sm'].indexOf(value) > -1},
-      widthSize: {type: String, default: '', validator: value => ['', 'xlarge', 'large', 'medium', 'small', 'xsmall'].indexOf(value) > -1},
+      size: {type: String, validator: value => ['lg', 'sm'].indexOf(value) > -1},
+      widthSize: {type: String, validator: value => ['xlarge', 'large', 'medium', 'small', 'xsmall'].indexOf(value) > -1},
+      shape: {type: String, validator: value => ['circle'].indexOf(value) > -1},
       disabled: {type: Boolean},
       readonly: {type: Boolean},
       placeholder: {type: String},
@@ -54,6 +55,7 @@
         return [
           {'form-control': true},
           {[`input-${this.size}`]: !!this.size},
+          {[`input-${this.shape}`]: !!this.shape},
           {[`input-${this.widthSize}`]: !!this.widthSize},
           {[this.klass]: !!this.klass}
         ]
