@@ -33,7 +33,7 @@
   import Fa from '@/components/icon/faicon'
 
   export default {
-    name: 'Inputbox',
+    name: 'Textbox',
     props: {
       value: null,
       type: {type: String, default: 'text'},

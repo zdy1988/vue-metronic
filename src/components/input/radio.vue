@@ -1,27 +1,21 @@
 <template>
-  <label :class="classes">
-    <slot></slot>
-    <input type="checkbox" :checked="status" :value="value" @change="_change" :disabled="disabled"/>
+  <label :class="classes"> <slot></slot>
+    <input type="radio" :checked="status" :value="value" :name="radioName" @change="_change" :disabled="disabled"/>
     <span></span>
   </label>
 </template>
-<style>
-  label {
-    -moz-user-select:none;
-    -webkit-user-select:none;
-    user-select:none;
-  }
-</style>
 <script>
   export default {
-    name: 'Checkbox',
+    name: 'Radio',
     data () {
       return {
-        status: false
+        status: false,
+        radioName: null
       }
     },
     props: {
       value: null,
+      name: null,
       checked: {type: Boolean, default: false},
       disabled: {type: Boolean},
       outline: {type: Boolean}
@@ -33,18 +27,22 @@
     computed: {
       classes () {
         return [
-          {'mt-checkbox': true},
-          {'mt-checkbox-outline': !!this.outline}
+          {'mt-radio': true},
+          {'mt-radio-outline': !!this.outline}
         ]
       }
     },
     watch: {
       checked () {
         this.status = this.checked
+      },
+      name () {
+        this.radioName = this.name
       }
     },
     created () {
       this.status = this.checked
+      this.radioName = this.name
     },
     methods: {
       _change (e) {
