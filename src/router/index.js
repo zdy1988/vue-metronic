@@ -18,7 +18,9 @@ export default new VueRouter({
         {path: 'ui_buttons', component: resolve => require(['@/views/ui_buttons'], resolve)},
         {path: 'ui_tabs', component: resolve => require(['@/views/ui_tabs'], resolve)},
         {path: 'ui_tooltips', component: resolve => require(['@/views/ui_tooltips'], resolve)},
-        {path: 'ui_inputs', component: resolve => require(['@/views/ui_inputs'], resolve)}
+        {path: 'ui_inputs', component: resolve => require(['@/views/ui_inputs'], resolve)},
+        {path: 'ui_general', component: resolve => require(['@/views/ui_general'], resolve)},
+        {path: 'ui_alerts', component: resolve => require(['@/views/ui_alerts'], resolve)}
       ]
     }
   ]

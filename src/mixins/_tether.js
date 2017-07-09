@@ -178,6 +178,7 @@ export default {
       }
     },
     _delay (show, _fun) {
+      this.$emit('update:show', show)
       const delay = this.getDelay(show)
       if (delay === 0) {
         _fun()

@@ -10,11 +10,11 @@
         <slot name="actions"></slot>
       </div>
       <div class="tools" v-if="tools">
-        <a href="javascript:;" class="collapse" @click="fold"> </a>
-        <a href="javascript:;" class="config" @click="config"> </a>
-        <a href="javascript:;" class="reload" @click="reload"> </a>
-        <a href="javascript:;" class="fullscreen" @click="fullscreen"> </a>
-        <a href="javascript:;" class="remove" @click="remove"> </a>
+        <a href="javascript:;" class="collapse" @click="fold" v-tooltip="'Collapse/Expand'"> </a>
+        <a href="javascript:;" class="config" @click="config" v-tooltip="'Settings'"> </a>
+        <a href="javascript:;" class="reload" @click="reload" v-tooltip="'Reload'"> </a>
+        <a href="javascript:;" class="fullscreen" @click="fullscreen" v-tooltip="'Fullscreen'"> </a>
+        <a href="javascript:;" class="remove" @click="remove" v-tooltip="'Remove'"> </a>
       </div>
     </div>
     <div class="portlet-body">
@@ -24,7 +24,7 @@
 </template>
 <script>
   import $ from 'jquery'
-  import colors from '@/untils/colors'
+  import {colorKeys} from '@/untils'
 
   import Icon from '@/components/icon/icon'
 
@@ -35,7 +35,7 @@
       summary: {type: String},
       icon: {type: String},
       theme: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
-      color: {type: String, default: 'dark', validator: value => colors.indexOf(value) > -1},
+      color: {type: String, default: 'dark', validator: value => colorKeys.indexOf(value) > -1},
       bordered: {type: Boolean},
       tools: {type: Boolean, default: true},
       klass: {type: String}

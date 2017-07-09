@@ -1,13 +1,13 @@
 /**
  * Created by dell on 2017/6/21.
  */
-import colors from '@/untils/colors'
+import {colorKeys} from '@/untils'
 
 export default {
   props: {
-    color: {type: String, validator: value => colors.indexOf(value) > -1},
+    color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
     theme: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link'].indexOf(value) > -1},
-    stripe: {type: String, validator: value => colors.indexOf(value) > -1},
+    stripe: {type: String, validator: value => colorKeys.indexOf(value) > -1},
     shape: {type: String, validator: value => ['circle'].indexOf(value) > -1},
     outline: {type: Boolean},
     size: {type: String, validator: value => ['lg', 'sm', 'xs', 'icon-only'].indexOf(value) > -1},

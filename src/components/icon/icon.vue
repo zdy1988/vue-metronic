@@ -5,13 +5,13 @@
   @import "../../../node_modules/simple-line-icons/less/simple-line-icons";
 </style>
 <script>
-  import {icons, colors} from '@/untils'
+  import {icons, colorKeys} from '@/untils'
 
   export default{
     name: 'Icon',
     props: {
       name: {type: String, required: true, validator: value => icons.indexOf(value) > -1},
-      color: {type: String, validator: value => colors.indexOf(value) > -1},
+      color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
       klass: {type: String}
     },
     computed: {

@@ -4,12 +4,12 @@
   </span>
 </template>
 <script>
-  import colors from '@/untils/colors'
+  import {colorKeys} from '@/untils'
 
   export default{
     name: 'FaStack',
     props: {
-      color: {type: String, validator: value => colors.indexOf(value) > -1},
+      color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
       size: {type: String, default: 'lg', validator: value => ['lg', '2x', '3x', '4x', '5x'].indexOf(value) > -1},
       klass: {type: String}
     },

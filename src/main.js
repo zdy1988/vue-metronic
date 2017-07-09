@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './app'
 import router from './router'
 import animated from './animates/animated-vue'
+import dirsctives from './directives'
+import prototypes from './prototypes'
 
 Vue.config.productionTip = false
 
@@ -16,3 +18,5 @@ new Vue({
 })
 
 Vue.use(animated)
+Vue.use(dirsctives)
+Vue.use(prototypes)

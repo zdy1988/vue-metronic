@@ -4,13 +4,13 @@
   </transition>
 </template>
 <script>
-  import colors from '@/untils/colors'
+  import {colorKeys} from '@/untils'
 
   export default{
     name: 'Masker',
     props: {
       show: {type: Boolean, default: false, required: true},
-      color: {type: String, default: 'dark', validator: value => colors.indexOf(value) > -1},
+      color: {type: String, default: 'dark', validator: value => colorKeys.indexOf(value) > -1},
       opacity: {type: Number, default: 0.5},
       zindex: {type: Number, default: 10049}
     }

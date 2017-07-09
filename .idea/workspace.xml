@@ -2,13 +2,71 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84d64c47-47ca-425c-89f2-a58e07276b98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input/radio-group.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input/radio.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/alert/alert.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/alert/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/badge/badge.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/badge/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/checkbox/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/form/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/lable/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/lable/lable.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list/list-item.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list/list.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/note/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/note/note.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pagination/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pagination/pagination.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/panel/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/panel/panel.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover/popover-confirm.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/progress/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/progress/progress-bar.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/radio/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/select/select.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/textbox/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/tooltip/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/well/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/well/well.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/click-outside.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/color.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/popover.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/pulsate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/directives/tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mixins/_scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prototypes/alert.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/prototypes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/ui_alerts.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/ui_general.vue" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/mixins/_propsync.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/input/checkbox.vue" afterPath="$PROJECT_DIR$/src/components/input/checkbox.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metronic_v47/theme/assets/pages/scripts/ui-sweetalert.js" afterPath="$PROJECT_DIR$/metronic_v47/theme/assets/pages/scripts/ui-sweetalert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scripts/global/app.js" afterPath="$PROJECT_DIR$/src/assets/scripts/global/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/button/btn-dropdown.vue" afterPath="$PROJECT_DIR$/src/components/button/btn-dropdown.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/button/mixins/_btn.js" afterPath="$PROJECT_DIR$/src/components/button/mixins/_btn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/element/masker.vue" afterPath="$PROJECT_DIR$/src/components/element/masker.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/icon/faicon-stack.vue" afterPath="$PROJECT_DIR$/src/components/icon/faicon-stack.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/icon/faicon.vue" afterPath="$PROJECT_DIR$/src/components/icon/faicon.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/icon/icon.vue" afterPath="$PROJECT_DIR$/src/components/icon/icon.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/modal/modal.vue" afterPath="$PROJECT_DIR$/src/components/modal/modal.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/portlet/portlet.vue" afterPath="$PROJECT_DIR$/src/components/portlet/portlet.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mixins/_tether.js" afterPath="$PROJECT_DIR$/src/mixins/_tether.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/untils/index.js" afterPath="$PROJECT_DIR$/src/untils/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_colors.vue" afterPath="$PROJECT_DIR$/src/views/ui_colors.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_inputs.vue" afterPath="$PROJECT_DIR$/src/views/ui_inputs.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/inputbox-group.vue" afterPath="$PROJECT_DIR$/src/components/input/textbox-group.vue" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/inputbox.vue" afterPath="$PROJECT_DIR$/src/components/input/textbox.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_tooltips.vue" afterPath="$PROJECT_DIR$/src/views/ui_tooltips.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/checkbox-group.vue" afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox-group.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/checkbox.vue" afterPath="$PROJECT_DIR$/src/components/checkbox/checkbox.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/radio-group.vue" afterPath="$PROJECT_DIR$/src/components/radio/radio-group.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/radio.vue" afterPath="$PROJECT_DIR$/src/components/radio/radio.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/textbox-group.vue" afterPath="$PROJECT_DIR$/src/components/textbox/textbox-group.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/input/textbox.vue" afterPath="$PROJECT_DIR$/src/components/textbox/textbox.vue" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/untils/colors2.js" afterPath="$PROJECT_DIR$/src/untils/colors.js" />
     </list>
     <ignored path="vue-metronic.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,139 +89,98 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ui_inputs.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/views/ui_inputs.vue">
+      <file leaf-file-name="alert.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/prototypes/alert.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+            <state relative-caret-position="288">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
               <folding>
-                <element signature="n#formbox#0;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#1;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#2;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#3;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#textbox-group#0;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#0;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#1;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#2;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#3;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#textbox-group#0;n#formbox#3;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#4;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#textbox-group#0;n#formbox#4;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#5;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#2;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#1;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#2;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#1;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#2;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#3;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#row#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#checkbox#1;n#column#0;n#row#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#formbox-group#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#0;n#formbox-group#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#0;n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#1;n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#checkbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#textbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#btn#0;n#textbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#radio#1;n#column#0;n#row#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#radio-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#textbox-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#btn#0;n#textbox-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#1;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox#1;n#formbox-group#1;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#formbox-group#2;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#10093#10136#0" expanded="true" />
-                <element signature="e#10905#10962#0" expanded="false" />
-                <element signature="e#10991#11028#0" expanded="false" />
-                <element signature="e#11108#11241#0" expanded="false" />
+                <element signature="e#46#110#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="textbox-group.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/textbox-group.vue">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/prototypes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
-              <folding>
-                <element signature="e#2040#2072#0" expanded="false" />
-                <element signature="e#2089#2151#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="textbox.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/textbox.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="80" />
-              <folding>
-                <element signature="n#input#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="n#input#0;n#template#0;n#!!top" expanded="false" />
-                <element signature="e#2405#2625#0" expanded="false" />
-                <element signature="e#2776#2815#0" expanded="false" />
-                <element signature="e#2939#2955#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radio-group.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/radio-group.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
-              <folding>
-                <element signature="e#355#479#0" expanded="false" />
-                <element signature="e#581#658#0" expanded="false" />
-                <element signature="e#752#1268#0" expanded="false" />
-                <element signature="e#1292#1566#0" expanded="false" />
-                <element signature="e#1590#1764#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="radio.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/radio.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-36">
-              <caret line="2" column="73" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="73" />
+            <state relative-caret-position="144">
+              <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkbox-group.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/checkbox-group.vue">
+      <file leaf-file-name="ui_alerts.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/ui_alerts.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="27" />
+            <state relative-caret-position="342">
+              <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
               <folding>
-                <element signature="e#527#1053#0" expanded="false" />
-                <element signature="e#571#1045#0" expanded="false" />
+                <element signature="e#288#331#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkbox.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/input/checkbox.vue">
+      <file leaf-file-name="_components.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_components.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="-450">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="components.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="5756" column="3" lean-forward="false" selection-start-line="5756" selection-start-column="3" selection-end-line="5756" selection-end-column="62" />
               <folding>
-                <element signature="n#style#0;n#!!top" expanded="false" />
+                <element signature="n#template#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ui-sweetalert.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_ui-sweetalert.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_bootstrap-override.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_bootstrap-override.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2250">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_colors.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,31 +190,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>\&lt;tab\-pane name\=\&quot;Glyphicon\&quot;\&gt;\n                    \&lt;div class\=\&quot;clearfix\&quot;\&gt;\n                      \&lt;h4 class\=\&quot;block\&quot;\&gt;Large Buttons\&lt;\/h4\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;default\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Default \&lt;glyphicon type\=\&quot;cog\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;red\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Red \&lt;glyphicon type\=\&quot;calendar\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;blue\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Blue \&lt;glyphicon type\=\&quot;font\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;gift\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;yellow\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Yellow \&lt;glyphicon type\=\&quot;pencil\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;purple\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Purple \&lt;glyphicon type\=\&quot;bell\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;tag\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;grey\-cascade\&quot; size\=\&quot;lg\&quot;\&gt;\n                          Dark \&lt;glyphicon type\=\&quot;pin\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                    \&lt;\/div\&gt;\n                    \&lt;div class\=\&quot;clearfix\&quot;\&gt;\n                      \&lt;h4 class\=\&quot;block\&quot;\&gt;Default Buttons\&lt;\/h4\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;default\&quot;\&gt;\n                          Default \&lt;glyphicon type\=\&quot;cog\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;red\&quot;\&gt;\n                          Red \&lt;glyphicon type\=\&quot;calendar\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;blue\&quot;\&gt;\n                          Blue \&lt;glyphicon type\=\&quot;font\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;gift\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;yellow\&quot;\&gt;\n                          Yellow \&lt;glyphicon type\=\&quot;pencil\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;purple\&quot;\&gt;\n                          Purple \&lt;glyphicon type\=\&quot;bell\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;tag\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;grey\-cascade\&quot;\&gt;\n                          Dark \&lt;glyphicon type\=\&quot;pin\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                    \&lt;\/div\&gt;\n                    \&lt;div class\=\&quot;clearfix\&quot;\&gt;\n                      \&lt;h4 class\=\&quot;block\&quot;\&gt;Small Buttons\&lt;\/h4\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;default\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Default \&lt;glyphicon type\=\&quot;cog\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;red\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Red \&lt;glyphicon type\=\&quot;calendar\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;blue\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Blue \&lt;glyphicon type\=\&quot;font\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;gift\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;yellow\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Yellow \&lt;glyphicon type\=\&quot;pencil\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;purple\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Purple \&lt;glyphicon type\=\&quot;bell\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;tag\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;grey\-cascade\&quot; size\=\&quot;sm\&quot;\&gt;\n                          Dark \&lt;glyphicon type\=\&quot;pin\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                    \&lt;\/div\&gt;\n                    \&lt;div class\=\&quot;clearfix\&quot;\&gt;\n                      \&lt;h4 class\=\&quot;block\&quot;\&gt;Extra Small\&lt;\/h4\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;default\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Default \&lt;glyphicon type\=\&quot;cog\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;red\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Red \&lt;glyphicon type\=\&quot;calendar\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;blue\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Blue \&lt;glyphicon type\=\&quot;font\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;gift\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;yellow\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Yellow \&lt;glyphicon type\=\&quot;pencil\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;purple\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Purple \&lt;glyphicon type\=\&quot;bell\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Green \&lt;glyphicon type\=\&quot;tag\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;grey\-cascade\&quot; size\=\&quot;xs\&quot;\&gt;\n                          Dark \&lt;glyphicon type\=\&quot;pin\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                    \&lt;\/div\&gt;\n                    \&lt;div class\=\&quot;clearfix\&quot;\&gt;\n                      \&lt;h4 class\=\&quot;block\&quot;\&gt;Icon Only Buttons\&lt;\/h4\&gt;\n                      \&lt;p\&gt;\n                        \&lt;btn color\=\&quot;default\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;cog\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;red\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;calendar\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;blue\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;font\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;gift\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;yellow\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;pencil\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;purple\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;bell\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;green\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;tag\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                        \&lt;btn color\=\&quot;grey\-cascade\&quot; size\=\&quot;glyphicon\-only\&quot;\&gt;\n                          \&lt;glyphicon type\=\&quot;pin\&quot;\&gt;\&lt;\/glyphicon\&gt;\n                        \&lt;\/btn\&gt;\n                      \&lt;\/p\&gt;\n                    \&lt;\/div\&gt;\n                  \&lt;\/tab\-pane\&gt;</find>
-      <find>pin</find>
-      <find>style</find>
-      <find>@click=&quot;doClick&quot;</find>
-      <find>size=&quot;lg&quot;</find>
-      <find>size=&quot;l&quot;</find>
-      <find>size=&quot;&quot;</find>
-      <find>size=&quot;*&quot;</find>
-      <find>size=&quot;.*&quot;</find>
-      <find>change</find>
-      <find>btnType</find>
-      <find>size=</find>
-      <find>loadingAnimateClosed</find>
-      <find>Button Stripe</find>
-      <find>{ single, group }</find>
-      <find>&lt;</find>
-      <find>&lt;b</find>
-      <find>&lt;bt</find>
-      <find>&lt;btn</find>
       <find>Vertical variation</find>
       <find>DROPDOWNS</find>
       <find>Metro</find>
@@ -209,6 +208,25 @@
       <find>selected</find>
       <find>innerValue</find>
       <find>inputbox</find>
+      <find>dropup</find>
+      <find>btnSize</find>
+      <find>ariaLabel</find>
+      <find>disabled</find>
+      <find>\&lt;script\&gt;\n  \/\/ Determine if an HTML element is visible \- Faster than CSS check\n  function isVisible\(el\) \{\n    return el \&amp;\&amp; \(el\.offsetWidth \&gt; 0 \|\| el\.offsetHeight \&gt; 0\)\;\n  \}\n  \/\/ Make an aray of N to N\+X\n  function makePageArray\(startNum\, numPages\) \{\n    return Array\.apply\(null\, \{length\: numPages\}\)\.map\(function\(value\, index\)\{\n      return \{ number\: index \+ startNum\, className\: null \}\;\n    \}\)\;\n  \}\n  \/\/ Threshold of limit size when we start\/stop showing ellipsis\n  const ELLIPSIS_THRESHOLD \= 3\;\n  export default \{\n    props\: \{\n      disabled\: \{type\: Boolean\, default\: false\}\,\n      value\: \{type\: Number\, default\: 1\}\,\n      limit\: \{type\: Number\, default\: 5\}\,\n      perPage\: \{type\: Number\, default\: 20\}\,\n      totalRows\: \{type\: Number\, default\: 20\}\,\n      size\: \{type\: String\, default\: \'md\'\}\,\n      hideGotoEndButtons\: \{type\: Boolean\, default\: false\}\,\n      labelFirstPage\: \{type\: String\, default\: \'Goto first page\'\}\,\n      firstText\: \{type\: String\, default\: \'\&amp;laquo\'\}\,\n      labelPrevPage\: \{type\: String\, default\: \'Goto previous page\'\}\,\n      prevText\: \{type\: String\, default\: \'\&amp;lsaquo\;\'\}\,\n      labelNextPage\: \{type\: String\, default\: \'Goto next page\'\}\,\n      nextText\: \{type\: String\, default\: \'\&amp;rsaquo\;\'\}\,\n      labelLastPage\: \{type\: String\, default\: \'Goto last page\'\}\,\n      lastText\: \{type\: String\, default\: \'\&amp;raquo\;\'\}\,\n      labelPage\: \{type\: String\, default\: \'Goto page\'\}\,\n      hideEllipsis\: \{type\: Boolean\, default\: false\}\,\n      ellipsisText\: \{type\: String\, default\: \'\&amp;hellip\;\'\}\,\n      role\: \{type\: String\, default\: \'group\'\}\,\n      buttonRole\: \{type\: String\, default\: \'button\'\}\n    \}\,\n    data\(\) \{\n      return \{\n        showFirstDots\: false\,\n        showLastDots\: false\,\n        currentPage\: this\.value\n      \}\;\n    \}\,\n    computed\: \{\n      classes \(\) \{\n        return \[\n          \{\'pagination\'\: true\}\,\n          \{\[\`pagination\-\$\{this\.size\}\`\]\: \!\!this\.size\}\n        \]\n      \}\,\n      numberOfPages\(\) \{\n        const result \= Math\.ceil\(this\.totalRows \/ this\.perPage\)\;\n        return \(result \&lt; 1\) \? 1 \: result\;\n      \}\,\n      pageList\(\) \{\n        \/\/ Sanity checks\n        if \(this\.currentPage \&gt; this\.numberOfPages\) \{\n          this\.currentPage \= this\.numberOfPages\;\n        \} else if \(this\.currentPage \&lt; 1\) \{\n          this\.currentPage \= 1\;\n        \}\n        \/\/ \- Hide first ellipsis marker\n        this\.showFirstDots \= false\;\n        \/\/ \- Hide last ellipsis marker\n        this\.showLastDots \= false\;\n        let numLinks \= this\.limit\;\n        let startNum \= 1\;\n        if \(this\.numberOfPages \&lt;\= this\.limit\) \{\n          \/\/ Special Case\: Less pages available than the limit of displayed pages\n          numLinks \= this\.numberOfPages\;\n        \} else if \(this\.currentPage \&lt; \(this\.limit \- 1\) \&amp;\&amp; this\.limit \&gt; ELLIPSIS_THRESHOLD\) \{\n          \/\/ We are near the beginning of the page list\n          if \(\!this\.hideEllipsis\) \{\n            numLinks \= this\.limit \- 1\;\n            this\.showLastDots \= true\;\n          \}\n        \} else if \(\(this\.numberOfPages \- this\.currentPage \+ 2\) \&lt; this\.limit \&amp;\&amp; this\.limit \&gt; ELLIPSIS_THRESHOLD\) \{\n          \/\/ We are near the end of the list\n          if \(\!this\.hideEllipsis\) \{\n            this\.showFirstDots \= true\;\n            numLinks \= this\.limit \- 1\;\n          \}\n          startNum \= this\.numberOfPages \- numLinks \+ 1\;\n        \} else \{\n          \/\/ We are somewhere in the middle of the page list\n          if \(this\.limit \&gt; ELLIPSIS_THRESHOLD \&amp;\&amp; \!this\.hideEllipsis\) \{\n            this\.showFirstDots \= true\;\n            this\.showLastDots \= true\;\n            numLinks \= this\.limit \- 2\;\n          \}\n          startNum \= this\.currentPage \- Math\.floor\(numLinks \/ 2\)\;\n        \}\n        \/\/ Sanity checks\n        if \(startNum \&lt; 1\) \{\n          startNum \= 1\;\n        \} else if \(startNum \&gt; \(this\.numberOfPages \- numLinks\)\) \{\n          startNum \= this\.numberOfPages \- numLinks \+ 1\;\n        \}\n        \/\/ Generate list of page numbers\n        const pages \= makePageArray\(startNum\, numLinks\)\;\n        \/\/ We limit to a total of 3 page buttons on small screens\n        \/\/ Ellipsis will also be hidden on small screens\n        if \(pages\.length \&gt; 3\) \{\n          const idx \= this\.currentPage \- startNum\;\n          if \(idx \=\=\= 0\) \{\n            \/\/ Keep leftmost 3 buttons visible\n            for \(let i \= 3\; i \&lt; pages\.length\; i\+\+\) \{\n              pages\[i\]\.className \= \'hidden\-xs\-down\'\;\n            \}\n          \} else if \(idx \=\=\= pages\.length \- 1\) \{\n            \/\/ Keep rightmost 3 buttons visible\n            for \(let i \= 0\; i \&lt; pages\.length \- 3\; i\+\+\) \{\n              pages\[i\]\.className \= \'hidden\-xs\-down\'\;\n            \}\n          \} else \{\n            \/\/ hide left button\(s\)\n            for \(let i \= 0\; i \&lt; idx \- 1\; i\+\+\) \{\n              pages\[i\]\.className \= \'hidden\-xs\-down\'\;\n            \}\n            \/\/ hide right button\(s\)\n            for \(let i \= pages\.length \- 1\; i \&gt; idx \+ 1\; i\-\-\) \{\n              pages\[i\]\.className \= \'hidden\-xs\-down\'\;\n            \}\n          \}\n        \}\n\n        return pages\;\n      \}\n    \}\,\n    methods\: \{\n      isActive\(page\) \{\n        return page \=\=\= this\.currentPage\;\n      \}\,\n      pageItemClasses\(page\) \{\n        const active \= this\.isActive\(page\.number\)\;\n        return \[\n          \'page\-item\'\,\n          this\.disabled \? \'disabled\' \: \'\'\,\n          active \? \'active\' \: \'\'\,\n          page\.className\n        \]\;\n      \}\,\n      pageLinkClasses\(page\) \{\n        const active \= this\.isActive\(page\.number\)\;\n        return \[\n          \'page\-link\'\,\n          this\.disabled \? \'disabled\' \: \'\'\,\n          active \? \'active\' \: \'\'\n        \]\;\n      \}\,\n      setPage\(e\, num\) \{\n        if \(this\.disabled\) \{\n          e\.preventDefault\(\)\;\n          e\.stopPropagation\(\)\;\n          return\;\n        \}\n        if \(num \&gt; this\.numberOfPages\) \{\n          this\.currentPage \= this\.numberOfPages\;\n        \} else if \(num \&lt; 1\) \{\n          this\.currentpage \= 1\;\n        \} else \{\n          this\.currentPage \= num\;\n        \}\n        this\.\$nextTick\(\(\) \=\&gt; \{\n          \/\/ Keep the current button focused if possible\n          if \(isVisible\(e\.target\) \&amp;\&amp; e\.target\.focus\) \{\n            e\.target\.focus\(\)\;\n          \} else \{\n            this\.focusCurrent\(\)\;\n          \}\n        \}\)\;\n        this\.\$emit\(\'change\'\, this\.currentPage\)\;\n      \}\,\n      getButtons\(\) \{\n        const buttons \= Array\.prototype\.slice\.call\(this\.\$el\.querySelectorAll\(\'a\.page\-link\'\)\)\;\n        \/\/ Return only buttons that are visible\n        return buttons\.filter\(btn \=\&gt; isVisible\(btn\)\)\;\n      \}\,\n      setBtnFocus\(btn\) \{\n        this\.\$nextTick\(\(\) \=\&gt; \{\n          btn\.focus\(\)\;\n        \}\)\;\n      \}\,\n      focusFirst\(\) \{\n        const btn \= this\.getButtons\(\)\.find\(el \=\&gt; \!el\.disabled\)\;\n        if \(btn \&amp;\&amp; btn\.focus \&amp;\&amp; btn \!\=\= document\.activeElement\) \{\n          this\.setBtnFocus\(btn\)\;\n        \}\n      \}\,\n      focusLast\(\) \{\n        const btn \= this\.getButtons\(\)\.reverse\(\)\.find\(el \=\&gt; \!el\.disabled\)\;\n        if \(btn \&amp;\&amp; btn\.focus \&amp;\&amp; btn \!\=\= document\.activeElement\) \{\n          this\.setBtnFocus\(btn\)\;\n        \}\n      \}\,\n      focusCurrent\(\) \{\n        const btn \= this\.getButtons\(\)\.find\(el \=\&gt; parseInt\(el\.getAttribute\(\'aria\-posinset\'\)\, 10\) \=\=\= this\.currentPage\)\;\n        if \(btn \&amp;\&amp; btn\.focus\) \{\n          this\.setBtnFocus\(btn\)\;\n        \} else \{\n          \/\/ Fallback if current page is not in button list\n          this\.focusFirst\(\)\;\n        \}\n      \}\,\n      focusPrev\(\) \{\n        const buttons \= this\.getButtons\(\)\;\n        const idx \= buttons\.indexOf\(document\.activeElement\)\;\n        if \(idx \&gt; 0 \&amp;\&amp; \!buttons\[idx \- 1\]\.disabled \&amp;\&amp; buttons\[idx \- 1\]\.focus\) \{\n          this\.setBtnFocus\(buttons\[idx \- 1\]\)\;\n        \}\n      \}\,\n      focusNext\(\) \{\n        const buttons \= this\.getButtons\(\)\;\n        const idx \= buttons\.indexOf\(document\.activeElement\)\;\n        const cnt \= buttons\.length \- 1\;\n        if \(idx \&lt; cnt \&amp;\&amp; \!buttons\[idx \+ 1\]\.disabled \&amp;\&amp; buttons\[idx \+ 1\]\.focus\) \{\n          this\.setBtnFocus\(buttons\[idx \+ 1\]\)\;\n        \}\n      \}\n    \}\,\n    watch\: \{\n      currentPage\(newPage\, oldPage\) \{\n        if \(newPage \!\=\= oldPage\) \{\n          this\.\$emit\(\'input\'\, newPage\)\;\n        \}\n      \}\,\n      value\(newValue\, oldValue\) \{\n        if \(newValue \!\=\= oldValue\) \{\n          this\.currentPage \= newValue\;\n        \}\n      \}\n    \}\n  \}\;\n\&lt;\/script\&gt;</find>
+      <find>totalRows</find>
+      <find>colors2</find>
+      <find>colors</find>
+      <find>Labels In Headings</find>
+      <find>\(function\( \$ \)\{\n  var methods \= \{\n    init\: function\(options\) \{\n      var settings \= \{\n        color\: \$\(this\)\.css\(\&quot;background\-color\&quot;\)\,\n        reach\: 20\,\n        speed\: 1000\,\n        pause\: 0\,\n        glow\: true\,\n        repeat\: true\,\n        onHover\: false\n      \}\;\n      \$\(this\)\.css\(\{\n        \&quot;\-moz\-outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\,\n        \&quot;\-webkit\-outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\,\n        \&quot;outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\n      \}\)\;\n\n      if \(options\) \{\n        \$\.extend\(settings\, options\)\;\n      \}\n      settings\.color \= \$\(\&quot;\&lt;div style\=\'background\:\&quot; \+ settings\.color \+ \&quot;\'\&gt;\&lt;\/div\&gt;\&quot;\)\.css\(\&quot;background\-color\&quot;\)\;\n      if\(settings\.repeat \!\=\= true \&amp;\&amp; \!isNaN\(settings\.repeat\) \&amp;\&amp; settings\.repeat \&gt; 0\) \{\n        settings\.repeat \-\=1\;\n      \}\n\n      return this\.each\(function\(\) \{\n        if\(settings\.onHover\) \{\n          \$\(this\)\.bind\(\&quot;mouseover\&quot;\, function \(\) \{pulse\(settings\, this\, 0\)\;\}\)\n            \.bind\(\&quot;mouseout\&quot;\, function \(\)\{\$\(this\)\.pulsate\(\&quot;destroy\&quot;\)\;\}\)\;\n        \} else \{\n          pulse\(settings\, this\, 0\)\;\n        \}\n      \}\)\;\n    \}\,\n    destroy\: function\(\) \{\n      return this\.each\(function\(\) \{\n        clearTimeout\(this\.timer\)\;\n        \$\(this\)\.css\(\&quot;outline\&quot;\,0\)\;\n      \}\)\;\n    \}\n  \}\;\n\n  var pulse \= function\(options\, el\, count\) \{\n    var reach \= options\.reach\,\n      count \= count\&gt;reach \? 0 \: count\,\n      opacity \= \(reach\-count\)\/reach\,\n      colorarr \= options\.color\.split\(\&quot;\,\&quot;\)\,\n      color \= \&quot;rgba\(\&quot; \+ colorarr\[0\]\.split\(\&quot;\(\&quot;\)\[1\] \+ \&quot;\,\&quot; \+ colorarr\[1\] \+ \&quot;\,\&quot; \+ colorarr\[2\]\.split\(\&quot;\)\&quot;\)\[0\] \+ \&quot;\,\&quot; \+ opacity \+ \&quot;\)\&quot;\,\n      cssObj \= \{\n        \&quot;outline\&quot;\: \&quot;2px solid \&quot; \+ color\n      \}\;\n    if\(options\.glow\) \{\n      cssObj\[\&quot;box\-shadow\&quot;\] \= \&quot;0px 0px \&quot; \+ parseInt\(\(count\/1\.5\)\) \+ \&quot;px \&quot; \+ color\;\n    \}\n    cssObj\[\&quot;outline\-offset\&quot;\] \= count \+ \&quot;px\&quot;\;\n\n    \$\(el\)\.css\(cssObj\)\;\n\n    var innerfunc \= function \(\) \{\n      if\(count\&gt;\=reach \&amp;\&amp; \!options\.repeat\) \{\n        \$\(el\)\.pulsate\(\&quot;destroy\&quot;\)\;\n        return false\;\n      \} else if\(count\&gt;\=reach \&amp;\&amp; options\.repeat \!\=\= true \&amp;\&amp; \!isNaN\(options\.repeat\) \&amp;\&amp; options\.repeat \&gt; 0\) \{\n        options\.repeat \= options\.repeat\-1\;\n      \} else if\(options\.pause \&amp;\&amp; count\&gt;\=reach\) \{\n        pause\(options\, el\, count\+1\)\;\n        return false\;\n      \}\n      pulse\(options\, el\, count\+1\)\;\n    \}\;\n\n    if\(el\.timer\)\{\n      clearTimeout\(el\.timer\)\;\n    \}\n    el\.timer \= setTimeout\(innerfunc\, options\.speed\/reach\)\;\n  \}\;\n\n  var pause \= function \(options\, el\, count\) \{\n    innerfunc \= function \(\) \{\n      pulse\(options\, el\, count\)\;\n    \}\;\n    el\.timer \= setTimeout\(innerfunc\, options\.pause\)\;\n  \}\;\n\n  \$\.fn\.pulsate \= function\( method \) \{\n    \/\/ Method calling logic\n    if \( methods\[method\] \) \{\n      return methods\[ method \]\.apply\( this\, Array\.prototype\.slice\.call\( arguments\, 1 \)\)\;\n    \} else if \( typeof method \=\=\= \'object\' \|\| \! method \) \{\n      return methods\.init\.apply\( this\, arguments \)\;\n    \} else \{\n      \$\.error\( \'Method \' \+  method \+ \' does not exist on jQuery\.pulsate\' \)\;\n    \}\n\n  \}\;\n\}\)\( \$ \)\;</find>
+      <find>;</find>
+      <find>\(function\( \$ \)\{\n  var methods \= \{\n    init\: function\(options\) \{\n      var settings \= \{\n        color\: \$\(this\)\.css\(\&quot;background\-color\&quot;\)\,\n        reach\: 20\,\n        speed\: 1000\,\n        pause\: 0\,\n        glow\: true\,\n        repeat\: true\,\n        onHover\: false\n      \}\n      \$\(this\)\.css\(\{\n        \&quot;\-moz\-outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\,\n        \&quot;\-webkit\-outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\,\n        \&quot;outline\-radius\&quot;\: \$\(this\)\.css\(\&quot;border\-top\-left\-radius\&quot;\)\n      \}\)\n\n      if \(options\) \{\n        \$\.extend\(settings\, options\)\n      \}\n      settings\.color \= \$\(\&quot;\&lt;div style\=\'background\:\&quot; \+ settings\.color \+ \&quot;\'\&gt;\&lt;\/div\&gt;\&quot;\)\.css\(\&quot;background\-color\&quot;\)\n      if\(settings\.repeat \!\=\= true \&amp;\&amp; \!isNaN\(settings\.repeat\) \&amp;\&amp; settings\.repeat \&gt; 0\) \{\n        settings\.repeat \-\=1\n      \}\n\n      return this\.each\(function\(\) \{\n        if\(settings\.onHover\) \{\n          \$\(this\)\.bind\(\&quot;mouseover\&quot;\, function \(\) \{pulse\(settings\, this\, 0\)\}\)\n            \.bind\(\&quot;mouseout\&quot;\, function \(\)\{\$\(this\)\.pulsate\(\&quot;destroy\&quot;\)\}\)\n        \} else \{\n          pulse\(settings\, this\, 0\)\n        \}\n      \}\)\n    \}\,\n    destroy\: function\(\) \{\n      return this\.each\(function\(\) \{\n        clearTimeout\(this\.timer\)\n        \$\(this\)\.css\(\&quot;outline\&quot;\,0\)\n      \}\)\n    \}\n  \}\n\n  var pulse \= function\(options\, el\, count\) \{\n    var reach \= options\.reach\,\n      count \= count\&gt;reach \? 0 \: count\,\n      opacity \= \(reach\-count\)\/reach\,\n      colorarr \= options\.color\.split\(\&quot;\,\&quot;\)\,\n      color \= \&quot;rgba\(\&quot; \+ colorarr\[0\]\.split\(\&quot;\(\&quot;\)\[1\] \+ \&quot;\,\&quot; \+ colorarr\[1\] \+ \&quot;\,\&quot; \+ colorarr\[2\]\.split\(\&quot;\)\&quot;\)\[0\] \+ \&quot;\,\&quot; \+ opacity \+ \&quot;\)\&quot;\,\n      cssObj \= \{\n        \&quot;outline\&quot;\: \&quot;2px solid \&quot; \+ color\n      \}\n    if\(options\.glow\) \{\n      cssObj\[\&quot;box\-shadow\&quot;\] \= \&quot;0px 0px \&quot; \+ parseInt\(\(count\/1\.5\)\) \+ \&quot;px \&quot; \+ color\n    \}\n    cssObj\[\&quot;outline\-offset\&quot;\] \= count \+ \&quot;px\&quot;\n\n    \$\(el\)\.css\(cssObj\)\n\n    var innerfunc \= function \(\) \{\n      if\(count\&gt;\=reach \&amp;\&amp; \!options\.repeat\) \{\n        \$\(el\)\.pulsate\(\&quot;destroy\&quot;\)\n        return false\n      \} else if\(count\&gt;\=reach \&amp;\&amp; options\.repeat \!\=\= true \&amp;\&amp; \!isNaN\(options\.repeat\) \&amp;\&amp; options\.repeat \&gt; 0\) \{\n        options\.repeat \= options\.repeat\-1\n      \} else if\(options\.pause \&amp;\&amp; count\&gt;\=reach\) \{\n        pause\(options\, el\, count\+1\)\n        return false\n      \}\n      pulse\(options\, el\, count\+1\)\n    \}\n\n    if\(el\.timer\)\{\n      clearTimeout\(el\.timer\)\n    \}\n    el\.timer \= setTimeout\(innerfunc\, options\.speed\/reach\)\n  \}\n\n  var pause \= function \(options\, el\, count\) \{\n    innerfunc \= function \(\) \{\n      pulse\(options\, el\, count\)\n    \}\n    el\.timer \= setTimeout\(innerfunc\, options\.pause\)\n  \}\n\n  \$\.fn\.pulsate \= function\( method \) \{\n    \/\/ Method calling logic\n    if \( methods\[method\] \) \{\n      return methods\[ method \]\.apply\( this\, Array\.prototype\.slice\.call\( arguments\, 1 \)\)\n    \} else if \( typeof method \=\=\= \'object\' \|\| \! method \) \{\n      return methods\.init\.apply\( this\, arguments \)\n    \} else \{\n      \$\.error\( \'Method \' \+  method \+ \' does not exist on jQuery\.pulsate\' \)\n    \}\n\n  \}\n\}\)\( \$ \)</find>
+      <find>&quot;</find>
+      <find>tooltips</find>
+      <find>handleTooltips</find>
+      <find>handlePopovers</find>
+      <find>destroy</find>
+      <find>scrollTo</find>
+      <find>alert</find>
     </findStrings>
     <replaceStrings>
       <replace>/static/media</replace>
@@ -218,7 +236,6 @@
       <replace>/static/</replace>
       <replace>/static/media/</replace>
       <replace>',</replace>
-      <replace>'</replace>
       <replace>btn</replace>
       <replace>outline</replace>
       <replace>icon</replace>
@@ -231,13 +248,14 @@
       <replace>pencil</replace>
       <replace>tag</replace>
       <replace>user</replace>
-      <replace />
       <replace>{single, group}</replace>
       <replace>&lt;btn shape=&quot;circle&quot;</replace>
       <replace>inputbox</replace>
       <replace>formbox</replace>
       <replace>formbox-group</replace>
       <replace>textbox</replace>
+      <replace />
+      <replace>'</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\Work\vue-metronic\src\animateds\animated-vue</dir>
@@ -249,57 +267,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/button/link.vue" />
-        <option value="$PROJECT_DIR$/src/components/button/index.js" />
-        <option value="$PROJECT_DIR$/src/components/button/btn-group.vue" />
-        <option value="$PROJECT_DIR$/src/mixins/_color.js" />
-        <option value="$PROJECT_DIR$/src/mixins/_popper.js" />
-        <option value="$PROJECT_DIR$/src/layouts/girds/column.vue" />
-        <option value="$PROJECT_DIR$/src/components/popover/popover.vue" />
-        <option value="$PROJECT_DIR$/src/components/tooltip/tooltip.vue" />
-        <option value="$PROJECT_DIR$/src/mixins/_tether.js" />
-        <option value="$PROJECT_DIR$/src/components/button/btn.vue" />
-        <option value="$PROJECT_DIR$/src/components/button/link-btn.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/text.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/mixins/_text.js" />
-        <option value="$PROJECT_DIR$/src/components/input/mixins/_input.js" />
+        <option value="$PROJECT_DIR$/src/components/well/well.vue" />
         <option value="$PROJECT_DIR$/src/views/ui_colors.vue" />
+        <option value="$PROJECT_DIR$/src/untils/index.js" />
         <option value="$PROJECT_DIR$/src/components/icon/faicon.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_formContorls.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/components/input/input.vue" />
+        <option value="$PROJECT_DIR$/src/components/icon/faicon-stack.vue" />
+        <option value="$PROJECT_DIR$/src/components/icon/icon.vue" />
+        <option value="$PROJECT_DIR$/src/components/element/masker.vue" />
+        <option value="$PROJECT_DIR$/src/components/button/mixins/_btn.js" />
         <option value="$PROJECT_DIR$/src/components/portlet/portlet.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_buttons.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_tabs.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_tooltips.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_portlets.vue" />
-        <option value="$PROJECT_DIR$/src/views/ui_modals.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/input-box.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/input-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/form/form-box.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/text-box.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inp-group-addon.vue" />
-        <option value="$PROJECT_DIR$/src/assets/sass/global/components/_buttons.scss" />
-        <option value="$PROJECT_DIR$/src/components/input/inp-group-icon.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inp-group-btn.vue" />
-        <option value="$PROJECT_DIR$/src/assets/sass/global/components.scss" />
-        <option value="$PROJECT_DIR$/src/views/layout.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inp-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/form/fm-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inp.vue" />
-        <option value="$PROJECT_DIR$/src/components/form/fm.vue" />
-        <option value="$PROJECT_DIR$/src/assets/sass/global/components/_form-layouts.scss" />
-        <option value="$PROJECT_DIR$/src/components/form/formbox-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inputbox.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/inputbox-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/form/formbox.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/checkbox-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/checkbox.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/textbox.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/radio.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/radio-group.vue" />
-        <option value="$PROJECT_DIR$/src/components/input/textbox-group.vue" />
+        <option value="$PROJECT_DIR$/src/assets/scripts/global/app.js" />
+        <option value="$PROJECT_DIR$/src/components/textbox/index.js" />
+        <option value="$PROJECT_DIR$/src/directives/color.js" />
+        <option value="$PROJECT_DIR$/src/directives/tooltip.js" />
+        <option value="$PROJECT_DIR$/src/directives/pulsate.js" />
+        <option value="$PROJECT_DIR$/src/directives/popover.js" />
+        <option value="$PROJECT_DIR$/src/components/badge/badge.vue" />
+        <option value="$PROJECT_DIR$/src/components/lable/lable.vue" />
+        <option value="$PROJECT_DIR$/src/components/note/note.vue" />
+        <option value="$PROJECT_DIR$/src/components/list/index.js" />
         <option value="$PROJECT_DIR$/src/views/ui_inputs.vue" />
+        <option value="$PROJECT_DIR$/src/components/list/list-item.vue" />
+        <option value="$PROJECT_DIR$/src/components/list/list.vue" />
+        <option value="$PROJECT_DIR$/src/components/panel/index.js" />
+        <option value="$PROJECT_DIR$/src/components/panel/panel.vue" />
+        <option value="$PROJECT_DIR$/src/views/ui_general.vue" />
+        <option value="$PROJECT_DIR$/src/mixins/_scroll.js" />
+        <option value="$PROJECT_DIR$/src/components/alert/alert.vue" />
+        <option value="$PROJECT_DIR$/src/components/popover/index.js" />
+        <option value="$PROJECT_DIR$/src/directives/index.js" />
+        <option value="$PROJECT_DIR$/src/components/modal/modal.vue" />
+        <option value="$PROJECT_DIR$/src/directives/click-outside.js" />
+        <option value="$PROJECT_DIR$/src/mixins/_tether.js" />
+        <option value="$PROJECT_DIR$/src/components/popover/popover.vue" />
+        <option value="$PROJECT_DIR$/src/components/alert/index.js" />
+        <option value="$PROJECT_DIR$/src/components/badge/index.js" />
+        <option value="$PROJECT_DIR$/src/components/checkbox/index.js" />
+        <option value="$PROJECT_DIR$/src/components/form/index.js" />
+        <option value="$PROJECT_DIR$/src/components/lable/index.js" />
+        <option value="$PROJECT_DIR$/src/components/note/index.js" />
+        <option value="$PROJECT_DIR$/src/components/pagination/index.js" />
+        <option value="$PROJECT_DIR$/src/components/progress/index.js" />
+        <option value="$PROJECT_DIR$/src/components/radio/index.js" />
+        <option value="$PROJECT_DIR$/src/components/tooltip/index.js" />
+        <option value="$PROJECT_DIR$/src/components/well/index.js" />
+        <option value="$PROJECT_DIR$/src/components/popover/popover-confirm.vue" />
+        <option value="$PROJECT_DIR$/src/views/ui_tooltips.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/prototypes/index.js" />
+        <option value="$PROJECT_DIR$/src/views/ui_alerts.vue" />
+        <option value="$PROJECT_DIR$/src/prototypes/alert.js" />
       </list>
     </option>
   </component>
@@ -377,11 +395,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -395,11 +409,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mixins" />
+              <option name="myItemId" value="sweetalert2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,11 +427,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="sweetalert2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-metronic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-metronic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sweetalert2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -438,14 +478,15 @@
     <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\dell\Desktop\private\vue-metronic\node_modules\mocha" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="editor.config.accepted" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\vue-metronic\src\components\panel" />
+      <recent name="D:\Work\vue-metronic\src\components\radio" />
+      <recent name="D:\Work\vue-metronic\src\components\checkbox" />
       <recent name="C:\Users\dell\Desktop\private\vue-metronic\src\components\input\mixins" />
       <recent name="C:\Users\dell\Desktop\private\vue-metronic\src\components\button\mixins" />
-      <recent name="C:\Users\dell\Desktop\private\vue-metronic\src\components\popper" />
-      <recent name="D:\Work\vue-metronic\src" />
-      <recent name="D:\Work\vue-metronic\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Work\vue-metronic\src\animates\animated-vue\css" />
@@ -572,11 +613,13 @@
       <workItem from="1498181104423" duration="25925000" />
       <workItem from="1498379278945" duration="33026000" />
       <workItem from="1498481364324" duration="9556000" />
+      <workItem from="1499508272760" duration="32158000" />
+      <workItem from="1499584802132" duration="32603000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="412884000" />
+    <option name="totallyTimeSpent" value="477645000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,15 +633,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19471817" sideWeight="0.80382776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19471817" sideWeight="0.80382776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739937" sideWeight="0.49702382" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23175965" sideWeight="0.5205479" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066718" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842758" sideWeight="0.4940476" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2581665" sideWeight="0.19617225" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17610551" sideWeight="0.47945204" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2581665" sideWeight="0.19617225" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17610551" sideWeight="0.47945204" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -607,6 +649,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066718" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -617,14 +660,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23175965" sideWeight="0.5205479" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842758" sideWeight="0.4940476" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2581665" sideWeight="0.19617225" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2581665" sideWeight="0.19617225" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17610551" sideWeight="0.47945204" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19471817" sideWeight="0.80382776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26066718" sideWeight="0.48314014" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495073" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -656,298 +699,138 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="77" />
+      <option name="time" value="105" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/views/ui_buttons.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/panel/panel.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="1766" column="104" lean-forward="false" selection-start-line="1766" selection-start-column="104" selection-end-line="1766" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_modals.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="18" lean-forward="false" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/dashboard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_colors.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_icons.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/btn-dropdown.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="30" column="8" lean-forward="false" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/btn-group.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/textbox.vue" />
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_bootstrap-override.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2546">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-674">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_buttons.scss">
+    <entry file="file://$PROJECT_DIR$/src/views/ui_buttons.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_inputs.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
+        <state relative-caret-position="-540">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/icon/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/icon/faicon.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/text-box.vue" />
-    <entry file="file://$PROJECT_DIR$/src/components/modal/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components-md.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_reset-rounds.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="12" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components-rounded.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_plugins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="43" lean-forward="true" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_reset-general.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_components.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="38" lean-forward="true" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/layout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="2343" column="0" lean-forward="false" selection-start-line="2343" selection-start-column="0" selection-end-line="2343" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/inp-group-btn.vue" />
-    <entry file="file://$PROJECT_DIR$/src/components/input/inp-group-icon.vue" />
-    <entry file="file://$PROJECT_DIR$/src/components/input/inp-group-addon.vue" />
-    <entry file="file://$USER_HOME$/Desktop/inp-group-btn.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/button/btn.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/button/mixins/_btn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="78" />
+        <state relative-caret-position="18">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_portlets.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/popover/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="108">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#45#76#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_tabs.vue">
+    <entry file="file://$PROJECT_DIR$/src/assets/scripts/global/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="65" column="37" lean-forward="false" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        <state relative-caret-position="-191">
+          <caret line="781" column="0" lean-forward="false" selection-start-line="781" selection-start-column="0" selection-end-line="781" selection-end-column="0" />
+          <folding>
+            <element signature="e#14569#15634#0" expanded="false" />
+            <element signature="e#15661#17061#0" expanded="false" />
+            <element signature="e#23221#23458#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_form-layouts.scss">
+    <entry file="file://$PROJECT_DIR$/src/directives/color.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="307" column="39" lean-forward="true" selection-start-line="307" selection-start-column="39" selection-end-line="307" selection-end-column="39" />
+        <state relative-caret-position="216">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/mixins/_input.js" />
+    <entry file="file://$PROJECT_DIR$/src/directives/popover.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding>
+            <element signature="e#131#573#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/modal/modal.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="73" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="90">
+          <caret line="5" column="62" lean-forward="true" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#transition#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#transition#0;n#div#0;n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directives/click-outside.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="74" lean-forward="false" selection-start-line="1" selection-start-column="74" selection-end-line="1" selection-end-column="74" />
+          <folding>
+            <element signature="n#!!block;n#on#0" expanded="false" />
+            <element signature="n#!!block;n#dynamicStrategy#0" expanded="false" />
+            <element signature="n#!!block;n#staticStrategy#0" expanded="false" />
+            <element signature="n#!!block;n#bind#0" expanded="false" />
+            <element signature="n#!!block;n#update#0" expanded="false" />
+            <element signature="n#!!block;n#unbind#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mixins/_tether.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="49" column="15" lean-forward="false" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tooltip/tooltip.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/formbox-group.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/form/formbox.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="977">
+          <caret line="92" column="18" lean-forward="false" selection-start-line="92" selection-start-column="11" selection-end-line="92" selection-end-column="18" />
           <folding>
-            <element signature="e#265#429#0" expanded="false" />
+            <element signature="e#587#1000#0" expanded="false" />
+            <element signature="e#1374#1959#0" expanded="false" />
+            <element signature="e#1474#1953#0" expanded="false" />
+            <element signature="e#5809#5977#0" expanded="false" />
+            <element signature="e#5998#6060#0" expanded="false" />
+            <element signature="e#6077#6192#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/radio.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/alert/alert.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="2" column="73" lean-forward="false" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="73" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
+          <folding>
+            <element signature="e#767#1054#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/checkbox.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/popover/popover.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="39" lean-forward="false" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding>
+            <element signature="e#601#772#0" expanded="false" />
+            <element signature="e#620#766#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/checkbox/checkbox.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
@@ -957,107 +840,368 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/radio-group.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/element/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="78" column="25" lean-forward="false" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#355#479#0" expanded="false" />
-            <element signature="e#581#658#0" expanded="false" />
-            <element signature="e#752#1268#0" expanded="false" />
-            <element signature="e#1292#1566#0" expanded="false" />
-            <element signature="e#1590#1764#0" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/checkbox-group.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/form/formbox.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="27" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/form/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
-            <element signature="e#527#1053#0" expanded="false" />
-            <element signature="e#571#1045#0" expanded="false" />
+            <element signature="e#45#76#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/textbox.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/badge/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="80" />
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/lable/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/note/note.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/note/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pagination/pagination.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="123" column="21" lean-forward="false" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pagination/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/progress/progress-bar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/checkbox/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
           <folding>
-            <element signature="n#input#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#input#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#2405#2625#0" expanded="false" />
-            <element signature="e#2776#2815#0" expanded="false" />
-            <element signature="e#2939#2955#0" expanded="false" />
+            <element signature="e#45#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/input/textbox-group.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/tabs/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="52" column="44" lean-forward="false" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/radio/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#2040#2072#0" expanded="false" />
-            <element signature="e#2089#2151#0" expanded="false" />
+            <element signature="e#45#72#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/ui_inputs.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/progress/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="104" column="53" lean-forward="false" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tooltip/tooltip.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/tooltip/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/well/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/alert/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/ui_tooltips.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="171" column="28" lean-forward="false" selection-start-line="171" selection-start-column="28" selection-end-line="171" selection-end-column="28" />
           <folding>
-            <element signature="n#formbox#0;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#1;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#2;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#3;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#textbox-group#0;n#formbox-group#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#0;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#1;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#2;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#3;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#textbox-group#0;n#formbox#3;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#4;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#textbox-group#0;n#formbox#4;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#5;n#formbox-group#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#2;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#0;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#1;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#2;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#3;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#4;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#column#0;n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#popover#0;n#column#0;n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#column#1;n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#column#2;n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#column#3;n#row#5;n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="e#5135#5178#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/popover/popover-confirm.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/ui_general.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="14" lean-forward="true" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="65" />
+          <folding>
+            <element signature="n#portlet#0;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#1;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#2;n#formbox-group#0;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#1;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#2;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#3;n#portlet#1;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#2;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#3;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#4;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#panel#0;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#panel#1;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#panel#2;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#p#0;n#panel#9;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#panel#9;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#list#0;n#panel#10;n#portlet#5;n#column#0;n#row#0;n#template#0;n#!!top" expanded="false" />
             <element signature="n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#row#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#checkbox#1;n#column#0;n#row#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#formbox-group#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#0;n#formbox-group#0;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#0;n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#1;n#formbox-group#1;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#checkbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#textbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#btn#0;n#textbox-group#0;n#formbox#0;n#formbox-group#2;n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#radio#1;n#column#0;n#row#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#radio-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#textbox-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#btn#0;n#textbox-group#0;n#formbox#0;n#formbox-group#0;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#1;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox#1;n#formbox-group#1;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#formbox-group#2;n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="e#10093#10136#0" expanded="true" />
-            <element signature="e#10905#10962#0" expanded="false" />
-            <element signature="e#10991#11028#0" expanded="false" />
-            <element signature="e#11108#11241#0" expanded="false" />
+            <element signature="n#portlet#0;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#1;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#2;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#portlet#2;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#tbody#0;n#table#0;n#portlet#2;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#well#0;n#portlet#2;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#btn-dropdown#0;n#portlet#2;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#3;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#portlet#4;n#column#1;n#row#0;n#template#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#!!top" expanded="false" />
+            <element signature="e#16567#16610#0" expanded="false" />
+            <element signature="e#17313#17635#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="77" lean-forward="false" selection-start-line="22" selection-start-column="77" selection-end-line="22" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#21#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/directives/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#27#0" expanded="false" />
+            <element signature="e#187#247#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sweetalert/dev/sweetalert.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-864">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#140#161#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_widgets.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_bootstrap-override.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2250">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="5756" column="3" lean-forward="false" selection-start-line="5756" selection-start-column="3" selection-end-line="5756" selection-end-column="62" />
+          <folding>
+            <element signature="n#template#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/components/_ui-sweetalert.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/sweetalert2/src/sweetalert2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/ui_alerts.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="7" lean-forward="false" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding>
+            <element signature="e#288#331#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prototypes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/sass/global/_components.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/prototypes/alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#46#110#0" expanded="true" />
           </folding>
         </state>
       </provider>

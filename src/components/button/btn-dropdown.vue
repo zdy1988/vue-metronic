@@ -51,7 +51,7 @@
         return [
           {'btn-group': true},
           {'open': this.open},
-          {'open': this.open},
+          {'dropup': this.dropup},
           {[`btn-text-${this.textAlign}`]: !!this.textAlign},
           {[this.klass]: !!this.klass}
         ]

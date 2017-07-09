@@ -3,9 +3,9 @@
     <transition name="modal-fade">
       <div :class="classes" v-if="show" :style="{display:'block', zIndex:zindex}">
         <div :class="dialogClasses">
-          <div class="modal-content">
+          <div class="modal-content" v-click-outside="_close">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"  @click="_close"></button>
+              <button type="button" class="close"  @click="_close"></button>
               <h4 class="modal-title">{{title}}</h4>
             </div>
             <div class="modal-body">

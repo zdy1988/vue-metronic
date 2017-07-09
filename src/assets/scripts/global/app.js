@@ -264,39 +264,6 @@ var handleModals = function () {
   })
 }
 
-// Handles Bootstrap Tooltips.
-var handleTooltips = function () {
-  // global tooltips
-  $('.tooltips').tooltip()
-
-  // portlet tooltips
-  $('.portlet > .portlet-title .fullscreen').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    title: 'Fullscreen'
-  })
-  $('.portlet > .portlet-title > .tools > .reload').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    title: 'Reload'
-  })
-  $('.portlet > .portlet-title > .tools > .remove').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    title: 'Remove'
-  })
-  $('.portlet > .portlet-title > .tools > .config').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    title: 'Settings'
-  })
-  $('.portlet > .portlet-title > .tools > .collapse, .portlet > .portlet-title > .tools > .expand').tooltip({
-    trigger: 'hover',
-    container: 'body',
-    title: 'Collapse/Expand'
-  })
-}
-
 // Handles Bootstrap Dropdowns
 var handleDropdowns = function () {
   /*
@@ -483,7 +450,6 @@ let App = new class {
     handleAlerts() // handle closabled alerts
     handleDropdowns() // handle dropdowns
     handleTabs() // handle tabs
-    handleTooltips() // handle bootstrap tooltips
     handlePopovers() // handles bootstrap popovers
     handleAccordions() // handles accordions
     handleModals() // handle modals
@@ -507,7 +473,6 @@ let App = new class {
     handleSelect2() // handle custom Select2 dropdowns
     handleFancybox() // handle fancy box
     handleDropdowns() // handle dropdowns
-    handleTooltips() // handle bootstrap tooltips
     handlePopovers() // handles bootstrap popovers
     handleAccordions() // handles accordions
     handleBootstrapConfirmation() // handle bootstrap confirmations

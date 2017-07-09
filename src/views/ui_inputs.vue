@@ -285,12 +285,12 @@
   import Fa from '@/components/icon/faicon'
   import Formbox from '@/components/form/formbox'
   import FormboxGroup from '@/components/form/formbox-group'
-  import Textbox from '@/components/input/textbox'
-  import TextboxGroup from '@/components/input/textbox-group'
-  import Checkbox from '@/components/input/checkbox'
-  import CheckboxGroup from '@/components/input/checkbox-group'
-  import Radio from '@/components/input/radio'
-  import RadioGroup from '@/components/input/radio-group'
+  import Textbox from '@/components/textbox/textbox'
+  import TextboxGroup from '@/components/textbox/textbox-group'
+  import Checkbox from '@/components/checkbox/checkbox'
+  import CheckboxGroup from '@/components/checkbox/checkbox-group'
+  import Radio from '@/components/radio/radio'
+  import RadioGroup from '@/components/radio/radio-group'
 
   export default{
     data () {

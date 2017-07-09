@@ -1,8 +1,8 @@
 <template>
 <row>
-  <column :md=2 :sm=2 :xs=6 v-for='color in colors' :key="color">
+  <column :md=2 :sm=2 :xs=6 v-for='color in colorKeys' :key="color">
     <div class="color-demo tooltips" data-original-title="Click to view demos for this color" @click="modals[color].showModal = true">
-      <div :class="['color-view','bg-'+color,'bg-font-'+color,'bold','uppercase']"> {{colors2[color].base}} </div>
+      <div :class="['color-view','bg-'+color,'bg-font-'+color,'bold','uppercase']"> {{colors[color].base}} </div>
       <div :class="['color-info','bg-white','c-font-14','sbold']"> {{color}} </div>
     </div>
     <modal :show="modals[color].showModal" @close="modals[color].showModal = false" :title="color" size="lg">
@@ -94,7 +94,7 @@
 </row>
 </template>
 <script>
-  import {colors, colors2} from '@/untils'
+  import {colors, colorKeys} from '@/untils'
   import {Row, Column} from '@/layouts/girds'
   import {Modal} from '@/components/modal'
   import {Tabs, TabPane} from '@/components/tabs'
@@ -103,11 +103,11 @@
     data () {
       return {
         colors: colors,
-        colors2: colors2,
+        colorKeys: colorKeys,
         modals: (
           function () {
-            var self = colors2
-            colors.forEach(function (color) {
+            var self = colors
+            colorKeys.forEach(function (color) {
               self[color].showModal = false
             })
             return self

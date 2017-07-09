@@ -27,7 +27,7 @@ var SweetAlert = function () {
 					  title: sa_title,
 					  text: sa_message,
 					  type: sa_type,
-					  allowOutsideClick: sa_allowOutsideClick,
+					  allowOutsideClick: true,
 					  showConfirmButton: sa_showConfirmButton,
 					  showCancelButton: sa_showCancelButton,
 					  confirmButtonClass: sa_confirmButtonClass,

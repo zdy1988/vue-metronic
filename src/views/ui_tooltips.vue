@@ -98,45 +98,47 @@
         </row>
         <h4 class="block">Popover</h4>
         <row>
-          <row>
-            <column :md=3 class="text-center">
-              <popover placement="top">
-                <btn>top</btn>
-                <div slot="content">
-                  <btn>{{msg}}</btn>
-                </div>
-              </popover>
-            </column>
-            <column :md=3 class="text-center">
-              <popover placement="left">
-                <btn>left</btn>
-                <div slot="content">
-                  <btn>{{msg}}</btn>
-                </div>
-              </popover>
-            </column>
-            <column :md=3 class="text-center">
-              <popover placement="right">
-                <btn>right</btn>
-                <div slot="content">
-                  <btn>{{msg}}</btn>
-                </div>
-              </popover>
-            </column>
-            <column :md=3 class="text-center">
-              <popover placement="bottom">
-                <btn>bottom</btn>
-                <div slot="content">
-                  <btn>{{msg}}</btn>
-                  <btn>{{msg}}</btn>
-                  <btn>{{msg}}</btn>
-                  <btn>{{msg}}</btn>
-                  <btn>{{msg}}</btn>
-                </div>
-              </popover>
-            </column>
-          </row>
+          <column :md=3 class="text-center">
+            <popover placement="top">
+              <btn>top</btn>
+              <div slot="content">
+                <btn>{{msg}}</btn>
+              </div>
+            </popover>
+          </column>
+          <column :md=3 class="text-center">
+            <popover placement="left">
+              <btn>left</btn>
+              <div slot="content">
+                <btn>{{msg}}</btn>
+              </div>
+            </popover>
+          </column>
+          <column :md=3 class="text-center">
+            <popover placement="right">
+              <btn>right</btn>
+              <div slot="content">
+                <btn>{{msg}}</btn>
+              </div>
+            </popover>
+          </column>
+          <column :md=3 class="text-center">
+            <popover placement="bottom">
+              <btn>bottom</btn>
+              <div slot="content">
+                <btn>{{msg}}</btn>
+                <btn>{{msg}}</btn>
+                <btn>{{msg}}</btn>
+                <btn>{{msg}}</btn>
+                <btn>{{msg}}</btn>
+              </div>
+            </popover>
+          </column>
         </row>
+        <h4 class="block">Popover Confirmation</h4>
+        <popover-confirm @success="_success" @cancel="_cancel">
+          <btn>Confirmation 1</btn>
+        </popover-confirm>
       </portlet>
     </column>
   </row>
@@ -146,7 +148,7 @@
   import {Portlet} from '@/components/portlet'
   import Btn from '@/components/button/btn'
   import Tooltip from '@/components/tooltip/tooltip'
-  import Popover from '@/components/popover/popover'
+  import {Popover, PopoverConfirm} from '@/components/popover'
 
   export default{
     data () {
@@ -162,7 +164,16 @@
       Portlet,
       Btn,
       Tooltip,
-      Popover
+      Popover,
+      PopoverConfirm
+    },
+    methods: {
+      _success () {
+        console.log('success!')
+      },
+      _cancel () {
+        console.log('cancel!')
+      }
     }
   }
 </script>

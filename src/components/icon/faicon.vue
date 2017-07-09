@@ -6,7 +6,7 @@
 </style>
 <script>
   import faicons from '@/untils/faicons'
-  import colors from '@/untils/colors'
+  import {colorKeys} from '@/untils'
 
   export default{
     name: 'Fa',
@@ -17,7 +17,7 @@
     },
     props: {
       name: {type: String, required: true, validator: value => faicons.indexOf(value) > -1},
-      color: {type: String, validator: value => colors.indexOf(value) > -1},
+      color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
       size: {type: String, validator: value => ['lg', '2x', '3x', '4x', '5x'].indexOf(value) > -1},
       pulse: {type: Boolean},
       spin: {type: Boolean},
