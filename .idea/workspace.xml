@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84d64c47-47ca-425c-89f2-a58e07276b98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/accordions/accordion-pane.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/accordions/accordions.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/accordions/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/datepicker/datepicker.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/datepicker/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/element/go-top.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input/mixins/_input.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav/quick-nav.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/selectbox/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/selectbox/selectbox.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/data/pages.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/layouts/layout/layout.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/main.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/views/ui_datepickers.vue" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/scripts/global/quick-nav.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/select/select.vue" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/views/layout.vue" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/animates/animated-vue/index.js" afterPath="$PROJECT_DIR$/src/animates/animated-vue/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/sass/global/_colors.scss" afterPath="$PROJECT_DIR$/src/assets/sass/global/_colors.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scripts/layout/layout.js" afterPath="$PROJECT_DIR$/src/assets/scripts/layout/layout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/element/index.js" afterPath="$PROJECT_DIR$/src/components/element/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/element/masker.vue" afterPath="$PROJECT_DIR$/src/components/element/masker.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/icon/faicon-stack.vue" afterPath="$PROJECT_DIR$/src/components/icon/faicon-stack.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/modal/modal.vue" afterPath="$PROJECT_DIR$/src/components/modal/modal.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/portlet/portlet.vue" afterPath="$PROJECT_DIR$/src/components/portlet/portlet.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tabs/tab-pane.vue" afterPath="$PROJECT_DIR$/src/components/tabs/tab-pane.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/tabs/tabs.vue" afterPath="$PROJECT_DIR$/src/components/tabs/tabs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/textbox/textbox.vue" afterPath="$PROJECT_DIR$/src/components/textbox/textbox.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prototypes/alert.js" afterPath="$PROJECT_DIR$/src/prototypes/alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/prototypes/index.js" afterPath="$PROJECT_DIR$/src/prototypes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/untils/colors.js" afterPath="$PROJECT_DIR$/src/untils/colors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/index.vue" afterPath="$PROJECT_DIR$/src/views/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_alerts.vue" afterPath="$PROJECT_DIR$/src/views/ui_alerts.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_colors.vue" afterPath="$PROJECT_DIR$/src/views/ui_colors.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_inputs.vue" afterPath="$PROJECT_DIR$/src/views/ui_inputs.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_modals.vue" afterPath="$PROJECT_DIR$/src/views/ui_modals.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/views/ui_tabs.vue" afterPath="$PROJECT_DIR$/src/views/ui_tabs.vue" />
-    </list>
+    <list default="true" id="84d64c47-47ca-425c-89f2-a58e07276b98" name="Default" comment="" />
     <ignored path="vue-metronic.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -419,12 +376,12 @@
       <workItem from="1498481364324" duration="9556000" />
       <workItem from="1499508272760" duration="32158000" />
       <workItem from="1499584802132" duration="32603000" />
-      <workItem from="1500091421123" duration="81051000" />
+      <workItem from="1500091421123" duration="81379000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="558696000" />
+    <option name="totallyTimeSpent" value="559024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,7 +393,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
+    <frame x="-8" y="-8" width="2576" height="1426" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19471817" sideWeight="0.80382776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32739937" sideWeight="0.49702382" order="6" side_tool="false" content_ui="tabs" />
