@@ -10,7 +10,7 @@
         <slot name="actions"></slot>
       </div>
       <div class="tools" v-if="tools">
-        <a href="javascript:;" class="collapse" @click="fold" v-tooltip="'Collapse/Expand'"> </a>
+        <a href="javascript:;" class="collapse" @click="fold" v-tooltip="Collapse/Expand"> </a>
         <a href="javascript:;" class="config" @click="config" v-tooltip="'Settings'"> </a>
         <a href="javascript:;" class="reload" @click="reload" v-tooltip="'Reload'"> </a>
         <a href="javascript:;" class="fullscreen" @click="fullscreen" v-tooltip="'Fullscreen'"> </a>

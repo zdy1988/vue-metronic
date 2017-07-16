@@ -2,7 +2,7 @@
   <row>
     <column :md=6>
       <portlet icon="social-dribbble" title="DEFAULT TABS" theme="light" color="purple-soft" bordered>
-        <tabs>
+        <tabs :active-index.sync="activeIndex">
           <tab-pane name='Section 1' cur>
             <p> Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
               retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate
@@ -133,17 +133,51 @@
         </tabs>
       </portlet>
     </column>
+    <column :md=6>
+      <portlet icon="social-dribbble" title="Accordions" theme="light" color="purple-soft" bordered>
+        <accordions :active-index.sync="activeIndex">
+          <accordion-pane title="Collapsible Group Item #1" cur>
+            <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+            <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. </p>
+          </accordion-pane>
+          <accordion-pane title="Collapsible Group Item #2">
+            <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+            <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. </p>
+          </accordion-pane>
+          <accordion-pane title="Collapsible Group Item #3">
+            <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+            <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. </p>
+          </accordion-pane>
+          <accordion-pane title="Collapsible Group Item #4">
+            <p> Duis autem vel eum iriure dolor in hendrerit in vulputate. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut. </p>
+            <p> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+              eiusmod. </p>
+          </accordion-pane>
+        </accordions>
+      </portlet>
+      <select v-model="activeIndex">
+        <option :value="0">0</option>
+        <option :value="1">1</option>
+        <option :value="2">2</option>
+        <option :value="3">3</option>
+      </select>
+    </column>
   </row>
 </template>
 <script>
   import {Row, Column} from '@/layouts/girds'
   import Portlet from '@/components/portlet/portlet'
   import {Tabs, TabPane} from '@/components/tabs'
+  import {Accordions, AccordionPane} from '@/components/accordions'
 
   export default{
     data () {
       return {
-        position: 'top'
+        position: 'top',
+        activeIndex: 1
       }
     },
     methods: {
@@ -156,7 +190,9 @@
       Column,
       Portlet,
       Tabs,
-      TabPane
+      TabPane,
+      Accordions,
+      AccordionPane
     }
   }
 </script>

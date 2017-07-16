@@ -5,7 +5,7 @@
       <div :class="['color-view','bg-'+color,'bg-font-'+color,'bold','uppercase']"> {{colors[color].base}} </div>
       <div :class="['color-info','bg-white','c-font-14','sbold']"> {{color}} </div>
     </div>
-    <modal :show="modals[color].showModal" @close="modals[color].showModal = false" :title="color" size="lg">
+    <modal :show.sync="modals[color].showModal" :title="color" size="lg">
       <tabs mode="line">
         <tab-pane name="Typography" cur>
           <h4>Text font</h4>

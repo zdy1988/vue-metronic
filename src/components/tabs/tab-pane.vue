@@ -18,9 +18,7 @@
       cur: { type: Boolean, default: false }
     },
     created () {
-      if (this.cur) {
-        this.active = this.cur
-      }
+      this.active = this.cur
     }
   }
 </script>

@@ -96,10 +96,10 @@
         </formbox-group>
         <h4>Circle Input</h4>
         <formbox-group>
-          <formbox label="Input" help="Input">
+          <formbox label="Input" help="Input Help">
             <textbox placeholder="Input" shape="circle"></textbox>
           </formbox>
-          <formbox label="Input" help="Input">
+          <formbox label="Input" help="Input Help">
             <textbox-group size="sm" shape="circle">
               <fa name="user"></fa>
               <textbox placeholder="Input"></textbox>
@@ -275,6 +275,24 @@
           </formbox>
         </formbox-group>
       </portlet>
+      <portlet title="SELECT" icon="settings" theme="light" bordered>
+        <h4>Select Value: {{selectValue}}</h4>
+        <selectbox :options="radioGroup" option-text="name" option-value="value" placeHolder="Please select" v-model="selectValue">
+          <option value="yellow">Yellow</option>
+        </selectbox>
+        <br>
+        <btn color="red" @click="selectValue='red'">red</btn>
+        <btn color="blue" @click="selectValue='blue'">blue</btn>
+        <btn color="yellow" @click="selectValue='yellow'">yellow</btn>
+        <btn color="green" @click="selectValue='green'">green</btn>
+        <hr>
+        <h4>Select Value: {{selectValue2}}</h4>
+        <selectbox :options="radioGroup" option-text="name" option-value="value" placeHolder="Please select" v-model="selectValue2" multiple>
+          <option value="yellow">Yellow</option>
+        </selectbox>
+        <br>
+        <btn @click="selectValue2=['red','yellow']">red and yellow</btn>
+      </portlet>
     </column>
   </row>
 </template>
@@ -291,6 +309,7 @@
   import CheckboxGroup from '@/components/checkbox/checkbox-group'
   import Radio from '@/components/radio/radio'
   import RadioGroup from '@/components/radio/radio-group'
+  import Selectbox from '@/components/selectbox/selectbox'
 
   export default{
     data () {
@@ -319,7 +338,10 @@
           {name: 'Blue', value: 'blue'},
           {name: 'Green', value: 'green'}
         ],
-        radioGroupStatus: 'red'
+        radioGroupStatus: 'red',
+
+        selectValue: 'red',
+        selectValue2: ['red', 'blue']
       }
     },
     components: {
@@ -335,7 +357,8 @@
       Checkbox,
       CheckboxGroup,
       Radio,
-      RadioGroup
+      RadioGroup,
+      Selectbox
     }
   }
 </script>

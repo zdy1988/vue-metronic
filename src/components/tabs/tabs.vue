@@ -36,6 +36,7 @@
       position: {type: String, default: 'top', validator: value => ['top', 'left', 'right', 'bottom'].indexOf(value) > -1},
       reversed: {type: Boolean, default: false},
       justified: {type: Boolean, default: false},
+      activeIndex: {type: Number, default: 0},
       klass: {type: String}
     },
     computed: {
@@ -78,25 +79,37 @@
         ]
       }
     },
+    watch: {
+      activeIndex (newValue) {
+        this.setActiveIndex(newValue)
+      }
+    },
     mounted () {
       for (let child of this.$children) {
         if (child.$options._componentTag === 'tab-pane') {
           this.tabPanes.push(child)
         }
       }
-    },
-    created () {
-
+      this.setActiveIndex(this.activeIndex)
     },
     methods: {
+      setActiveIndex (index) {
+        var pane = this.tabPanes[index]
+        if (pane) {
+          this.setActive(pane)
+        }
+      },
       setActive (tabPane) {
-        this.tabPanes.forEach((pane) => {
+        var self = this
+        for (let i = 0; i < this.tabPanes.length; i++) {
+          var pane = this.tabPanes[i]
           if (tabPane === pane) {
             pane.active = true
+            self.$emit('update:activeIndex', i)
           } else {
             pane.active = false
           }
-        })
+        }
       }
     }
   }

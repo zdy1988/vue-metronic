@@ -19,7 +19,7 @@
         </div>
       </div>
     </transition>
-    <masker :show="show" v-if="mask" :zindex="zindex"></masker>
+    <masker :show="show" v-if="mask" :zindex="zindex" :delay="0.5"></masker>
   </div>
 </template>
 <script>
@@ -56,7 +56,7 @@
     },
     methods: {
       _close () {
-        this.$emit('close')
+        this.$emit('update:show', false)
       }
     },
     components: {

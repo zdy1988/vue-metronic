@@ -3,6 +3,7 @@
  */
 export default {
   'white': {base: '#ffffff', font: '#666'},
+  'black': {base: '#000000', font: '#FFFFFF'},
   'default': {base: '#e1e5ec', font: '#666'},
   'dark': {base: '#2f353b', font: '#FFFFFF'},
   'blue': {base: '#3598dc', font: '#FFFFFF'},

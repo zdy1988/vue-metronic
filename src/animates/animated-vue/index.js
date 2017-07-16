@@ -2,6 +2,7 @@
 * This module centralizes all animations from animate.css expressed as functional
 * Vue components for transitions.
 */
+import './css/animated-vue.css'
 
 import AttentionSeekers from './transitions/attention-seekers'
 import BouncingEntrances from './transitions/bouncing-entrances'

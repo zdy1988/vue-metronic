@@ -27,7 +27,7 @@
       if (this.$children.length >= 2) {
         var index = 1
         this.$children.forEach(function (child) {
-          if (child.$options.name === 'Fa') {
+          if (child.$options._componentTag === 'faicon') {
             child.stack = index + 'x'
           }
         })

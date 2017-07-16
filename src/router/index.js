@@ -7,8 +7,8 @@ export default new VueRouter({
   routes: [
     {path: '/', component: resolve => require(['@/views/index'], resolve)},
     {
-      path: '/layout',
-      component: resolve => require(['@/views/layout'], resolve),
+      path: '/main',
+      component: resolve => require(['@/views/main'], resolve),
       children: [
         {path: '/', component: resolve => require(['@/views/dashboard'], resolve)},
         {path: 'ui_colors', component: resolve => require(['@/views/ui_colors'], resolve)},
@@ -20,7 +20,8 @@ export default new VueRouter({
         {path: 'ui_tooltips', component: resolve => require(['@/views/ui_tooltips'], resolve)},
         {path: 'ui_inputs', component: resolve => require(['@/views/ui_inputs'], resolve)},
         {path: 'ui_general', component: resolve => require(['@/views/ui_general'], resolve)},
-        {path: 'ui_alerts', component: resolve => require(['@/views/ui_alerts'], resolve)}
+        {path: 'ui_alerts', component: resolve => require(['@/views/ui_alerts'], resolve)},
+        {path: 'ui_datepickers', component: resolve => require(['@/views/ui_datepickers'], resolve)}
       ]
     }
   ]

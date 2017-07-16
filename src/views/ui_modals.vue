@@ -8,7 +8,7 @@
           <td> Basic Example </td>
           <td>
             <btn color="red" outline klass="sbold" @click="show = true"> View Demo </btn>
-            <modal :show="show" @close="show = false">
+            <modal :show.sync="show">
               Modal body goes here
             </modal>
           </td>
@@ -17,7 +17,7 @@
           <td> Large Width Example </td>
           <td>
             <btn color="purple" outline klass="sbold" @click="show2 = true"> View Demo </btn>
-            <modal :show="show2" @close="show2 = false" size="lg">
+            <modal :show.sync="show2" size="lg">
               Modal body goes here
             </modal>
           </td>
@@ -26,7 +26,7 @@
           <td> Small Width Example </td>
           <td>
             <btn color="blue" outline klass="sbold" @click="show3 = true"> View Demo </btn>
-            <modal :show="show3" @close="show3 = false" size="sm">
+            <modal :show.sync="show3" size="sm">
               Modal body goes here
             </modal>
           </td>
@@ -35,7 +35,7 @@
           <td> Full Width Example </td>
           <td>
             <btn color="dark" outline klass="sbold" @click="show4 = true"> View Demo </btn>
-            <modal :show="show4" @close="show4 = false" size="full">
+            <modal :show.sync="show4" size="full">
               Modal body goes here
             </modal>
           </td>
@@ -44,7 +44,7 @@
           <td> No Masker </td>
           <td>
             <btn color="yellow" outline klass="sbold" @click="show5 = true"> View Demo </btn>
-            <modal :show="show5" @close="show5 = false" :mask="false">
+            <modal :show.sync="show5" :mask="false">
               Modal body goes here
             </modal>
           </td>
@@ -53,7 +53,7 @@
           <td> Footer Inside </td>
           <td>
             <btn color="green" outline klass="sbold" @click="show6 = true"> View Demo </btn>
-            <modal :show="show6" @close="show6 = false">
+            <modal :show.sync="show6">
               Modal body goes here
               <btn color="yellow" outline klass="sbold" @click="show = true" slot="footer"> View Demo </btn>
               <btn color="yellow" outline klass="sbold" @click="show2 = true" slot="footer"> View Demo </btn>
