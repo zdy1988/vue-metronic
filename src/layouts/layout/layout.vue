@@ -534,9 +534,9 @@
             </h1>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
-
-            <router-view></router-view>
-
+            <transition name="fade">
+              <router-view></router-view>
+            </transition>
           </div>
           <!-- END CONTENT BODY -->
         </div>
@@ -1201,11 +1201,18 @@
     }
   })
 
+  import {routerConfig} from '@/router/'
+
   export default{
     data () {
       return {
         logo: require('../../../static/img/layouts/layout/logo.png'),
-        sidebarData: require('../../data/pages.json')
+        sidebarData: routerConfig
+      }
+    },
+    watch: {
+      $route () {
+
       }
     },
     mounted () {
@@ -1221,6 +1228,17 @@
     }
   }
 </script>
+<style scoped>
+  .fade-enter-active, .fade-leave-active {
+    transition: all .5s
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }
+  .fade-enter-active {
+    transition-delay: .5s;
+  }
+</style>
 <style lang='sass'>
   @import "../../assets/sass/bootstrap"
   @import "../../assets/sass/global/components"
