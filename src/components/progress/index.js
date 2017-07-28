@@ -1,7 +1,7 @@
 /**
  * Created by virus_zhh on 2017/7/9.
  */
-import ProgressBar from './progressBar'
+import ProgressBar from './progress-bar'
 
 export {
   ProgressBar

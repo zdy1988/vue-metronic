@@ -96,6 +96,13 @@
     "children": []
   },
   {
+    "title": "Progress",
+    "path": "/main/progress",
+    "src": "pages/progress.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "Menu Example",
     "heading": true
   },

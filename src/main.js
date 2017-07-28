@@ -6,6 +6,7 @@ import router from './router'
 import Animated from './animates/animated-vue'
 import Dirsctives from './directives'
 import Prototypes from './prototypes'
+import Components from './components'
 
 Vue.config.productionTip = false
 
@@ -20,3 +21,4 @@ new Vue({
 Vue.use(Animated)
 Vue.use(Dirsctives)
 Vue.use(Prototypes)
+Vue.use(Components)
