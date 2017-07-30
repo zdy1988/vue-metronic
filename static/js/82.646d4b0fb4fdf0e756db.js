@@ -1,0 +1,2 @@
+webpackJsonp([82],{476:function(e,t,n){var r=n(2)(n(489),n(510),null,null);e.exports=r.exports},489:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={}},510:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("router-link",{attrs:{to:"/main"}},[e._v("Go to home")])},staticRenderFns:[]}}});
+//# sourceMappingURL=82.646d4b0fb4fdf0e756db.js.map
