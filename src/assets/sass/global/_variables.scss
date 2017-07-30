@@ -14,9 +14,13 @@ $theme-type:  						'default' !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-primary:  	  		 	"Open Sans", sans-serif !default;
-$font-family-nav:	  		 		Roboto, sans-serif !default;
-$font-family-default:  	  		 	"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-primary:  	  		 	"Open Sans", "PingFang SC", "Microsoft YaHei",sans-serif !default;
+$font-family-nav:	  		 		Roboto, "PingFang SC", "Microsoft YaHei",sans-serif  !default;
+$font-family-default:  	  		 	"Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif !default;
+
+//$font-family-primary:  	  		 	'Roboto Slab',Monda,"PingFang SC","Microsoft YaHei",sans-serif !default;
+//$font-family-nav:	  		 		Monda,"PingFang SC","Microsoft YaHei",sans-serif  !default;
+//$font-family-default:  	  		 	'Roboto Slab',Monda,"PingFang SC","Microsoft YaHei",sans-serif !default;
 
 $general-heading-color:				#3f444a;
 $general-text-color:  				darken(#677581, 5%);

@@ -14,7 +14,7 @@
   export default {
     name: 'ProgressBar',
     props: {
-      theme: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      theme: {type: String, validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       title: {type: String},
       showValue: {type: Boolean, default: false},
       max: {type: Number, default: 100},

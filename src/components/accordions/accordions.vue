@@ -12,12 +12,19 @@
       }
     },
     props: {
-      activeIndex: {type: Number, default: 0}
+      activeIndex: {type: [Number, String], default: 0}
     },
     watch: {
       activeIndex (newValue) {
+        if (typeof newValue !== 'number') {
+          newValue = parseInt(newValue)
+        }
         this.setActiveIndex(newValue)
       }
+    },
+    model: {
+      prop: 'activeIndex',
+      event: 'update:activeIndex'
     },
     mounted () {
       var self = this

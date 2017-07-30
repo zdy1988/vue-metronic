@@ -96,9 +96,44 @@
     "children": []
   },
   {
-    "title": "Progress",
+    "title": "颜色设置",
+    "path": "/main/color",
+    "src": "pages/color.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "进度条",
     "path": "/main/progress",
-    "src": "pages/progress.md",
+    "src": "pages/progress-bar.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "手风琴",
+    "path": "/main/accordion",
+    "src": "pages/accordion.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "警告提示",
+    "path": "/main/alert",
+    "src": "pages/alert.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "徽标",
+    "path": "/main/bdge",
+    "src": "pages/badge.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "按钮",
+    "path": "/main/button",
+    "src": "pages/button.md",
     "summary": "",
     "children": []
   },

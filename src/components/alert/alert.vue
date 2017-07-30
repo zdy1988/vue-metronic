@@ -20,6 +20,10 @@
       content: {type: String},
       klass: {type: String}
     },
+    model: {
+      prop: 'show',
+      event: 'update:show'
+    },
     computed: {
       classes () {
         return [

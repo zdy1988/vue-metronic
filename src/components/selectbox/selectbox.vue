@@ -5,7 +5,7 @@
     :readonly="readonly"
     :multiple="multiple">
     <option value="" v-if="!!placeHolder && !multiple">{{placeHolder}}</option>
-    <option v-for="option in options" :value="option[optionValue]">{{option[optionText]}}</option>
+    <option v-for="option in options" :value="option[optionValue]" v-if="options.length > 0">{{option[optionText]}}</option>
     <slot></slot>
   </select>
 </template>
@@ -17,7 +17,12 @@
     mixins: [_input],
     props: {
       selectValue: '',
-      options: {type: Array, default: []},
+      options: {
+        type: Array,
+        default: () => {
+          return []
+        }
+      },
       optionText: {type: String, default: 'text'},
       optionValue: {type: String, default: 'value'},
       multiple: {type: Boolean, default: false},
@@ -48,7 +53,7 @@
               option.selected = true
             }
           })
-        } else if (typeof selectValue === 'string') {
+        } else {
           let option = self.getOption(selectValue)
           if (option) {
             option.selected = true
@@ -58,7 +63,7 @@
       getOption (val) {
         for (var i = 0; i < this.$el.children.length; i++) {
           var option = this.$el.children[i]
-          if (option.value === val) {
+          if (option.value.toString() === val.toString()) {
             return option
           }
         }

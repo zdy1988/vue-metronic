@@ -1,6 +1,7 @@
 /**
  * Created by dell on 2017/7/28.
  */
+import { Row, Column } from '@/layouts/girds'
 import { Accordions, AccordionPane } from '@/components/accordions'
 import { Alert } from '@/components/alert'
 import { Badge } from '@/components/badge'
@@ -28,6 +29,8 @@ import { Tooltip } from '@/components/tooltip'
 import { Well } from '@/components/well'
 
 const components = {
+  Row,
+  Column,
   Accordions,
   AccordionPane,
   Alert,

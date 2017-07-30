@@ -32,15 +32,16 @@
   import faicons from '@/untils/faicons'
   import Fa from '@/components/icon/faicon'
   import Btn from './btn'
+  import {colorKeys} from '@/untils'
 
   export default{
     name: 'BtnDropdown',
     props: {
       text: {type: String, default: ''},
       textAlign: {type: String, default: 'left', validator: value => ['left', 'center', 'right'].indexOf(value) > -1},
-      color: {type: String},
+      color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
       shape: {type: String, validator: value => ['circle'].indexOf(value) > -1},
-      theme: {type: String, default: 'default'},
+      theme: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       icon: {type: String, validator: value => faicons.indexOf(value) > -1},
       size: {type: String, validator: value => ['lg', 'sm', 'xs'].indexOf(value) > -1},
       dropup: {type: Boolean, default: false},

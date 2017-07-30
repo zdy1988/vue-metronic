@@ -3,7 +3,7 @@
     <transition name="modal-fade">
       <div :class="classes" v-if="show" :style="{display:'block', zIndex:zindex}">
         <div :class="dialogClasses">
-          <div class="modal-content" v-click-outside="_close">
+          <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close"  @click="_close"></button>
               <h4 class="modal-title">{{title}}</h4>
@@ -12,7 +12,7 @@
               <slot></slot>
             </div>
             <div class="modal-footer">
-              <btn color="dark" outline @click="_close">Close</btn>
+              <btn color="dark" outline @click="_close">关闭</btn>
               <slot name="footer"></slot>
             </div>
           </div>

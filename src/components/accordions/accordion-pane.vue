@@ -1,7 +1,10 @@
 <template>
   <div :class="classes">
     <div class="panel-heading" v-if="hasHeader" style="cursor:pointer">
-      <h3 class="panel-title" v-if="title">{{title}}</h3>
+      <h3 class="panel-title" v-if="title">
+        <fa :name="icon" v-if="icon"></fa>
+        {{title}}
+      </h3>
       <slot name="header"></slot>
     </div>
     <div :class="collapseClasses" :style="collapseStyle">
@@ -33,6 +36,9 @@
   }
 </style>
 <script>
+  import faicons from '@/untils/faicons'
+  import Fa from '@/components/icon/faicon'
+
   export default {
     name: 'AccordionPane',
     data () {
@@ -47,6 +53,7 @@
       title: {type: String},
       maxHeight: {type: Number, default: 200},
       cur: { type: Boolean, default: false },
+      icon: {type: String, validator: value => faicons.indexOf(value) > -1},
       klass: {type: String}
     },
     computed: {
@@ -80,6 +87,9 @@
     updated () {
       this.hasHeader = !!this.$slots.header || !!this.title
       this.hasFooter = !!this.$slots.footer
+    },
+    components: {
+      Fa
     }
   }
 </script>

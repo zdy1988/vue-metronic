@@ -2,7 +2,7 @@
   <div :class="classes">
     <div class="portlet-title">
       <div :class="caption">
-        <icon :name="icon" :class="caption" v-if="!!icon"></icon>
+        <fa :name="icon" :class="caption" v-if="icon"></fa>
         <span class="caption-subject sbold"> {{title}}</span>
         <span class="caption-helper" v-if="!!summary"> {{summary}}</span>
       </div>
@@ -10,11 +10,11 @@
         <slot name="actions"></slot>
       </div>
       <div class="tools" v-if="tools">
-        <a href="javascript:;" class="collapse" @click="fold" v-tooltip="Collapse/Expand"> </a>
-        <a href="javascript:;" class="config" @click="config" v-tooltip="'Settings'"> </a>
-        <a href="javascript:;" class="reload" @click="reload" v-tooltip="'Reload'"> </a>
-        <a href="javascript:;" class="fullscreen" @click="fullscreen" v-tooltip="'Fullscreen'"> </a>
-        <a href="javascript:;" class="remove" @click="remove" v-tooltip="'Remove'"> </a>
+        <a href="javascript:;" class="collapse" @click="fold" v-tooltip="'合并 / 展开'"> </a>
+        <a href="javascript:;" class="config" @click="config" v-tooltip="'设置'"> </a>
+        <a href="javascript:;" class="reload" @click="reload" v-tooltip="'刷新'"> </a>
+        <a href="javascript:;" class="fullscreen" @click="fullscreen" v-tooltip="'全屏'"> </a>
+        <a href="javascript:;" class="remove" @click="remove" v-tooltip="'移除'"> </a>
       </div>
     </div>
     <div class="portlet-body">
@@ -26,14 +26,15 @@
   import $ from 'jquery'
   import {colorKeys} from '@/untils'
 
-  import Icon from '@/components/icon/icon'
+  import faicons from '@/untils/faicons'
+  import Fa from '@/components/icon/faicon'
 
   export default{
     name: 'Portlet',
     props: {
       title: {type: String, default: 'Portlet Title'},
       summary: {type: String},
-      icon: {type: String},
+      icon: {type: String, validator: value => faicons.indexOf(value) > -1},
       theme: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
       color: {type: String, default: 'dark', validator: value => colorKeys.indexOf(value) > -1},
       bordered: {type: Boolean},
@@ -117,7 +118,7 @@
       }
     },
     components: {
-      Icon
+      Fa
     }
   }
 </script>
