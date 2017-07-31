@@ -138,6 +138,27 @@
     "children": []
   },
   {
+    "title": "多选框",
+    "path": "/main/checkbox",
+    "src": "pages/checkbox.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "日期选择器",
+    "path": "/main/datepicker",
+    "src": "pages/datepicker.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "表单容器",
+    "path": "/main/form",
+    "src": "pages/form.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "Menu Example",
     "heading": true
   },

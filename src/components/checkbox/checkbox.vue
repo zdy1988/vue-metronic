@@ -28,7 +28,7 @@
     },
     model: {
       prop: 'checked',
-      event: 'check'
+      event: 'update:checked'
     },
     computed: {
       classes () {
@@ -39,8 +39,8 @@
       }
     },
     watch: {
-      checked () {
-        this.status = this.checked
+      checked (newValue) {
+        this.status = newValue
       }
     },
     created () {
@@ -49,7 +49,7 @@
     methods: {
       _change (e) {
         this.status = e.target.checked
-        this.$emit('check', e.target.checked)
+        this.$emit('update:checked', e.target.checked)
       }
     }
   }

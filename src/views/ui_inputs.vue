@@ -229,7 +229,7 @@
         </row>
         <h4>Radio Status</h4>
         <formbox-group>
-          <formbox>
+          <formbox horizontal>
             <radio-group inline>
               <radio v-model="radioStatus">Default</radio>
             </radio-group>

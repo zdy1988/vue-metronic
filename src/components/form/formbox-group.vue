@@ -1,10 +1,17 @@
 <template>
   <form :class="classes" role="form">
+    <div class="form-actions top" v-if="hasTopSlot">
+      <div class="btn-set pull-right">
+        <slot name="top"></slot>
+      </div>
+    </div>
     <div class="form-body">
       <slot></slot>
     </div>
-    <div class="form-actions" v-if="hasSlot">
-      <slot name="actions"></slot>
+    <div class="form-actions" v-if="hasBottomSlot">
+      <div class="btn-set pull-right">
+        <slot name="bottom"></slot>
+      </div>
     </div>
   </form>
 </template>
@@ -13,7 +20,8 @@
     name: 'FormboxGroup',
     data () {
       return {
-        hasSlot: !!this.$slots.actions
+        hasTopSlot: !!this.$slots.top,
+        hasBottomSlot: !!this.$slots.bottom
       }
     },
     props: {
@@ -32,7 +40,8 @@
       }
     },
     updated () {
-      this.hasSlot = !!this.$slots.actions
+      this.hasTopSlot = !!this.$slots.top
+      this.hasBottomSlot = !!this.$slots.bottom
     }
   }
 </script>

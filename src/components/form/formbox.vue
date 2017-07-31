@@ -23,26 +23,26 @@
     props: {
       label: {type: String},
       help: {type: String},
-      horizontal: {type: Boolean, default: false}
+      horizontal: {type: Boolean}
     },
     computed: {
       classes () {
         return [
           {'form-group row': true},
-          {'form-group-horizontal': this.horizontal}
+          {'form-group-horizontal': !!this.horizontal}
         ]
       },
       labelClasses () {
         return [
           {'control-label': true},
           {'col-md-12': !this.horizontal},
-          {'col-md-3': this.horizontal}
+          {'col-md-3': !!this.horizontal}
         ]
       },
       inputOrientationClasses () {
         return [
           {'col-md-12': !this.horizontal},
-          {'col-md-9': this.horizontal}
+          {'col-md-9': !!this.horizontal}
         ]
       }
     }
