@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display: inline-block;">
     <span ref="trigger"><slot></slot></span>
     <div :class="classes" ref="popover">
       <div class="arrow"></div>

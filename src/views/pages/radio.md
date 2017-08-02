@@ -3,62 +3,62 @@
 
   ### 使用
 
-  <checkbox>复选框</checkbox>
-  <checkbox outline style="margin-left: 20px;">复选框</checkbox>
+  <radio>单选框</radio>
+  <radio outline style="margin-left: 20px;">单选框</radio>
 
   ```html
-  <checkbox>复选框</checkbox>
-  <checkbox outline>复选框</checkbox>
+  <radio>单选框</radio>
+  <radio outline>单选框</radio>
   ```
 
-  ### 复选框组
+  ### 单选框组
 
-  <checkbox-group>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline disabled>禁用</checkbox>
-  </checkbox-group>
+  <radio-group>
+    <radio outline>单选框</radio>
+    <radio outline>单选框</radio>
+    <radio outline disabled>禁用</radio>
+  </radio-group>
 
-  <checkbox-group inline>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline disabled>禁用</checkbox>
-  </checkbox-group>
+  <radio-group inline>
+    <radio>单选框</radio>
+    <radio>单选框</radio>
+    <radio disabled>禁用</radio>
+  </radio-group>
 
   ```html
-  <checkbox-group>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline disabled>禁用</checkbox>
-  </checkbox-group>
+  <radio-group>
+    <radio outline>单选框</radio>
+    <radio outline>单选框</radio>
+    <radio outline disabled>禁用</radio>
+  </radio-group>
 
-  <checkbox-group inline>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline>复选框</checkbox>
-    <checkbox outline disabled>禁用</checkbox>
-  </checkbox-group>
+  <radio-group inline>
+    <radio>单选框</radio>
+    <radio>单选框</radio>
+    <radio disabled>禁用</radio>
+  </radio-group>
   ```
 
   ### 例子
 
   <p>
-    <checkbox v-model="checkboxStatus">复选框</checkbox>
+    <radio v-model="radioStatus">单选框</radio>
   </p>
   <p>
-    值： {{checkboxStatus}}
-    <btn @click="checkboxStatus = !checkboxStatus" theme="success">
+    值： {{radioStatus}}
+    <btn @click="radioStatus = !radioStatus" theme="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
   </p>
   <p>
-    <checkbox-group inline v-model="checkboxGroupStatus">
-      <checkbox :value="item.value" v-for="item in checkboxGroup" :key="item.value">{{item.name}}</checkbox>
-    </checkbox-group>
+    <radio-group inline v-model="radioGroupStatus">
+      <radio :value="item.value" v-for="item in radioGroup" :key="item.value">{{item.name}}</radio>
+    </radio-group>
   </p>
   <p>
-    值：{{checkboxGroupStatus}}
-    <btn @click="checkboxGroupStatus = ['green']" theme="success">
+    值：{{radioGroupStatus}}
+    <btn @click="radioGroupStatus = 'green'" theme="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -68,13 +68,13 @@
   export default {
     data () {
       return {
-        checkboxStatus: true,
-        checkboxGroup: [
+        radioStatus: false,
+        radioGroup: [
           {name: 'Red', value: 'red'},
           {name: 'Blue', value: 'blue'},
           {name: 'Green', value: 'green'}
         ],
-        checkboxGroupStatus: ['red', 'blue']
+        radioGroupStatus: 'red'
       }
     }
   }
@@ -82,23 +82,23 @@
 
   ```html
   <p>
-    <checkbox v-model="checkboxStatus">Default</checkbox>
+    <radio v-model="radioStatus">单选框</radio>
   </p>
   <p>
-    值： {{checkboxStatus}}
-    <btn @click="checkboxStatus = !checkboxStatus" theme="success">
+    值： {{radioStatus}}
+    <btn @click="radioStatus = !radioStatus" theme="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
   </p>
   <p>
-    <checkbox-group inline v-model="checkboxGroupStatus">
-      <checkbox :value="item.value" v-for="item in checkboxGroup" :key="item.value">{{item.name}}</checkbox>
-    </checkbox-group>
+    <radio-group inline v-model="radioGroupStatus">
+      <radio :value="item.value" v-for="item in radioGroup" :key="item.value">{{item.name}}</radio>
+    </radio-group>
   </p>
   <p>
-    值：{{checkboxGroupStatus}}
-    <btn @click="checkboxGroupStatus = ['green']" theme="success">
+    值：{{radioGroupStatus}}
+    <btn @click="radioGroupStatus = 'green'" theme="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -108,13 +108,13 @@
   export default {
     data () {
       return {
-        checkboxStatus: true,
-        checkboxGroup: [
+        radioStatus: false,
+        radioGroup: [
           {name: 'Red', value: 'red'},
           {name: 'Blue', value: 'blue'},
           {name: 'Green', value: 'green'}
         ],
-        checkboxGroupStatus: ['red', 'blue']
+        radioGroupStatus: 'red'
       }
     }
   }
@@ -123,7 +123,7 @@
 
   ### API
 
-  <portlet title="Checkbox" icon="map-signs" theme="light" bordered>
+  <portlet title="Radio" icon="map-signs" theme="light" bordered>
 
   #### Props
 
@@ -141,6 +141,12 @@
               <tr>
                   <td> value </td>
                   <td> 设置值，单独使用时无意义 </td>
+                  <td> - </td>
+                  <td> null </td>
+              </tr>
+              <tr>
+                  <td> name </td>
+                  <td> 设置name值，单独使用时无意义 </td>
                   <td> - </td>
                   <td> null </td>
               </tr>
@@ -189,7 +195,7 @@
 
   </portlet>
 
-  <portlet title="Checkbox Group" icon="map-signs" theme="light" bordered>
+  <portlet title="Radio Group" icon="map-signs" theme="light" bordered>
 
   #### Props
 
@@ -205,10 +211,16 @@
           </thead>
           <tbody>
               <tr>
-                  <td> checkedGroup </td>
-                  <td> 设置获取选中项，设置方式为 v-model="" 或者 checked-group.sync="" </td>
-                  <td> Array </td>
-                  <td> [] </td>
+                  <td> value </td>
+                  <td> 设置获取选中项，设置方式为 v-model="" 或者 value.sync="" </td>
+                  <td> - </td>
+                  <td> null </td>
+              </tr>
+              <tr>
+                  <td> name </td>
+                  <td> 设置组内所有 radio 的 name 值 </td>
+                  <td> String </td>
+                  <td> - </td>
               </tr>
               <tr>
                   <td> inline </td>
@@ -235,7 +247,7 @@
           <tbody>
               <tr>
                   <td> default </td>
-                  <td> 设置选择框，只能写入 Checkbox </td>
+                  <td> 设置选择框，只能写入 Radio </td>
               </tr>
           </tbody>
       </table>

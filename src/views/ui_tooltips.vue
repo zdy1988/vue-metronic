@@ -1,7 +1,7 @@
 <template>
   <row>
     <column :md=6>
-      <portlet title="TOOLTIPS" icon="settings" color="green-sharp" theme="light" bordered klass="util-btn-group-margin-bottom-5">
+      <portlet title="TOOLTIPS" icon="pencil" color="green-sharp" theme="light" bordered klass="util-btn-group-margin-bottom-5">
         <h4 class="block">Placement</h4>
         <row>
           <column :md=3 class="text-center">
@@ -136,9 +136,9 @@
           </column>
         </row>
         <h4 class="block">Popover Confirmation</h4>
-        <popover-confirm @success="_success" @cancel="_cancel">
+        <popconfirm @success="_success" @cancel="_cancel">
           <btn>Confirmation 1</btn>
-        </popover-confirm>
+        </popconfirm>
       </portlet>
     </column>
   </row>
@@ -148,7 +148,7 @@
   import {Portlet} from '@/components/portlet'
   import Btn from '@/components/button/btn'
   import Tooltip from '@/components/tooltip/tooltip'
-  import {Popover, PopoverConfirm} from '@/components/popover'
+  import {Popover, Popconfirm} from '@/components/popover'
 
   export default{
     data () {
@@ -165,7 +165,7 @@
       Btn,
       Tooltip,
       Popover,
-      PopoverConfirm
+      Popconfirm
     },
     methods: {
       _success () {

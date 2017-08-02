@@ -106,8 +106,6 @@
 </script>
 ```
 
-<hr/>
-
 ### API
 
 <portlet title="Progress Bar" icon="map-signs" theme="light" bordered>    

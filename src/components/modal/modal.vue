@@ -34,11 +34,15 @@
       }
     },
     props: {
-      title: {type: String, default: 'Modal Title'},
+      title: {type: String, default: '弹出窗'},
       show: {type: Boolean, required: true},
       mask: {type: Boolean, default: true},
       size: {type: String, validator: value => ['lg', 'sm', 'full'].indexOf(value) > -1},
       klass: {type: String}
+    },
+    model: {
+      prop: 'show',
+      event: 'update:show'
     },
     computed: {
       classes () {

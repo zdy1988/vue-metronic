@@ -13,7 +13,7 @@
     },
     props: {
       value: null,
-      name: {default: 'RadioGroup'},
+      name: {type: String, default: 'RadioGroup'},
       inline: {type: Boolean}
     },
     computed: {
@@ -26,7 +26,7 @@
     },
     model: {
       prop: 'value',
-      event: 'checkgroup'
+      event: 'update:value'
     },
     watch: {
       name () {
@@ -51,7 +51,7 @@
               child.status = status
             }
           }
-          this.$emit('checkgroup', value)
+          this.$emit('update:value', value)
         }
       },
       refreshGroup () {

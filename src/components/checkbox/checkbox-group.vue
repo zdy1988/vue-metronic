@@ -20,7 +20,7 @@
     },
     model: {
       prop: 'checkedGroup',
-      event: 'checkgroup'
+      event: 'update:checkedGroup'
     },
     methods: {
       _click (e) {
@@ -36,7 +36,7 @@
               child.status = status
             }
           }
-          this.$emit('checkgroup', values)
+          this.$emit('update:checkedGroup', values)
         }
       },
       refreshGroup () {

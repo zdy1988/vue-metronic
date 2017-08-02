@@ -1,11 +1,11 @@
 <template>
   <popover :placement="placement" :title="title" :show.sync="show">
     <btn-group slot="content">
-      <btn theme="success" @click="_success">
-        <fa name="check"></fa> Yes
+      <btn theme="success" @click="_ok">
+        <fa name="check"></fa> {{okText}}
       </btn>
       <btn theme="danger" @click="_cancel">
-        <fa name="close"></fa> No
+        <fa name="close"></fa> {{cancelText}}
       </btn>
     </btn-group>
     <slot></slot>
@@ -17,20 +17,22 @@
   import {Btn, BtnGroup} from '@/components/button'
 
   export default {
-    name: 'PopoverConfirm',
+    name: 'Popconfirm',
     data () {
       return {
         show: false
       }
     },
     props: {
-      title: {type: String, default: 'Are you sure?'},
+      title: {type: String, default: '请确认'},
+      okText: {type: String, default: '确认'},
+      cancelText: {type: String, default: '取消'},
       placement: {type: String, default: 'top'}
     },
     methods: {
-      _success () {
+      _ok () {
         this.show = false
-        this.$emit('success')
+        this.$emit('ok')
       },
       _cancel () {
         this.show = false

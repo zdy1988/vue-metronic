@@ -18,7 +18,7 @@ import { QuickNav } from '@/components/nav'
 import { Note } from '@/components/note'
 import { Pagination } from '@/components/pagination'
 import { Panel } from '@/components/panel'
-import { Popover, PopoverConfirm } from '@/components/popover'
+import { Popover, Popconfirm } from '@/components/popover'
 import { Portlet } from '@/components/portlet'
 import { ProgressBar } from '@/components/progress'
 import { Radio, RadioGroup } from '@/components/radio'
@@ -60,7 +60,7 @@ const components = {
   Pagination,
   Panel,
   Popover,
-  PopoverConfirm,
+  Popconfirm,
   Portlet,
   ProgressBar,
   Radio,

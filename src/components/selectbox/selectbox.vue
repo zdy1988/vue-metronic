@@ -23,6 +23,7 @@
           return []
         }
       },
+      placeHolder: {type: String},
       optionText: {type: String, default: 'text'},
       optionValue: {type: String, default: 'value'},
       multiple: {type: Boolean, default: false},
@@ -63,7 +64,7 @@
       getOption (val) {
         for (var i = 0; i < this.$el.children.length; i++) {
           var option = this.$el.children[i]
-          if (option.value.toString() === val.toString()) {
+          if (String(option.value) === String(val)) {
             return option
           }
         }

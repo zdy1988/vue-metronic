@@ -3,60 +3,52 @@
 
 ### 使用
 
-<alert :show="true" content="提示成功！"></alert>
+<note>
+  这是一段文字.
+</note>
 
 ```html
-<alert :show="true" content="提示成功！"></alert>
+<note>
+  这是一段文字
+</note>
 ```
 
 ### 状态色
 
-<alert :show="true" theme="success">提示成功！</alert>
-<alert :show="true" theme="info">提示信息！</alert>
-<alert :show="true" theme="warning">提示警告！</alert>
-<alert :show="true" theme="danger">提示错误！</alert>
+<note title="成功! " theme="success">
+  这是一段文字.
+</note>
+<note title="信息! " theme="info">
+  这是一段文字.
+</note>
+<note title="错误! " theme="danger">
+  这是一段文字.
+</note>
+<note title="警告! " theme="warning">
+  这是一段文字.
+</note>
 
 ```html
-<alert :show="true" theme="success">提示成功！</alert>
-<alert :show="true" theme="info">提示信息！</alert>
-<alert :show="true" theme="warning">提示警告！</alert>
-<alert :show="true" theme="danger">提示错误！</alert>
+<note title="成功! " theme="success">
+  这是一段文字.
+</note>
+<note title="信息! " theme="info">
+  这是一段文字.
+</note>
+<note title="错误! " theme="danger">
+  这是一段文字.
+</note>
+<note title="警告! " theme="warning">
+  这是一段文字.
+</note>
 ```
 
-### 例子
-
-<alert v-model="show" content="提示成功！"></alert>
-<btn @click="show = !show">切换显示</btn>
-<script>
-  export default {
-    data () {
-      return {
-        show: true
-      }
-    }
-  }
-</script>
-
-```html
-<alert v-model="show" content="提示成功！"></alert>
-<btn @click="show = !show">切换显示</btn>
-<script>
-  export default {
-    data () {
-      return {
-        show: true
-      }
-    }
-  }
-</script>
-```
-
-### API
-
-<portlet title="Alert" icon="map-signs" theme="light" bordered> 
+  ### API
+  
+  <portlet title="Note" icon="map-signs" theme="light" bordered>
   
   #### Props
-  
+
   <div class="table-scrollable table-scrollable-borderless">
       <table class="table table-hover table-bordered">
           <thead>
@@ -70,9 +62,9 @@
           <tbody>
               <tr>
                   <td> theme </td>
-                  <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
+                  <td> 设置状态色，可选值 success, info, warning, danger </td>
                   <td> String </td>
-                  <td> success </td>
+                  <td> default </td>
               </tr>
               <tr>
                   <td> color </td>
@@ -81,15 +73,15 @@
                   <td> - </td>
               </tr>
               <tr>
-                  <td> show </td>
-                  <td> 设置是否显示，必选项 </td>
-                  <td> Boolean </td>
+                  <td> title </td>
+                  <td> 设置标题 </td>
+                  <td> String </td>
                   <td> - </td>
               </tr>
               <tr>
                   <td> content </td>
-                  <td> 设置内容 </td>
-                  <td> String </td>
+                  <td> 设置内容</td>
+                  <td> Boolean </td>
                   <td> - </td>
               </tr>
               <tr>
@@ -99,13 +91,11 @@
                   <td> - </td>
               </tr>
           </tbody>
-      </table>      
+      </table>
   </div>
-  
-  <br>
-  
+
   #### Slots
-  
+
   <div class="table-scrollable table-scrollable-borderless">
       <table class="table table-hover table-bordered">
           <thead>
@@ -117,13 +107,13 @@
           <tbody>
               <tr>
                   <td> default </td>
-                  <td> 设置内容，将覆盖 Props 中的 content 属性！ </td>
+                  <td> 设置内容 </td>
               </tr>
           </tbody>
-      </table>      
+      </table>
   </div>
   
-</portlet>
+  </portlet>
 
 </column>
 </row>

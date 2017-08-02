@@ -131,6 +131,13 @@
     "children": []
   },
   {
+    "title": "标签",
+    "path": "/main/lable",
+    "src": "pages/lable.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "按钮",
     "path": "/main/button",
     "src": "pages/button.md",
@@ -138,9 +145,16 @@
     "children": []
   },
   {
-    "title": "多选框",
+    "title": "复选框",
     "path": "/main/checkbox",
     "src": "pages/checkbox.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "单选框",
+    "path": "/main/radio",
+    "src": "pages/radio.md",
     "summary": "",
     "children": []
   },
@@ -155,6 +169,69 @@
     "title": "表单容器",
     "path": "/main/form",
     "src": "pages/form.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "列表",
+    "path": "/main/list",
+    "src": "pages/list.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "对话框",
+    "path": "/main/modal",
+    "src": "pages/modal.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "便签",
+    "path": "/main/note",
+    "src": "pages/note.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "分页",
+    "path": "/main/pagination",
+    "src": "pages/pagination.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "面板",
+    "path": "/main/panel",
+    "src": "pages/panel.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "气泡卡片",
+    "path": "/main/popover",
+    "src": "pages/popover.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "气泡确认框",
+    "path": "/main/popconfirm",
+    "src": "pages/popconfirm.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "内容窗口",
+    "path": "/main/portlet",
+    "src": "pages/portlet.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "下拉选择",
+    "path": "/main/selectbox",
+    "src": "pages/selectbox.md",
     "summary": "",
     "children": []
   },

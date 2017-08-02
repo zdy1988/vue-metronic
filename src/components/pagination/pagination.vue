@@ -1,6 +1,5 @@
 <template>
   <ul :class="classes"
-      :role="role"
       :aria-disabled="disabled ? 'true' : 'false'"
       @focusin.self="focusCurrent"
       @keydown.left.prevent="focusPrev"
@@ -15,9 +14,8 @@
         <span class="page-link" v-html="firstText"></span>
       </li>
       <li v-else class="page-item">
-        <a :role="buttonRole"
-           class="page-link"
-           :aria-label="labelFirstPage"
+        <a class="page-link"
+           v-tooltip="labelFirstPage"
            tabindex="-1"
            href="#"
            @click.prevent="setPage($event, 1)"
@@ -32,9 +30,8 @@
       <span class="page-link" v-html="prevText"></span>
     </li>
     <li v-else class="page-item">
-      <a :role="buttonRole"
-         class="page-link"
-         :aria-label="labelPrevPage"
+      <a class="page-link"
+         v-tooltip="labelPrevPage"
          tabindex="-1"
          href="#"
          @click.prevent="setPage($event, currentPage - 1)"
@@ -44,7 +41,7 @@
     </li>
 
     <!-- First Ellipsis Bookend -->
-    <li v-if="showFirstDots" class="page-item disabled hidden-xs-down" role="seperator">
+    <li v-if="showFirstDots" class="page-item disabled hidden-xs-down">
       <span class="page-link" v-html="ellipsisText"></span>
     </li>
 
@@ -53,11 +50,10 @@
         :class="pageItemClasses(page)"
         :key="page.number"
     >
-      <a :role="buttonRole"
-         :class="pageLinkClasses(page)"
+      <a :class="pageLinkClasses(page)"
          :disabled="disabled"
          :aria-disabled="disabled ? 'true' : 'false'"
-         :aria-label="labelPage + ' ' + page.number"
+         v-tooltip="labelPage.replace('{0}', page.number)"
          :aria-current="isActive(page) ? 'true' : 'false'"
          :aria-posinset="page.number"
          :aria-setsize="numberOfPages"
@@ -69,7 +65,7 @@
     </li>
 
     <!-- Last Ellipsis Bookend -->
-    <li v-if="showLastDots" class="page-item disabled hidden-xs-down" role="seperator">
+    <li v-if="showLastDots" class="page-item disabled hidden-xs-down">
       <span class="page-link" v-html="ellipsisText"></span>
     </li>
 
@@ -78,9 +74,8 @@
       <span class="page-link" v-html="nextText"></span>
     </li>
     <li v-else class="page-item">
-      <a :role="buttonRole"
-         class="page-link"
-         :aria-label="labelNextPage"
+      <a class="page-link"
+         v-tooltip="labelNextPage"
          tabindex="-1"
          @click.prevent="setPage($event, currentPage + 1)"
          @keydown.enter.prevent="setPage($event, currentPage + 1)"
@@ -94,9 +89,8 @@
         <span class="page-link" v-html="lastText"></span>
       </li>
       <li v-else class="page-item">
-        <a :role="buttonRole"
-           class="page-link"
-           :aria-label="labelLastPage"
+        <a class="page-link"
+           v-tooltip="labelLastPage"
            tabindex="-1"
            @click.prevent="setPage($event, numberOfPages)"
            @keydown.enter.prevent="setPage($event, numberOfPages)"
@@ -130,19 +124,17 @@
       totalRows: {type: Number, default: 20},
       size: {type: String, default: 'md', validator: value => ['lg', 'md', 'sm'].indexOf(value) > -1},
       hideGotoEndButtons: {type: Boolean, default: false},
-      labelFirstPage: {type: String, default: 'Goto first page'},
+      labelFirstPage: {type: String, default: '第一页'},
       firstText: {type: String, default: '&laquo;'},
-      labelPrevPage: {type: String, default: 'Goto previous page'},
+      labelPrevPage: {type: String, default: '上一页'},
       prevText: {type: String, default: '&lsaquo;'},
-      labelNextPage: {type: String, default: 'Goto next page'},
+      labelNextPage: {type: String, default: '下一页'},
       nextText: {type: String, default: '&rsaquo;'},
-      labelLastPage: {type: String, default: 'Goto last page'},
+      labelLastPage: {type: String, default: '最后一页'},
       lastText: {type: String, default: '&raquo;'},
-      labelPage: {type: String, default: 'Goto page'},
+      labelPage: {type: String, default: '第{0}页'},
       hideEllipsis: {type: Boolean, default: false},
-      ellipsisText: {type: String, default: '&hellip;'},
-      role: {type: String, default: 'group'},
-      buttonRole: {type: String, default: 'button'}
+      ellipsisText: {type: String, default: '&hellip;'}
     },
     data () {
       return {

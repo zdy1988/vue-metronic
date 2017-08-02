@@ -88,7 +88,7 @@
               </tr>
               <tr>
                   <td> color </td>
-                  <td> 设置背景色，将覆盖主题颜色，可选值参考 <router-link to="/main/color">Color</router-link> </td>
+                  <td> 设置背景色，将覆盖状态色，可选值参考 <router-link to="/main/color">Color</router-link> </td>
                   <td> String </td>
                   <td> - </td>
               </tr>

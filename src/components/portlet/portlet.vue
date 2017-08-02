@@ -32,7 +32,7 @@
   export default{
     name: 'Portlet',
     props: {
-      title: {type: String, default: 'Portlet Title'},
+      title: {type: String, default: '标题'},
       summary: {type: String},
       icon: {type: String, validator: value => faicons.indexOf(value) > -1},
       theme: {type: String, default: 'box', validator: value => ['box', 'solid', 'light'].indexOf(value) > -1},
