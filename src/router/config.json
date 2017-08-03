@@ -236,6 +236,34 @@
     "children": []
   },
   {
+    "title": "标签页",
+    "path": "/main/tabs",
+    "src": "pages/tabs.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "文本框",
+    "path": "/main/textbox",
+    "src": "pages/textbox.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "工具提示",
+    "path": "/main/tooltip",
+    "src": "pages/tooltip.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "井",
+    "path": "/main/well",
+    "src": "pages/well.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "Menu Example",
     "heading": true
   },

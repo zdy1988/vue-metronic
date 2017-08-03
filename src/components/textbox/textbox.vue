@@ -43,7 +43,7 @@
       icon: {type: String},
       iconPosition: {type: String, default: 'left', validator: value => ['left', 'right'].indexOf(value) > -1},
       iconColor: {type: String},
-      iconSpin: {type: String},
+      iconSpin: {type: Boolean},
       klass: {type: String}
     },
     computed: {

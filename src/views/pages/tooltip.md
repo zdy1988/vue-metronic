@@ -4,53 +4,68 @@
 ### 使用
 
 <p>
-  <popover placement="top" title="卡片标题">
+  <tooltip placement="top" title="卡片标题" content="提示">
     <btn color="red" outline>视图演示</btn>
-    <div slot="content">
-      <p>卡片中的一些内容</p>
-    </div>
-  </popover>
+  </tooltip>
 </p>
 
 ```html
-<popover placement="top" title="卡片标题">
-  <btn>视图演示</btn>
-  <div slot="content">
-    <p>卡片中的一切内容</p>
-  </div>
-</popover>
+<tooltip placement="top" title="卡片标题" content="提示">
+  <btn color="red" outline>视图演示</btn>
+</tooltip>
 ```
 
 ### 位置
 
-<popover placement="top" title="卡片标题">
+<tooltip placement="top" title="卡片标题">
   <btn color="red" outline>上</btn>
   <div slot="content">
     <p>卡片中的一些内容</p>
   </div>
-</popover>
-<popover placement="left" title="卡片标题">
+</tooltip>
+<tooltip placement="left" title="卡片标题">
   <btn color="green" outline>左</btn>
   <div slot="content">
     <p>卡片中的一些内容</p>
   </div>
-</popover>
-<popover placement="right" title="卡片标题">
+</tooltip>
+<tooltip placement="right" title="卡片标题">
   <btn color="blue" outline>右</btn>
   <div slot="content">
     <p>卡片中的一些内容</p>
   </div>
-</popover>
-<popover placement="bottom" title="卡片标题">
+</tooltip>
+<tooltip placement="bottom" title="卡片标题">
   <btn color="purple" outline>下</btn>
   <div slot="content">
     <p>卡片中的一些内容</p>
   </div>
-</popover>
+</tooltip>
 
-  ### API
+### 触发
+
+<tooltip content="卡片中的一些内容" placement="top" triggers="click">
+  <btn>click</btn>
+</tooltip>
+<tooltip content="卡片中的一些内容" placement="top" triggers="focus">
+  <btn>focus</btn>
+</tooltip>
+<tooltip content="卡片中的一些内容" placement="top" triggers="hover">
+  <btn>hover</btn>
+</tooltip>
+<tooltip content="卡片中的一些内容" placement="top" :triggers="['click','focus']">
+  <btn>click + focus</btn>
+</tooltip>
+<tooltip content="卡片中的一些内容" placement="top" :triggers="['click','hover']">
+ <btn>click + hover</btn>
+</tooltip>
+<tooltip content="卡片中的一些内容" placement="top" :triggers="['hover','focus']">
+  <btn>focus + hover</btn>
+</tooltip>
+
+### API
   
-  <portlet title="Popover" icon="map-signs" theme="light" bordered>
+  <portlet title="Tooltip" icon="map-signs" theme="light" bordered>
   
   #### Props
 
@@ -65,12 +80,6 @@
               </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td> title </td>
-                  <td> 设置标题 </td>
-                  <td> String </td>
-                  <td> - </td>
-              </tr>
               <tr>
                   <td> content </td>
                   <td> 设置内容</td>
@@ -109,9 +118,9 @@
               </tr>
               <tr>
                   <td> triggers </td>
-                  <td> 设置显示触发方式，hover, click, focus </td>
-                  <td> String </td>
-                  <td> click </td>
+                  <td> 设置显示触发方式，hover, click, focus, ['click','focus'], ['click','hover'], ['hover','focus'] </td>
+                  <td> [String, Array] </td>
+                  <td> hover </td>
               </tr>
           </tbody>
       </table>
@@ -134,7 +143,7 @@
               </tr>
               <tr>
                   <td> content </td>
-                  <td> 设置卡片内容 </td>
+                  <td> 设置提示内容 </td>
               </tr>
           </tbody>
       </table>

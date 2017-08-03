@@ -14,7 +14,7 @@
       }
     },
     props: {
-      name: { type: String, default: 'Section' },
+      name: { type: String, default: '标签页' },
       cur: { type: Boolean, default: false }
     },
     created () {

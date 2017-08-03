@@ -193,6 +193,7 @@ export default {
         this.refreshPosition()
         this.$nextTick(() => {
           this.visible = true
+          this.$popover.style.zIndex = 1030
         })
       })
     },
@@ -200,6 +201,7 @@ export default {
       this._delay(false, () => {
         clearTimeout(this.$timeout)
         this.visible = false
+        this.$popover.style.zIndex = -100
       })
     },
     _toggle (show) {
