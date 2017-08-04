@@ -274,24 +274,6 @@ var handleDropdowns = function () {
   })
 }
 
-var handleAlerts = function () {
-  $('body').on('click', '[data-close="alert"]', function (e) {
-    $(this).parent('.alert').hide()
-    $(this).closest('.note').hide()
-    e.preventDefault()
-  })
-
-  $('body').on('click', '[data-close="note"]', function (e) {
-    $(this).closest('.note').hide()
-    e.preventDefault()
-  })
-
-  $('body').on('click', '[data-remove="note"]', function (e) {
-    $(this).closest('.note').remove()
-    e.preventDefault()
-  })
-}
-
 // Handle textarea autosize
 var handleTextareaAutosize = function () {
   if (typeof AutoSize === 'function') {
@@ -447,7 +429,6 @@ let App = new class {
     handleScrollers() // handles slim scrolling contents
     handleFancybox() // handle fancy box
     handleSelect2() // handle custom Select2 dropdowns
-    handleAlerts() // handle closabled alerts
     handleDropdowns() // handle dropdowns
     handleTabs() // handle tabs
     handlePopovers() // handles bootstrap popovers
@@ -667,74 +648,6 @@ let App = new class {
     } else {
       $.unblockUI()
     }
-  }
-
-  startPageLoading (options) {
-    if (options && options.animate) {
-      $('.page-spinner-bar').remove()
-      $('body').append('<div class="page-spinner-bar"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>')
-    } else {
-      $('.page-loading').remove()
-      $('body').append('<div class="page-loading"><img src="' + this.getGlobalImgPath() + 'loading-spinner-grey.gif"/>&nbsp&nbsp<span>' + (options && options.message ? options.message : 'Loading...') + '</span></div>')
-    }
-  }
-
-  stopPageLoading () {
-    $('.page-loading, .page-spinner-bar').remove()
-  }
-
-  alert (options) {
-    options = $.extend(true, {
-      container: '', // alerts parent container(by default placed after the page breadcrumbs)
-      place: 'append', // 'append' or 'prepend' in container
-      type: 'success', // alert's type
-      message: '', // alert's message
-      close: true, // make alert closable
-      reset: true, // close all previouse alerts first
-      focus: true, // auto scroll to the alert after shown
-      closeInSeconds: 0, // auto close after defined seconds
-      icon: '' // put icon before the message
-    }, options)
-
-    var id = App.getUniqueID('App_alert')
-
-    var html = '<div id="' + id + '" class="custom-alerts alert alert-' + options.type + ' fade in">' + (options.close ? '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>' : '') + (options.icon !== '' ? '<i class="fa-lg fa fa-' + options.icon + '"></i>  ' : '') + options.message + '</div>'
-
-    if (options.reset) {
-      $('.custom-alerts').remove()
-    }
-
-    if (!options.container) {
-      if ($('.page-fixed-main-content').size() === 1) {
-        $('.page-fixed-main-content').prepend(html)
-      } else if (($('body').hasClass('page-container-bg-solid') || $('body').hasClass('page-content-white')) && $('.page-head').size() === 0) {
-        $('.page-title').after(html)
-      } else {
-        if ($('.page-bar').size() > 0) {
-          $('.page-bar').after(html)
-        } else {
-          $('.page-breadcrumb, .breadcrumbs').after(html)
-        }
-      }
-    } else {
-      if (options.place === 'append') {
-        $(options.container).append(html)
-      } else {
-        $(options.container).prepend(html)
-      }
-    }
-
-    if (options.focus) {
-      App.scrollTo($('#' + id))
-    }
-
-    if (options.closeInSeconds > 0) {
-      setTimeout(function () {
-        $('#' + id).remove()
-      }, options.closeInSeconds * 1000)
-    }
-
-    return id
   }
 
   // public function to initialize the fancybox plugin

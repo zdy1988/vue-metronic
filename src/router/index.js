@@ -5,13 +5,21 @@ import scroll from '@/mixins/_scroll.js'
 
 Vue.use(VueRouter)
 
-const routers = Object.keys(routerConfig).map(key => {
-  let item = routerConfig[key]
-  if (item.src) {
-    item.component = resolve => require(['@/views/' + item.src], resolve)
-    return item
+const routers = []
+
+function recursionRouters (routerConfig) {
+  for (let item of routerConfig) {
+    if (item.src) {
+      item.meta = Object.assign({}, item)
+      item.component = resolve => require(['@/views/' + item.src], resolve)
+      routers.push(item)
+    } else if (item.children) {
+      recursionRouters(item.children)
+    }
   }
-}).filter(item => item !== undefined)
+}
+
+recursionRouters(routerConfig)
 
 var router = new VueRouter({
   routes: [
@@ -32,5 +40,6 @@ router.beforeEach((to, from, next) => {
 export default router
 
 export {
-  routerConfig
+  routerConfig,
+  routers
 }

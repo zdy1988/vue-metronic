@@ -378,22 +378,7 @@
           <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
           <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
           <div class="page-sidebar navbar-collapse collapse">
-            <!-- BEGIN SIDEBAR MENU -->
-            <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-            <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-            <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-            <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-            <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-            <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-            <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
-              <page-sidebar-toggler></page-sidebar-toggler>
-
-              <page-sidebar-search></page-sidebar-search>
-
-              <page-sidebar-item v-for="(sidebarItem, index) in sidebarData" :key="sidebarItem.title" :model="sidebarItem" :class="{'start active': index===0}"></page-sidebar-item>
-            </ul>
-            <!-- END SIDEBAR MENU -->
-            <!-- END SIDEBAR MENU -->
+            <page-sidebar-menu :sidebar-data="sidebarData" :set-active="setSidebarMenuActive"></page-sidebar-menu>
           </div>
           <!-- END SIDEBAR -->
         </div>
@@ -485,53 +470,9 @@
               </div>
             </div>
             <!-- END THEME PANEL -->
-            <!-- BEGIN PAGE BAR -->
-            <div class="page-bar">
-              <ul class="page-breadcrumb">
-                <li>
-                  <a href="index.html">Home</a>
-                  <i class="fa fa-circle"></i>
-                </li>
-                <li>
-                  <a href="#">Blank Page</a>
-                  <i class="fa fa-circle"></i>
-                </li>
-                <li>
-                  <span>Page Layouts</span>
-                </li>
-              </ul>
-              <div class="page-toolbar">
-                <div class="btn-group pull-right">
-                  <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
-                    <i class="fa fa-angle-down"></i>
-                  </button>
-                  <ul class="dropdown-menu pull-right" role="menu">
-                    <li>
-                      <a href="#">
-                        <i class="icon-bell"></i> Action</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-shield"></i> Another action</a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-user"></i> Something else here</a>
-                    </li>
-                    <li class="divider"> </li>
-                    <li>
-                      <a href="#">
-                        <i class="icon-bag"></i> Separated link</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <!-- END PAGE BAR -->
+            <page-bar></page-bar>
             <!-- BEGIN PAGE TITLE-->
-            <h1 class="page-title"> Blank Page Layout
-              <small>blank page layout</small>
-            </h1>
+            <page-title></page-title>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
             <transition name="fade">
@@ -1115,6 +1056,7 @@
       <!-- END FOOTER -->
     </div>
     <quick-nav></quick-nav>
+    <page-loading :show="showLoading"></page-loading>
   </div>
 </template>
 <script>
@@ -1122,97 +1064,35 @@
   import Layout from '@/assets/scripts/layout/layout'
   import QuickSidebar from '@/assets/scripts/global/quick-sidebar'
 
-  import Vue from 'vue'
-
   import {Fa, Icon} from '@/components/icon'
   import {QuickNav} from '@/components/nav'
   import {GoTop} from '@/components/element'
 
-  Vue.component('page-sidebar-item', {
-    template: `<li class="heading" v-if="model.heading">
-                   <h3 class="uppercase">{{model.title}}</h3>
-               </li>
-               <li class="nav-item" v-else>
-                  <router-link :to="model.path" class="nav-link" :class="{'nav-toggle':isFolder}" v-if="model.path">
-                     <i class="icon-folder"></i>
-                     <span class="title">{{model.title}}</span>
-                     <span class="arrow" v-if="isFolder"></span>
-                  </router-link>
-                  <a href="javascript:;" class="nav-link" :class="{'nav-toggle':isFolder}" v-else>
-                    <i class="icon-folder"></i>
-                    <span class="title">{{model.title}}</span>
-                    <span class="arrow" v-if="isFolder"></span>
-                  </a>
-
-                  <ul class="sub-menu" v-if="isFolder">
-                    <page-sidebar-item v-for="model in model.children" :key="model.title" :model="model"></page-sidebar-item>
-                  </ul>
-               </li>`,
-    props: {
-      model: {type: Object}
-    },
-    computed: {
-      isFolder: function () {
-        return this.model.children &&
-          this.model.children.length
-      }
-    }
-  })
-
-  // DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box
-  // DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box
-  Vue.component('page-sidebar-search', {
-    template: `<li class="sidebar-search-wrapper">
-                  <div class="sidebar-search" :class="classes">
-                    <a href="javascript:;" class="remove">
-                      <i class="icon-close"></i>
-                    </a>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                        <a href="javascript:;" class="btn submit">
-                          <i class="icon-magnifier"></i>
-                        </a>
-                      </span>
-                    </div>
-                  </div>
-               </li>`,
-    props: {
-      theme: {type: String, validator: value => ['bordered', 'solid'].indexOf(value) > -1}
-    },
-    computed: {
-      classes () {
-        return [
-          {'sidebar-search-bordered': !!this.theme},
-          {'sidebar-search-solid': !!this.theme && this.theme === 'solid'}
-        ]
-      }
-    }
-  })
-
-  Vue.component('page-sidebar-toggler', {
-    template: `<li class="sidebar-toggler-wrapper" v-if="show">
-                 <div class="sidebar-toggler">
-                   <span></span>
-                 </div>
-               </li>`,
-    props: {
-      show: {type: Boolean, default: false}
-    }
-  })
-
   import {routerConfig} from '@/router/'
+
+  import PageLoading from './page-loading'
+  import PageSidebarMenu from './page-sidebar-menu'
+  import PageBar from './page-bar'
+  import PageTitle from './page-title'
 
   export default{
     data () {
       return {
         logo: require('../../../static/img/layouts/layout/logo.png'),
-        sidebarData: routerConfig
+        showLoading: false,
+        sidebarData: routerConfig,
+        setSidebarMenuActive: () => {
+          this.showLoading = true
+          setTimeout(() => {
+            this.showLoading = false
+          }, 500)
+          return true
+        }
       }
     },
     watch: {
-      $route () {
-
+      $route (to, from, savedPosition) {
+        console.log(this.$route)
       }
     },
     mounted () {
@@ -1224,7 +1104,11 @@
       Fa,
       Icon,
       QuickNav,
-      GoTop
+      GoTop,
+      PageLoading,
+      PageSidebarMenu,
+      PageBar,
+      PageTitle
     }
   }
 </script>

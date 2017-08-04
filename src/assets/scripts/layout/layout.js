@@ -11,9 +11,6 @@ var layoutCssPath = 'layouts/layout/css/'
 
 var resBreakpointMd = App.getResponsiveBreakpoint('md')
 
-var ajaxContentSuccessCallbacks = []
-var ajaxContentErrorCallbacks = []
-
 // * BEGIN:CORE HANDLERS *//
 //  this function handles responsive layout on screen size resize or mobile device rotate.
 
@@ -528,10 +525,6 @@ let Layout = new class {
     handleSidebarMenuActiveLink(mode, el, null)
   }
 
-  setAngularJsSidebarMenuActiveLink (mode, el, $state) {
-    handleSidebarMenuActiveLink(mode, el, $state)
-  }
-
   initSidebar ($state) {
     // layout handlers
     handleFixedSidebar() //  handles fixed sidebar menu
@@ -553,50 +546,6 @@ let Layout = new class {
     this.initHeader()
     this.initSidebar(null)
     this.initContent()
-  }
-
-  loadAjaxContent (url, sidebarMenuLink) {
-    var pageContent = $('.page-content .page-content-body')
-
-    App.startPageLoading({animate: true})
-
-    $.ajax({
-      type: 'GET',
-      cache: false,
-      url: url,
-      dataType: 'html',
-      success: function (res) {
-        App.stopPageLoading()
-
-        for (var i = 0; i < ajaxContentSuccessCallbacks.length; i++) {
-          ajaxContentSuccessCallbacks[i].call(res)
-        }
-
-        if (sidebarMenuLink.size() > 0 && sidebarMenuLink.parents('li.open').size() === 0) {
-          $('.page-sidebar-menu > li.open > a').click()
-        }
-
-        pageContent.html(res)
-        Layout.fixContentHeight() //  fix content height
-        App.initAjax() //  initialize core stuff
-      },
-      error: function (res, ajaxOptions, thrownError) {
-        App.stopPageLoading()
-        pageContent.html('<h4>Could not load the requested content.</h4>')
-
-        for (var i = 0; i < ajaxContentErrorCallbacks.length; i++) {
-          ajaxContentSuccessCallbacks[i].call(res)
-        }
-      }
-    })
-  }
-
-  addAjaxContentSuccessCallback (callback) {
-    ajaxContentSuccessCallbacks.push(callback)
-  }
-
-  addAjaxContentErrorCallback (callback) {
-    ajaxContentErrorCallbacks.push(callback)
   }
 
   // public function to fix the sidebar and content height accordingly

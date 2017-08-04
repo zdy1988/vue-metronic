@@ -1,6 +1,6 @@
 [
   {
-    "title": "Dashboard",
+    "title": "指示板",
     "path": "/main/",
     "src": "dashboard",
     "summary": "statistics, charts, recent events and reports",
@@ -11,92 +11,7 @@
     "title": "UI Features"
   },
   {
-    "title": "Color Library",
-    "path": "/main/ui_colors",
-    "src": "ui_colors",
-    "summary": "color variants for metronic and bootstrap custom elements and components",
-    "children": []
-  },
-  {
-    "title": "Font Icons",
-    "path": "/main/ui_icons",
-    "src": "ui_icons",
-    "summary": "fontawesome, simple line icons",
-    "children": []
-  },
-  {
-    "title": "General Components",
-    "path": "/main/ui_general",
-    "src": "ui_general",
-    "summary": "bootstrap alerts, notes, tooltips, progress bars, labels, badges, paginations and more",
-    "children": []
-  },
-  {
-    "title": "Components",
-    "heading": true
-  },
-  {
-    "title": "Buttons",
-    "path": "/main/ui_buttons",
-    "src": "ui_buttons",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Alerts",
-    "path": "/main/ui_alerts",
-    "src": "ui_alerts",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Modals",
-    "path": "/main/ui_modals",
-    "src": "ui_modals",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Tabs",
-    "path": "/main/ui_tabs",
-    "src": "ui_tabs",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Tooltips",
-    "path": "/main/ui_tooltips",
-    "src": "ui_tooltips",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Inputs",
-    "path": "/main/ui_inputs",
-    "src": "ui_inputs",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "Datepickers",
-    "path": "/main/ui_datepickers",
-    "src": "ui_datepickers",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "portlets",
-    "heading": true
-  },
-  {
-    "title": "Portlets",
-    "path": "/main/ui_portlets",
-    "src": "ui_portlets",
-    "summary": "",
-    "children": []
-  },
-  {
-    "title": "颜色设置",
+    "title": "颜色",
     "path": "/main/color",
     "src": "pages/color.md",
     "summary": "",
@@ -278,29 +193,39 @@
           {
             "title": "Item 11",
             "summary": "",
-            "children": []
+            "children": [],
+            "path": "/main/page",
+            "src": "pages/page.md"
           },
           {
             "title": "Item 12",
             "summary": "",
-            "children": []
+            "children": [],
+            "path": "/main/page",
+            "src": "pages/page.md"
           },
           {
             "title": "Item 13",
             "summary": "",
-            "children": []
+            "children": [],
+            "path": "/main/page",
+            "src": "pages/page.md"
           }
         ]
       },
       {
         "title": "Item 2",
         "summary": "",
-        "children": []
+        "children": [],
+        "path": "/main/page",
+        "src": "pages/page.md"
       },
       {
         "title": "Item 3",
         "summary": "",
-        "children": []
+        "children": [],
+        "path": "/main/page",
+        "src": "pages/page.md"
       }
     ]
   }
