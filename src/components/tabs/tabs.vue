@@ -2,10 +2,22 @@
   <div :class="tabClasses">
     <div :class="navPosition" style="z-index: 1;" v-show="position !== 'bottom'">
       <ul :class="navClasses">
-        <li :class="{active:tabPane.active}" v-for="tabPane in tabPanes">
+        <li :class="{active:tabPane.active}" v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit > index">
           <a href="javscript:;" @click="setActive(tabPane)">
-            {{tabPane.name}}
+            <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
           </a>
+        </li>
+        <li class="dropdown" :class="{active: limit <= tabIndex}" v-if="limit > 0 && limit < tabPanes.length">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 更多
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-right">
+            <li v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit <= index">
+              <a href="javscript:;" @click="setActive(tabPane)">
+                <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -16,8 +28,22 @@
     </div>
     <div :class="navPosition" style="z-index: 1;" v-show="position === 'bottom'">
       <ul :class="navClasses">
-        <li :class="{active:tabPane.active}" v-for="tabPane in tabPanes">
-          <a href="javscript:;" @click="setActive(tabPane)">{{tabPane.name}}</a>
+        <li :class="{active:tabPane.active}" v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit > index">
+          <a href="javscript:;" @click="setActive(tabPane)">
+            <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
+          </a>
+        </li>
+        <li class="dropdown" :class="{active: limit <= tabIndex}" v-if="limit > 0 && limit < tabPanes.length">
+          <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 更多
+            <i class="fa fa-angle-down"></i>
+          </a>
+          <ul class="dropdown-menu pull-right">
+            <li v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit <= index">
+              <a href="javscript:;" @click="setActive(tabPane)">
+                <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -28,7 +54,8 @@
     name: 'Tabs',
     data () {
       return {
-        tabPanes: []
+        tabPanes: [],
+        tabIndex: 0
       }
     },
     props: {
@@ -37,6 +64,7 @@
       reversed: {type: Boolean, default: false},
       justified: {type: Boolean, default: false},
       activeIndex: {type: Number, default: 0},
+      limit: {type: Number, default: 1000},
       klass: {type: String}
     },
     computed: {
@@ -85,14 +113,18 @@
       }
     },
     mounted () {
-      for (let child of this.$children) {
-        if (child.$options._componentTag === 'tab-pane') {
-          this.tabPanes.push(child)
-        }
-      }
-      this.setActiveIndex(this.activeIndex)
+      this.updateTabs()
     },
     methods: {
+      updateTabs () {
+        this.tabPanes.length = 0
+        for (let child of this.$children) {
+          if (child.$options._componentTag === 'tab-pane') {
+            this.tabPanes.push(child)
+          }
+        }
+        this.setActiveIndex(this.activeIndex)
+      },
       setActiveIndex (index) {
         var pane = this.tabPanes[index]
         if (pane) {
@@ -105,6 +137,7 @@
           var pane = this.tabPanes[i]
           if (tabPane === pane) {
             pane.active = true
+            self.tabIndex = i
             self.$emit('update:activeIndex', i)
           } else {
             pane.active = false

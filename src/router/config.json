@@ -172,6 +172,13 @@
     "children": []
   },
   {
+    "title": "开关",
+    "path": "/main/switch",
+    "src": "pages/switch.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "井",
     "path": "/main/well",
     "src": "pages/well.md",

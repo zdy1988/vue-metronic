@@ -6,9 +6,7 @@
   <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
   <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
   <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-  <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
-    <page-sidebar-toggler></page-sidebar-toggler>
-
+  <ul :class="classes" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
     <page-sidebar-search></page-sidebar-search>
 
     <page-sidebar-item v-for="(sidebarItem, index) in sidebarData"
@@ -93,25 +91,23 @@
     }
   })
 
-  Vue.component('page-sidebar-toggler', {
-    template: `<li class="sidebar-toggler-wrapper" v-if="show">
-                 <div class="sidebar-toggler">
-                   <span></span>
-                 </div>
-               </li>`,
-    props: {
-      show: {type: Boolean, default: false}
-    }
-  })
-
   export default{
     props: {
+      show: {type: Boolean, default: true},
       sidebarData: {type: Array, required: true},
       setActive: {
         type: Function,
         default: () => {
           return true
         }
+      }
+    },
+    computed: {
+      classes () {
+        return [
+          {'page-sidebar-menu  page-header-fixed': true},
+          {'page-sidebar-menu-closed': !this.show}
+        ]
       }
     }
   }

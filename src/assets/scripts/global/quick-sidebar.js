@@ -5,14 +5,6 @@ import $ from 'jquery'
 import App from '../global/app'
 import Layout from '../layout/layout'
 
-// Handles quick sidebar toggler
-var handleQuickSidebarToggler = function () {
-  // quick sidebar toggler
-  $('.dropdown-quick-sidebar-toggler a, .page-quick-sidebar-toggler, .quick-sidebar-toggler').click(function (e) {
-    $('body').toggleClass('page-quick-sidebar-open')
-  })
-}
-
 // Handles quick sidebar chats
 var handleQuickSidebarChat = function () {
   var wrapper = $('.page-quick-sidebar-wrapper')
@@ -41,14 +33,6 @@ var handleQuickSidebarChat = function () {
 
   initChatSlimScroll()
   App.addResizeHandler(initChatSlimScroll) // reinitialize on window resize
-
-  wrapper.find('.page-quick-sidebar-chat-users .media-list > .media').click(function () {
-    wrapperChat.addClass('page-quick-sidebar-content-item-shown')
-  })
-
-  wrapper.find('.page-quick-sidebar-chat-user .page-quick-sidebar-back-to-list').click(function () {
-    wrapperChat.removeClass('page-quick-sidebar-content-item-shown')
-  })
 
   var handleChatMessagePost = function (e) {
     e.preventDefault()
@@ -102,7 +86,6 @@ var handleQuickSidebarChat = function () {
       })
     }, 3000)
   }
-
   wrapperChat.find('.page-quick-sidebar-chat-user-form .btn').click(handleChatMessagePost)
   wrapperChat.find('.page-quick-sidebar-chat-user-form .form-control').keypress(function (e) {
     if (e.which === 13) {
@@ -155,7 +138,6 @@ var handleQuickSidebarSettings = function () {
 let QuickSidebar = new class {
   init () {
     // layout handlers
-    handleQuickSidebarToggler() // handles quick sidebar's toggler
     handleQuickSidebarChat() // handles quick sidebar's chats
     handleQuickSidebarAlerts() // handles quick sidebar's alerts
     handleQuickSidebarSettings() // handles quick sidebar's setting

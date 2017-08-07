@@ -3,7 +3,6 @@
  **/
 import $ from 'jquery'
 import App from '../global/app'
-import Cookies from 'js-cookie'
 
 var layoutImgPath = 'layouts/layout/img/'
 
@@ -305,23 +304,6 @@ var handleSidebarMenu = function () {
     }
   })
 
-  //  handle the search submit(for sidebar search and responsive mode of the header search)
-  $('.sidebar-search .submit').on('click', function (e) {
-    e.preventDefault()
-    if ($('body').hasClass('page-sidebar-closed')) {
-      if ($('.sidebar-search').hasClass('open') === false) {
-        if ($('.page-sidebar-fixed').size() === 1) {
-          $('.page-sidebar .sidebar-toggler').click() // trigger sidebar toggle button
-        }
-        $('.sidebar-search').addClass('open')
-      } else {
-        $('.sidebar-search').submit()
-      }
-    } else {
-      $('.sidebar-search').submit()
-    }
-  })
-
   //  handle close on body click
   if ($('.sidebar-search').size() !== 0) {
     $('.sidebar-search .input-group').on('click', function (e) {
@@ -378,43 +360,6 @@ var handleFixedSidebarHoverEffect = function () {
       }
     })
   }
-}
-
-//  Hanles sidebar toggler
-var handleSidebarToggler = function () {
-  /**
-   if (Cookies && Cookies.get('sidebar_closed') === '1' && App.getViewPort().width >= resBreakpointMd) {
-            $('body').addClass('page-sidebar-closed')
-            $('.page-sidebar-menu').addClass('page-sidebar-menu-closed')
-        }
-   */
-
-  //  handle sidebar show/hide
-  $('body').on('click', '.sidebar-toggler', function (e) {
-    var body = $('body')
-    var sidebar = $('.page-sidebar')
-    var sidebarMenu = $('.page-sidebar-menu')
-    $('.sidebar-search', sidebar).removeClass('open')
-
-    if (body.hasClass('page-sidebar-closed')) {
-      body.removeClass('page-sidebar-closed')
-      sidebarMenu.removeClass('page-sidebar-menu-closed')
-      if (Cookies) {
-        Cookies.set('sidebar_closed', '0')
-      }
-    } else {
-      body.addClass('page-sidebar-closed')
-      sidebarMenu.addClass('page-sidebar-menu-closed')
-      if (body.hasClass('page-sidebar-fixed')) {
-        sidebarMenu.trigger('mouseleave')
-      }
-      if (Cookies) {
-        Cookies.set('sidebar_closed', '1')
-      }
-    }
-
-    $(window).trigger('resize')
-  })
 }
 
 //  Handles the horizontal menu
@@ -529,7 +474,6 @@ let Layout = new class {
     // layout handlers
     handleFixedSidebar() //  handles fixed sidebar menu
     handleSidebarMenu() //  handles main menu
-    handleSidebarToggler() //  handles sidebar hide/show
 
     App.addResizeHandler(handleFixedSidebar) //  reinitialize fixed sidebar on window resize
   }
