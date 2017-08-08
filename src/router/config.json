@@ -202,7 +202,7 @@
             "summary": "",
             "children": [],
             "path": "/main/page",
-            "src": "pages/page.md"
+            "src": "ui_switch"
           },
           {
             "title": "Item 12",

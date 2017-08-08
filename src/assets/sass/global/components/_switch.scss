@@ -1,0 +1,91 @@
+
+$duration: .4s;
+
+/***
+Color variants
+***/
+
+@mixin switch-variant($state, $background, $text) {
+  .switch.switch-#{$state} {
+    &:checked {
+      color: $text;
+      border-color: $background;
+      box-shadow: $background 0 0 0 16px inset;
+      background-color: $background;
+    }
+  }
+}
+
+.switch-container {
+  margin-bottom: 0px;
+
+  & > span{
+    float: left;
+    padding: 9px 16px 9px 0;
+  }
+}
+
+.switch {
+  width: 62px;
+  height: 31px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #dfdfdf;
+  background-color: #fdfdfd;
+  box-shadow: #dfdfdf 0 0 0 0 inset;
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: 0px !important;
+  &:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  &:checked {
+    border-color: $btn-primary-bg;
+    box-shadow: $btn-primary-bg 0 0 0 16px inset;
+    background-color: $btn-primary-bg;
+    &:before {
+      left: 31px;
+    }
+  }
+  & {
+    transition: border cubic-bezier(0, 0, 0, 1) $duration, box-shadow cubic-bezier(0, 0, 0, 1) $duration;
+    &:before {
+      transition: left 0.3s;
+    }
+    &:checked {
+      transition: border ease $duration, box-shadow ease $duration, background-color ease $duration*3;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+  }
+}
+
+@include switch-variant("primary", $btn-primary-bg, $btn-primary-color);
+@include switch-variant("info", $btn-info-bg, $btn-info-color);
+@include switch-variant("success", $btn-success-bg, $btn-success-color);
+@include switch-variant("warning", $btn-warning-bg, $btn-warning-color);
+@include switch-variant("danger", $btn-danger-bg, $btn-danger-color);
+@include switch-variant("default", lighten($brand-default, 15%), #444)
+
+.switch-group {
+  & > .switch-container {
+    width: 100%;
+  }
+
+  &.switch-group-inline {
+    & > .switch-container {
+      width: inherit;
+      padding-right: 9px;
+    }
+  }
+}

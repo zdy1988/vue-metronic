@@ -83,40 +83,33 @@
       </tab-pane>
       <tab-pane name="设置" class="page-quick-sidebar-settings">
         <div class="page-quick-sidebar-settings-list">
-          <h3 class="list-heading">General Settings</h3>
+          <h3 class="list-heading">一般设置</h3>
           <ul class="list-items borderless">
-            <li> Enable Notifications
-              <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-            <li> Allow Tracking
-              <input type="checkbox" class="make-switch" data-size="small" data-on-color="info" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-            <li> Log Errors
-              <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-            <li> Auto Sumbit Issues
-              <input type="checkbox" class="make-switch" data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-            <li> Enable SMS Alerts
-              <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
+            <li><switch-btn title="显示提醒："></switch-btn></li>
+            <li><switch-btn title="允许跟踪：" theme="success"></switch-btn></li>
+            <li><switch-btn title="错误日志：" theme="danger"></switch-btn></li>
+            <li><switch-btn title="问题提交：" theme="warning"></switch-btn></li>
+            <li><switch-btn title="短信提醒：" theme="info"></switch-btn></li>
           </ul>
-          <h3 class="list-heading">System Settings</h3>
+          <h3 class="list-heading">系统设置</h3>
           <ul class="list-items borderless">
-            <li> Security Level
+            <li> 安全等级
               <select class="form-control input-inline input-sm input-small">
-                <option value="1">Normal</option>
-                <option value="2" selected>Medium</option>
-                <option value="e">High</option>
+                <option value="1">低</option>
+                <option value="2" selected>中</option>
+                <option value="e">高</option>
               </select>
             </li>
-            <li> Failed Email Attempts
+            <li> 发送失败尝试次数
               <input class="form-control input-inline input-sm input-small" value="5" /> </li>
-            <li> Secondary SMTP Port
+            <li> SMTP 端口
               <input class="form-control input-inline input-sm input-small" value="3560" /> </li>
-            <li> Notify On System Error
-              <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
-            <li> Notify On SMTP Error
-              <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF"> </li>
+            <li><switch-btn title="通知系统错误：" theme="info"></switch-btn></li>
+            <li><switch-btn title="通知通信错误：" theme="info"></switch-btn></li>
           </ul>
           <div class="inner-content">
             <button class="btn btn-success">
-              <i class="icon-settings"></i> Save Changes</button>
+              <i class="icon-settings"></i> 保存</button>
           </div>
         </div>
       </tab-pane>

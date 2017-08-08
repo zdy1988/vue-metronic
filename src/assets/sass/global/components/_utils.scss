@@ -1,7 +1,11 @@
 /***
 Utilities
 ***/
-
+label {
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  user-select:none;
+}
 /* Rounded Element */
 .rounded-2 {
   border-radius: 2px !important;

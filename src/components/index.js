@@ -23,7 +23,7 @@ import { Portlet } from '@/components/portlet'
 import { ProgressBar } from '@/components/progress'
 import { Radio, RadioGroup } from '@/components/radio'
 import { Selectbox } from '@/components/selectbox'
-import { SwitchBtn } from '@/components/switch'
+import { SwitchBtn, SwitchBtnGroup } from '@/components/switch'
 import { Tabs, TabPane } from '@/components/tabs'
 import { Textbox, TextboxGroup } from '@/components/textbox'
 import { Tooltip } from '@/components/tooltip'
@@ -68,6 +68,7 @@ const components = {
   RadioGroup,
   Selectbox,
   SwitchBtn,
+  SwitchBtnGroup,
   Tabs,
   TabPane,
   Textbox,

@@ -2,6 +2,7 @@ import color from './color'
 import tooltip from './tooltip'
 import popover from './popover'
 import pulsate from './pulsate'
+import slimscroll from './slimscroll'
 import clickOutside from './click-outside'
 
 const dirsctives = {
@@ -9,6 +10,7 @@ const dirsctives = {
   tooltip,
   popover,
   pulsate,
+  slimscroll,
   clickOutside
 }
 

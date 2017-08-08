@@ -330,21 +330,21 @@ var _calculateFixedSidebarViewportHeight = function () {
 
 //  Handles fixed sidebar
 var handleFixedSidebar = function () {
-  var menu = $('.page-sidebar-menu')
+  // var menu = $('.page-sidebar-menu')
 
   handleSidebarAndContentHeight()
 
-  if ($('.page-sidebar-fixed').size() === 0) {
-    App.destroySlimScroll(menu)
-    return
-  }
+  // if ($('.page-sidebar-fixed').size() === 0) {
+  //   App.destroySlimScroll(menu)
+  //   return
+  // }
 
-  if (App.getViewPort().width >= resBreakpointMd && !$('body').hasClass('page-sidebar-menu-not-fixed')) {
-    menu.attr('data-height', _calculateFixedSidebarViewportHeight())
-    App.destroySlimScroll(menu)
-    App.initSlimScroll(menu)
-    handleSidebarAndContentHeight()
-  }
+  // if (App.getViewPort().width >= resBreakpointMd && !$('body').hasClass('page-sidebar-menu-not-fixed')) {
+  //   menu.attr('data-height', _calculateFixedSidebarViewportHeight())
+  //   App.destroySlimScroll(menu)
+  //   App.initSlimScroll(menu)
+  //   handleSidebarAndContentHeight()
+  // }
 }
 
 //  Handles sidebar toggler to close/hide the sidebar.

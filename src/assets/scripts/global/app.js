@@ -3,7 +3,6 @@ Core script to handle the entire theme and core functions
 **/
 import $ from 'jquery'
 import 'bootstrap'
-import 'bootstrap-switch'
 import 'jquery-slimscroll'
 import AutoSize from 'autosize'
 
@@ -168,73 +167,6 @@ var handleMaterialDesign = function () {
   })
 }
 
-// Handles custom checkboxes & radios using jQuery iCheck plugin
-var handleiCheck = function () {
-  if (!$().iCheck) {
-    return
-  }
-
-  $('.icheck').each(function () {
-    var checkboxClass = $(this).attr('data-checkbox') ? $(this).attr('data-checkbox') : 'icheckbox_minimal-grey'
-    var radioClass = $(this).attr('data-radio') ? $(this).attr('data-radio') : 'iradio_minimal-grey'
-
-    if (checkboxClass.indexOf('_line') > -1 || radioClass.indexOf('_line') > -1) {
-      $(this).iCheck({
-        checkboxClass: checkboxClass,
-        radioClass: radioClass,
-        insert: '<div class="icheck_line-icon"></div>' + $(this).attr('data-label')
-      })
-    } else {
-      $(this).iCheck({
-        checkboxClass: checkboxClass,
-        radioClass: radioClass
-      })
-    }
-  })
-}
-
-// Handles Bootstrap switches
-var handleBootstrapSwitch = function () {
-  if (!$().bootstrapSwitch) {
-    return
-  }
-  $('.make-switch').bootstrapSwitch()
-}
-
-// Handles Bootstrap confirmations
-var handleBootstrapConfirmation = function () {
-  if (!$().confirmation) {
-    return
-  }
-  $('[data-toggle=confirmation]').confirmation({btnOkClass: 'btn btn-sm btn-success', btnCancelClass: 'btn btn-sm btn-danger'})
-}
-
-// Handles Bootstrap Accordions.
-var handleAccordions = function () {
-  $('body').on('shown.bs.collapse', '.accordion.scrollable', function (e) {
-    App.scrollTo($(e.target))
-  })
-}
-
-// Handles Bootstrap Tabs.
-var handleTabs = function () {
-  // activate tab if tab id provided in the URL
-  if (encodeURI(location.hash)) {
-    var tabid = encodeURI(location.hash.substr(1))
-    $('a[href="#' + tabid + '"]').parents('.tab-pane:hidden').each(function () {
-      var tabid = $(this).attr('id')
-      $('a[href="#' + tabid + '"]').click()
-    })
-    $('a[href="#' + tabid + '"]').click()
-  }
-
-  if ($().tabdrop) {
-    $('.tabbable-tabdrop .nav-pills, .tabbable-tabdrop .nav-tabs').tabdrop({
-      text: '<i class="fa fa-ellipsis-v"></i>&nbsp<i class="fa fa-angle-down"></i>'
-    })
-  }
-}
-
 // Handles Bootstrap Modals.
 var handleModals = function () {
   // fix stackable modal issue: when 2 or more modals opened, closing one of modal will remove .modal-open class.
@@ -279,28 +211,6 @@ var handleTextareaAutosize = function () {
   if (typeof AutoSize === 'function') {
     AutoSize(document.querySelector('textarea.autosizeme'))
   }
-}
-
-// Handles Bootstrap Popovers
-
-// last popep popover
-var lastPopedPopover
-
-var handlePopovers = function () {
-  $('.popovers').popover()
-
-  // close last displayed popover
-
-  $(document).on('click.bs.popover.data-api', function (e) {
-    if (lastPopedPopover) {
-      lastPopedPopover.popover('hide')
-    }
-  })
-}
-
-// Handles scrollable contents using jQuery SlimScroll plugin.
-var handleScrollers = function () {
-  App.initSlimScroll('.scroller')
 }
 
 // Handles Image Preview using jQuery Fancybox plugin
@@ -363,18 +273,6 @@ var handleFixInputPlaceholderForIE = function () {
   }
 }
 
-// Handle Select2 Dropdowns
-var handleSelect2 = function () {
-  if ($().select2) {
-    $.fn.select2.defaults.set('theme', 'bootstrap')
-    $('.select2me').select2({
-      placeholder: 'Select',
-      width: 'auto',
-      allowClear: true
-    })
-  }
-}
-
 // handle group element heights
 var handleHeight = function () {
   $('[data-auto-height]').each(function () {
@@ -424,17 +322,9 @@ let App = new class {
 
     // UI Component handlers
     handleMaterialDesign() // handle material design
-    handleiCheck() // handles custom icheck radio and checkboxes
-    handleBootstrapSwitch() // handle bootstrap switch plugin
-    handleScrollers() // handles slim scrolling contents
     handleFancybox() // handle fancy box
-    handleSelect2() // handle custom Select2 dropdowns
     handleDropdowns() // handle dropdowns
-    handleTabs() // handle tabs
-    handlePopovers() // handles bootstrap popovers
-    handleAccordions() // handles accordions
     handleModals() // handle modals
-    handleBootstrapConfirmation() // handle bootstrap confirmations
     handleTextareaAutosize() // handle autosize textareas
     handleCounterup() // handle counterup instances
 
@@ -443,30 +333,6 @@ let App = new class {
 
     // Hacks
     handleFixInputPlaceholderForIE() // IE8 & IE9 input placeholder issue fix
-  }
-
-  // main function to initiate core javascript after ajax complete
-  initAjax () {
-    // handleUniform() // handles custom radio & checkboxes
-    handleiCheck() // handles custom icheck radio and checkboxes
-    handleBootstrapSwitch() // handle bootstrap switch plugin
-    handleScrollers() // handles slim scrolling contents
-    handleSelect2() // handle custom Select2 dropdowns
-    handleFancybox() // handle fancy box
-    handleDropdowns() // handle dropdowns
-    handlePopovers() // handles bootstrap popovers
-    handleAccordions() // handles accordions
-    handleBootstrapConfirmation() // handle bootstrap confirmations
-  }
-
-  // init main components
-  initComponents () {
-    this.initAjax()
-  }
-
-  // public function to remember last opened popover that needs to be closed on click
-  setLastPopedPopover (el) {
-    lastPopedPopover = el
   }
 
   // public function to add callback a function which will be called on window resize
@@ -499,155 +365,9 @@ let App = new class {
     }, 'slow')
   }
 
-  initSlimScroll (el) {
-    if (!$().slimScroll) {
-      return
-    }
-
-    $(el).each(function () {
-      if ($(this).attr('data-initialized')) {
-        return // exit
-      }
-
-      var height
-
-      if ($(this).attr('data-height')) {
-        height = $(this).attr('data-height')
-      } else {
-        height = $(this).css('height')
-      }
-
-      $(this).slimScroll({
-        allowPageScroll: true, // allow page scroll when the element scroll is ended
-        size: '7px',
-        color: ($(this).attr('data-handle-color') ? $(this).attr('data-handle-color') : '#bbb'),
-        wrapperClass: ($(this).attr('data-wrapper-class') ? $(this).attr('data-wrapper-class') : 'slimScrollDiv'),
-        railColor: ($(this).attr('data-rail-color') ? $(this).attr('data-rail-color') : '#eaeaea'),
-        position: isRTL ? 'left' : 'right',
-        height: height,
-        alwaysVisible: ($(this).attr('data-always-visible') === '1'),
-        railVisible: ($(this).attr('data-rail-visible') === '1'),
-        disableFadeOut: true
-      })
-
-      $(this).attr('data-initialized', '1')
-    })
-  }
-
-  destroySlimScroll (el) {
-    if (!$().slimScroll) {
-      return
-    }
-
-    $(el).each(function () {
-      if ($(this).attr('data-initialized') === '1') { // destroy existing instance before updating the height
-        $(this).removeAttr('data-initialized')
-        $(this).removeAttr('style')
-
-        var attrList = {}
-
-        // store the custom attribures so later we will reassign.
-        if ($(this).attr('data-handle-color')) {
-          attrList['data-handle-color'] = $(this).attr('data-handle-color')
-        }
-        if ($(this).attr('data-wrapper-class')) {
-          attrList['data-wrapper-class'] = $(this).attr('data-wrapper-class')
-        }
-        if ($(this).attr('data-rail-color')) {
-          attrList['data-rail-color'] = $(this).attr('data-rail-color')
-        }
-        if ($(this).attr('data-always-visible')) {
-          attrList['data-always-visible'] = $(this).attr('data-always-visible')
-        }
-        if ($(this).attr('data-rail-visible')) {
-          attrList['data-rail-visible'] = $(this).attr('data-rail-visible')
-        }
-
-        $(this).slimScroll({
-          wrapperClass: ($(this).attr('data-wrapper-class') ? $(this).attr('data-wrapper-class') : 'slimScrollDiv'),
-          destroy: true
-        })
-
-        var the = $(this)
-
-        // reassign custom attributes
-        $.each(attrList, function (key, value) {
-          the.attr(key, value)
-        })
-      }
-    })
-  }
-
   // function to scroll to the top
   scrollTop () {
     App.scrollTo()
-  }
-
-  // wrApper function to  block element(indicate loading)
-  blockUI (options) {
-    options = $.extend(true, {}, options)
-    var html = ''
-    if (options.animate) {
-      html = '<div class="loading-message ' + (options.boxed ? 'loading-message-boxed' : '') + '">' + '<div class="block-spinner-bar"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>' + '</div>'
-    } else if (options.iconOnly) {
-      html = '<div class="loading-message ' + (options.boxed ? 'loading-message-boxed' : '') + '"><img src="' + this.getGlobalImgPath() + 'loading-spinner-grey.gif" align=""></div>'
-    } else if (options.textOnly) {
-      html = '<div class="loading-message ' + (options.boxed ? 'loading-message-boxed' : '') + '"><span>&nbsp&nbsp' + (options.message ? options.message : 'LOADING...') + '</span></div>'
-    } else {
-      html = '<div class="loading-message ' + (options.boxed ? 'loading-message-boxed' : '') + '"><img src="' + this.getGlobalImgPath() + 'loading-spinner-grey.gif" align=""><span>&nbsp&nbsp' + (options.message ? options.message : 'LOADING...') + '</span></div>'
-    }
-
-    if (options.target) { // element blocking
-      var el = $(options.target)
-      if (el.height() <= ($(window).height())) {
-        options.cenrerY = true
-      }
-      el.block({
-        message: html,
-        baseZ: options.zIndex ? options.zIndex : 1000,
-        centerY: options.cenrerY !== undefined ? options.cenrerY : false,
-        css: {
-          top: '10%',
-          border: '0',
-          padding: '0',
-          backgroundColor: 'none'
-        },
-        overlayCSS: {
-          backgroundColor: options.overlayColor ? options.overlayColor : '#555',
-          opacity: options.boxed ? 0.05 : 0.1,
-          cursor: 'wait'
-        }
-      })
-    } else { // page blocking
-      $.blockUI({
-        message: html,
-        baseZ: options.zIndex ? options.zIndex : 1000,
-        css: {
-          border: '0',
-          padding: '0',
-          backgroundColor: 'none'
-        },
-        overlayCSS: {
-          backgroundColor: options.overlayColor ? options.overlayColor : '#555',
-          opacity: options.boxed ? 0.05 : 0.1,
-          cursor: 'wait'
-        }
-      })
-    }
-  }
-
-  // wrApper function to  un-block element(finish loading)
-  unblockUI (target) {
-    if (target) {
-      $(target).unblock({
-        onUnblock: function () {
-          $(target).css('position', '')
-          $(target).css('zoom', '')
-        }
-      })
-    } else {
-      $.unblockUI()
-    }
   }
 
   // public function to initialize the fancybox plugin

@@ -69,7 +69,7 @@
       }
       this.updatePicker()
     },
-    destroyed: function () {
+    destroyed () {
       $(this.$el).datepicker('destroy')
     }
   }
