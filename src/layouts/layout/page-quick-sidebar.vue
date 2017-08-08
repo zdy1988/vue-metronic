@@ -129,25 +129,25 @@
                 id: 1,
                 name: '小张',
                 post: 'CEO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar3.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg'
               },
               {
                 id: 2,
                 name: '小王',
                 post: 'CTO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar1.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg'
               },
               {
                 id: 3,
                 name: '小李',
                 post: 'CFO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar4.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg'
               },
               {
                 id: 4,
                 name: '小戴',
                 post: '项目经理',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar2.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg'
               }
             ]
           },
@@ -158,25 +158,25 @@
                 id: 5,
                 name: '小张',
                 post: 'CEO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar3.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg'
               },
               {
                 id: 6,
                 name: '小王',
                 post: 'CTO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar1.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg'
               },
               {
                 id: 7,
                 name: '小李',
                 post: 'CFO',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar4.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg'
               },
               {
                 id: 8,
                 name: '小戴',
                 post: '项目经理',
-                handPic: 'http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar2.jpg'
+                handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg'
               }
             ]
           }
