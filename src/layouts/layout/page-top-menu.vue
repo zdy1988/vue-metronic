@@ -294,7 +294,7 @@
       <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
       <li class="dropdown dropdown-user">
         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-          <img alt="" class="img-circle" src="../../../static/img/layouts/layout/avatar3_small.jpg" />
+          <img alt="" class="img-circle" src="http://zdyonline.com/vue-metronic/static/img/layouts/layout/avatar3_small.jpg" />
           <span class="username username-hide-on-mobile"> Nick </span>
           <i class="fa fa-angle-down"></i>
         </a>
