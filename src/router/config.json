@@ -151,6 +151,13 @@
     "children": []
   },
   {
+    "title": "多项选择",
+    "path": "/main/multiselect",
+    "src": "pages/multiselect.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "标签页",
     "path": "/main/tabs",
     "src": "pages/tabs.md",
@@ -201,15 +208,15 @@
             "title": "Item 11",
             "summary": "",
             "children": [],
-            "path": "/main/page",
+            "path": "/main/ui_switch",
             "src": "ui_switch"
           },
           {
             "title": "Item 12",
             "summary": "",
             "children": [],
-            "path": "/main/page",
-            "src": "pages/page.md"
+            "path": "/main/ui_multiselect",
+            "src": "ui_multiselect"
           },
           {
             "title": "Item 13",

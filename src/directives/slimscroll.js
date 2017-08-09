@@ -15,7 +15,7 @@ var handleSlimScroll = function (el, binding) {
       railColor: '#eaeaea',
       position: 'right',
       height: '100px',
-      alwaysVisible: true,
+      alwaysVisible: false,
       railVisible: true,
       disableFadeOut: true
     }

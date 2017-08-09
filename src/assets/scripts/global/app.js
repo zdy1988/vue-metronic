@@ -3,8 +3,6 @@ Core script to handle the entire theme and core functions
 **/
 import $ from 'jquery'
 import 'bootstrap'
-import 'jquery-slimscroll'
-import AutoSize from 'autosize'
 
 // IE mode
 var isRTL = false
@@ -21,17 +19,6 @@ var globalImgPath = 'global/img/'
 var globalPluginsPath = 'global/plugins/'
 
 var globalCssPath = 'global/css/'
-
-// theme layout color set
-
-var brandColors = {
-  'blue': '#89C4F4',
-  'red': '#F3565D',
-  'green': '#1bbc9b',
-  'purple': '#9b59b6',
-  'grey': '#95a5a6',
-  'yellow': '#F8CB00'
-}
 
 // initializes main settings
 var handleInit = function () {
@@ -93,186 +80,6 @@ var handleOnResize = function () {
   }
 }
 
-// Handlesmaterial design checkboxes
-var handleMaterialDesign = function () {
-  // Material design ckeckbox and radio effects
-  $('body').on('click', '.md-checkbox > label, .md-radio > label', function () {
-    var the = $(this)
-    // find the first span which is our circle/bubble
-    var el = $(this).children('span:first-child')
-
-    // add the bubble class (we do this so it doesnt show on page load)
-    el.addClass('inc')
-
-    // clone it
-    var newone = el.clone(true)
-
-    // add the cloned version before our original
-    el.before(newone)
-
-    // remove the original so that it is ready to run on next click
-    $('.' + el.attr('class') + ':last', the).remove()
-  })
-
-  if ($('body').hasClass('page-md')) {
-    // Material design click effect
-    // credit where credit's due http://thecodeplayer.com/walkthrough/ripple-click-effect-google-material-design
-    var element, circle, d, x, y
-    $('body').on('click', 'a.btn, button.btn, input.btn, label.btn', function (e) {
-      element = $(this)
-
-      if (element.find('.md-click-circle').length === 0) {
-        element.prepend('<span class="md-click-circle"></span>')
-      }
-
-      circle = element.find('.md-click-circle')
-      circle.removeClass('md-click-animate')
-
-      if (!circle.height() && !circle.width()) {
-        d = Math.max(element.outerWidth(), element.outerHeight())
-        circle.css({height: d, width: d})
-      }
-
-      x = e.pageX - element.offset().left - circle.width() / 2
-      y = e.pageY - element.offset().top - circle.height() / 2
-
-      circle.css({top: y + 'px', left: x + 'px'}).addClass('md-click-animate')
-
-      setTimeout(function () {
-        circle.remove()
-      }, 1000)
-    })
-  }
-
-  // Floating labels
-  var handleInput = function (el) {
-    if (el.val() !== '') {
-      el.addClass('edited')
-    } else {
-      el.removeClass('edited')
-    }
-  }
-
-  $('body').on('keydown', '.form-md-floating-label .form-control', function (e) {
-    handleInput($(this))
-  })
-  $('body').on('blur', '.form-md-floating-label .form-control', function (e) {
-    handleInput($(this))
-  })
-
-  $('.form-md-floating-label .form-control').each(function () {
-    if ($(this).val().length > 0) {
-      $(this).addClass('edited')
-    }
-  })
-}
-
-// Handles Bootstrap Modals.
-var handleModals = function () {
-  // fix stackable modal issue: when 2 or more modals opened, closing one of modal will remove .modal-open class.
-  $('body').on('hide.bs.modal', function () {
-    if ($('.modal:visible').size() > 1 && $('html').hasClass('modal-open') === false) {
-      $('html').addClass('modal-open')
-    } else if ($('.modal:visible').size() <= 1) {
-      $('html').removeClass('modal-open')
-    }
-  })
-
-  // fix page scrollbars issue
-  $('body').on('show.bs.modal', '.modal', function () {
-    if ($(this).hasClass('modal-scroll')) {
-      $('body').addClass('modal-open-noscroll')
-    }
-  })
-
-  // fix page scrollbars issue
-  $('body').on('hidden.bs.modal', '.modal', function () {
-    $('body').removeClass('modal-open-noscroll')
-  })
-
-  // remove ajax content and remove cache on modal closed
-  $('body').on('hidden.bs.modal', '.modal:not(.modal-cached)', function () {
-    $(this).removeData('bs.modal')
-  })
-}
-
-// Handles Bootstrap Dropdowns
-var handleDropdowns = function () {
-  /*
-   Hold dropdown on click
-   */
-  $('body').on('click', '.dropdown-menu.hold-on-click', function (e) {
-    e.stopPropagation()
-  })
-}
-
-// Handle textarea autosize
-var handleTextareaAutosize = function () {
-  if (typeof AutoSize === 'function') {
-    AutoSize(document.querySelector('textarea.autosizeme'))
-  }
-}
-
-// Handles Image Preview using jQuery Fancybox plugin
-var handleFancybox = function () {
-  if (!$.fancybox) {
-    return
-  }
-
-  if ($('.fancybox-button').size() > 0) {
-    $('.fancybox-button').fancybox({
-      groupAttr: 'data-rel',
-      prevEffect: 'none',
-      nextEffect: 'none',
-      closeBtn: true,
-      helpers: {
-        title: {
-          type: 'inside'
-        }
-      }
-    })
-  }
-}
-
-// Handles counterup plugin wrapper
-var handleCounterup = function () {
-  if (!$().counterUp) {
-    return
-  }
-
-  $('[data-counter="counterup"]').counterUp({
-    delay: 10,
-    time: 1000
-  })
-}
-
-// Fix input placeholder issue for IE8 and IE9
-var handleFixInputPlaceholderForIE = function () {
-  // fix html5 placeholder attribute for ie7 & ie8
-  if (isIE8 || isIE9) { // ie8 & ie9
-    // this is html5 placeholder fix for inputs, inputs with placeholder-no-fix class will be skipped(e.g: we need this for password fields)
-    $('input[placeholder]:not(.placeholder-no-fix), textarea[placeholder]:not(.placeholder-no-fix)').each(function () {
-      var input = $(this)
-
-      if (input.val() === '' && input.attr('placeholder') !== '') {
-        input.addClass('placeholder').val(input.attr('placeholder'))
-      }
-
-      input.focus(function () {
-        if (input.val() === input.attr('placeholder')) {
-          input.val('')
-        }
-      })
-
-      input.blur(function () {
-        if (input.val() === '' || input.val() === input.attr('placeholder')) {
-          input.val(input.attr('placeholder'))
-        }
-      })
-    })
-  }
-}
-
 // handle group element heights
 var handleHeight = function () {
   $('[data-auto-height]').each(function () {
@@ -320,19 +127,8 @@ let App = new class {
     handleInit() // initialize core variables
     handleOnResize() // set and handle responsive
 
-    // UI Component handlers
-    handleMaterialDesign() // handle material design
-    handleFancybox() // handle fancy box
-    handleDropdowns() // handle dropdowns
-    handleModals() // handle modals
-    handleTextareaAutosize() // handle autosize textareas
-    handleCounterup() // handle counterup instances
-
     // Handle group element heights
     App.addResizeHandler(handleHeight) // handle auto calculating height on window resize
-
-    // Hacks
-    handleFixInputPlaceholderForIE() // IE8 & IE9 input placeholder issue fix
   }
 
   // public function to add callback a function which will be called on window resize
@@ -368,12 +164,6 @@ let App = new class {
   // function to scroll to the top
   scrollTop () {
     App.scrollTo()
-  }
-
-  // public function to initialize the fancybox plugin
-
-  initFancybox () {
-    handleFancybox()
   }
 
   // public helper function to get actual input value(used in IE9 and IE8 due to placeholder attribute not supported)
@@ -427,7 +217,7 @@ let App = new class {
   }
 
   getUniqueID (prefix) {
-    return 'prefix_' + Math.floor(Math.random() * (new Date()).getTime())
+    return prefix + '_' + Math.floor(Math.random() * (new Date()).getTime())
   }
 
   // check IE8 mode
@@ -473,15 +263,6 @@ let App = new class {
     return assetsPath + globalCssPath
   }
 
-  // get layout color code by color name
-  getBrandColor (name) {
-    if (brandColors[name]) {
-      return brandColors[name]
-    } else {
-      return ''
-    }
-  }
-
   getResponsiveBreakpoint (size) {
     // bootstrap responsive breakpoints
     var sizes = {
@@ -492,6 +273,38 @@ let App = new class {
     }
 
     return sizes[size] ? sizes[size] : 0
+  }
+
+  getDateDiff (dateStr) {
+    var minute = 1000 * 60
+    var hour = minute * 60
+    var day = hour * 24
+    var month = day * 30
+    var now = new Date().getTime()
+    var diffValue = now - Date.parse(dateStr.replace(/-/gi, '/'))
+    if (diffValue < 0) {
+      return
+    }
+    var monthC = diffValue / month
+    var weekC = diffValue / (7 * day)
+    var dayC = diffValue / day
+    var hourC = diffValue / hour
+    var minC = diffValue / minute
+    var result = ''
+    if (monthC >= 1) {
+      result = '' + parseInt(monthC) + '月前'
+    } else if (weekC >= 1) {
+      result = '' + parseInt(weekC) + '周前'
+    } else if (dayC >= 1) {
+      result = '' + parseInt(dayC) + '天前'
+    } else if (hourC >= 1) {
+      result = '' + parseInt(hourC) + '小时前'
+    } else if (minC >= 1) {
+      result = '' + parseInt(minC) + '分钟前'
+    } else {
+      result = '刚刚'
+    }
+    return result
   }
 }()
 

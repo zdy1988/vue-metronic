@@ -28,6 +28,9 @@ import { Tabs, TabPane } from '@/components/tabs'
 import { Textbox, TextboxGroup } from '@/components/textbox'
 import { Tooltip } from '@/components/tooltip'
 import { Well } from '@/components/well'
+// More Info https://github.com/monterail/vue-multiselect
+import '../../node_modules/vue-multiselect/dist/vue-multiselect.min.css'
+import Multiselect from 'vue-multiselect'
 
 const components = {
   Row,
@@ -74,7 +77,8 @@ const components = {
   Textbox,
   TextboxGroup,
   Tooltip,
-  Well
+  Well,
+  Multiselect
 }
 
 components.install = (Vue) => {

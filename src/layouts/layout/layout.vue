@@ -15,7 +15,7 @@
           </div>
           <!-- END LOGO -->
           <!-- BEGIN TOP NAVIGATION MENU -->
-          <page-top-menu>
+          <page-top-menu :alerts="alerts" :messages="unReadChatMessages" :tasks="tasks">
             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
             <li class="dropdown dropdown-quick-sidebar-toggler"  @click="quickSidebarShow = !quickSidebarShow">
               <a href="javascript:;" class="dropdown-toggle">
@@ -68,7 +68,7 @@
           <i class="icon-login"></i>
         </a>
         <div class="page-quick-sidebar-wrapper">
-          <page-quick-sidebar></page-quick-sidebar>
+          <page-quick-sidebar :alerts="alerts" :users="users" :messages="chatMessages" :tasks="tasks" :active-user="activeUser" @chat-post="chatMessagePost"></page-quick-sidebar>
         </div>
         <!-- END QUICK SIDEBAR -->
       </div>
@@ -119,7 +119,198 @@
           }, 500)
           return true
         },
-        quickSidebarShow: false
+        quickSidebarShow: false,
+        activeUser: 1,
+        alerts: [
+          {
+            icon: 'check',
+            status: 'info',
+            desc: '您有4个未处理任务。',
+            time: '2016/1/20 19:59:30',
+            type: 1
+          },
+          {
+            icon: 'bar-chart-o',
+            status: 'success',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 1:22:22',
+            type: 1
+          },
+          {
+            icon: 'user',
+            status: 'danger',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 6:22:22',
+            type: 1
+          },
+          {
+            icon: 'shopping-cart',
+            status: 'info',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 11:22:22',
+            type: 1
+          },
+          {
+            icon: 'check',
+            status: 'info',
+            desc: '您有4个未处理任务。',
+            time: '2016/1/20 19:59:30',
+            type: 2
+          },
+          {
+            icon: 'bar-chart-o',
+            status: 'success',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 1:22:22',
+            type: 2
+          },
+          {
+            icon: 'user',
+            status: 'danger',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 6:22:22',
+            type: 2
+          },
+          {
+            icon: 'shopping-cart',
+            status: 'info',
+            desc: '您有4个未处理任务。',
+            time: '2017/8/7 11:22:22',
+            type: 2
+          }
+        ],
+        users: [
+          {
+            id: 1,
+            name: '小张',
+            post: 'CEO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
+            role: 1
+          },
+          {
+            id: 2,
+            name: '小王',
+            post: 'CTO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
+            role: 1
+          },
+          {
+            id: 3,
+            name: '小李',
+            post: 'CFO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
+            role: 1
+          },
+          {
+            id: 4,
+            name: '小戴',
+            post: '项目经理',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
+            role: 1
+          },
+          {
+            id: 5,
+            name: '小张',
+            post: 'CEO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
+            role: 2
+          },
+          {
+            id: 6,
+            name: '小王',
+            post: 'CTO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
+            role: 2
+          },
+          {
+            id: 7,
+            name: '小李',
+            post: 'CFO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
+            role: 2
+          },
+          {
+            id: 8,
+            name: '小戴',
+            post: '项目经理',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
+            role: 2
+          },
+          {
+            id: 9,
+            name: '小张',
+            post: 'CEO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
+            role: 2
+          },
+          {
+            id: 10,
+            name: '小王',
+            post: 'CTO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
+            role: 2
+          },
+          {
+            id: 11,
+            name: '小李',
+            post: 'CFO',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
+            role: 2
+          },
+          {
+            id: 12,
+            name: '小戴',
+            post: '项目经理',
+            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
+            role: 2
+          }
+        ],
+        messages: [
+          {sender: 1, receiver: 2, datetime: '2017/08/07 20:15', content: '你好！', read: false},
+          {sender: 2, receiver: 1, datetime: '2017/08/07 20:20', content: '你好！', read: false},
+          {sender: 2, receiver: 3, datetime: '2017/08/07 20:21', content: '你好！', read: false},
+          {sender: 3, receiver: 1, datetime: '2017/08/07 20:22', content: '你好！', read: false},
+          {sender: 2, receiver: 1, datetime: '2017/08/07 20:23', content: '你好！', read: false},
+          {sender: 4, receiver: 1, datetime: '2017/08/07 20:24', content: '你好！', read: false},
+          {sender: 2, receiver: 4, datetime: '2017/08/07 20:25', content: '你好！', read: false},
+          {sender: 5, receiver: 6, datetime: '2017/08/07 20:26', content: '你好！', read: false},
+          {sender: 2, receiver: 1, datetime: '2017/08/07 20:27', content: '你好！', read: false},
+          {sender: 3, receiver: 7, datetime: '2017/08/07 20:28', content: '你好！', read: false},
+          {sender: 2, receiver: 8, datetime: '2017/08/07 20:29', content: '你好！', read: false},
+          {sender: 3, receiver: 8, datetime: '2017/08/07 20:30', content: '你好！', read: false}
+        ],
+        tasks: [
+          {
+            id: App.getUniqueID('task'),
+            name: '任务一',
+            state: 'danger',
+            progress: 40
+          },
+          {
+            id: App.getUniqueID('task'),
+            name: '任务二',
+            state: 'success',
+            progress: 62
+          },
+          {
+            id: App.getUniqueID('task'),
+            name: '任务三',
+            state: 'info',
+            progress: 35.5
+          },
+          {
+            id: App.getUniqueID('task'),
+            name: '任务四',
+            state: 'success',
+            progress: 80
+          },
+          {
+            id: App.getUniqueID('task'),
+            name: '任务五',
+            state: 'warning',
+            progress: 64
+          }
+        ]
       }
     },
     watch: {
@@ -134,6 +325,33 @@
           {'page-sidebar-closed': !this.sidebarShow},
           {'page-quick-sidebar-open': this.quickSidebarShow}
         ]
+      },
+      chatMessages () {
+        var self = this
+        return this.messages.map(msg => {
+          for (let user of self.users) {
+            if (user.id === msg.sender) {
+              msg.senderInfo = user
+            }
+            if (user.id === msg.receiver) {
+              msg.receiverInfo = user
+            }
+          }
+          return msg
+        })
+      },
+      unReadChatMessages () {
+        var self = this
+        return this.chatMessages.map(msg => {
+          if (msg.receiver === self.activeUser && msg.read === false) {
+            return msg
+          }
+        }).filter(msg => msg !== undefined)
+      }
+    },
+    methods: {
+      chatMessagePost (msg) {
+        this.messages.push(msg)
       }
     },
     mounted () {

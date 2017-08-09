@@ -407,14 +407,6 @@ var handleHorizontalMenu = function () {
   })
 }
 
-//  Handles Bootstrap Tabs.
-var handleTabs = function () {
-  //  fix content height on tab click
-  $('body').on('shown.bs.tab', 'a[data-toggle="tab"]', function () {
-    handleSidebarAndContentHeight()
-  })
-}
-
 //  Hanlde 100% height elements(block, portlet, etc)
 var handle100HeightContent = function () {
   $('.full-height-content').each(function () {
@@ -480,7 +472,6 @@ let Layout = new class {
 
   initContent () {
     handle100HeightContent() //  handles 100% height elements(block, portlet, etc)
-    handleTabs() //  handle bootstrah tabs
 
     App.addResizeHandler(handleSidebarAndContentHeight) //  recalculate sidebar & content height on window resize
     App.addResizeHandler(handle100HeightContent) //  reinitialize content height on window resize
