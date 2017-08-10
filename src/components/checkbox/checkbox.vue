@@ -24,7 +24,8 @@
       value: null,
       checked: {type: Boolean, default: false},
       disabled: {type: Boolean},
-      outline: {type: Boolean}
+      outline: {type: Boolean},
+      klass: {type: String}
     },
     model: {
       prop: 'checked',
@@ -34,7 +35,8 @@
       classes () {
         return [
           {'mt-checkbox': true},
-          {'mt-checkbox-outline': !!this.outline}
+          {'mt-checkbox-outline': !!this.outline},
+          {[this.klass]: !!this.klass}
         ]
       }
     },

@@ -23,13 +23,15 @@
     props: {
       label: {type: String},
       help: {type: String},
-      horizontal: {type: Boolean}
+      horizontal: {type: Boolean},
+      klass: {type: String}
     },
     computed: {
       classes () {
         return [
           {'form-group row': true},
-          {'form-group-horizontal': !!this.horizontal}
+          {'form-group-horizontal': !!this.horizontal},
+          {[this.klass]: !!this.klass}
         ]
       },
       labelClasses () {

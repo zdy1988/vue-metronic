@@ -26,7 +26,8 @@
     },
     props: {
       seperated: {type: String, validator: value => ['row', 'border'].indexOf(value) > -1},
-      stripped: {type: String, validator: value => ['row', 'label'].indexOf(value) > -1}
+      stripped: {type: String, validator: value => ['row', 'label'].indexOf(value) > -1},
+      klass: {type: String}
     },
     computed: {
       classes () {
@@ -35,7 +36,8 @@
           {'form-bordered': !!this.seperated && this.seperated === 'border'},
           {'form-row-seperated': !!this.seperated && this.seperated === 'row'},
           {'form-row-stripped': !!this.seperated && this.seperated === 'border' && !!this.stripped && this.stripped === 'row'},
-          {'form-label-stripped': !!this.seperated && this.seperated === 'border' && !!this.stripped && this.stripped === 'label'}
+          {'form-label-stripped': !!this.seperated && this.seperated === 'border' && !!this.stripped && this.stripped === 'label'},
+          {[this.klass]: !!this.klass}
         ]
       }
     },

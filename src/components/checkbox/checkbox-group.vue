@@ -8,13 +8,15 @@
     name: 'CheckboxGroup',
     props: {
       checkedGroup: {type: Array, default: () => []},
-      inline: {type: Boolean}
+      inline: {type: Boolean},
+      klass: {type: String}
     },
     computed: {
       classes () {
         return [
           {'mt-checkbox-list': !this.inline},
-          {'mt-checkbox-inline': !!this.inline}
+          {'mt-checkbox-inline': !!this.inline},
+          {[this.klass]: !!this.klass}
         ]
       }
     },
