@@ -128,12 +128,14 @@
           </li>
           <li class="divider"> </li>
           <li>
-            <a href="javascript:;">
-              <i class="icon-lock"></i> 锁定屏幕 </a>
+            <router-link to="/lock">
+              <icon name="lock"></icon> 锁定屏幕
+            </router-link>
           </li>
           <li>
-            <a href="javascript:;">
-              <i class="icon-key"></i> 退出系统 </a>
+            <router-link to="/login">
+              <icon name="key"></icon> 退出系统
+            </router-link>
           </li>
         </ul>
       </li>

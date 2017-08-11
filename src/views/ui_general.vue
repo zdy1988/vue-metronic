@@ -20,30 +20,24 @@
               <td>
                 <lable>Repeating Pulsate</lable>
               </td>
-              <td>
-                <textbox-group v-pulsate>
-                  <textbox size="sm"></textbox>
-                </textbox-group>
+              <td v-pulsate>
+                <textbox size="sm"></textbox>
               </td>
             </tr>
             <tr>
               <td>
                 <lable>Pulsate Number</lable>
               </td>
-              <td>
-                <textbox-group v-pulsate.green="pulsateNumber">
-                  <textbox size="sm" v-model.lazy="pulsateNumber"></textbox>
-                </textbox-group>
+              <td v-pulsate.green="pulsateNumber">
+                <textbox size="sm" v-model.lazy="pulsateNumber"></textbox>
               </td>
             </tr>
             <tr>
               <td>
                 <lable>Pulsate Crazy</lable>
               </td>
-              <td>
-                <textbox-group v-pulsate.yellow.crazy>
-                  <textbox size="sm"></textbox>
-                </textbox-group>
+              <td v-pulsate.yellow.crazy>
+                <textbox size="sm"></textbox>
               </td>
             </tr>
             </tbody>
@@ -374,21 +368,6 @@
   </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import {Btn, BtnDropdown} from '@/components/button'
-  import {Textbox, TextboxGroup} from '@/components/textbox'
-  import Alert from '@/components/alert/alert'
-  import Note from '@/components/note/note'
-  import ProgressBar from '@/components/progress/progress-bar'
-  import Badge from '@/components/badge/badge'
-  import Lable from '@/components/lable/lable'
-  import Pagination from '@/components/pagination/pagination'
-  import Well from '@/components/well/well'
-  import Popover from '@/components/popover/popover'
-  import {List, ListItem} from '@/components/list'
-  import {Panel} from '@/components/panel'
-
   export default {
     data () {
       return {
@@ -409,26 +388,6 @@
 
         pulsateNumber: 10
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Btn,
-      BtnDropdown,
-      Textbox,
-      TextboxGroup,
-      Alert,
-      Note,
-      ProgressBar,
-      Badge,
-      Lable,
-      Pagination,
-      Well,
-      Popover,
-      List,
-      ListItem,
-      Panel
     },
     methods: {
       GetRandomNum (Min, Max) {

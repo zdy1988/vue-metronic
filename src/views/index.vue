@@ -2,7 +2,7 @@
   <div class="login">
     <!-- BEGIN LOGO -->
     <div class="logo">
-      <a href="index.html">
+      <a href="/">
         <img :src="bigLogo" alt="" /> </a>
     </div>
     <!-- END LOGO -->
@@ -16,7 +16,7 @@
           <textbox placeholder="用户名" icon="user" v-model="username"></textbox>
         </formbox>
         <formbox>
-          <textbox placeholder="密码" icon="lock" v-model="password"></textbox>
+          <textbox type="password" placeholder="密码" icon="lock" v-model="password"></textbox>
         </formbox>
         <div class="form-actions">
           <checkbox outline klass="rememberme">记住我</checkbox>

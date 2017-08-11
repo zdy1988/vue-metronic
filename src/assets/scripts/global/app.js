@@ -166,15 +166,6 @@ let App = new class {
     App.scrollTo()
   }
 
-  // public helper function to get actual input value(used in IE9 and IE8 due to placeholder attribute not supported)
-  getActualVal (el) {
-    el = $(el)
-    if (el.val() === el.attr('placeholder')) {
-      return ''
-    }
-    return el.val()
-  }
-
   // public function to get a paremeter by name from URL
   getURLParameter (paramName) {
     var searchString = window.location.search.substring(1)

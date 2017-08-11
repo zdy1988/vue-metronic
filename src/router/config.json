@@ -222,8 +222,8 @@
             "title": "Item 13",
             "summary": "",
             "children": [],
-            "path": "/main/page",
-            "src": "pages/page.md"
+            "path": "/main/ui_inputs",
+            "src": "ui_inputs"
           }
         ]
       },
@@ -231,8 +231,8 @@
         "title": "Item 2",
         "summary": "",
         "children": [],
-        "path": "/main/page",
-        "src": "pages/page.md"
+        "path": "/main/ui_general",
+        "src": "ui_general"
       },
       {
         "title": "Item 3",

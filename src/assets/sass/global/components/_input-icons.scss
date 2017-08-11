@@ -20,7 +20,7 @@ Input icons
         display: block;
         position: absolute;
         margin: 11px 2px 4px 10px;
-        z-index: 3;
+        z-index: 15;
         width: 16px;
         font-size: 16px;
         text-align: center;
@@ -35,7 +35,7 @@ Input icons
         }
 
         .has-warning & {
-            color: $brand-warning; 
+            color: $brand-warning;
         }
 
         .has-info & {
@@ -50,13 +50,13 @@ Input icons
     &.right {
         left: auto;
         right: 0;
-        
+
         > .form-control {
             padding-right: 33px;
             padding-left: 12px;
 
             .input-group & {
-                @include border-radius(0 $general-border-radius $general-border-radius 0); 
+                @include border-radius(0 $general-border-radius $general-border-radius 0);
             }
         }
 
@@ -64,19 +64,19 @@ Input icons
             left: auto;
             right: 8px;
             float: right;
-        } 
+        }
     }
 
     &.input-icon-lg {
         > i {
-            margin-top: 16px;  
+            margin-top: 16px;
         }
     }
 
     &.input-icon-sm {
         > i {
-            margin-top: 8px;      
-            font-size: 13px;    
-        } 
+            margin-top: 8px;
+            font-size: 13px;
+        }
     }
 }

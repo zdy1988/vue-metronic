@@ -1,6 +1,7 @@
 <template>
-  <div :class="iconGroupClasses" v-if="icon">
-    <fa :name="icon" :color="iconColor" :spin="iconSpin" v-if="icon"></fa>
+  <div :class="groupClasses" v-if="icon || hasSlot">
+    <slot name="before"></slot>
+    <fa ref="faicon" :name="icon" :color="iconColor" :spin="iconSpin" v-if="icon"></fa>
     <input ref="input"
            :is="type==='textarea'?'textarea':'input'"
            :class="classes"
@@ -14,6 +15,7 @@
            @keyup="_keyup"
            @focus="_focus"
            @blur="_blur">
+    <slot name="after"></slot>
   </div>
   <input ref="input" v-else
          :is="type==='textarea'?'textarea':'input'"
@@ -36,6 +38,11 @@
   export default {
     name: 'Textbox',
     mixins: [_input],
+    data () {
+      return {
+        hasSlot: !!this.$slots.before || !!this.$slots.after
+      }
+    },
     props: {
       value: null,
       type: {type: String, default: 'text'},
@@ -47,10 +54,15 @@
       klass: {type: String}
     },
     computed: {
-      iconGroupClasses () {
+      groupClasses () {
         return [
+          {'input-group': !!this.hasSlot},
+          {[`input-group-${this.size}`]: !!this.hasSlot && !!this.size},
           {'input-icon': !!this.icon},
-          {[this.iconPosition]: !!this.icon && !!this.iconPosition}
+          {[`input-icon-${this.size}`]: !!this.icon && !!this.size},
+          {[`input-${this.widthSize}`]: !!this.widthSize},
+          {[this.iconPosition]: !!this.icon && !!this.iconPosition},
+          {[this.klass]: !!this.klass}
         ]
       }
     },
@@ -80,7 +92,49 @@
       },
       _blur (e) {
         this.$emit('blur', e)
+      },
+      handleGroupCirCle () {
+        if (this.shape === 'circle') {
+          this.$el.childNodes[0].className += ' input-circle-left'
+          this.$el.childNodes[this.$el.childNodes.length - 1].className += ' input-circle-right'
+        }
+      },
+      updateGroup () {
+        if (this.hasSlot) {
+          this.$el.innerHTML = ''
+          this.updateSlot(this.$slots.before)
+          if (this.$refs.faicon) {
+            this.$el.appendChild(this.$refs.faicon.$el)
+          }
+          this.$el.appendChild(this.$refs.input)
+          this.updateSlot(this.$slots.after)
+          this.handleGroupCirCle()
+        }
+      },
+      updateSlot (slot) {
+        if (!slot) {
+          return
+        }
+        for (let node of slot) {
+          var VNode = node.componentInstance
+          if (VNode) {
+            let $inertNode
+            if (['Btn', 'Fa'].indexOf(VNode.$options.name) > -1) {
+              var $addon = document.createElement('span')
+              $addon.className = (VNode.$options.name === 'Btn') ? 'input-group-btn' : 'input-group-addon'
+              $addon.appendChild(VNode.$el)
+              $inertNode = $addon
+            } else {
+              console.log(VNode.$el)
+              $inertNode = VNode.$el
+            }
+            VNode.$parent.$el.appendChild($inertNode)
+          }
+        }
       }
+    },
+    mounted () {
+      this.updateGroup()
     },
     components: {
       Fa

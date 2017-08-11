@@ -25,7 +25,7 @@ import { Radio, RadioGroup } from '@/components/radio'
 import { Selectbox } from '@/components/selectbox'
 import { SwitchBtn, SwitchBtnGroup } from '@/components/switch'
 import { Tabs, TabPane } from '@/components/tabs'
-import { Textbox, TextboxGroup } from '@/components/textbox'
+import { Textbox } from '@/components/textbox'
 import { Tooltip } from '@/components/tooltip'
 import { Well } from '@/components/well'
 // More Info https://github.com/monterail/vue-multiselect
@@ -75,7 +75,6 @@ const components = {
   Tabs,
   TabPane,
   Textbox,
-  TextboxGroup,
   Tooltip,
   Well,
   Multiselect

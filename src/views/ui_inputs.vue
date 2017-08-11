@@ -1,7 +1,7 @@
 <template>
   <row>
     <column :md="6">
-      <portlet title="DEFAULT FORM" icon="settings" theme="light" bordered>
+      <portlet title="DEFAULT FORM" icon="pencil" theme="light" bordered>
         <formbox-group>
           <formbox label="Name">
             <textbox></textbox>
@@ -19,58 +19,50 @@
           <br>
           <textbox placeholder="Input" icon="user"></textbox>
           <br>
-          <textbox-group>
-            <fa name="user"></fa>
-            <fa name="user-md"></fa>
-            <fa name="user"></fa>
-            <textbox placeholder="Input"></textbox>
-            <btn theme="success" @click="alert" v-for="num in numbers" :key="num">
-              <fa name="arrow-left"></fa> Go! Go! Go! {{num}}
+          <textbox placeholder="Input">
+            <fa name="user" slot="before"></fa>
+            <fa name="user-md" slot="before"></fa>
+            <btn theme="success" @click="alert" slot="after">
+              <fa name="arrow-left"></fa> Go!
             </btn>
-            <btn theme="success" @click="alert">
-              <fa name="arrow-left"></fa> Go! Go! Go! {{num}}
-            </btn>
-          </textbox-group>
+          </textbox>
           <btn slot="actions">Click</btn>
         </formbox-group>
         <br>
         <h4>Input Size</h4>
         <formbox-group>
           <formbox label="Large">
-            <textbox size="lg"></textbox>
+            <textbox size="lg" v-model="text" icon="user"></textbox>
           </formbox>
           <formbox label="Default">
-            <textbox></textbox>
+            <textbox icon="user"></textbox>
           </formbox>
           <formbox label="Small">
-            <textbox size="sm"></textbox>
+            <textbox  icon="user" size="sm"></textbox>
           </formbox>
           <formbox label="Large">
-            <textbox-group size="lg">
-              <fa name="user"></fa>
-              <textbox placeholder="Input"></textbox>
-              <btn theme="success" @click="alert">
-                <fa name="arrow-left"></fa> Go! Go! Go! {{num}}
+            <textbox placeholder="Input" size="lg">
+              <fa name="user" slot="before"></fa>
+              <btn theme="success" @click="alert" slot="after">
+                <fa name="arrow-left"></fa> Go!
               </btn>
-            </textbox-group>
+            </textbox>
           </formbox>
           <formbox label="Default">
-            <textbox-group>
-              <fa name="user"></fa>
-              <textbox placeholder="Input"></textbox>
-              <btn theme="success" @click="alert">
-                <fa name="arrow-left"></fa> Go! Go! Go! {{num}}
+            <textbox placeholder="Input">
+              <fa name="user" slot="before"></fa>
+              <btn theme="success" @click="alert" slot="after">
+                <fa name="arrow-left"></fa> Go!
               </btn>
-            </textbox-group>
+            </textbox>
           </formbox>
           <formbox label="Small">
-            <textbox-group size="sm">
-              <fa name="user"></fa>
-              <textbox placeholder="Input"></textbox>
-              <btn theme="success" @click="alert">
-                <fa name="arrow-left"></fa> Go! Go! Go! {{num}}
+            <textbox placeholder="Input" size="sm">
+              <fa name="user" slot="before"></fa>
+              <btn theme="success" @click="alert" slot="after">
+                <fa name="arrow-left"></fa> Go!
               </btn>
-            </textbox-group>
+            </textbox>
           </formbox>
         </formbox-group>
         <h4>Input Width Size</h4>
@@ -100,14 +92,13 @@
             <textbox placeholder="Input" shape="circle"></textbox>
           </formbox>
           <formbox label="Input" help="Input Help">
-            <textbox-group size="sm" shape="circle">
-              <fa name="user"></fa>
-              <textbox placeholder="Input"></textbox>
-            </textbox-group>
+            <textbox placeholder="Input" shape="circle">
+              <fa name="user" slot="before"></fa>
+            </textbox>
           </formbox>
         </formbox-group>
       </portlet>
-      <portlet title="DEFAULT FORM" icon="settings" theme="light" bordered>
+      <portlet title="DEFAULT FORM" icon="pencil" theme="light" bordered>
         <h4>Form Row Seperated</h4>
         <formbox-group seperated="row">
           <formbox label="Name">
@@ -165,7 +156,7 @@
       </portlet>
     </column>
     <column :md="6">
-      <portlet title="DEFAULT FORM" icon="settings" theme="light" bordered>
+      <portlet title="DEFAULT FORM" icon="pencil" theme="light" bordered>
         <h4>Checkbox Style</h4>
         <row class="padding-tb-20">
           <column :md="12">
@@ -220,7 +211,7 @@
           </formbox>
         </formbox-group>
       </portlet>
-      <portlet title="DEFAULT FORM" icon="settings" theme="light" bordered>
+      <portlet title="DEFAULT FORM" icon="pencil" theme="light" bordered>
         <h4>Radio Style</h4>
         <row class="padding-tb-20">
           <column :md="12">
@@ -275,7 +266,7 @@
           </formbox>
         </formbox-group>
       </portlet>
-      <portlet title="SELECT" icon="settings" theme="light" bordered>
+      <portlet title="SELECT" icon="pencil" theme="light" bordered>
         <h4>Select Value: {{selectValue}}</h4>
         <selectbox :options="radioGroup" option-text="name" option-value="value" placeHolder="Please select" v-model="selectValue">
           <option value="yellow">Yellow</option>
@@ -297,20 +288,6 @@
   </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import {Btn} from '@/components/button'
-  import Fa from '@/components/icon/faicon'
-  import Formbox from '@/components/form/formbox'
-  import FormboxGroup from '@/components/form/formbox-group'
-  import Textbox from '@/components/textbox/textbox'
-  import TextboxGroup from '@/components/textbox/textbox-group'
-  import Checkbox from '@/components/checkbox/checkbox'
-  import CheckboxGroup from '@/components/checkbox/checkbox-group'
-  import Radio from '@/components/radio/radio'
-  import RadioGroup from '@/components/radio/radio-group'
-  import Selectbox from '@/components/selectbox/selectbox'
-
   export default{
     data () {
       return {
@@ -343,22 +320,6 @@
         selectValue: 'red',
         selectValue2: ['red', 'blue']
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Btn,
-      Fa,
-      Formbox,
-      FormboxGroup,
-      Textbox,
-      TextboxGroup,
-      Checkbox,
-      CheckboxGroup,
-      Radio,
-      RadioGroup,
-      Selectbox
     }
   }
 </script>
