@@ -23,7 +23,7 @@
       }
     },
     props: {
-      theme: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      state: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       title: {type: String},
       klass: {type: String}
     },
@@ -31,7 +31,7 @@
       classes () {
         return [
           {'panel': true},
-          {[`panel-${this.theme}`]: !!this.theme},
+          {[`panel-${this.state}`]: !!this.state},
           {[this.klass]: !!this.klass}
         ]
       }

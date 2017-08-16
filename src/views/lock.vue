@@ -10,7 +10,7 @@
         <h1>{{activeUser.name}}</h1>
         <span class="email"> {{activeUser.email}} </span>
         <span class="locked"> 已锁定 </span>
-        <alert v-model="alertShow" theme="danger" :content="alertMessage"></alert>
+        <alert v-model="alertShow" state="danger" :content="alertMessage"></alert>
         <textbox type="password" placeholder="请输入密码" icon="lock" v-model="password">
           <btn size="icon-only" color="green" @click="relogin" slot="after">
             <i class="m-icon-swapright m-icon-white"></i>

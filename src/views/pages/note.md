@@ -15,30 +15,30 @@
 
 ### 状态色
 
-<note title="成功! " theme="success">
+<note title="成功! " state="success">
   这是一段文字.
 </note>
-<note title="信息! " theme="info">
+<note title="信息! " state="info">
   这是一段文字.
 </note>
-<note title="错误! " theme="danger">
+<note title="错误! " state="danger">
   这是一段文字.
 </note>
-<note title="警告! " theme="warning">
+<note title="警告! " state="warning">
   这是一段文字.
 </note>
 
 ```html
-<note title="成功! " theme="success">
+<note title="成功! " state="success">
   这是一段文字.
 </note>
-<note title="信息! " theme="info">
+<note title="信息! " state="info">
   这是一段文字.
 </note>
-<note title="错误! " theme="danger">
+<note title="错误! " state="danger">
   这是一段文字.
 </note>
-<note title="警告! " theme="warning">
+<note title="警告! " state="warning">
   这是一段文字.
 </note>
 ```
@@ -61,7 +61,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 success, info, warning, danger </td>
                   <td> String </td>
                   <td> default </td>

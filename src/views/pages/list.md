@@ -20,20 +20,20 @@
 ### 状态色
 
 <list>
-  <list-item theme="default">默认</list-item>
-  <list-item theme="success">成功</list-item>
-  <list-item theme="info">信息</list-item>
-  <list-item theme="warning">警告</list-item>
-  <list-item theme="danger">错误</list-item>
+  <list-item state="default">默认</list-item>
+  <list-item state="success">成功</list-item>
+  <list-item state="info">信息</list-item>
+  <list-item state="warning">警告</list-item>
+  <list-item state="danger">错误</list-item>
 </list>
 
 ```html
 <list>
-  <list-item theme="default">默认</list-item>
-  <list-item theme="success">成功</list-item>
-  <list-item theme="info">信息</list-item>
-  <list-item theme="warning">警告</list-item>
-  <list-item theme="danger">错误</list-item>
+  <list-item state="default">默认</list-item>
+  <list-item state="success">成功</list-item>
+  <list-item state="info">信息</list-item>
+  <list-item state="warning">警告</list-item>
+  <list-item state="danger">错误</list-item>
 </list>
 ```
 
@@ -101,7 +101,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, success, info, warning, danger </td>
                   <td> String </td>
                   <td> default </td>

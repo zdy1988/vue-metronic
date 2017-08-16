@@ -11,7 +11,7 @@
     name: 'Note',
     props: {
       color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
-      theme: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      state: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       title: {type: String},
       content: {type: String},
       klass: {type: String}
@@ -22,7 +22,7 @@
           {'note': true},
           {[`bg-${this.color}`]: !!this.color},
           {[`bg-font-${this.color}`]: !!this.color},
-          {[`note-${this.theme}`]: !!this.theme && !this.color},
+          {[`note-${this.state}`]: !!this.state && !this.color},
           {[this.klass]: !!this.klass}
         ]
       }

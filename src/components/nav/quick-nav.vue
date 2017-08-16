@@ -6,25 +6,25 @@
       </a>
       <ul>
         <li>
-          <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
+          <a href="https://stateforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenstates" target="_blank" class="active">
             <span>Purchase Metronic</span>
             <i class="icon-basket"></i>
           </a>
         </li>
         <li>
-          <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
+          <a href="https://stateforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenstates" target="_blank">
             <span>Customer Reviews</span>
             <i class="icon-users"></i>
           </a>
         </li>
         <li>
-          <a href="http://keenthemes.com/showcast/" target="_blank">
+          <a href="http://keenstates.com/showcast/" target="_blank">
             <span>Showcase</span>
             <i class="icon-user"></i>
           </a>
         </li>
         <li>
-          <a href="http://keenthemes.com/metronic-theme/changelog/" target="_blank">
+          <a href="http://keenstates.com/metronic-state/changelog/" target="_blank">
             <span>Changelog</span>
             <i class="icon-graph"></i>
           </a>

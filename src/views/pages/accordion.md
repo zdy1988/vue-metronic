@@ -62,25 +62,25 @@
 ### 状态色
 
 <accordions>
-  <accordion-pane title="折叠面板 #1" theme="primary" cur>
+  <accordion-pane title="折叠面板 #1" state="primary" cur>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #2" theme="success">
+  <accordion-pane title="折叠面板 #2" state="success">
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #3" theme="info">
+  <accordion-pane title="折叠面板 #3" state="info">
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #4" theme="warning">
+  <accordion-pane title="折叠面板 #4" state="warning">
     <p> 折叠面板内容 #4 </p>
     <p> 折叠面板内容 #4 </p>
     <p> 折叠面板内容 #4 </p>
@@ -90,25 +90,25 @@
 
 ```html
 <accordions>
-  <accordion-pane title="折叠面板 #1" theme="primary" cur>
+  <accordion-pane title="折叠面板 #1" state="primary" cur>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
     <p> 折叠面板内容 #1 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #2" theme="success">
+  <accordion-pane title="折叠面板 #2" state="success">
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
     <p> 折叠面板内容 #2 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #3" theme="info">
+  <accordion-pane title="折叠面板 #3" state="info">
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
     <p> 折叠面板内容 #3 </p>
   </accordion-pane>
-  <accordion-pane title="折叠面板 #4" theme="warning">
+  <accordion-pane title="折叠面板 #4" state="warning">
     <p> 折叠面板内容 #4 </p>
     <p> 折叠面板内容 #4 </p>
     <p> 折叠面板内容 #4 </p>
@@ -206,17 +206,17 @@
 
 ##### 试一试
 
-<p>
-  <textbox-group>
-    <btn>切换折叠面板：</btn>
+<row>
+  <column :md=3>
     <selectbox v-model="activeIndex">
       <option :value="0">0</option>
       <option :value="1">1</option>
       <option :value="2">2</option>
       <option :value="3">3</option>
-    </selectbox>
-  </textbox-group>
-</p>
+    </selectbox 
+  </column>
+</row>
+
 
 <script>
   export default{
@@ -332,7 +332,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
                   <td> String </td>
                   <td> - </td>

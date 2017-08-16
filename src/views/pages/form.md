@@ -5,13 +5,13 @@
 
   <portlet title="表单" icon="map-signs" theme="light" bordered color="blue">
     <formbox-group>
-      <formbox label="姓名" help="请输入姓名">
+      <formbox label="姓名" help="请输入姓名" state="error">
         <textbox></textbox>
       </formbox>
-      <formbox label="年龄" help="请输入年龄">
+      <formbox label="年龄" help="请输入年龄" state="success">
         <textbox></textbox>
       </formbox>
-      <formbox label="性别">
+      <formbox label="性别" state="warning">
         <radio-group inline>
           <radio outline>男</radio>
           <radio outline>女</radio>
@@ -24,13 +24,13 @@
   ```html
   <portlet title="表单" icon="map-signs" theme="light" bordered color="blue">
     <formbox-group>
-      <formbox label="姓名" help="请输入姓名">
+      <formbox label="姓名" help="请输入姓名" state="error">
         <textbox></textbox>
       </formbox>
-      <formbox label="年龄" help="请输入年龄">
+      <formbox label="年龄" help="请输入年龄" state="success">
         <textbox></textbox>
       </formbox>
-      <formbox label="性别">
+      <formbox label="性别" state="warning">
         <radio-group inline>
           <radio outline>男</radio>
           <radio outline>女</radio>

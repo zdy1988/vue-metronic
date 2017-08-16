@@ -6,7 +6,7 @@ import {colorKeys} from '@/untils'
 export default {
   props: {
     color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
-    theme: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link'].indexOf(value) > -1},
+    state: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger', 'link'].indexOf(value) > -1},
     stripe: {type: String, validator: value => colorKeys.indexOf(value) > -1},
     shape: {type: String, validator: value => ['circle'].indexOf(value) > -1},
     outline: {type: Boolean},
@@ -22,7 +22,7 @@ export default {
       return [
         {'btn': true},
         {[this.color]: !!this.color},
-        {[`btn-${this.theme}`]: !!this.theme && !this.color && !this.stripe},
+        {[`btn-${this.state}`]: !!this.state && !this.color && !this.stripe},
         {[`${this.stripe}-stripe`]: !!this.color && !!this.stripe},
         {[this.shape]: !!this.shape},
         {'btn-outline': !!this.outline},

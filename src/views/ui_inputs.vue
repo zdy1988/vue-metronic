@@ -22,7 +22,7 @@
           <textbox placeholder="Input">
             <fa name="user" slot="before"></fa>
             <fa name="user-md" slot="before"></fa>
-            <btn theme="success" @click="alert" slot="after">
+            <btn state="success" @click="alert" slot="after">
               <fa name="arrow-left"></fa> Go!
             </btn>
           </textbox>
@@ -43,7 +43,7 @@
           <formbox label="Large">
             <textbox placeholder="Input" size="lg">
               <fa name="user" slot="before"></fa>
-              <btn theme="success" @click="alert" slot="after">
+              <btn state="success" @click="alert" slot="after">
                 <fa name="arrow-left"></fa> Go!
               </btn>
             </textbox>
@@ -51,7 +51,7 @@
           <formbox label="Default">
             <textbox placeholder="Input">
               <fa name="user" slot="before"></fa>
-              <btn theme="success" @click="alert" slot="after">
+              <btn state="success" @click="alert" slot="after">
                 <fa name="arrow-left"></fa> Go!
               </btn>
             </textbox>
@@ -59,7 +59,7 @@
           <formbox label="Small">
             <textbox placeholder="Input" size="sm">
               <fa name="user" slot="before"></fa>
-              <btn theme="success" @click="alert" slot="after">
+              <btn state="success" @click="alert" slot="after">
                 <fa name="arrow-left"></fa> Go!
               </btn>
             </textbox>
@@ -171,7 +171,7 @@
             </checkbox-group>
             <textbox-group>
               <textbox v-model="checkboxStatus" disabled></textbox>
-              <btn @click="checkboxStatus = !checkboxStatus" theme="success">
+              <btn @click="checkboxStatus = !checkboxStatus" state="success">
                 <fa name="arrow-left"></fa>
                 Change
               </btn>
@@ -203,7 +203,7 @@
             </checkbox-group>
             <textbox-group>
               <textbox v-model="checkboxGroupStatus" disabled></textbox>
-              <btn @click="checkboxGroupStatus = ['green']" theme="success">
+              <btn @click="checkboxGroupStatus = ['green']" state="success">
                 <fa name="arrow-left"></fa>
                 Change
               </btn>
@@ -226,7 +226,7 @@
             </radio-group>
             <textbox-group>
               <textbox v-model="radioStatus" disabled></textbox>
-              <btn @click="radioStatus = !radioStatus" theme="success">
+              <btn @click="radioStatus = !radioStatus" state="success">
                 <fa name="arrow-left"></fa>
                 Change
               </btn>
@@ -258,7 +258,7 @@
             </radio-group>
             <textbox-group>
               <textbox v-model="radioGroupStatus" disabled></textbox>
-              <btn @click="radioGroupStatus = 'green'" theme="success">
+              <btn @click="radioGroupStatus = 'green'" state="success">
                 <fa name="arrow-left"></fa>
                 Change
               </btn>

@@ -11,16 +11,16 @@
 
 ### 状态色
 
-<alert :show="true" theme="success">提示成功！</alert>
-<alert :show="true" theme="info">提示信息！</alert>
-<alert :show="true" theme="warning">提示警告！</alert>
-<alert :show="true" theme="danger">提示错误！</alert>
+<alert :show="true" state="success">提示成功！</alert>
+<alert :show="true" state="info">提示信息！</alert>
+<alert :show="true" state="warning">提示警告！</alert>
+<alert :show="true" state="danger">提示错误！</alert>
 
 ```html
-<alert :show="true" theme="success">提示成功！</alert>
-<alert :show="true" theme="info">提示信息！</alert>
-<alert :show="true" theme="warning">提示警告！</alert>
-<alert :show="true" theme="danger">提示错误！</alert>
+<alert :show="true" state="success">提示成功！</alert>
+<alert :show="true" state="info">提示信息！</alert>
+<alert :show="true" state="warning">提示警告！</alert>
+<alert :show="true" state="danger">提示错误！</alert>
 ```
 
 ### 例子
@@ -69,7 +69,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
                   <td> String </td>
                   <td> success </td>

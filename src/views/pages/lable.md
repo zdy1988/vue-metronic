@@ -11,20 +11,20 @@
 
 ### 状态色
 
-<lable theme="default">默认</lable>
-<lable theme="primary">基本</lable>
-<lable theme="success">成功</lable>
-<lable theme="info">信息</lable>
-<lable theme="warning">警告</lable>
-<lable theme="danger">错误</lable>
+<lable state="default">默认</lable>
+<lable state="primary">基本</lable>
+<lable state="success">成功</lable>
+<lable state="info">信息</lable>
+<lable state="warning">警告</lable>
+<lable state="danger">错误</lable>
 
 ```html
-<lable theme="default">默认</lable>
-<lable theme="primary">基本</lable>
-<lable theme="success">成功</lable>
-<lable theme="info">信息</lable>
-<lable theme="warning">警告</lable>
-<lable theme="danger">错误</lable>
+<lable state="default">默认</lable>
+<lable state="primary">基本</lable>
+<lable state="success">成功</lable>
+<lable state="info">信息</lable>
+<lable state="warning">警告</lable>
+<lable state="danger">错误</lable>
 ```
 
 ### API
@@ -45,7 +45,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
                   <td> String </td>
                   <td> default </td>

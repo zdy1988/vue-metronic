@@ -22,6 +22,7 @@
     name: 'Formbox',
     props: {
       label: {type: String},
+      state: {type: String, validator: value => ['success', 'warning', 'error'].indexOf(value) > -1},
       help: {type: String},
       horizontal: {type: Boolean},
       klass: {type: String}
@@ -31,6 +32,7 @@
         return [
           {'form-group row': true},
           {'form-group-horizontal': !!this.horizontal},
+          {[`has-${this.state}`]: !!this.state},
           {[this.klass]: !!this.klass}
         ]
       },

@@ -15,7 +15,7 @@
     mixins: [_scroll],
     props: {
       color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
-      theme: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      state: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       show: {type: Boolean, required: true},
       content: {type: String},
       klass: {type: String}
@@ -30,7 +30,7 @@
           {'alert alert-dismissable': true},
           {[`bg-${this.color}`]: !!this.color},
           {[`bg-font-${this.color}`]: !!this.color},
-          {[`alert-${this.theme}`]: !!this.theme && !this.color},
+          {[`alert-${this.state}`]: !!this.state && !this.color},
           {[this.klass]: !!this.klass}
         ]
       }

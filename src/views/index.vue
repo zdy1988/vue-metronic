@@ -11,7 +11,7 @@
       <!-- BEGIN LOGIN FORM -->
       <formbox-group klass="login-form" v-show="activeForm === 'login'">
         <h3 class="form-title">登录到账户</h3>
-        <alert v-model="alertShow" theme="danger" :content="alertMessage"></alert>
+        <alert v-model="alertShow" state="danger" :content="alertMessage"></alert>
         <formbox>
           <textbox placeholder="用户名" icon="user" v-model="username"></textbox>
         </formbox>

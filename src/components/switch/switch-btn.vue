@@ -17,7 +17,7 @@
     props: {
       value: null,
       title: {type: String},
-      theme: {type: String, validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      state: {type: String, validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       checked: {type: Boolean, default: false},
       disabled: {type: Boolean},
       klass: {type: String}
@@ -26,7 +26,7 @@
       switchClasses () {
         return [
           {'switch': true},
-          {[`switch-${this.theme}`]: !!this.theme},
+          {[`switch-${this.state}`]: !!this.state},
           {[this.klass]: !!this.klass}
         ]
       }

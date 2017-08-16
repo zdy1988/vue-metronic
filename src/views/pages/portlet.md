@@ -84,7 +84,7 @@
               </tr>
               <tr>
                   <td> bordered </td>
-                  <td> 设置是否显示边框,在 theme 为 light 的模式下生效 </td>
+                  <td> 设置是否显示边框,在 state 为 light 的模式下生效 </td>
                   <td> Boolean </td>
                   <td> - </td>
               </tr>

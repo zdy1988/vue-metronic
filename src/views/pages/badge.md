@@ -11,20 +11,20 @@
 
 ### 状态色
 
-<badge theme="default">1</badge>
-<badge theme="primary">2</badge>
-<badge theme="success">3</badge>
-<badge theme="info">4</badge>
-<badge theme="warning">5</badge>
-<badge theme="danger">6</badge>
+<badge state="default">1</badge>
+<badge state="primary">2</badge>
+<badge state="success">3</badge>
+<badge state="info">4</badge>
+<badge state="warning">5</badge>
+<badge state="danger">6</badge>
 
 ```html
-<badge theme="default">1</badge>
-<badge theme="primary">2</badge>
-<badge theme="success">3</badge>
-<badge theme="info">4</badge>
-<badge theme="warning">5</badge>
-<badge theme="danger">6</badge>
+<badge state="default">1</badge>
+<badge state="primary">2</badge>
+<badge state="success">3</badge>
+<badge state="info">4</badge>
+<badge state="warning">5</badge>
+<badge state="danger">6</badge>
 ```
 
 ### 环境
@@ -32,16 +32,16 @@
 <p>
   <btn-dropdown text="点击">
     <btn>按钮 1 <badge class="float-right">2</badge></btn>
-    <btn theme="success">按钮 2 <badge class="float-right">3</badge></btn>
-    <btn theme="danger">按钮 3 <badge class="float-right">4</badge></btn>
+    <btn state="success">按钮 2 <badge class="float-right">3</badge></btn>
+    <btn state="danger">按钮 3 <badge class="float-right">4</badge></btn>
   </btn-dropdown>
 </p>
 
 ```html
 <btn-dropdown text="点击">
   <btn>按钮 1 <badge class="float-right">2</badge></btn>
-  <btn theme="success">按钮 2 <badge class="float-right">3</badge></btn>
-  <btn theme="danger">按钮 3 <badge class="float-right">4</badge></btn>
+  <btn state="success">按钮 2 <badge class="float-right">3</badge></btn>
+  <btn state="danger">按钮 3 <badge class="float-right">4</badge></btn>
 </btn-dropdown>
 ```
 
@@ -81,7 +81,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
                   <td> String </td>
                   <td> default </td>

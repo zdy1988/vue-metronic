@@ -11,44 +11,44 @@
 
 ### 状态色
 
-<progress-bar :value="40" theme="success"></progress-bar>
-<progress-bar :value="40" theme="info"></progress-bar>
-<progress-bar :value="40" theme="warning"></progress-bar>
-<progress-bar :value="40" theme="danger"></progress-bar>
+<progress-bar :value="40" state="success"></progress-bar>
+<progress-bar :value="40" state="info"></progress-bar>
+<progress-bar :value="40" state="warning"></progress-bar>
+<progress-bar :value="40" state="danger"></progress-bar>
 
 ```html
-<progress-bar :value="40" theme="success"></progress-bar>
-<pogress-bar :value="40" theme="info"></progress-bar>
-<progress-bar :value="40" theme="warning"></progress-bar>
-<progress-bar :value="40" theme="danger"></progress-bar>
+<progress-bar :value="40" state="success"></progress-bar>
+<pogress-bar :value="40" state="info"></progress-bar>
+<progress-bar :value="40" state="warning"></progress-bar>
+<progress-bar :value="40" state="danger"></progress-bar>
 ```
 
 ### 条纹
 
-<progress-bar :value="40" theme="success" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="info" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="warning" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="danger" stripe="static"></progress-bar>
+<progress-bar :value="40" state="success" stripe="static"></progress-bar>
+<progress-bar :value="40" state="info" stripe="static"></progress-bar>
+<progress-bar :value="40" state="warning" stripe="static"></progress-bar>
+<progress-bar :value="40" state="danger" stripe="static"></progress-bar>
 
 ```html
-<progress-bar :value="40" theme="success" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="info" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="warning" stripe="static"></progress-bar>
-<progress-bar :value="40" theme="danger" stripe="static"></progress-bar>
+<progress-bar :value="40" state="success" stripe="static"></progress-bar>
+<progress-bar :value="40" state="info" stripe="static"></progress-bar>
+<progress-bar :value="40" state="warning" stripe="static"></progress-bar>
+<progress-bar :value="40" state="danger" stripe="static"></progress-bar>
 ```
 
 ### 动态条纹
 
-<progress-bar :value="40" theme="success" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="info" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="warning" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="danger" stripe="active"></progress-bar>
+<progress-bar :value="40" state="success" stripe="active"></progress-bar>
+<progress-bar :value="40" state="info" stripe="active"></progress-bar>
+<progress-bar :value="40" state="warning" stripe="active"></progress-bar>
+<progress-bar :value="40" state="danger" stripe="active"></progress-bar>
 
 ```html
-<progress-bar :value="40" theme="success" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="info" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="warning" stripe="active"></progress-bar>
-<progress-bar :value="40" theme="danger" stripe="active"></progress-bar>
+<progress-bar :value="40" state="success" stripe="active"></progress-bar>
+<progress-bar :value="40" state="info" stripe="active"></progress-bar>
+<progress-bar :value="40" state="warning" stripe="active"></progress-bar>
+<progress-bar :value="40" state="danger" stripe="active"></progress-bar>
 ```
 
 ### 例子
@@ -124,7 +124,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 success, info, warning, danger </td>
                   <td> String </td>
                   <td> - </td>

@@ -1,10 +1,10 @@
 <template>
   <popover :placement="placement" :title="title" :show.sync="show">
     <btn-group slot="content">
-      <btn theme="success" @click="_ok">
+      <btn state="success" @click="_ok">
         <fa name="check"></fa> {{okText}}
       </btn>
-      <btn theme="danger" @click="_cancel">
+      <btn state="danger" @click="_cancel">
         <fa name="close"></fa> {{cancelText}}
       </btn>
     </btn-group>

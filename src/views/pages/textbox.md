@@ -16,7 +16,7 @@
 <p>
   <textbox placeholder="请输入" icon="pencil">
     <fa name="pencil" slot="before"></fa>
-    <btn theme="success" slot="after">
+    <btn state="success" slot="after">
       <fa name="arrow-left"></fa> Go!
     </btn>
   </textbox>
@@ -25,7 +25,7 @@
 ```html
 <textbox placeholder="请输入" icon="pencil">
   <fa name="pencil" slot="before"></fa>
-  <btn theme="success" slot="after">
+  <btn state="success" slot="after">
     <fa name="arrow-left"></fa> Go!
   </btn>
 </textbox

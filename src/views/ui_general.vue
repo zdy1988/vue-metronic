@@ -5,11 +5,11 @@
         <h4 class="block">Default Alerts</h4>
         <alert :show.sync="show" content="Success! The page has been added."></alert>
         <btn @click="show = !show">Toggle Alert</btn>
-        <h4 class="block">Alert Themes</h4>
-        <alert :show.sync="show_success" theme="success">Success! The page has been added.</alert>
-        <alert :show.sync="show_info" theme="info">Info! You have 198 unread messages.</alert>
-        <alert :show.sync="show_warning" theme="warning">Warning! Your monthly traffic is reaching limit.</alert>
-        <alert :show.sync="show_danger" theme="danger">Error! The daily cronjob has failed.</alert>
+        <h4 class="block">Alert states</h4>
+        <alert :show.sync="show_success" state="success">Success! The page has been added.</alert>
+        <alert :show.sync="show_info" state="info">Info! You have 198 unread messages.</alert>
+        <alert :show.sync="show_warning" state="warning">Warning! Your monthly traffic is reaching limit.</alert>
+        <alert :show.sync="show_danger" state="danger">Error! The daily cronjob has failed.</alert>
       </portlet>
       <portlet title="PULSATE" icon="share" theme="light" bordered>
         <h4>Pulsate any page elements.</h4>
@@ -91,11 +91,11 @@
         </list>
         <h4 class="block">Contextual States</h4>
         <list>
-          <list-item theme="default">Default</list-item>
-          <list-item theme="success">Success</list-item>
-          <list-item theme="info">Info</list-item>
-          <list-item theme="danger">Danger</list-item>
-          <list-item theme="warning">Warning</list-item>
+          <list-item state="default">Default</list-item>
+          <list-item state="success">Success</list-item>
+          <list-item state="info">Info</list-item>
+          <list-item state="danger">Danger</list-item>
+          <list-item state="warning">Warning</list-item>
         </list>
         <h4 class="block">Custom Content</h4>
         <list>
@@ -131,14 +131,14 @@
           Panel content
         </panel>
         <h4 class="block">Contextual Panels</h4>
-        <panel theme="default" title="Default Panel">Panel content</panel>
-        <panel theme="primary" title="Primary Panel">Panel content</panel>
-        <panel theme="success" title="Success Panel">Panel content</panel>
-        <panel theme="info" title="Info Panel">Panel content</panel>
-        <panel theme="warning" title="Warning Panel">Panel content</panel>
-        <panel theme="danger" title="Danger Panel">Panel content</panel>
+        <panel state="default" title="Default Panel">Panel content</panel>
+        <panel state="primary" title="Primary Panel">Panel content</panel>
+        <panel state="success" title="Success Panel">Panel content</panel>
+        <panel state="info" title="Info Panel">Panel content</panel>
+        <panel state="warning" title="Warning Panel">Panel content</panel>
+        <panel state="danger" title="Danger Panel">Panel content</panel>
         <h4 class="block">With Tables</h4>
-        <panel theme="info" title="Panel Title">
+        <panel state="info" title="Panel Title">
           <p> Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
             Nullam id dolor id nibh ultricies vehicula ut id elit. </p>
           <table class="table" slot="table">
@@ -173,7 +173,7 @@
           </table>
         </panel>
         <h4 class="block">With List Groups</h4>
-        <panel theme="warning" title="Panel Title">
+        <panel state="warning" title="Panel Title">
           <p> Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies
             vehicula ut id elit. </p>
           <list slot="list">
@@ -189,17 +189,17 @@
       <portlet title="NOTE" icon="share" theme="light" bordered>
         <h4 class="block">Default Note</h4>
         <note content="Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum."></note>
-        <h4 class="block">Note Themes</h4>
-        <note title="Success! Some Header Goes Here" theme="success">
+        <h4 class="block">Note states</h4>
+        <note title="Success! Some Header Goes Here" state="success">
           Duis mollis, est non commodo luctus, nisi erat mattis consectetur purus sit amet porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
         </note>
-        <note title="Info! Some Header Goes Here" theme="info">
+        <note title="Info! Some Header Goes Here" state="info">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, mattis consectetur purus sit amet eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.
         </note>
-        <note title="Danger! Some Header Goes Here" theme="danger">
+        <note title="Danger! Some Header Goes Here" state="danger">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit mattis consectetur purus sit amet.\ Cras mattis consectetur purus sit amet fermentum.
         </note>
-        <note title="Warning! Some Header Goes Here" theme="warning">
+        <note title="Warning! Some Header Goes Here" state="warning">
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit mattis consectetur purus sit amet. Cras mattis consectetur purus sit amet fermentum.
         </note>
       </portlet>
@@ -208,20 +208,20 @@
         <progress-bar :value="progress" :max="max" :min="min" :step="step" title="Complete (success)" show-value></progress-bar>
         <btn @click="randomProgress">Random Progress</btn>
         <h4 class="block">Styles</h4>
-        <progress-bar :value="40" theme="success"></progress-bar>
-        <progress-bar :value="40" theme="info"></progress-bar>
-        <progress-bar :value="40" theme="warning"></progress-bar>
-        <progress-bar :value="40" theme="danger"></progress-bar>
+        <progress-bar :value="40" state="success"></progress-bar>
+        <progress-bar :value="40" state="info"></progress-bar>
+        <progress-bar :value="40" state="warning"></progress-bar>
+        <progress-bar :value="40" state="danger"></progress-bar>
         <h4 class="block">Striped</h4>
-        <progress-bar :value="40" theme="success" stripe="static"></progress-bar>
-        <progress-bar :value="40" theme="info" stripe="static"></progress-bar>
-        <progress-bar :value="40" theme="warning" stripe="static"></progress-bar>
-        <progress-bar :value="40" theme="danger" stripe="static"></progress-bar>
+        <progress-bar :value="40" state="success" stripe="static"></progress-bar>
+        <progress-bar :value="40" state="info" stripe="static"></progress-bar>
+        <progress-bar :value="40" state="warning" stripe="static"></progress-bar>
+        <progress-bar :value="40" state="danger" stripe="static"></progress-bar>
         <h4 class="block">Animated</h4>
-        <progress-bar :value="40" theme="success" stripe="active"></progress-bar>
-        <progress-bar :value="40" theme="info" stripe="active"></progress-bar>
-        <progress-bar :value="40" theme="warning" stripe="active"></progress-bar>
-        <progress-bar :value="40" theme="danger" stripe="active"></progress-bar>
+        <progress-bar :value="40" state="success" stripe="active"></progress-bar>
+        <progress-bar :value="40" state="info" stripe="active"></progress-bar>
+        <progress-bar :value="40" state="warning" stripe="active"></progress-bar>
+        <progress-bar :value="40" state="danger" stripe="active"></progress-bar>
       </portlet>
       <portlet title="LABLES & BADGES" icon="share" theme="light" color="red" bordered>
         <h4 class="block">Labels & Badges Styles</h4>
@@ -250,61 +250,61 @@
           <tr>
             <td> Primary </td>
             <td>
-              <lable theme="primary">Primary</lable>
+              <lable state="primary">Primary</lable>
             </td>
             <td>
-              <badge theme="primary">5</badge>
+              <badge state="primary">5</badge>
             </td>
             <td>
-              <badge shape="square" theme="primary">3</badge>
+              <badge shape="square" state="primary">3</badge>
             </td>
           </tr>
           <tr>
             <td> Info </td>
             <td>
-              <lable theme="info">Info</lable>
+              <lable state="info">Info</lable>
             </td>
             <td>
-              <badge theme="info">5</badge>
+              <badge state="info">5</badge>
             </td>
             <td>
-              <badge shape="square" theme="info">3</badge>
+              <badge shape="square" state="info">3</badge>
             </td>
           </tr>
           <tr>
             <td> Success </td>
             <td>
-              <lable theme="success">Success</lable>
+              <lable state="success">Success</lable>
             </td>
             <td>
-              <badge theme="success">5</badge>
+              <badge state="success">5</badge>
             </td>
             <td>
-              <badge shape="square" theme="success">3</badge>
+              <badge shape="square" state="success">3</badge>
             </td>
           </tr>
           <tr>
             <td> Danger </td>
             <td>
-              <lable theme="danger">Danger</lable>
+              <lable state="danger">Danger</lable>
             </td>
             <td>
-              <badge theme="danger">5</badge>
+              <badge state="danger">5</badge>
             </td>
             <td>
-              <badge shape="square" theme="danger">3</badge>
+              <badge shape="square" state="danger">3</badge>
             </td>
           </tr>
           <tr>
             <td> Warning </td>
             <td>
-              <lable theme="warning">Warning</lable>
+              <lable state="warning">Warning</lable>
             </td>
             <td>
-              <badge theme="warning">5</badge>
+              <badge state="warning">5</badge>
             </td>
             <td>
-              <badge shape="square" theme="warning">3</badge>
+              <badge shape="square" state="warning">3</badge>
             </td>
           </tr>
           </tbody>
@@ -315,26 +315,26 @@
             <lable>default</lable>
           </h1>
           <h2>Example heading
-            <lable theme="success">success</lable>
+            <lable state="success">success</lable>
           </h2>
           <h3>Example heading
-            <lable theme="danger">danger</lable>
+            <lable state="danger">danger</lable>
           </h3>
           <h4 class="block">Example heading
-            <lable theme="info">info</lable>
+            <lable state="info">info</lable>
           </h4>
           <h4>Example heading
-            <lable theme="warning">warning</lable>
+            <lable state="warning">warning</lable>
           </h4>
           <h6>Example heading
-            <lable theme="primary">primary</lable>
+            <lable state="primary">primary</lable>
           </h6>
         </well>
         <h4 class="block">Badges in Button Dropdowns</h4>
         <btn-dropdown text="Open Me!">
-          <btn theme="success">Action <badge class="float-right">1</badge></btn>
-          <btn theme="danger">Action <badge class="float-right">3</badge></btn>
-          <btn theme="info">Action <badge class="float-right">4</badge></btn>
+          <btn state="success">Action <badge class="float-right">1</badge></btn>
+          <btn state="danger">Action <badge class="float-right">3</badge></btn>
+          <btn state="info">Action <badge class="float-right">4</badge></btn>
         </btn-dropdown>
       </portlet>
       <portlet title="PAGINATION" icon="share" theme="light" color="red" bordered>

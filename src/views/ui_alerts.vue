@@ -4,10 +4,10 @@
     <portlet title="BOOTSTRAP SWEET ALERTS ON BUTTONS" icon="share" theme="light" color="green" bordered>
       <h4>Sweet Alert Samples</h4>
       <btn @click="defaultAlert">Default Alert</btn>
-      <btn @click="infoAlert" theme="info">Info Alert</btn>
-      <btn @click="warningAlert" theme="warning">Warning Alert</btn>
-      <btn @click="dangerAlert" theme="danger">Danger Alert</btn>
-      <btn @click="successAlert" theme="success">Success Alert</btn>
+      <btn @click="infoAlert" state="info">Info Alert</btn>
+      <btn @click="warningAlert" state="warning">Warning Alert</btn>
+      <btn @click="dangerAlert" state="danger">Danger Alert</btn>
+      <btn @click="successAlert" state="success">Success Alert</btn>
       <h4>Sweet Alert Samples with Confimation Message</h4>
       <btn @click="confirm">Agree to Terms & Conditions</btn>
     </portlet>

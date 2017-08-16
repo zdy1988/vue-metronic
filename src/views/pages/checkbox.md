@@ -46,7 +46,7 @@
   </p>
   <p>
     值： {{checkboxStatus}}
-    <btn @click="checkboxStatus = !checkboxStatus" theme="success">
+    <btn @click="checkboxStatus = !checkboxStatus" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -58,7 +58,7 @@
   </p>
   <p>
     值：{{checkboxGroupStatus}}
-    <btn @click="checkboxGroupStatus = ['green']" theme="success">
+    <btn @click="checkboxGroupStatus = ['green']" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -86,7 +86,7 @@
   </p>
   <p>
     值： {{checkboxStatus}}
-    <btn @click="checkboxStatus = !checkboxStatus" theme="success">
+    <btn @click="checkboxStatus = !checkboxStatus" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -98,7 +98,7 @@
   </p>
   <p>
     值：{{checkboxGroupStatus}}
-    <btn @click="checkboxGroupStatus = ['green']" theme="success">
+    <btn @click="checkboxGroupStatus = ['green']" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>

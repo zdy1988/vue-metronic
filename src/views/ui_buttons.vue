@@ -7,14 +7,14 @@
             <column :md="6">
               <portlet title="BUTTONS" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <div class="clearfix">
-                  <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
-                  <btn theme="default">Default</btn>
-                  <btn theme="primary" >Primary</btn>
-                  <btn theme="success" >Success</btn>
-                  <btn theme="info" >Info</btn>
-                  <btn theme="warning" >Warning</btn>
-                  <btn theme="danger" >Danger</btn>
-                  <btn theme="link" >Link</btn>
+                  <h4 class="block">Default Bootstrap Buttons(Customized to Match state Style)</h4>
+                  <btn state="default">Default</btn>
+                  <btn state="primary" >Primary</btn>
+                  <btn state="success" >Success</btn>
+                  <btn state="info" >Info</btn>
+                  <btn state="warning" >Warning</btn>
+                  <btn state="danger" >Danger</btn>
+                  <btn state="link" >Link</btn>
                 </div>
                 <div class="clearfix">
                   <h4 class="block">Metronic Custom Buttons</h4>
@@ -98,7 +98,7 @@
                 </div>
                 <div class="clearfix">
                   <h4 class="block">Block Buttons</h4>
-                  <btn block theme="default" >Button</btn>
+                  <btn block state="default" >Button</btn>
                   <btn block color="red" >Button</btn>
                   <btn block color="purple" >Button</btn>
                   <btn block outline color="blue" >Button</btn>
@@ -572,20 +572,20 @@
                 <div class="clearfix">
                   <h4 class="block">Nesting Button Group</h4>
                   <btn-group>
-                    <btn theme="default">
+                    <btn state="default">
                       <fa name="user"></fa> Profile
                     </btn>
-                    <btn theme="default">
+                    <btn state="default">
                       <fa name="cogs"></fa> Settings
                     </btn>
-                    <btn theme="default">
+                    <btn state="default">
                       <fa name="bullhorn"></fa> Feeds
                     </btn>
-                    <btn-dropdown text="More" theme="default">
+                    <btn-dropdown text="More" state="default">
                       <btn color="white">Dropdown link</btn>
                       <btn color="white">Dropdown link</btn>
                     </btn-dropdown>
-                    <btn-dropdown text="Up" dropup theme="default">
+                    <btn-dropdown text="Up" dropup state="default">
                       <btn color="white">Dropdown link</btn>
                       <btn color="white">Dropdown link</btn>
                     </btn-dropdown>
@@ -605,7 +605,7 @@
                       <btn color="white">Dropdown link</btn>
                       <btn color="red">Dropdown link</btn>
                     </btn-dropdown>
-                    <btn-dropdown text="Up" dropup theme="default">
+                    <btn-dropdown text="Up" dropup state="default">
                       <btn color="white" @click="doClick">Dropdown link</btn>
                       <btn color="white" @click="doClick">Dropdown link</btn>
                     </btn-dropdown>
@@ -652,7 +652,7 @@
               </portlet>
               <portlet title="DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4 class="block">Dropdown buttons</h4>
-                <btn-dropdown text="Tools" theme="default" textAlign="left">
+                <btn-dropdown text="Tools" state="default" textAlign="left">
                   <btn color="white">Settings</btn>
                   <btn color="white">Preferences</btn>
                   <btn color="white">Window Options</btn>
@@ -710,40 +710,40 @@
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="primary" textAlign="left">
-                    <btn slot="before" theme="primary">Primary</btn>
+                  <btn-dropdown text="" state="primary" textAlign="left">
+                    <btn slot="before" state="primary">Primary</btn>
                     <btn color="white">Settings</btn>
                     <btn color="white">Preferences</btn>
                     <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="success" textAlign="left">
-                    <btn slot="before" theme="success">Success</btn>
+                  <btn-dropdown text="" state="success" textAlign="left">
+                    <btn slot="before" state="success">Success</btn>
                     <btn color="white">Settings</btn>
                     <btn color="white">Preferences</btn>
                     <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="info" textAlign="left">
-                    <btn slot="before" theme="info">Info</btn>
+                  <btn-dropdown text="" state="info" textAlign="left">
+                    <btn slot="before" state="info">Info</btn>
                     <btn color="white">Settings</btn>
                     <btn color="white">Preferences</btn>
                     <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="warning" textAlign="left">
-                    <btn slot="before" theme="warning">Warning</btn>
+                  <btn-dropdown text="" state="warning" textAlign="left">
+                    <btn slot="before" state="warning">Warning</btn>
                     <btn color="white">Settings</btn>
                     <btn color="white">Preferences</btn>
                     <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                     <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="danger" textAlign="left">
-                    <btn slot="before" theme="danger">Danger</btn>
+                  <btn-dropdown text="" state="danger" textAlign="left">
+                    <btn slot="before" state="danger">Danger</btn>
                     <btn color="white">Settings</btn>
                     <btn color="white">Preferences</btn>
                     <btn color="white">Window Options</btn>
@@ -880,8 +880,8 @@
               <portlet title="Button States" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4>Loading State</h4>
                 <div class="clearfix">
-                  <btn theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
-                  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn state="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                  <btn state="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                   <btn color="red" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                   <btn color="blue" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                 </div>
@@ -894,14 +894,14 @@
             <column :md="6">
               <portlet title="BUTTONS" summary="tasks summary..." theme="light" bordered color="green-sharp" klass="util-btn-margin-bottom-5">
                 <div class="clearfix">
-                  <h4 class="block">Default Bootstrap Buttons(Customized to Match Theme Style)</h4>
-                  <btn shape="circle" theme="default">Default</btn>
-                  <btn shape="circle" theme="primary" >Primary</btn>
-                  <btn shape="circle" theme="success" >Success</btn>
-                  <btn shape="circle" theme="info" >Info</btn>
-                  <btn shape="circle" theme="warning" >Warning</btn>
-                  <btn shape="circle" theme="danger" >Danger</btn>
-                  <btn shape="circle" theme="link" >Link</btn>
+                  <h4 class="block">Default Bootstrap Buttons(Customized to Match state Style)</h4>
+                  <btn shape="circle" state="default">Default</btn>
+                  <btn shape="circle" state="primary" >Primary</btn>
+                  <btn shape="circle" state="success" >Success</btn>
+                  <btn shape="circle" state="info" >Info</btn>
+                  <btn shape="circle" state="warning" >Warning</btn>
+                  <btn shape="circle" state="danger" >Danger</btn>
+                  <btn shape="circle" state="link" >Link</btn>
                 </div>
                 <div class="clearfix">
                   <h4 class="block">Metronic Custom Buttons</h4>
@@ -985,7 +985,7 @@
                 </div>
                 <div class="clearfix">
                   <h4 class="block">Block Buttons</h4>
-                  <btn shape="circle" block theme="default" >Button</btn>
+                  <btn shape="circle" block state="default" >Button</btn>
                   <btn shape="circle" block color="red" >Button</btn>
                   <btn shape="circle" block color="purple" >Button</btn>
                   <btn shape="circle" block outline color="blue" >Button</btn>
@@ -1459,20 +1459,20 @@
                 <div class="clearfix">
                   <h4 class="block">Nesting Button Group</h4>
                   <btn-group shape="circle">
-                     <btn theme="default">
+                     <btn state="default">
                       <fa name="user"></fa> Profile
                     </btn>
-                     <btn theme="default">
+                     <btn state="default">
                       <fa name="cogs"></fa> Settings
                     </btn>
-                     <btn theme="default">
+                     <btn state="default">
                       <fa name="bullhorn"></fa> Feeds
                     </btn>
-                    <btn-dropdown text="More" theme="default">
+                    <btn-dropdown text="More" state="default">
                        <btn color="white">Dropdown link</btn>
                        <btn color="white">Dropdown link</btn>
                     </btn-dropdown>
-                    <btn-dropdown text="Up" dropup theme="default">
+                    <btn-dropdown text="Up" dropup state="default">
                        <btn color="white">Dropdown link</btn>
                        <btn color="white">Dropdown link</btn>
                     </btn-dropdown>
@@ -1492,7 +1492,7 @@
                        <btn shape="circle" color="white">Dropdown link</btn>
                        <btn shape="circle" color="red">Dropdown link</btn>
                     </btn-dropdown>
-                    <btn-dropdown text="Up" dropup theme="default">
+                    <btn-dropdown text="Up" dropup state="default">
                        <btn shape="circle" color="white" @click="doClick">Dropdown link</btn>
                        <btn shape="circle" color="white" @click="doClick">Dropdown link</btn>
                     </btn-dropdown>
@@ -1539,7 +1539,7 @@
               </portlet>
               <portlet title="DROPDOWNS" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4 class="block">Dropdown buttons</h4>
-                <btn-dropdown text="Tools" theme="default" textAlign="left" shape="circle">
+                <btn-dropdown text="Tools" state="default" textAlign="left" shape="circle">
                   <btn color="white">Settings</btn>
                   <btn color="white">Preferences</btn>
                   <btn color="white">Window Options</btn>
@@ -1597,40 +1597,40 @@
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="primary" textAlign="left" shape="circle">
-                     <btn slot="before" theme="primary">Primary</btn>
+                  <btn-dropdown text="" state="primary" textAlign="left" shape="circle">
+                     <btn slot="before" state="primary">Primary</btn>
                      <btn color="white">Settings</btn>
                      <btn color="white">Preferences</btn>
                      <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="success" textAlign="left" shape="circle">
-                     <btn slot="before" theme="success">Success</btn>
+                  <btn-dropdown text="" state="success" textAlign="left" shape="circle">
+                     <btn slot="before" state="success">Success</btn>
                      <btn color="white">Settings</btn>
                      <btn color="white">Preferences</btn>
                      <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="info" textAlign="left" shape="circle">
-                     <btn slot="before" theme="info">Info</btn>
+                  <btn-dropdown text="" state="info" textAlign="left" shape="circle">
+                     <btn slot="before" state="info">Info</btn>
                      <btn color="white">Settings</btn>
                      <btn color="white">Preferences</btn>
                      <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="warning" textAlign="left" shape="circle">
-                     <btn slot="before" theme="warning">Warning</btn>
+                  <btn-dropdown text="" state="warning" textAlign="left" shape="circle">
+                     <btn slot="before" state="warning">Warning</btn>
                      <btn color="white">Settings</btn>
                      <btn color="white">Preferences</btn>
                      <btn color="white">Window Options</btn>
                     <btn-dropdown-divider></btn-dropdown-divider>
                      <btn color="white">Help</btn>
                   </btn-dropdown>
-                  <btn-dropdown text="" theme="danger" textAlign="left" shape="circle">
-                     <btn slot="before" theme="danger">Danger</btn>
+                  <btn-dropdown text="" state="danger" textAlign="left" shape="circle">
+                     <btn slot="before" state="danger">Danger</btn>
                      <btn color="white">Settings</btn>
                      <btn color="whte">Preferences</btn>
                      <btn color="white">Window Options</btn>
@@ -1767,8 +1767,8 @@
               <portlet title="Button States" icon="settings" color="green-sharp" theme="light" bordered>
                 <h4>Loading State</h4>
                 <div class="clearfix">
-                   <btn shape="circle" theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
-                   <btn shape="circle" theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                   <btn shape="circle" state="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+                   <btn shape="circle" state="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                    <btn shape="circle" color="red" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                    <btn shape="circle" color="blue" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
                 </div>

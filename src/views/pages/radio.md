@@ -46,7 +46,7 @@
   </p>
   <p>
     值： {{radioStatus}}
-    <btn @click="radioStatus = !radioStatus" theme="success">
+    <btn @click="radioStatus = !radioStatus" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -58,7 +58,7 @@
   </p>
   <p>
     值：{{radioGroupStatus}}
-    <btn @click="radioGroupStatus = 'green'" theme="success">
+    <btn @click="radioGroupStatus = 'green'" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -86,7 +86,7 @@
   </p>
   <p>
     值： {{radioStatus}}
-    <btn @click="radioStatus = !radioStatus" theme="success">
+    <btn @click="radioStatus = !radioStatus" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>
@@ -98,7 +98,7 @@
   </p>
   <p>
     值：{{radioGroupStatus}}
-    <btn @click="radioGroupStatus = 'green'" theme="success">
+    <btn @click="radioGroupStatus = 'green'" state="success">
       <fa name="arrow-left"></fa>
       改变
     </btn>

@@ -35,25 +35,25 @@
 
 ### 状态色
 
-<panel theme="default" title="面板标题">面板内容</panel>
-<panel theme="primary" title="面板标题">面板内容</panel>
-<panel theme="success" title="面板标题">面板内容</panel>
-<panel theme="info" title="面板标题">面板内容</panel>
-<panel theme="warning" title="面板标题">面板内容</panel>
-<panel theme="danger" title="面板标题">面板内容</panel>
+<panel state="default" title="面板标题">面板内容</panel>
+<panel state="primary" title="面板标题">面板内容</panel>
+<panel state="success" title="面板标题">面板内容</panel>
+<panel state="info" title="面板标题">面板内容</panel>
+<panel state="warning" title="面板标题">面板内容</panel>
+<panel state="danger" title="面板标题">面板内容</panel>
 
 ```html
-<panel theme="default" title="面板标题">面板内容</panel>
-<panel theme="primary" title="面板标题">面板内容</panel>
-<panel theme="success" title="面板标题">面板内容</panel>
-<panel theme="info" title="面板标题">面板内容</panel>
-<panel theme="warning" title="面板标题">面板内容</panel>
-<panel theme="danger" title="面板标题">面板内容</panel>
+<panel state="default" title="面板标题">面板内容</panel>
+<panel state="primary" title="面板标题">面板内容</panel>
+<panel state="success" title="面板标题">面板内容</panel>
+<panel state="info" title="面板标题">面板内容</panel>
+<panel state="warning" title="面板标题">面板内容</panel>
+<panel state="danger" title="面板标题">面板内容</panel>
 ```
 
 ### 面板中的表格
 
-<panel theme="info" title="Panel Title">
+<panel state="info" title="Panel Title">
   <p> 一些默认的面板内容。 </p>
   <table class="table" slot="table">
     <thead>
@@ -88,7 +88,7 @@
 </panel>
 
 ```html
-<panel theme="info" title="面板标题">
+<panel state="info" title="面板标题">
   <p> 一些默认的面板内容。 </p>
   <table class="table" slot="table">
     <thead>
@@ -125,7 +125,7 @@
 
 ### 面板中的列表
 
-<panel theme="warning" title="Panel Title">
+<panel state="warning" title="Panel Title">
   <p> 一些默认的面板内容。 </p>
   <list slot="list">
     <list-item>Item 1 <badge>1</badge></list-item>
@@ -136,7 +136,7 @@
 </panel>
 
 ```html
-<panel theme="warning" title="Panel Title">
+<panel state="warning" title="Panel Title">
   <p> 一些默认的面板内容。 </p>
   <list slot="list">
     <list-item>Item 1 <badge>1</badge></list-item>
@@ -165,7 +165,7 @@
           </thead>
           <tbody>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger </td>
                   <td> String </td>
                   <td> default </td>

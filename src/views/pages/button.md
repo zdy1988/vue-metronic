@@ -15,23 +15,23 @@
   ### 状态色
   
   <p class="util-btn-margin-bottom-5">
-    <btn theme="default">Default</btn>
-    <btn theme="primary" >Primary</btn>
-    <btn theme="success" >Success</btn>
-    <btn theme="info" >Info</btn>
-    <btn theme="warning" >Warning</btn>
-    <btn theme="danger" >Danger</btn>
-    <btn theme="link" >Link</btn>
+    <btn state="default">Default</btn>
+    <btn state="primary" >Primary</btn>
+    <btn state="success" >Success</btn>
+    <btn state="info" >Info</btn>
+    <btn state="warning" >Warning</btn>
+    <btn state="danger" >Danger</btn>
+    <btn state="link" >Link</btn>
   </p>
      
   ```html
-  <btn theme="default">Default</btn>
-  <btn theme="primary" >Primary</btn>
-  <btn theme="success" >Success</btn>
-  <btn theme="info" >Info</btn>
-  <btn theme="warning" >Warning</btn>
-  <btn theme="danger" >Danger</btn>
-  <btn theme="link" >Link</btn>
+  <btn state="default">Default</btn>
+  <btn state="primary" >Primary</btn>
+  <btn state="success" >Success</btn>
+  <btn state="info" >Info</btn>
+  <btn state="warning" >Warning</btn>
+  <btn state="danger" >Danger</btn>
+  <btn state="link" >Link</btn>
   ```
   
   ### 背景色
@@ -143,13 +143,13 @@
   ### 块
   
   <p class="util-btn-margin-bottom-5">  
-     <btn block theme="default" >Button</btn>
+     <btn block state="default" >Button</btn>
      <btn block color="red" >Button</btn>
      <btn block color="purple" >Button</btn>
   </p>
     
   ```html
-  <btn block theme="default" >Button</btn>
+  <btn block state="default" >Button</btn>
   <btn block color="red" >Button</btn>
   <btn block color="purple" >Button</btn>    
   ```  
@@ -157,8 +157,8 @@
   ### 加载状态
   
   <p class="util-btn-margin-bottom-5">
-    <btn theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
-    <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+    <btn state="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+    <btn state="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
   </p>
   <script>
     export default {
@@ -180,8 +180,8 @@
   </script>
   
   ```html
-  <btn theme="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
-  <btn theme="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+  <btn state="primary" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
+  <btn state="default" @click="showLoading" :loading="loading" loading-text="加载中...">Default</btn>
   <script>
     export default {
       data () {
@@ -301,7 +301,7 @@
   ### 下拉按钮组
   
   <p class="util-btn-margin-bottom-5">
-    <btn-dropdown text="Tools" theme="default" textAlign="left">
+    <btn-dropdown text="Tools" state="default" textAlign="left">
       <btn color="white">Settings</btn>
       <btn color="white">Preferences</btn>
       <btn color="white">Window Options</btn>
@@ -334,7 +334,7 @@
   </p>
   
   ```html
-  <btn-dropdown text="Tools" theme="default" textAlign="left">
+  <btn-dropdown text="Tools" state="default" textAlign="left">
     <btn color="white">Settings</btn>
     <btn color="white">Preferences</btn>
     <btn color="white">Window Options</btn>
@@ -382,7 +382,7 @@
                   <td> button </td>
               </tr>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger, link </td>
                   <td> String </td>
                   <td> default </td>
@@ -607,7 +607,7 @@
                   <td> - </td>
               </tr>
               <tr>
-                  <td> theme </td>
+                  <td> state </td>
                   <td> 设置状态色，可选值 default, primary, success, info, warning, danger, link </td>
                   <td> String </td>
                   <td> default </td>

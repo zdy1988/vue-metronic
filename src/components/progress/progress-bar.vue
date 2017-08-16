@@ -14,7 +14,7 @@
   export default {
     name: 'ProgressBar',
     props: {
-      theme: {type: String, validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
+      state: {type: String, validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       title: {type: String},
       showValue: {type: Boolean, default: false},
       max: {type: Number, default: 100},
@@ -35,7 +35,7 @@
       barClasses () {
         return [
           {'progress-bar': true},
-          {[`progress-bar-${this.theme}`]: !!this.theme}
+          {[`progress-bar-${this.state}`]: !!this.state}
         ]
       },
       progress () {

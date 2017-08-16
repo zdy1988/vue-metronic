@@ -18,13 +18,10 @@
           </multiselect>
         </formbox>
         <formbox label="Name" help="Enter Name">
-          <textbox-group>
-            <fa name="user"></fa>
-            <multiselect
-              v-model="selected"
-              :options="options">
-            </multiselect>
-          </textbox-group>
+          <multiselect
+            v-model="selected"
+            :options="options">
+          </multiselect> 
         </formbox>
       </formbox-group>
     </portlet>
@@ -34,62 +31,53 @@
       <formbox-group>
         <h3>Single select (object)</h3>
         <formbox label="请选择" help="请选择帮助">
-          <textbox-group>
-            <fa name="user"></fa>
-            <multiselect
-              v-model="value2"
-              :options="options2"
-              select-label="选择此项"
-              selected-label="已选此项"
-              deselect-label="移除此项"
-              track-by="name"
-              label="name"
-              placeholder="请选择"
-              :searchable="false"
-              :allow-empty="true">
-            </multiselect>
-          </textbox-group>
+          <multiselect
+            v-model="value2"
+            :options="options2"
+            select-label="选择此项"
+            selected-label="已选此项"
+            deselect-label="移除此项"
+            track-by="name"
+            label="name"
+            placeholder="请选择"
+            :searchable="false"
+            :allow-empty="true">
+          </multiselect>
         </formbox>
       </formbox-group>
       <formbox-group>
         <h3>Select with search</h3>
         <formbox label="请选择" help="请选择帮助">
-          <textbox-group>
-            <fa name="user"></fa>
-            <multiselect
-              v-model="value3"
-              :options="options2"
-              select-label="选择此项"
-              selected-label="已选此项"
-              deselect-label="移除此项"
-              track-by="name"
-              label="name"
-              placeholder="请选择">
-            </multiselect>
-          </textbox-group>
+          <multiselect
+            v-model="value3"
+            :options="options2"
+            select-label="选择此项"
+            selected-label="已选此项"
+            deselect-label="移除此项"
+            track-by="name"
+            label="name"
+            placeho der="请选择">
+          </multiselect>
         </formbox>
       </formbox-group>
       <formbox-group>
         <h3>Multiple select</h3>
         <formbox label="请选择" help="请选择帮助">
-          <textbox-group>
-            <fa name="user"></fa>
-            <multiselect
-              v-model="value4"
-              :options="options2"
-              select-label="选择此项"
-              selected-label="已选此项"
-              deselect-label="移除此项"
-              :multiple="true"
-              :close-on-select="false"
-              :clear-on-select="false"
-              :hide-selected="true"
-              :preserve-search="true"
-              track-by="name"
-              label="name"
-              placeholder="请选择">
-            </multiselect>
-          </textbox-group>
+          <multiselect
+            v-model="value4"
+            :options="options2"
+            select-label="选择此项"
+            selected-label="已选此项"
+            deselect-label="移除此项"
+            :multiple="true"
+            :close-on-select="false"
+            :clear-on-select="false"
+            :hide-selected="true"
+            :preserve-search="true"
+            track-by="name"
+            label="name"
+            placeholder="请选择">
+          </multiselect>
         </formbox>
       </formbox-group>
     </portlet>
