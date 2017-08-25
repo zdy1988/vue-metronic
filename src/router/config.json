@@ -186,7 +186,21 @@
     "children": []
   },
   {
-    "title": "井",
+    "title": "树视图",
+    "path": "/main/tree",
+    "src": "pages/tree.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "树形选择",
+    "path": "/main/treeselect",
+    "src": "pages/treeselect.md",
+    "summary": "",
+    "children": []
+  },
+  {
+    "title": "文字井",
     "path": "/main/well",
     "src": "pages/well.md",
     "summary": "",

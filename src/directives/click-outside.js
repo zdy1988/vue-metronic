@@ -1,89 +1,28 @@
-/**
- * https://github.com/kmohrf/vue-on-click-outside/blob/master/src/index.js
- */
-
-const registeredHandlers = []
-let domListener
-
-function on (el, event, callback) {
-  el.addEventListener(event, callback, false)
-  return { destroy: () => el.removeEventListener(event, callback, false) }
-}
-
-function dynamicStrategy (el, callback) {
-  let hasMouseOver = false
-  const enterListener = on(el, 'mouseenter', () => { hasMouseOver = true })
-  const leaveListener = on(el, 'mouseleave', () => { hasMouseOver = false })
-
-  return {
-    el,
-    check (event) {
-      if (!hasMouseOver) {
-        callback(event)
-      }
-    },
-    destroy () {
-      enterListener.destroy()
-      leaveListener.destroy()
-    }
-  }
-}
-
-function staticStrategy (el, callback) {
-  return {
-    el,
-    check (event) {
-      if (!el.contains(event.target)) {
-        callback(event)
-      }
-    },
-    destroy: () => {}
-  }
-}
-
-function bind (el, binding) {
-  const { value: callback, modifiers } = binding
-
-  // unbind any existing listeners first
-  unbind(el)
-
-  if (!domListener) {
-    domListener = on(document.documentElement, 'click', event => {
-      registeredHandlers.forEach(handler => handler.check(event))
-    })
-  }
-
-  setTimeout(() => {
-    registeredHandlers.push(
-      modifiers.static ? staticStrategy(el, callback) : dynamicStrategy(el, callback)
-    )
-  }, 0)
-}
-
-function update (el, binding) {
-  if (binding.value !== binding.oldValue) {
-    bind(el, binding)
-  }
-}
-
-function unbind (el) {
-  let index = registeredHandlers.length - 1
-
-  while (index >= 0) {
-    if (registeredHandlers[index].el === el) {
-      registeredHandlers[index].destroy()
-      registeredHandlers.splice(index, 1)
-    }
-
-    index -= 1
-  }
-
-  if (registeredHandlers.length === 0 && domListener) {
-    domListener.destroy()
-    domListener = null
-  }
-}
-
 export default {
-  bind, unbind, update
+  bind: function (el, binding, vNode) {
+    if (typeof binding.value !== 'function') {
+      let msg = `in [clickoutside] directives, provided expression '${binding.expression}' is not a function `
+      const compName = vNode.context.name
+      if (compName) {
+        msg += `in ${compName}`
+      }
+      console.error(msg)
+    }
+
+    var handler = (e) => {
+      if (!el.contains(e.target) && el !== e.target) {
+        binding.value(e)
+      } else {
+        return false
+      }
+    }
+
+    el.__clickOutSide__ = handler
+
+    document.addEventListener('click', handler, true)
+  },
+  unbind: function (el) {
+    document.removeEventListener('click', el.__clickOutSide__, true)
+    el.__clickOutSide__ = null
+  }
 }

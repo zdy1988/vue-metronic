@@ -14,6 +14,7 @@ import { Icon, Fa, FaStack } from '@/components/icon'
 import { Lable } from '@/components/lable'
 import { List, ListItem } from '@/components/list'
 import { Modal } from '@/components/modal'
+import { Multiselect } from '@/components/multiselect'
 import { QuickNav } from '@/components/nav'
 import { Note } from '@/components/note'
 import { Pagination } from '@/components/pagination'
@@ -27,10 +28,8 @@ import { SwitchBtn, SwitchBtnGroup } from '@/components/switch'
 import { Tabs, TabPane } from '@/components/tabs'
 import { Textbox } from '@/components/textbox'
 import { Tooltip } from '@/components/tooltip'
+import { Tree, TreeSelect } from '@/components/tree'
 import { Well } from '@/components/well'
-// More Info https://github.com/monterail/vue-multiselect
-import '../../node_modules/vue-multiselect/dist/vue-multiselect.min.css'
-import Multiselect from 'vue-multiselect'
 
 const components = {
   Row,
@@ -59,6 +58,7 @@ const components = {
   List,
   ListItem,
   Modal,
+  Multiselect,
   QuickNav,
   Note,
   Pagination,
@@ -76,8 +76,9 @@ const components = {
   TabPane,
   Textbox,
   Tooltip,
-  Well,
-  Multiselect
+  Tree,
+  TreeSelect,
+  Well
 }
 
 components.install = (Vue) => {

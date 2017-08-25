@@ -1,7 +1,7 @@
 <template>
   <div style="display: inline-block;">
     <span ref="trigger"><slot></slot></span>
-    <div :class="classes" ref="popover">
+    <div :class="classes" ref="popover" v-click-outside="_close">
       <div class="arrow"></div>
       <h3 class="popover-title" v-if="title">{{title}}</h3>
       <div class="popover-content">
@@ -28,6 +28,11 @@
           {'show': this.visible},
           {[this.placement]: !!this.placement}
         ]
+      }
+    },
+    methods: {
+      _close () {
+        this.visible = false
       }
     }
   }

@@ -125,7 +125,6 @@
               $addon.appendChild(VNode.$el)
               $inertNode = $addon
             } else {
-              console.log(VNode.$el)
               $inertNode = VNode.$el
             }
             VNode.$parent.$el.appendChild($inertNode)
