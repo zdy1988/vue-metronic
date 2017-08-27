@@ -35,10 +35,10 @@
   export default {
     data () {
       return {
+        msg: 'A Tree Plugin For Vue2',
         data: [
           {
             "text": "Same but with checkboxes",
-            "opened": true,
             "children": [
               {
                 "text": "initially selected",
@@ -107,22 +107,31 @@
           }
         ],
         asyncData: [],
-        loadData: (parent) => {
-          var tag = !!parent && !!parent.id ? parent.id : ''
-          return [
-            {
-              "text": "New Item 1..." + tag
-            },
-            {
-              "text": "New Item 2..." + tag
+        loadData: (oriNode, resolve) => {
+          var id = !!oriNode && !!oriNode.model ? oriNode.model.id : 0
+          setTimeout(() => {
+            let data = []
+            if (id > 20) {
+              data = []
             }
-          ]
+            else {
+              data = [
+                {
+                  "text": "New Item 1..." + id
+                },
+                {
+                  "text": "New Item 2..." + id
+                }
+              ]
+            }
+            resolve(data)
+          }, 500)
         }
       }
     },
     methods: {
-      itemClick (item) {
-        console.log(item.text + ' clicked !')
+      itemClick (node) {
+        console.log(node.model.text + ' clicked !')
       }
     }
   }
