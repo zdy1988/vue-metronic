@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 import routerConfig from './config.json'
 import scroll from '@/mixins/_scroll.js'
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
 
 Vue.use(VueRouter)
 

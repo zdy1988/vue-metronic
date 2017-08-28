@@ -1,127 +1,125 @@
 <template>
   <div class="login">
-    <!-- BEGIN LOGO -->
-    <div class="logo">
-      <a href="/">
-        <img :src="bigLogo" alt="" /> </a>
-    </div>
-    <!-- END LOGO -->
     <!-- BEGIN LOGIN -->
-    <div class="content">
-      <!-- BEGIN LOGIN FORM -->
-      <formbox-group klass="login-form" v-show="activeForm === 'login'">
-        <h3 class="form-title">登录到账户</h3>
-        <alert v-model="alertShow" state="danger" :content="alertMessage"></alert>
-        <formbox>
-          <textbox placeholder="用户名" icon="user" v-model="username"></textbox>
-        </formbox>
-        <formbox>
-          <textbox type="password" placeholder="密码" icon="lock" v-model="password"></textbox>
-        </formbox>
-        <div class="form-actions">
-          <checkbox outline klass="rememberme">记住我</checkbox>
-          <btn color="green" klass="pull-right" @click="login">登录</btn>
-        </div>
-        <div class="login-options">
-          <h4>其他登录方式</h4>
-          <ul class="social-icons">
-            <li>
-              <a class="facebook" data-original-title="facebook" href="javascript:;"> </a>
-            </li>
-            <li>
-              <a class="twitter" data-original-title="Twitter" href="javascript:;"> </a>
-            </li>
-            <li>
-              <a class="googleplus" data-original-title="Goole Plus" href="javascript:;"> </a>
-            </li>
-            <li>
-              <a class="linkedin" data-original-title="Linkedin" href="javascript:;"> </a>
-            </li>
-          </ul>
-        </div>
-        <div class="forget-password">
-          <h4>忘记密码？</h4>
-          <p> 不要担心, 点击
-            <a href="javascript:;" @click="activeForm = 'forget'"> 这里 </a> 重置您的密码. </p>
-        </div>
-        <div class="create-account">
-          <p> 还没有帐号吗？&nbsp;
-            <a href="javascript:;" @click="activeForm = 'register'"> 创建帐号 </a>
-          </p>
-        </div>
-      </formbox-group>
-      <!-- END LOGIN FORM -->
-      <!-- BEGIN FORGOT PASSWORD FORM -->
-      <formbox-group klass="forget-form" v-show="activeForm === 'forget'">
-        <h3>忘记密码？</h3>
-        <p> 输入您的电子邮件地址重新设置您的密码. </p>
-        <formbox>
-          <textbox icon="envelope" placeholder="邮箱地址"></textbox>
-        </formbox>
-        <div class="form-actions">
-          <btn color="grey-salsa" outline @click="activeForm = 'login'">返回</btn>
-          <btn color="green" klass="pull-right">提交</btn>
-        </div>
-      </formbox-group>
-      <!-- END FORGOT PASSWORD FORM -->
-      <!-- BEGIN REGISTRATION FORM -->
-      <formbox-group klass="register-form" v-show="activeForm === 'register'">
-        <h3>创建帐号</h3>
-        <p> 输入您的个人信息: </p>
-        <formbox>
-          <textbox placeholder="姓名" icon="font"></textbox>
-        </formbox>
-        <formbox>
-          <textbox placeholder="邮箱地址" icon="envelope"></textbox>
-        </formbox>
-        <formbox>
-          <textbox placeholder="家庭住址" icon="check"></textbox>
-        </formbox>
-        <formbox>
-          <div class="input-icon left">
-            <i class="fa fa-fw fa-flag"></i>
-            <multiselect v-model="country" placeholder="选择国家" track-by="name" label="name" :options="countries" :show-labels="false">
-              <template slot="option" scope="props">
-                <img class="option__image" :src="handleCountryFlag(props.option.value)" :alt="props.option.value">
-                <span>{{ props.option.name }}</span>
-              </template>
-            </multiselect>
+    <animated-fade-in>
+      <div class="content" v-if="contentShow">
+        <!-- BEGIN LOGIN FORM -->
+        <formbox-group klass="login-form" v-show="activeForm === 'login'">
+          <h4 class="form-title">登录到账户</h4>
+          <alert v-model="alertShow" state="danger" :content="alertMessage"></alert>
+          <formbox>
+            <textbox placeholder="用户名" icon="user" v-model="username"></textbox>
+          </formbox>
+          <formbox>
+            <textbox type="password" placeholder="密码" icon="lock" v-model="password"></textbox>
+          </formbox>
+          <div class="form-actions">
+            <checkbox outline klass="rememberme">记住我</checkbox>
+            <btn color="green" klass="pull-right" @click="login">登录</btn>
           </div>
-        </formbox>
-        <p> 输入您的帐号信息: </p>
-        <formbox>
-          <textbox placeholder="帐号" icon="user"></textbox>
-        </formbox>
-        <formbox>
-          <textbox placeholder="密码" icon="lock"></textbox>
-        </formbox>
-        <formbox>
-          <textbox placeholder="再次输入密码" icon="check"></textbox>
-        </formbox>
-        <formbox>
-          <checkbox outline>
-            我同意
-            <a href="javascript:;">服务条款 </a> 和
-            <a href="javascript:;">隐私政策</a>
-          </checkbox>
-        </formbox>
-        <div class="form-actions">
-          <btn color="grey-salsa" outline @click="activeForm = 'login'">返回</btn>
-          <btn color="green" klass="pull-right">提交</btn>
-        </div>
-      </formbox-group>
-      <!-- END REGISTRATION FORM -->
-    </div>
+          <div class="login-options">
+            <h4>其他登录方式</h4>
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" data-original-title="facebook" href="javascript:;"> </a>
+              </li>
+              <li>
+                <a class="twitter" data-original-title="Twitter" href="javascript:;"> </a>
+              </li>
+              <li>
+                <a class="googleplus" data-original-title="Goole Plus" href="javascript:;"> </a>
+              </li>
+              <li>
+                <a class="linkedin" data-original-title="Linkedin" href="javascript:;"> </a>
+              </li>
+            </ul>
+          </div>
+          <div class="forget-password">
+            <h4>忘记密码？</h4>
+            <p> 不要担心, 点击
+              <a href="javascript:;" @click="activeForm = 'forget'"> 这里 </a> 重置您的密码. </p>
+          </div>
+          <div class="create-account">
+            <p> 还没有帐号吗？&nbsp;
+              <a href="javascript:;" @click="activeForm = 'register'"> 创建帐号 </a>
+            </p>
+          </div>
+        </formbox-group>
+        <!-- END LOGIN FORM -->
+        <!-- BEGIN FORGOT PASSWORD FORM -->
+        <formbox-group klass="forget-form" v-show="activeForm === 'forget'">
+          <h4>忘记密码？</h4>
+          <p> 输入您的电子邮件地址重新设置您的密码. </p>
+          <formbox>
+            <textbox icon="envelope" placeholder="邮箱地址"></textbox>
+          </formbox>
+          <div class="form-actions">
+            <btn color="grey-salsa" outline @click="activeForm = 'login'">返回</btn>
+            <btn color="green" klass="pull-right">提交</btn>
+          </div>
+        </formbox-group>
+        <!-- END FORGOT PASSWORD FORM -->
+        <!-- BEGIN REGISTRATION FORM -->
+        <formbox-group klass="register-form" v-show="activeForm === 'register'">
+          <h4>创建帐号</h4>
+          <p> 输入您的个人信息: </p>
+          <formbox>
+            <textbox placeholder="姓名" icon="font"></textbox>
+          </formbox>
+          <formbox>
+            <textbox placeholder="邮箱地址" icon="envelope"></textbox>
+          </formbox>
+          <formbox>
+            <textbox placeholder="家庭住址" icon="check"></textbox>
+          </formbox>
+          <formbox>
+            <div class="input-icon left">
+              <i class="fa fa-fw fa-flag"></i>
+              <multiselect v-model="country" placeholder="选择国家" track-by="name" label="name" :options="countries" :show-labels="false">
+                <template slot="option" scope="props">
+                  <img class="option__image" :src="handleCountryFlag(props.option.value)" :alt="props.option.value">
+                  <span>{{ props.option.name }}</span>
+                </template>
+              </multiselect>
+            </div>
+          </formbox>
+          <p> 输入您的帐号信息: </p>
+          <formbox>
+            <textbox placeholder="帐号" icon="user"></textbox>
+          </formbox>
+          <formbox>
+            <textbox placeholder="密码" icon="lock"></textbox>
+          </formbox>
+          <formbox>
+            <textbox placeholder="再次输入密码" icon="check"></textbox>
+          </formbox>
+          <formbox>
+            <checkbox outline>
+              我同意
+              <a href="javascript:;">服务条款 </a> 和
+              <a href="javascript:;">隐私政策</a>
+            </checkbox>
+          </formbox>
+          <div class="form-actions">
+            <btn color="grey-salsa" outline @click="activeForm = 'login'">返回</btn>
+            <btn color="green" klass="pull-right">提交</btn>
+          </div>
+        </formbox-group>
+        <!-- END REGISTRATION FORM -->
+      </div>
+    </animated-fade-in>
     <!-- END LOGIN -->
+    <canvas id="background"></canvas>
   </div>
 </template>
 <script>
   import router from '../router'
+  import BackgroundStage from '../assets/scripts/background-stage'
 
   export default{
     data () {
       return {
-        bigLogo: require('../../static/img/pages/logo-big.png'),
+        contentShow: false,
         activeForm: 'login',
         alertShow: false,
         alertMessage: '请输入任意字符到用户名和密码.',
@@ -376,18 +374,39 @@
       },
       handleCountryFlag (value) {
         return require('../../static/img/global/flags/' + value.toLowerCase() + '.png')
+      },
+      handleBackground () {
+        var canvas = document.getElementById('background')
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+        var stage = new BackgroundStage(canvas, state => {
+          if (state === 'second') {
+            this.contentShow = true
+          } else {
+            this.contentShow = false
+          }
+        })
+        stage.init()
+        stage.loop()
       }
+    },
+    mounted () {
+      this.handleBackground()
     }
   }
 </script>
 <style lang='sass'>
-  @import "../assets/sass/bootstrap"
-  @import "../assets/sass/global/components"
-  @import "../assets/sass/global/components/_reset-rounds"
-  @import "../assets/sass/layouts/layout/layout"
-  @import "../assets/sass/layouts/layout/themes/darkblue"
+  @import "../assets/sass/style"
 </style>
-<style>
+<style scoped>
+  #background{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    z-index: -1;
+    background-color: #364150;
+  }
+
   .login {
     background-color: transparent !important; }
 
@@ -400,6 +419,7 @@
     background-color: #fff;
     width: 360px;
     margin: 0 auto;
+    margin-top: 160px;
     margin-bottom: 0px;
     padding: 30px;
     padding-top: 20px;

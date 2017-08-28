@@ -53,14 +53,10 @@
     }
   }
 </script>
-<style lang='sass'>
-  @import "../assets/sass/bootstrap"
-  @import "../assets/sass/global/components"
-  @import "../assets/sass/global/components/_reset-rounds"
-  @import "../assets/sass/layouts/layout/layout"
-  @import "../assets/sass/layouts/layout/themes/darkblue"
-</style>
 <style>
+  body {
+    background-color: #364150;
+  }
   .page-lock {
     top: 50%;
     left: 50%;

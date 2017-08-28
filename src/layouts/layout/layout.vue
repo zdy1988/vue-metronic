@@ -373,22 +373,7 @@
     }
   }
 </script>
-<style scoped>
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all .2s ease
-  }
-
-  .fade-enter,
-  .fade-leave-active {
-    opacity: 0;
-  }
-
-</style>
 <style lang='sass'>
-  @import "../../assets/sass/bootstrap"
-  @import "../../assets/sass/global/components"
-  @import "../../assets/sass/global/components/_reset-rounds"
   @import "../../assets/sass/layouts/layout/layout"
   @import "../../assets/sass/layouts/layout/themes/darkblue"
 </style>

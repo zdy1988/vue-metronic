@@ -1,0 +1,19 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  width: 8px;
+  height: 8px;
+  opacity: 0.2;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  opacity: 0.4;
+  background: rgb(221, 221, 221);
+}
