@@ -3,23 +3,23 @@
 @import '../../global/_variables'; // global metronic framework variables
 @import '../../global/components/_mixins'; // global metronic framework mixings
 
-@import '_variables'; // theme level variables  
+@import '_variables'; // theme level variables
 
-@import 'layout/_print'; // print layout     
-              
-@import 'layout/_header'; // page header   
-@import 'layout/_page-container'; // page main container       
-@import 'layout/_sidebar';  // page sidebar        
-@import 'layout/_content'; // page consnde                        
-@import 'layout/_footer';   // page footer                     
+@import 'layout/_print'; // print layout
+
+@import 'layout/_header'; // page header
+@import 'layout/_page-container'; // page main container
+@import 'layout/_sidebar';  // page sidebar
+@import 'layout/_content'; // page consnde
+@import 'layout/_footer';   // page footer
 @import 'layout/_theme-panel';  // theme customizer panel
-@import 'layout/_quick-sidebar';  // quick sidebar toggler                  
+@import 'layout/_quick-sidebar';  // quick sidebar toggler
 
-@import '../quick-sidebar/_quick-sidebar';  // quick sidebar content 
-@import '../quick-sidebar/_quick-nav';  // quick navigation   
+@import '../quick-sidebar/_quick-sidebar';  // quick sidebar content
+@import '../quick-sidebar/_quick-nav';  // quick navigation
 
-/***  
-Page Loading       
+/***
+Page Loading
 ***/
 
 .page-on-load {
@@ -32,4 +32,30 @@ Page Loading
 		display: none;
 		transition: all 2s;
 	}
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  width: 8px;
+  height: 8px;
+  opacity: 0.2;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 8px;
+  height: 8px;
+  opacity: 0.4;
+  background: rgb(221, 221, 221);
+}
+
+#nprogress {
+  .bar, .spinner {
+    z-index: 9999;
+  }
 }

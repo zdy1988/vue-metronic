@@ -61,7 +61,7 @@
             <page-title></page-title>
             <!-- END PAGE TITLE-->
             <!-- END PAGE HEADER-->
-            <transition name="fade">
+            <transition name="fade" mode="out-in">
               <router-view></router-view>
             </transition>
           </div>
@@ -318,11 +318,6 @@
         ]
       }
     },
-    watch: {
-      $route (to, from, savedPosition) {
-        // console.log(this.$route)
-      }
-    },
     computed: {
       classes () {
         return [
@@ -379,15 +374,16 @@
   }
 </script>
 <style scoped>
-  .fade-enter-active, .fade-leave-active {
-    transition: all .5s
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .2s ease
   }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
   }
-  .fade-enter-active {
-    transition-delay: .5s;
-  }
+
 </style>
 <style lang='sass'>
   @import "../../assets/sass/bootstrap"

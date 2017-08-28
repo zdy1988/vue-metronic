@@ -1,17 +1,17 @@
 <template>
-  <transition name="fade">
+  <transition name="fade" mode="out-in">
     <router-view></router-view>
   </transition>
 </template>
 <style>
-  .fade-enter-active, .fade-leave-active {
-    transition: all .5s
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .2s ease
   }
-  .fade-enter, .fade-leave-to {
-    opacity: 0
-  }
-  .fade-enter-active {
-    transition-delay: .5s;
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
   }
 </style>
 <style>

@@ -10,7 +10,7 @@
   <column :md=6>
     <textarea  style="height:300px; width:100%;">
       {{data}}
-    </textare>
+    </textarea>
   </column>
 </row>
 
