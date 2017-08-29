@@ -12,7 +12,7 @@ $header-logo-height:                                    				14px;
 $header-menu-toggler-width:                             				$menu-toggler-size;
 $header-menu-toggler-height:                            				$menu-toggler-size;
 $header-sidebar-toggler-margin:                         				($header-height - $menu-toggler-size) / 2 0 0 0 !default;
-$header-responsive-toggler-margin:                      				($header-height - $menu-toggler-size) / 2 6px 0 6px !default;
+$header-responsive-toggler-margin:                      				($header-height - $menu-toggler-size) / 2 + 2 6px 0 6px !default;
 $header-logo-margin:                                					($header-height - $header-logo-height) / 2 0 0 0 !default;  // adjsut logo's margin top. default: -1px
 
 $header-top-menu-general-item-padding:      							19px 10px 10px 10px !default;  // adjust top menu general elements padding. default: 15px 10px 7px 10px

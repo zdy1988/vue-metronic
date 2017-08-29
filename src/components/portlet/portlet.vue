@@ -28,6 +28,7 @@
 
   import faicons from '@/untils/faicons'
   import Fa from '@/components/icon/faicon'
+  import {Tooltip} from '@/components/tooltip'
 
   export default{
     name: 'Portlet',
@@ -118,7 +119,8 @@
       }
     },
     components: {
-      Fa
+      Fa,
+      Tooltip
     }
   }
 </script>

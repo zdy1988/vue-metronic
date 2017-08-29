@@ -108,7 +108,7 @@
         ],
         asyncData: [],
         loadData: (oriNode, resolve) => {
-          var id = !!oriNode && !!oriNode.model ? oriNode.model.id : 0
+          var id = oriNode.data.id ? oriNode.data.id : 0
           setTimeout(() => {
             let data = []
             if (id > 20) {

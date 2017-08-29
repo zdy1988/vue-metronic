@@ -15,7 +15,7 @@
           </div>
           <!-- END LOGO -->
           <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-          <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+          <a href="javascript:;" class="menu-toggler responsive-toggler" @click="sidebarShow = !sidebarShow">
             <span></span>
           </a>
           <!-- END RESPONSIVE MENU TOGGLER -->
@@ -374,6 +374,7 @@
   }
 </script>
 <style lang='sass'>
+  @import "../../assets/sass/style"
   @import "../../assets/sass/layouts/layout/layout"
   @import "../../assets/sass/layouts/layout/themes/darkblue"
 </style>

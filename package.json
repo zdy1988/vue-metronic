@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "bootstrap": "^3.3.7",
     "bootstrap-datepicker": "^1.7.1",
     "bootstrap-sweetalert": "^1.0.1",
     "font-awesome": "^4.7.0",

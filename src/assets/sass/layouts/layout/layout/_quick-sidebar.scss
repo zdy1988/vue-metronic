@@ -8,12 +8,12 @@ Page Quick Sidebar
 	.top-menu {
 		.dropdown-quick-sidebar-toggler {
 			> .dropdown-toggle {
-				padding: $header-top-menu-general-item-padding !important; 
+				padding: $header-top-menu-general-item-padding !important;
 				i {
-					top: 0px;  
-					
+					top: 0px;
+
 					&:before {
-						content: "\e065"#{'/*rtl:"\e066"*/'};  				
+						content: "\e065"#{'/*rtl:"\e066"*/'};
 					}
 
 					.page-quick-sidebar-open &:before {
@@ -23,4 +23,4 @@ Page Quick Sidebar
 			}
 		}
 	}
-} 
+}

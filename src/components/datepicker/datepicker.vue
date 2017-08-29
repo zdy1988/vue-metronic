@@ -3,7 +3,6 @@
 </template>
 <script>
   import $ from 'jquery'
-  import 'bootstrap'
   import 'bootstrap-datepicker'
   import _input from '@/components/input/mixins/_input'
 

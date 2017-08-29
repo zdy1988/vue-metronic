@@ -1,6 +1,6 @@
 <template>
   <div class="page-quick-sidebar">
-    <tabs :limit="2">
+    <tabs :limit="2" :active-index.sync="tabIndex">
       <tab-pane name="联系人" class="page-quick-sidebar-chat" :class="{'page-quick-sidebar-content-item-shown': chatShow}" cur>
         <div class="page-quick-sidebar-list">
           <div class="page-quick-sidebar-chat-users" v-slimscroll="handleGetChatUsersHeight()">
@@ -169,6 +169,7 @@
       return {
         chatShow: false,
         message: '',
+        tabIndex: 0,
         activeReceiver: null
       }
     },

@@ -2,7 +2,6 @@
 Core script to handle the entire theme and core functions
 **/
 import $ from 'jquery'
-import 'bootstrap'
 
 // IE mode
 var isRTL = false

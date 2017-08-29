@@ -7,11 +7,11 @@
             <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
           </a>
         </li>
-        <li class="dropdown" :class="{active: limit <= tabIndex}" v-if="limit > 0 && limit < tabPanes.length">
+        <li class="dropdown" :class="{active: limit <= tabIndex}" @click="dropdownShow = !dropdownShow" v-click-outside="() => dropdownShow = false" v-if="limit > 0 && limit < tabPanes.length">
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 更多
             <i class="fa fa-angle-down"></i>
           </a>
-          <ul class="dropdown-menu pull-right">
+          <ul class="dropdown-menu pull-right" style="display:block" v-show="dropdownShow">
             <li v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit <= index">
               <a href="javscript:;" @click="setActive(tabPane)">
                 <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
@@ -37,7 +37,7 @@
           <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> 更多
             <i class="fa fa-angle-down"></i>
           </a>
-          <ul class="dropdown-menu pull-right">
+          <ul class="dropdown-menu pull-right" style="display:block">
             <li v-for="(tabPane, index) in tabPanes" :key="index" v-if="limit <= index">
               <a href="javscript:;" @click="setActive(tabPane)">
                 <i :class="'fa fa-' + tabPane.icon" v-if="tabPane.icon"></i> {{tabPane.name}}
@@ -55,7 +55,8 @@
     data () {
       return {
         tabPanes: [],
-        tabIndex: 0
+        tabIndex: 0,
+        dropdownShow: false
       }
     },
     props: {

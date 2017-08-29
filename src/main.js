@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './app'
 import router from './router'
-import Animated from './animates/animated-vue'
+import Animates from './animates'
 import Dirsctives from './directives'
 import Prototypes from './prototypes'
 import Components from './components'
@@ -18,7 +18,7 @@ new Vue({
   components: { App }
 })
 
-Vue.use(Animated)
+Vue.use(Animates)
 Vue.use(Dirsctives)
 Vue.use(Prototypes)
 Vue.use(Components)

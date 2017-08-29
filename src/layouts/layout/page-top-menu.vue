@@ -5,139 +5,147 @@
       <!-- DOC: Apply "dropdown-dark" class after "dropdown-extended" to change the dropdown styte -->
       <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
       <!-- DOC: Remove "dropdown-hoverable" and add data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to the below A element with dropdown-toggle class -->
-      <li class="dropdown dropdown-extended dropdown-notification">
-        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+      <li class="dropdown dropdown-extended dropdown-notification" @click="notificationShow = !notificationShow" v-click-outside="() => notificationShow = false">
+        <a href="javascript:;" class="dropdown-toggle">
           <i class="icon-bell"></i>
           <span class="badge badge-default"> {{alerts.length}} </span>
         </a>
-        <ul class="dropdown-menu">
-          <li class="external">
-            <h3>
-              <span class="bold">{{alerts.length}}</span> 个待处理提醒</h3>
-            <a href="javascript:;">显示全部</a>
-          </li>
-          <li>
-            <ul class="dropdown-menu-list" v-slimscroll="275">
-              <li v-for="(alert, index) in alerts">
-                <a href="javascript:;">
-                  <span class="time">{{handleGetDateDiff(alert.time)}}</span>
-                  <span class="details">
+        <animated-fade-in-bounce-out>
+          <ul class="dropdown-menu" style="display:block" v-show="notificationShow">
+            <li class="external">
+              <h3>
+                <span class="bold">{{alerts.length}}</span> 个待处理提醒</h3>
+              <a href="javascript:;">显示全部</a>
+            </li>
+            <li>
+              <ul class="dropdown-menu-list" v-slimscroll="275">
+                <li v-for="(alert, index) in alerts">
+                  <a href="javascript:;">
+                    <span class="time">{{handleGetDateDiff(alert.time)}}</span>
+                    <span class="details">
                     <span class="label label-sm label-icon" :class="'label-' + alert.status">
                         <i class="fa" :class="'fa-' + alert.icon"></i>
                     </span>
                       {{alert.desc}}
                   </span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </animated-fade-in-bounce-out>
       </li>
       <!-- END NOTIFICATION DROPDOWN -->
       <!-- BEGIN INBOX DROPDOWN -->
       <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-      <li class="dropdown dropdown-extended dropdown-inbox">
-        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+      <li class="dropdown dropdown-extended dropdown-inbox" @click="inboxShow = !inboxShow" v-click-outside="() => inboxShow = false">
+        <a href="javascript:;" class="dropdown-toggle">
           <i class="icon-envelope-open"></i>
           <span class="badge badge-default"> {{messages.length}} </span>
         </a>
-        <ul class="dropdown-menu">
-          <li class="external">
-            <h3>您有
-              <span class="bold">{{messages.length}}</span> 条新消息</h3>
-            <a href="javascript:;">显示全部</a>
-          </li>
-          <li>
-            <ul class="dropdown-menu-list" v-slimscroll="275">
-              <li v-for="(msg, index) in messages" :key="index">
-                <a href="javascript:;">
+        <animated-fade-in-bounce-out>
+          <ul class="dropdown-menu" style="display:block" v-show="inboxShow">
+            <li class="external">
+              <h3>您有
+                <span class="bold">{{messages.length}}</span> 条新消息</h3>
+              <a href="javascript:;">显示全部</a>
+            </li>
+            <li>
+              <ul class="dropdown-menu-list" v-slimscroll="275">
+                <li v-for="(msg, index) in messages" :key="index">
+                  <a href="javascript:;">
                   <span class="photo">
                       <img :src="msg.senderInfo.handPic" class="img-circle" alt="">
                   </span>
-                  <span class="subject">
+                    <span class="subject">
                       <span class="from"> {{msg.senderInfo.name}} </span>
                       <span class="time"> {{msg.datetime}} </span>
                   </span>
-                  <span class="message"> {{msg.content}} </span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+                    <span class="message"> {{msg.content}} </span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </animated-fade-in-bounce-out>
       </li>
       <!-- END INBOX DROPDOWN -->
       <!-- BEGIN TODO DROPDOWN -->
       <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-      <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
-        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+      <li class="dropdown dropdown-extended dropdown-tasks" @click="tasksShow = !tasksShow" v-click-outside="() => tasksShow = false">
+        <a href="javascript:;" class="dropdown-toggle">
           <i class="icon-calendar"></i>
           <span class="badge badge-default"> {{tasks.length}} </span>
         </a>
-        <ul class="dropdown-menu extended tasks">
-          <li class="external">
-            <h3>您有
-              <span class="bold">{{tasks.length}}</span> 个未完成任务</h3>
-            <a href="javascript:;">显示全部</a>
-          </li>
-          <li>
-            <ul class="dropdown-menu-list" v-slimscroll="275">
-              <li v-for="(task, index) in tasks">
-                <a href="javascript:;">
+        <animated-fade-in-bounce-out>
+          <ul class="dropdown-menu extended tasks" style="display:block" v-show="tasksShow">
+            <li class="external">
+              <h3>您有
+                <span class="bold">{{tasks.length}}</span> 个未完成任务</h3>
+              <a href="javascript:;">显示全部</a>
+            </li>
+            <li>
+              <ul class="dropdown-menu-list" v-slimscroll="275">
+                <li v-for="(task, index) in tasks">
+                  <a href="javascript:;">
                   <span class="task">
                     <span class="desc">{{task.name}}</span>
                     <span class="percent">{{task.progress}}%</span>
                   </span>
-                  <span class="progress">
+                    <span class="progress">
                       <span :style="{width: task.progress + '%'}" class="progress-bar" :class="'progress-bar-' + task.state"></span>
                   </span>
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </animated-fade-in-bounce-out>
       </li>
       <!-- END TODO DROPDOWN -->
       <!-- BEGIN USER LOGIN DROPDOWN -->
       <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-      <li class="dropdown dropdown-user">
-        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+      <li class="dropdown dropdown-user" @click="userShow = !userShow" v-click-outside="() => userShow = false">
+        <a href="javascript:;" class="dropdown-toggle">
           <img alt="" class="img-circle" src="http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3_small.jpg" />
           <span class="username username-hide-on-mobile"> 小张 </span>
           <i class="fa fa-angle-down"></i>
         </a>
-        <ul class="dropdown-menu dropdown-menu-default">
-          <li>
-            <a href="javascript:;">
-              <i class="icon-user"></i> 个人信息 </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="icon-calendar"></i> 日程安排 </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="icon-envelope-open"></i> 我的信箱
-              <span class="badge badge-danger"> 3 </span>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:;">
-              <i class="icon-rocket"></i> 我的任务
-              <span class="badge badge-success"> 7 </span>
-            </a>
-          </li>
-          <li class="divider"> </li>
-          <li>
-            <router-link to="/lock">
-              <icon name="lock"></icon> 锁定屏幕
-            </router-link>
-          </li>
-          <li>
-            <router-link to="/login">
-              <icon name="key"></icon> 退出系统
-            </router-link>
-          </li>
-        </ul>
+        <animated-fade-in-bounce-out>
+          <ul class="dropdown-menu dropdown-menu-default" style="display:block" v-show="userShow">
+            <li>
+              <a href="javascript:;">
+                <i class="icon-user"></i> 个人信息 </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-calendar"></i> 日程安排 </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-envelope-open"></i> 我的信箱
+                <span class="badge badge-danger"> 3 </span>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="icon-rocket"></i> 我的任务
+                <span class="badge badge-success"> 7 </span>
+              </a>
+            </li>
+            <li class="divider"> </li>
+            <li>
+              <router-link to="/lock">
+                <icon name="lock"></icon> 锁定屏幕
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/login">
+                <icon name="key"></icon> 退出系统
+              </router-link>
+            </li>
+          </ul>
+        </animated-fade-in-bounce-out>
       </li>
       <!-- END USER LOGIN DROPDOWN -->
       <!-- BEGIN QUICK SIDEBAR TOGGLER -->
@@ -153,6 +161,14 @@
       alerts: {type: Array},
       messages: {type: Array},
       tasks: {type: Array}
+    },
+    data () {
+      return {
+        notificationShow: false,
+        inboxShow: false,
+        tasksShow: false,
+        userShow: false
+      }
     },
     methods: {
       handleGetDateDiff (dateStr) {
