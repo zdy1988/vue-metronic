@@ -154,7 +154,7 @@
   </div>
 </template>
 <script>
-  import App from '../../assets/scripts/global/app'
+  import {common} from '@/untils'
 
   export default{
     props: {
@@ -172,7 +172,7 @@
     },
     methods: {
       handleGetDateDiff (dateStr) {
-        return App.getDateDiff(dateStr)
+        return common.getDateDiff(dateStr)
       }
     }
   }

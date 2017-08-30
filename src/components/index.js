@@ -8,14 +8,13 @@ import { Badge } from '@/components/badge'
 import { Btn, LinkBtn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider } from '@/components/button'
 import { Checkbox, CheckboxGroup } from '@/components/checkbox'
 import { Datepicker } from '@/components/datepicker'
-import { Masker, GoTop } from '@/components/element'
+import { Masker } from '@/components/element'
 import { Formbox, FormboxGroup } from '@/components/form'
 import { Icon, Fa, FaStack } from '@/components/icon'
 import { Lable } from '@/components/lable'
 import { List, ListItem } from '@/components/list'
 import { Modal } from '@/components/modal'
 import { Multiselect } from '@/components/multiselect'
-import { QuickNav } from '@/components/nav'
 import { Note } from '@/components/note'
 import { Pagination } from '@/components/pagination'
 import { Panel } from '@/components/panel'
@@ -48,7 +47,6 @@ const components = {
   CheckboxGroup,
   Datepicker,
   Masker,
-  GoTop,
   Formbox,
   FormboxGroup,
   Icon,
@@ -59,7 +57,6 @@ const components = {
   ListItem,
   Modal,
   Multiselect,
-  QuickNav,
   Note,
   Pagination,
   Panel,

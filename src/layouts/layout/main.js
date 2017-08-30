@@ -2,26 +2,19 @@
  Core script to handle the entire theme and core functions
  **/
 import $ from 'jquery'
-import App from '../global/app'
+import {common} from '@/untils'
 
-var layoutImgPath = 'layouts/layout/img/'
-
-var layoutCssPath = 'layouts/layout/css/'
-
-var resBreakpointMd = App.getResponsiveBreakpoint('md')
-
-// * BEGIN:CORE HANDLERS *//
-//  this function handles responsive layout on screen size resize or mobile device rotate.
+const resBreakpointMd = common.getResponsiveBreakpoint('md')
 
 //  Set proper height for sidebar and content. The content and sidebar height must be synced always.
-var handleSidebarAndContentHeight = function () {
+const handleSidebarAndContentHeight = () => {
   var content = $('.page-content')
   var sidebar = $('.page-sidebar')
   var body = $('body')
   var height
 
   if (body.hasClass('page-footer-fixed') === true && body.hasClass('page-sidebar-fixed') === false) {
-    var availableHeight = App.getViewPort().height - $('.page-footer').outerHeight() - $('.page-header').outerHeight()
+    var availableHeight = common.getViewPort().height - $('.page-footer').outerHeight() - $('.page-header').outerHeight()
     var sidebarHeight = sidebar.outerHeight()
     if (sidebarHeight > availableHeight) {
       availableHeight = sidebarHeight + $('.page-footer').outerHeight()
@@ -39,14 +32,14 @@ var handleSidebarAndContentHeight = function () {
       var headerHeight = $('.page-header').outerHeight()
       var footerHeight = $('.page-footer').outerHeight()
 
-      if (App.getViewPort().width < resBreakpointMd) {
-        height = App.getViewPort().height - headerHeight - footerHeight
+      if (common.getViewPort().width < resBreakpointMd) {
+        height = common.getViewPort().height - headerHeight - footerHeight
       } else {
         height = sidebar.height() + 20
       }
 
-      if ((height + headerHeight + footerHeight) <= App.getViewPort().height) {
-        height = App.getViewPort().height - headerHeight - footerHeight
+      if ((height + headerHeight + footerHeight) <= common.getViewPort().height) {
+        height = common.getViewPort().height - headerHeight - footerHeight
       }
     }
     content.css('min-height', height)
@@ -54,7 +47,7 @@ var handleSidebarAndContentHeight = function () {
 }
 
 //  Handle sidebar menu links
-var handleSidebarMenuActiveLink = function (mode, el, $state) {
+const handleSidebarMenuActiveLink = (mode, el, $state) => {
   var url = location.hash.toLowerCase()
   var menu = $('.page-sidebar-menu')
 
@@ -144,14 +137,14 @@ var handleSidebarMenuActiveLink = function (mode, el, $state) {
   })
 
   if (mode === 'click') {
-    if (App.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
+    if (common.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
       $('.page-header .responsive-toggler').click()
     }
   }
 }
 
 //  Handle sidebar menu
-var handleSidebarMenu = function () {
+const handleSidebarMenu = () => {
   //  offcanvas mobile menu
   $('.page-sidebar-mobile-offcanvas .responsive-toggler').click(function (e) {
     $('body').toggleClass('page-sidebar-mobile-offcanvas-open')
@@ -176,18 +169,18 @@ var handleSidebarMenu = function () {
   $('.page-sidebar-menu').on('click', 'li > a.nav-toggle, li > a > span.nav-toggle', function (e) {
     var that = $(this).closest('.nav-item').children('.nav-link')
 
-    if (App.getViewPort().width >= resBreakpointMd && !$('.page-sidebar-menu').attr('data-initialized') && $('body').hasClass('page-sidebar-closed') && that.parent('li').parent('.page-sidebar-menu').size() === 1) {
+    if (common.getViewPort().width >= resBreakpointMd && !$('.page-sidebar-menu').attr('data-initialized') && $('body').hasClass('page-sidebar-closed') && that.parent('li').parent('.page-sidebar-menu').size() === 1) {
       return
     }
 
     var hasSubMenu = that.next().hasClass('sub-menu')
 
-    if (App.getViewPort().width >= resBreakpointMd && that.parents('.page-sidebar-menu-hover-submenu').size() === 1) { //  exit of hover sidebar menu
+    if (common.getViewPort().width >= resBreakpointMd && that.parents('.page-sidebar-menu-hover-submenu').size() === 1) { //  exit of hover sidebar menu
       return
     }
 
     if (hasSubMenu === false) {
-      if (App.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
+      if (common.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
         $('.page-header .responsive-toggler').click()
       }
       return
@@ -220,7 +213,7 @@ var handleSidebarMenu = function () {
               'scrollTo': (the.position()).top
             })
           } else {
-            App.scrollTo(the, slideOffeset)
+            common.scrollTo(the, slideOffeset)
           }
         }
         handleSidebarAndContentHeight()
@@ -235,7 +228,7 @@ var handleSidebarMenu = function () {
               'scrollTo': (the.position()).top
             })
           } else {
-            App.scrollTo(the, slideOffeset)
+            common.scrollTo(the, slideOffeset)
           }
         }
         handleSidebarAndContentHeight()
@@ -248,8 +241,8 @@ var handleSidebarMenu = function () {
   //  handle ajax links within sidebar menu
   $('.page-sidebar').on('click', ' li > a.ajaxify', function (e) {
     e.preventDefault()
-    App.scrollTop()
-    var url = $(this).attr('href')
+    common.scrollTop()
+
     var menuContainer = $('.page-sidebar ul')
 
     menuContainer.children('li.active').removeClass('active')
@@ -261,30 +254,24 @@ var handleSidebarMenu = function () {
     })
     $(this).parents('li').addClass('active')
 
-    if (App.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
+    if (common.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
       $('.page-header .responsive-toggler').click()
     }
-
-    Layout.loadAjaxContent(url, $(this))
   })
 
   //  handle ajax link within main content
   $('.page-content').on('click', '.ajaxify', function (e) {
     e.preventDefault()
-    App.scrollTop()
+    common.scrollTop()
 
-    var url = $(this).attr('href')
-
-    if (App.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
+    if (common.getViewPort().width < resBreakpointMd && $('.page-sidebar').hasClass('in')) { //  close the menu on mobile view while laoding a page
       $('.page-header .responsive-toggler').click()
     }
-
-    Layout.loadAjaxContent(url)
   })
 
   //  handle scrolling to top on responsive menu toggler click when header is fixed for mobile view
   $(document).on('click', '.page-header-fixed-mobile .page-header .responsive-toggler', function () {
-    App.scrollTop()
+    common.scrollTop()
   })
 
   //  handle sidebar hover effect
@@ -319,8 +306,8 @@ var handleSidebarMenu = function () {
 }
 
 //  Helper function to calculate sidebar height for fixed sidebar layout.
-var _calculateFixedSidebarViewportHeight = function () {
-  var sidebarHeight = App.getViewPort().height - $('.page-header').outerHeight(true)
+const _calculateFixedSidebarViewportHeight = () => {
+  var sidebarHeight = common.getViewPort().height - $('.page-header').outerHeight(true)
   if ($('body').hasClass('page-footer-fixed')) {
     sidebarHeight = sidebarHeight - $('.page-footer').outerHeight()
   }
@@ -329,13 +316,13 @@ var _calculateFixedSidebarViewportHeight = function () {
 }
 
 //  Handles fixed sidebar
-var handleFixedSidebar = function () {
+const handleFixedSidebar = () => {
   // var menu = $('.page-sidebar-menu')
 
   handleSidebarAndContentHeight()
 
   // if ($('.page-sidebar-fixed').size() === 0) {
-  //   App.destroySlimScroll(menu)
+  //   common.destroySlimScroll(menu)
   //   return
   // }
 
@@ -348,7 +335,7 @@ var handleFixedSidebar = function () {
 }
 
 //  Handles sidebar toggler to close/hide the sidebar.
-var handleFixedSidebarHoverEffect = function () {
+const handleFixedSidebarHoverEffect = () => {
   if ($('body').hasClass('page-sidebar-fixed')) {
     $('.page-sidebar').on('mouseenter', function () {
       if ($('body').hasClass('page-sidebar-closed')) {
@@ -363,7 +350,7 @@ var handleFixedSidebarHoverEffect = function () {
 }
 
 //  Handles the horizontal menu
-var handleHorizontalMenu = function () {
+const handleHorizontalMenu = () => {
   // handle tab click
   $('.page-header').on('click', '.hor-menu a[data-toggle="tab"]', function (e) {
     e.preventDefault()
@@ -408,12 +395,12 @@ var handleHorizontalMenu = function () {
 }
 
 //  Hanlde 100% height elements(block, portlet, etc)
-var handle100HeightContent = function () {
+const handle100HeightContent = () => {
   $('.full-height-content').each(function () {
     var target = $(this)
     var height
 
-    height = App.getViewPort().height -
+    height = common.getViewPort().height -
       $('.page-header').outerHeight(true) -
       $('.page-footer').outerHeight(true) -
       $('.page-title').outerHeight(true) -
@@ -422,27 +409,27 @@ var handle100HeightContent = function () {
     if (target.hasClass('portlet')) {
       var portletBody = target.find('.portlet-body')
 
-      App.destroySlimScroll(portletBody.find('.full-height-content-body')) //  destroy slimscroll
+      // App.destroySlimScroll(portletBody.find('.full-height-content-body')) //  destroy slimscroll
 
       height = height -
         target.find('.portlet-title').outerHeight(true) -
         parseInt(target.find('.portlet-body').css('padding-top')) -
         parseInt(target.find('.portlet-body').css('padding-bottom')) - 5
 
-      if (App.getViewPort().width >= resBreakpointMd && target.hasClass('full-height-content-scrollable')) {
+      if (common.getViewPort().width >= resBreakpointMd && target.hasClass('full-height-content-scrollable')) {
         height = height - 35
         portletBody.find('.full-height-content-body').css('height', height)
-        App.initSlimScroll(portletBody.find('.full-height-content-body'))
+        // App.initSlimScroll(portletBody.find('.full-height-content-body'))
       } else {
         portletBody.css('min-height', height)
       }
     } else {
-      App.destroySlimScroll(target.find('.full-height-content-body')) //  destroy slimscroll
+      common.destroySlimScroll(target.find('.full-height-content-body')) //  destroy slimscroll
 
-      if (App.getViewPort().width >= resBreakpointMd && target.hasClass('full-height-content-scrollable')) {
+      if (common.getViewPort().width >= resBreakpointMd && target.hasClass('full-height-content-scrollable')) {
         height = height - 35
         target.find('.full-height-content-body').css('height', height)
-        App.initSlimScroll(target.find('.full-height-content-body'))
+        common.initSlimScroll(target.find('.full-height-content-body'))
       } else {
         target.css('min-height', height)
       }
@@ -450,59 +437,43 @@ var handle100HeightContent = function () {
   })
 }
 
-let Layout = new class {
-  //  Main init methods to initialize the layout
-  // IMPORTANT!!!: Do not modify the core handlers call order.
+export const initHeader = () => {
+  handleHorizontalMenu() //  handles horizontal menu
+}
 
-  initHeader () {
-    handleHorizontalMenu() //  handles horizontal menu
-  }
+export const setSidebarMenuActiveLink = (mode, el) => {
+  handleSidebarMenuActiveLink(mode, el, null)
+}
 
-  setSidebarMenuActiveLink (mode, el) {
-    handleSidebarMenuActiveLink(mode, el, null)
-  }
+export const initSidebar = () => {
+  // layout handlers
+  handleFixedSidebar() //  handles fixed sidebar menu
+  handleSidebarMenu() //  handles main menu
 
-  initSidebar ($state) {
-    // layout handlers
-    handleFixedSidebar() //  handles fixed sidebar menu
-    handleSidebarMenu() //  handles main menu
+  // common.addResizeHandler(handleFixedSidebar) //  reinitialize fixed sidebar on window resize
+}
 
-    App.addResizeHandler(handleFixedSidebar) //  reinitialize fixed sidebar on window resize
-  }
+export const initContent = () => {
+  handle100HeightContent() //  handles 100% height elements(block, portlet, etc)
 
-  initContent () {
-    handle100HeightContent() //  handles 100% height elements(block, portlet, etc)
+  // common.addResizeHandler(handleSidebarAndContentHeight) //  recalculate sidebar & content height on window resize
+  // common.addResizeHandler(handle100HeightContent) //  reinitialize content height on window resize
+}
 
-    App.addResizeHandler(handleSidebarAndContentHeight) //  recalculate sidebar & content height on window resize
-    App.addResizeHandler(handle100HeightContent) //  reinitialize content height on window resize
-  }
+export const init = () => {
+  initHeader()
+  initSidebar(null)
+  initContent()
+}
 
-  init () {
-    this.initHeader()
-    this.initSidebar(null)
-    this.initContent()
-  }
+export const fixContentHeight = () => {
+  handleSidebarAndContentHeight()
+}
 
-  // public function to fix the sidebar and content height accordingly
-  fixContentHeight () {
-    handleSidebarAndContentHeight()
-  }
+export const initFixedSidebarHoverEffect = () => {
+  handleFixedSidebarHoverEffect()
+}
 
-  initFixedSidebarHoverEffect () {
-    handleFixedSidebarHoverEffect()
-  }
-
-  initFixedSidebar () {
-    handleFixedSidebar()
-  }
-
-  getLayoutImgPath () {
-    return App.getAssetsPath() + layoutImgPath
-  }
-
-  getLayoutCssPath () {
-    return App.getAssetsPath() + layoutCssPath
-  }
-}()
-
-export default Layout
+export const initFixedSidebar = () => {
+  handleFixedSidebar()
+}

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routerConfig from './config.json'
-import scroll from '@/mixins/_scroll.js'
+import {common} from '@/untils'
 import NProgress from 'nprogress'
 
 Vue.use(VueRouter)
@@ -42,7 +42,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach(() => {
   NProgress.done()
-  scroll.methods.goto()
+  common.scrollTop()
 })
 
 export default router

@@ -93,14 +93,12 @@
   </div>
 </template>
 <script>
-  import App from '@/assets/scripts/global/app'
-  import Layout from '@/assets/scripts/layout/layout'
+  import * as Layout from './main'
 
   import {Fa, Icon} from '@/components/icon'
-  import {QuickNav} from '@/components/nav'
-  import {GoTop} from '@/components/element'
 
   import {routerConfig} from '@/router/'
+  import {common} from '@/untils'
 
   import PageLoading from './page-loading'
   import PageSidebarMenu from './page-sidebar-menu'
@@ -109,6 +107,8 @@
   import PageQuickSidebar from './page-quick-sidebar'
   import PageTopMenu from './page-top-menu'
   import ThemePanel from '../theme-panel'
+  import GoTop from '../go-top'
+  import QuickNav from '../quick-nav'
 
   export default{
     data () {
@@ -286,31 +286,31 @@
         ],
         tasks: [
           {
-            id: App.getUniqueID('task'),
+            id: common.getUniqueID('task'),
             name: '任务一',
             state: 'danger',
             progress: 40
           },
           {
-            id: App.getUniqueID('task'),
+            id: common.getUniqueID('task'),
             name: '任务二',
             state: 'success',
             progress: 62
           },
           {
-            id: App.getUniqueID('task'),
+            id: common.getUniqueID('task'),
             name: '任务三',
             state: 'info',
             progress: 35.5
           },
           {
-            id: App.getUniqueID('task'),
+            id: common.getUniqueID('task'),
             name: '任务四',
             state: 'success',
             progress: 80
           },
           {
-            id: App.getUniqueID('task'),
+            id: common.getUniqueID('task'),
             name: '任务五',
             state: 'warning',
             progress: 64
@@ -355,20 +355,19 @@
       }
     },
     mounted () {
-      App.init()
       Layout.init()
     },
     components: {
       Fa,
       Icon,
-      QuickNav,
-      GoTop,
       PageLoading,
       PageSidebarMenu,
       PageBar,
       PageTitle,
       PageQuickSidebar,
       PageTopMenu,
+      QuickNav,
+      GoTop,
       ThemePanel
     }
   }

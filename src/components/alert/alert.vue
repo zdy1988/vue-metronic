@@ -7,12 +7,10 @@
   </animated-swing>
 </template>
 <script>
-  import {colorKeys} from '@/untils'
-  import _scroll from '@/mixins/_scroll'
+  import {colorKeys, common} from '@/untils'
 
   export default {
     name: 'Alert',
-    mixins: [_scroll],
     props: {
       color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
       state: {type: String, default: 'success', validator: value => ['success', 'info', 'warning', 'danger'].indexOf(value) > -1},
@@ -38,7 +36,7 @@
     watch: {
       show (newValue) {
         if (newValue) {
-          this.goto(this.$parent.$el)
+          common.scrollTo(this.$parent.$el)
         }
       }
     }

@@ -162,7 +162,7 @@
 </template>
 <script>
   import $ from 'jquery'
-  import App from '../../assets/scripts/global/app'
+  import {common} from '@/untils'
 
   export default{
     data () {
@@ -248,7 +248,7 @@
         }
       },
       handleGetDateDiff (dateStr) {
-        return App.getDateDiff(dateStr)
+        return common.getDateDiff(dateStr)
       },
       handleGetChatUsersHeight () {
         var wrapper = $('.page-quick-sidebar-wrapper')

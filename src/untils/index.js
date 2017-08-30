@@ -17,3 +17,15 @@ export {
   icons,
   faicons
 }
+
+import * as common from './common'
+
+export {
+  common
+}
+
+import Stage from './stage'
+
+export {
+  Stage
+}

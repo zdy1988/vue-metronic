@@ -114,7 +114,7 @@
 </template>
 <script>
   import router from '../router'
-  import BackgroundStage from '../assets/scripts/background-stage'
+  import {Stage} from '@/untils'
 
   export default{
     data () {
@@ -379,7 +379,7 @@
         var canvas = document.getElementById('background')
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
-        var stage = new BackgroundStage(canvas, state => {
+        var stage = new Stage(canvas, state => {
           if (state === 'second') {
             this.contentShow = true
           } else {
