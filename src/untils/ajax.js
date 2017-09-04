@@ -3,7 +3,7 @@
  */
 import $ from 'jquery'
 
-export const baseURL = process.env.BASE_API
+export const baseURL = '/api/'
 
 const requestHeader = function (request) {
   request.setRequestHeader('Token', '')
