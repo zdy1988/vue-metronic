@@ -3,7 +3,7 @@
     <h3 class="uppercase">{{model.title}}</h3>
   </li>
   <li class="nav-item" v-else>
-    <router-link :to="model.path" class="nav-link" :class="{'nav-toggle':isFolder}" v-if="model.path" @click.native="sidebarItemClick">
+    <router-link :to="model.path" class="nav-link" :class="{'nav-toggle':isFolder}" v-if="model.path" @click.native="sidebarMenuItemClick">
       <i class="icon-folder"></i>
       <span class="title">{{model.title}}</span>
       <span class="arrow" v-if="isFolder"></span>
@@ -35,7 +35,7 @@
       }
     },
     methods: {
-      sidebarItemClick: function (e) {
+      sidebarMenuItemClick: function (e) {
         if (this.setActive.call() === true) {
           Layout.setSidebarMenuActiveLink('set', e.target)
         }

@@ -254,6 +254,13 @@
         "children": [],
         "path": "/main/page",
         "src": "pages/page.md"
+      },
+      {
+        "title": "Item 4",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_dropdown",
+        "src": "ui_dropdown"
       }
     ]
   }

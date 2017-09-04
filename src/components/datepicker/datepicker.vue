@@ -4,7 +4,7 @@
 <script>
   import $ from 'jquery'
   import 'bootstrap-datepicker'
-  import _input from '@/components/input/mixins/_input'
+  import _input from '../mixins/_input'
 
   export default {
     name: 'Datepicker',

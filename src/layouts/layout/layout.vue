@@ -9,20 +9,20 @@
           <div class="page-logo">
             <a href="index.html">
               <img :src="logo" alt="logo" class="logo-default" /> </a>
-            <div class="menu-toggler sidebar-toggler" @click="sidebarShow = !sidebarShow">
+            <div class="menu-toggler sidebar-toggler" @click="isShowSidebar = !isShowSidebar">
               <span></span>
             </div>
           </div>
           <!-- END LOGO -->
           <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-          <a href="javascript:;" class="menu-toggler responsive-toggler" @click="sidebarShow = !sidebarShow">
+          <a href="javascript:;" class="menu-toggler responsive-toggler" @click="isShowSidebar = !isShowSidebar">
             <span></span>
           </a>
           <!-- END RESPONSIVE MENU TOGGLER -->
           <!-- BEGIN TOP NAVIGATION MENU -->
-          <page-top-menu :alerts="alerts" :messages="unReadChatMessages" :tasks="tasks">
+          <page-top-menu>
             <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-            <li class="dropdown dropdown-quick-sidebar-toggler"  @click="quickSidebarShow = !quickSidebarShow">
+            <li class="dropdown dropdown-quick-sidebar-toggler"  @click="isQuickSidebarShow = !isQuickSidebarShow">
               <a href="javascript:;" class="dropdown-toggle">
                 <i class="icon-logout"></i>
               </a>
@@ -42,7 +42,7 @@
         <!-- BEGIN SIDEBAR -->
         <div class="page-sidebar-wrapper">
           <!-- BEGIN SIDEBAR -->
-          <page-sidebar-menu :show="sidebarShow" :sidebar-data="sidebarData" :set-active="setSidebarMenuActive"></page-sidebar-menu>
+          <page-sidebar-menu :show="isShowSidebar" :sidebar-data="sidebarData" :set-active="setSidebarMenuActive"></page-sidebar-menu>
           <!-- END SIDEBAR -->
         </div>
         <!-- END SIDEBAR -->
@@ -69,11 +69,11 @@
         </div>
         <!-- END CONTENT -->
         <!-- BEGIN QUICK SIDEBAR -->
-        <a href="javascript:;" class="page-quick-sidebar-toggler" @click="quickSidebarShow = !quickSidebarShow">
+        <a href="javascript:;" class="page-quick-sidebar-toggler" @click="isQuickSidebarShow = false">
           <i class="icon-login"></i>
         </a>
-        <div class="page-quick-sidebar-wrapper">
-          <page-quick-sidebar :alerts="alerts" :users="users" :messages="chatMessages" :tasks="tasks" :active-user="activeUser" @chat-post="chatMessagePost"></page-quick-sidebar>
+        <div class="page-quick-sidebar-wrapper" v-click-outside="() => isQuickSidebarShow = false">
+          <page-quick-sidebar></page-quick-sidebar>
         </div>
         <!-- END QUICK SIDEBAR -->
       </div>
@@ -89,7 +89,7 @@
       <!-- END FOOTER -->
     </div>
     <quick-nav></quick-nav>
-    <page-loading :show="showLoading"></page-loading>
+    <page-loading :show="isPageLoading"></page-loading>
   </div>
 </template>
 <script>
@@ -98,9 +98,8 @@
   import {Fa, Icon} from '@/components/icon'
 
   import {routerConfig} from '@/router/'
-  import {common} from '@/untils'
 
-  import PageLoading from './page-loading'
+  import PageLoading from '../page-loading'
   import PageSidebarMenu from './page-sidebar-menu'
   import PageBar from './page-bar'
   import PageTitle from './page-title'
@@ -114,8 +113,8 @@
     data () {
       return {
         logo: require('../../../static/img/layouts/layout/logo.png'),
-        showLoading: false,
-        sidebarShow: true,
+        isPageLoading: false,
+        isShowSidebar: true,
         sidebarData: routerConfig,
         setSidebarMenuActive: () => {
           this.showLoading = true
@@ -124,206 +123,15 @@
           }, 500)
           return true
         },
-        quickSidebarShow: false,
-        activeUser: 1,
-        alerts: [
-          {
-            icon: 'check',
-            status: 'info',
-            desc: '您有4个未处理任务。',
-            time: '2016/1/20 19:59:30',
-            type: 1
-          },
-          {
-            icon: 'bar-chart-o',
-            status: 'success',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 1:22:22',
-            type: 1
-          },
-          {
-            icon: 'user',
-            status: 'danger',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 6:22:22',
-            type: 1
-          },
-          {
-            icon: 'shopping-cart',
-            status: 'info',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 11:22:22',
-            type: 1
-          },
-          {
-            icon: 'check',
-            status: 'info',
-            desc: '您有4个未处理任务。',
-            time: '2016/1/20 19:59:30',
-            type: 2
-          },
-          {
-            icon: 'bar-chart-o',
-            status: 'success',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 1:22:22',
-            type: 2
-          },
-          {
-            icon: 'user',
-            status: 'danger',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 6:22:22',
-            type: 2
-          },
-          {
-            icon: 'shopping-cart',
-            status: 'info',
-            desc: '您有4个未处理任务。',
-            time: '2017/8/7 11:22:22',
-            type: 2
-          }
-        ],
-        users: [
-          {
-            id: 1,
-            name: '小张',
-            post: 'CEO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
-            role: 1
-          },
-          {
-            id: 2,
-            name: '小王',
-            post: 'CTO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
-            role: 1
-          },
-          {
-            id: 3,
-            name: '小李',
-            post: 'CFO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
-            role: 1
-          },
-          {
-            id: 4,
-            name: '小戴',
-            post: '项目经理',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
-            role: 1
-          },
-          {
-            id: 5,
-            name: '小张',
-            post: 'CEO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
-            role: 2
-          },
-          {
-            id: 6,
-            name: '小王',
-            post: 'CTO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
-            role: 2
-          },
-          {
-            id: 7,
-            name: '小李',
-            post: 'CFO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
-            role: 2
-          },
-          {
-            id: 8,
-            name: '小戴',
-            post: '项目经理',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
-            role: 2
-          },
-          {
-            id: 9,
-            name: '小张',
-            post: 'CEO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3.jpg',
-            role: 2
-          },
-          {
-            id: 10,
-            name: '小王',
-            post: 'CTO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar1.jpg',
-            role: 2
-          },
-          {
-            id: 11,
-            name: '小李',
-            post: 'CFO',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar4.jpg',
-            role: 2
-          },
-          {
-            id: 12,
-            name: '小戴',
-            post: '项目经理',
-            handPic: 'http://zdyonline.com/vue-metronic/img/layouts/layout/avatar2.jpg',
-            role: 2
-          }
-        ],
-        messages: [
-          {sender: 1, receiver: 2, datetime: '2017/08/07 20:15', content: '你好！', read: false},
-          {sender: 2, receiver: 1, datetime: '2017/08/07 20:20', content: '你好！', read: false},
-          {sender: 2, receiver: 3, datetime: '2017/08/07 20:21', content: '你好！', read: false},
-          {sender: 3, receiver: 1, datetime: '2017/08/07 20:22', content: '你好！', read: false},
-          {sender: 2, receiver: 1, datetime: '2017/08/07 20:23', content: '你好！', read: false},
-          {sender: 4, receiver: 1, datetime: '2017/08/07 20:24', content: '你好！', read: false},
-          {sender: 2, receiver: 4, datetime: '2017/08/07 20:25', content: '你好！', read: false},
-          {sender: 5, receiver: 6, datetime: '2017/08/07 20:26', content: '你好！', read: false},
-          {sender: 2, receiver: 1, datetime: '2017/08/07 20:27', content: '你好！', read: false},
-          {sender: 3, receiver: 7, datetime: '2017/08/07 20:28', content: '你好！', read: false},
-          {sender: 2, receiver: 8, datetime: '2017/08/07 20:29', content: '你好！', read: false},
-          {sender: 3, receiver: 8, datetime: '2017/08/07 20:30', content: '你好！', read: false}
-        ],
-        tasks: [
-          {
-            id: common.getUniqueID('task'),
-            name: '任务一',
-            state: 'danger',
-            progress: 40
-          },
-          {
-            id: common.getUniqueID('task'),
-            name: '任务二',
-            state: 'success',
-            progress: 62
-          },
-          {
-            id: common.getUniqueID('task'),
-            name: '任务三',
-            state: 'info',
-            progress: 35.5
-          },
-          {
-            id: common.getUniqueID('task'),
-            name: '任务四',
-            state: 'success',
-            progress: 80
-          },
-          {
-            id: common.getUniqueID('task'),
-            name: '任务五',
-            state: 'warning',
-            progress: 64
-          }
-        ]
+        isQuickSidebarShow: false
       }
     },
     computed: {
       classes () {
         return [
           {'page-header-fixed page-sidebar-closed-hide-logo page-content-white': true},
-          {'page-sidebar-closed': !this.sidebarShow},
-          {'page-quick-sidebar-open': this.quickSidebarShow}
+          {'page-sidebar-closed': !this.isShowSidebar},
+          {'page-quick-sidebar-open': this.isQuickSidebarShow}
         ]
       },
       chatMessages () {
@@ -339,14 +147,6 @@
           }
           return msg
         })
-      },
-      unReadChatMessages () {
-        var self = this
-        return this.chatMessages.map(msg => {
-          if (msg.receiver === self.activeUser && msg.read === false) {
-            return msg
-          }
-        }).filter(msg => msg !== undefined)
       }
     },
     methods: {
@@ -356,6 +156,11 @@
     },
     mounted () {
       Layout.init()
+      this.$store.dispatch('app/initUsers').done(() => {
+        this.$store.dispatch('app/initMessages')
+        this.$store.dispatch('app/initTasks')
+        this.$store.dispatch('app/initAlerts')
+      })
     },
     components: {
       Fa,

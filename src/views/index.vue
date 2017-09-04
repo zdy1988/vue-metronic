@@ -8,10 +8,10 @@
           <h4 class="form-title">登录到账户</h4>
           <alert v-model="alertShow" state="danger" :content="alertMessage"></alert>
           <formbox>
-            <textbox placeholder="用户名" icon="user" v-model="username"></textbox>
+            <textbox placeholder="用户名" icon="user" v-model="username" @keyup.enter="login"></textbox>
           </formbox>
           <formbox>
-            <textbox type="password" placeholder="密码" icon="lock" v-model="password"></textbox>
+            <textbox type="password" placeholder="密码" icon="lock" v-model="password" @keyup.enter="login"></textbox>
           </formbox>
           <div class="form-actions">
             <checkbox outline klass="rememberme">记住我</checkbox>
@@ -122,7 +122,7 @@
         contentShow: false,
         activeForm: 'login',
         alertShow: false,
-        alertMessage: '请输入任意字符到用户名和密码.',
+        alertMessage: '',
         username: '',
         password: '',
         countries: [
@@ -366,10 +366,22 @@
     },
     methods: {
       login () {
-        if (this.username === '' && this.password === '') {
+        var self = this
+        const username = this.username.trim()
+        const password = this.password.trim()
+        if (username === '' && password === '') {
+          self.alertMessage = '请输入用户名和密码'
           this.alertShow = true
         } else {
-          router.push('/main')
+          this.$store.dispatch('permission/login', {
+            username,
+            password
+          }).done(function (rst) {
+            router.push('/main')
+          }).fail(function (rst) {
+            self.alertMessage = rst.message
+            self.alertShow = true
+          })
         }
       },
       handleCountryFlag (value) {

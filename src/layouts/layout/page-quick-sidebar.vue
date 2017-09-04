@@ -4,32 +4,8 @@
       <tab-pane name="联系人" class="page-quick-sidebar-chat" :class="{'page-quick-sidebar-content-item-shown': chatShow}" cur>
         <div class="page-quick-sidebar-list">
           <div class="page-quick-sidebar-chat-users" v-slimscroll="handleGetChatUsersHeight()">
-            <h3 class="list-heading" v-if="staffs.length > 0">工作人员</h3>
-            <ul class="media-list list-items" v-if="staffs.length > 0">
-              <li class="media" v-for="(member, index) in staffs" :key="index" @click="handleChartMessageVisible(member)">
-                <div class="media-status" v-if="handleGetUnReadMessages(member.id).length > 0">
-                  <badge theme="success">{{handleGetUnReadMessages(member.id).length}}</badge>
-                </div>
-                <img class="media-object" :src="member.handPic" :alt="member.name">
-                <div class="media-body">
-                  <h4 class="media-heading"> {{member.name}} </h4>
-                  <div class="media-heading-sub"> {{member.post}} </div>
-                </div>
-              </li>
-            </ul>
-            <h3 class="list-heading" v-if="customers.length > 0">目标客户</h3>
-            <ul class="media-list list-items" v-if="customers.length > 0">
-              <li class="media" v-for="(member, index) in customers" :key="index" @click="handleChartMessageVisible(member)">
-                <div class="media-status" v-if="handleGetUnReadMessages(member.id).length > 0">
-                  <badge theme="success">{{handleGetUnReadMessages(member.id).length}}</badge>
-                </div>
-                <img class="media-object" :src="member.handPic" :alt="member.name">
-                <div class="media-body">
-                  <h4 class="media-heading"> {{member.name}} </h4>
-                  <div class="media-heading-sub"> {{member.post}} </div>
-                </div>
-              </li>
-            </ul>
+            <page-quick-sidebar-chat-user-group :users="staffs" name="工作人员" @item-click="handleDoChat"></page-quick-sidebar-chat-user-group>
+            <page-quick-sidebar-chat-user-group :users="customers" name="目标客户" @item-click="handleDoChat"></page-quick-sidebar-chat-user-group>
           </div>
         </div>
         <div class="page-quick-sidebar-item">
@@ -40,12 +16,12 @@
             </div>
             <div class="page-quick-sidebar-chat-user-messages" v-slimscroll="handleGetChatMessagesHeight()">
               <div class="post"
-                   :class="{out:activeUser === msg.sender, in: activeReceiver === msg.sender}"
+                   :class="{out:user.id === msg.senderId, in: activeReceiver.id === msg.senderId}"
                    v-for="(msg, index) in activeMessages" :key="index">
-                <img class="avatar" alt="" :src="msg.senderInfo.handPic" />
+                <img class="avatar" alt="" :src="msg.sender.avatar" />
                 <div class="message">
                   <span class="arrow"></span>
-                  <a href="javascript:;" class="name">{{msg.senderInfo.name}}</a>
+                  <a href="javascript:;" class="name">{{msg.sender.name}}</a>
                   <span class="datetime">{{msg.datetime}}</span>
                   <span class="body"> {{msg.content}} </span>
                 </div>
@@ -66,50 +42,8 @@
       </tab-pane>
       <tab-pane name="提醒" class="page-quick-sidebar-alerts">
         <div class="page-quick-sidebar-alerts-list" v-slimscroll="handleGetAlertsHeight()">
-          <h3 class="list-heading" v-if="generalAlerts.length > 0">一般提醒</h3>
-          <ul class="feeds list-items" v-if="generalAlerts.length > 0">
-            <li v-for="(feed, index) in generalAlerts">
-              <div class="col1">
-                <div class="cont">
-                  <div class="cont-col1">
-                    <div class="label label-sm" :class="'label-' + feed.status">
-                      <i class="fa" :class="'fa-' + feed.icon"></i>
-                    </div>
-                  </div>
-                  <div class="cont-col2">
-                    <div class="desc">
-                      {{feed.desc}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col2">
-                <div class="date"> {{handleGetDateDiff(feed.time)}} </div>
-              </div>
-            </li>
-          </ul>
-          <h3 class="list-heading" v-if="systemAlerts.length > 0">系统提醒</h3>
-          <ul class="feeds list-items" v-if="systemAlerts.length > 0">
-            <li v-for="(feed, index) in systemAlerts">
-              <div class="col1">
-                <div class="cont">
-                  <div class="cont-col1">
-                    <div class="label label-sm" :class="'label-' + feed.status">
-                      <i class="fa" :class="'fa-' + feed.icon"></i>
-                    </div>
-                  </div>
-                  <div class="cont-col2">
-                    <div class="desc">
-                      {{feed.desc}}
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col2">
-                <div class="date"> {{handleGetDateDiff(feed.time)}} </div>
-              </div>
-            </li>
-          </ul>
+          <page-quick-sidebar-alerts-group :alerts="generalAlerts" name="一般提醒"></page-quick-sidebar-alerts-group>
+          <page-quick-sidebar-alerts-group :alerts="systemAlerts" name="系统提醒"></page-quick-sidebar-alerts-group>
         </div>
       </tab-pane>
       <tab-pane name="任务" class="page-quick-sidebar-settings">
@@ -120,7 +54,7 @@
               <p>
                 {{task.name}}<span class="pull-right">{{task.progress}}%</span>
               </p>
-              <progress-bar :value="task.progress" :theme="task.state" stripe="active"></progress-bar>
+              <progress-bar :value="task.progress" :state="task.state" stripe="active"></progress-bar>
             </li>
           </ul>
         </div>
@@ -162,93 +96,56 @@
 </template>
 <script>
   import $ from 'jquery'
-  import {common} from '@/untils'
+  import { mapState, mapGetters } from 'vuex'
+
+  import PageQuickSidebarChatUserGroup from './page-quick-sidebar-chat-user-group'
+  import PageQuickSidebarAlertsGroup from './page-quick-sidebar-alerts-group'
 
   export default{
     data () {
       return {
+        tabIndex: 0,
         chatShow: false,
         message: '',
-        tabIndex: 0,
-        activeReceiver: null
+        activeReceiver: {
+          id: 0
+        }
       }
     },
-    props: {
-      alerts: {type: Array},
-      users: {type: Array},
-      messages: {type: Array},
-      tasks: {type: Array},
-      activeUser: {type: Number}
-    },
     computed: {
+      ...mapState({
+        user: state => state.permission.user
+      }),
+      ...mapState({
+        messages: state => state.app.messages,
+        tasks: state => state.app.tasks
+      }),
+      ...mapGetters('app', [
+        'staffs', 'customers',
+        'generalAlerts', 'systemAlerts'
+      ]),
       activeMessages () {
-        var self = this
-        return this.messages.map(msg => {
-          if ((msg.sender === self.activeUser && msg.receiver === self.activeReceiver) || (msg.sender === self.activeReceiver && msg.receiver === self.activeUser)) {
-            return msg
-          }
-        }).filter(msg => msg !== undefined)
-      },
-      generalAlerts () {
-        return this.alerts.map(alert => {
-          if (alert.type === 1) {
-            return alert
-          }
-        }).filter(alert => alert !== undefined)
-      },
-      systemAlerts  () {
-        return this.alerts.map(alert => {
-          if (alert.type === 2) {
-            return alert
-          }
-        }).filter(alert => alert !== undefined)
-      },
-      staffs () {
-        return this.users.map(user => {
-          if (user.role === 1) {
-            return user
-          }
-        }).filter(user => user !== undefined)
-      },
-      customers () {
-        return this.users.map(user => {
-          if (user.role === 2) {
-            return user
-          }
-        }).filter(user => user !== undefined)
+        return this.messages.filter(msg => (msg.senderId === this.user.id && msg.receiverId === this.activeReceiver.id) || (msg.senderId === this.activeReceiver.id && msg.receiverId === this.user.id))
       }
     },
     methods: {
-      handleGetUnReadMessages (sender) {
-        var self = this
-        return this.messages.map(msg => {
-          if (msg.sender === sender && msg.receiver === self.activeUser && msg.read === false) {
-            return msg
-          }
-        }).filter(msg => msg !== undefined)
-      },
-      handleChartMessageVisible (user) {
-        this.activeReceiver = user.id
+      handleDoChat (user) {
+        this.activeReceiver = user
         this.chatShow = true
-        this.handleGetUnReadMessages(user.id).map(msg => {
-          msg.read = true
-        })
       },
       handleChatMessagePost () {
         if (this.message.trim() !== '') {
           var time = new Date()
-          this.$emit('chat-post', {
-            sender: this.activeUser,
-            receiver: this.activeReceiver,
+          this.$store.dispatch('app/postMessage', {
+            id: '',
+            senderId: this.user.id,
+            receiverId: this.activeReceiver.id,
             datetime: time.getFullYear() + '/' + time.getMonth() + '/' + time.getDay() + ' ' + time.getHours() + ':' + time.getMinutes(),
             content: this.message,
             read: false
           })
           this.message = ''
         }
-      },
-      handleGetDateDiff (dateStr) {
-        return common.getDateDiff(dateStr)
       },
       handleGetChatUsersHeight () {
         var wrapper = $('.page-quick-sidebar-wrapper')
@@ -269,6 +166,10 @@
         var wrapper = $('.page-quick-sidebar-wrapper')
         return wrapper.height() - 80 - wrapper.find('.nav-justified > .nav-tabs').outerHeight()
       }
+    },
+    components: {
+      PageQuickSidebarChatUserGroup,
+      PageQuickSidebarAlertsGroup
     }
   }
 </script>

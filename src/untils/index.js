@@ -1,6 +1,12 @@
 /**
  * Created by virus_zhh on 2017/6/17.
  */
+import Stage from './stage'
+
+export {
+  Stage
+}
+
 import colors from './colors'
 
 const colorKeys = Object.keys(colors)
@@ -24,8 +30,8 @@ export {
   common
 }
 
-import Stage from './stage'
+import * as ajax from './ajax'
 
 export {
-  Stage
+  ajax
 }

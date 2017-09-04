@@ -10,11 +10,10 @@
           <i class="icon-bell"></i>
           <span class="badge badge-default"> {{alerts.length}} </span>
         </a>
-        <animated-fade-in-bounce-out>
+        <transition name="slide-fade">
           <ul class="dropdown-menu" style="display:block" v-show="notificationShow">
             <li class="external">
-              <h3>
-                <span class="bold">{{alerts.length}}</span> 个待处理提醒</h3>
+              <h3>您有 <span class="font-red">{{alerts.length}}</span> 个待处理提醒</h3>
               <a href="javascript:;">显示全部</a>
             </li>
             <li>
@@ -23,17 +22,19 @@
                   <a href="javascript:;">
                     <span class="time">{{handleGetDateDiff(alert.time)}}</span>
                     <span class="details">
-                    <span class="label label-sm label-icon" :class="'label-' + alert.status">
-                        <i class="fa" :class="'fa-' + alert.icon"></i>
-                    </span>
-                      {{alert.desc}}
+                      <span class="label label-sm label-icon" :class="'label-' + alert.status">
+                          <i class="fa" :class="'fa-' + alert.icon"></i>
+                      </span>
+                      <span>
+                        {{alert.desc}}
+                      </span>
                   </span>
                   </a>
                 </li>
               </ul>
             </li>
           </ul>
-        </animated-fade-in-bounce-out>
+        </transition>
       </li>
       <!-- END NOTIFICATION DROPDOWN -->
       <!-- BEGIN INBOX DROPDOWN -->
@@ -43,11 +44,10 @@
           <i class="icon-envelope-open"></i>
           <span class="badge badge-default"> {{messages.length}} </span>
         </a>
-        <animated-fade-in-bounce-out>
+        <transition name="slide-fade">
           <ul class="dropdown-menu" style="display:block" v-show="inboxShow">
             <li class="external">
-              <h3>您有
-                <span class="bold">{{messages.length}}</span> 条新消息</h3>
+              <h3>您有 <span class="font-red">{{messages.length}}</span> 条新消息</h3>
               <a href="javascript:;">显示全部</a>
             </li>
             <li>
@@ -55,10 +55,10 @@
                 <li v-for="(msg, index) in messages" :key="index">
                   <a href="javascript:;">
                   <span class="photo">
-                      <img :src="msg.senderInfo.handPic" class="img-circle" alt="">
+                      <img :src="msg.sender.avatar" class="img-circle" alt="">
                   </span>
                     <span class="subject">
-                      <span class="from"> {{msg.senderInfo.name}} </span>
+                      <span class="from"> {{msg.sender.name}} </span>
                       <span class="time"> {{msg.datetime}} </span>
                   </span>
                     <span class="message"> {{msg.content}} </span>
@@ -67,7 +67,7 @@
               </ul>
             </li>
           </ul>
-        </animated-fade-in-bounce-out>
+        </transition>
       </li>
       <!-- END INBOX DROPDOWN -->
       <!-- BEGIN TODO DROPDOWN -->
@@ -77,11 +77,10 @@
           <i class="icon-calendar"></i>
           <span class="badge badge-default"> {{tasks.length}} </span>
         </a>
-        <animated-fade-in-bounce-out>
+        <transition name="slide-fade">
           <ul class="dropdown-menu extended tasks" style="display:block" v-show="tasksShow">
             <li class="external">
-              <h3>您有
-                <span class="bold">{{tasks.length}}</span> 个未完成任务</h3>
+              <h3>您有 <span class="font-red">{{tasks.length}}</span> 个未完成任务</h3>
               <a href="javascript:;">显示全部</a>
             </li>
             <li>
@@ -100,18 +99,18 @@
               </ul>
             </li>
           </ul>
-        </animated-fade-in-bounce-out>
+        </transition>
       </li>
       <!-- END TODO DROPDOWN -->
       <!-- BEGIN USER LOGIN DROPDOWN -->
       <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
       <li class="dropdown dropdown-user" @click="userShow = !userShow" v-click-outside="() => userShow = false">
         <a href="javascript:;" class="dropdown-toggle">
-          <img alt="" class="img-circle" src="http://zdyonline.com/vue-metronic/img/layouts/layout/avatar3_small.jpg" />
-          <span class="username username-hide-on-mobile"> 小张 </span>
+          <img alt="" class="img-circle" :src="user.avatar" />
+          <span class="username username-hide-on-mobile"> {{user.name}} </span>
           <i class="fa fa-angle-down"></i>
         </a>
-        <animated-fade-in-bounce-out>
+        <transition name="slide-fade">
           <ul class="dropdown-menu dropdown-menu-default" style="display:block" v-show="userShow">
             <li>
               <a href="javascript:;">
@@ -145,7 +144,7 @@
               </router-link>
             </li>
           </ul>
-        </animated-fade-in-bounce-out>
+        </transition>
       </li>
       <!-- END USER LOGIN DROPDOWN -->
       <!-- BEGIN QUICK SIDEBAR TOGGLER -->
@@ -154,13 +153,22 @@
   </div>
 </template>
 <script>
+  import { mapState } from 'vuex'
   import {common} from '@/untils'
 
   export default{
-    props: {
-      alerts: {type: Array},
-      messages: {type: Array},
-      tasks: {type: Array}
+    computed: {
+      ...mapState({
+        user: state => state.permission.user
+      }),
+      ...mapState({
+        alerts: state => state.app.alerts,
+        msgs: state => state.app.messages,
+        tasks: state => state.app.tasks
+      }),
+      messages () {
+        return this.msgs.filter(msg => msg.receiverId === this.user.id && msg.read === false)
+      }
     },
     data () {
       return {
@@ -171,7 +179,8 @@
       }
     },
     methods: {
-      handleGetDateDiff (dateStr) {
+      handleGetDateDiff (date) {
+        const dateStr = String(date)
         return common.getDateDiff(dateStr)
       }
     }

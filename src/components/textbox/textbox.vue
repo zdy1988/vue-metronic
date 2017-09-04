@@ -33,7 +33,7 @@
 </template>
 <script>
   import Fa from '@/components/icon/faicon'
-  import _input from '@/components/input/mixins/_input'
+  import _input from '../mixins/_input'
 
   export default {
     name: 'Textbox',

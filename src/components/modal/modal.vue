@@ -1,6 +1,6 @@
 <template>
   <div>
-    <transition name="modal-fade">
+    <transition name="slide-fade">
       <div :class="classes" v-if="show" :style="{display:'block', zIndex:zindex}">
         <div :class="dialogClasses">
           <div class="modal-content" v-click-outside="_close">
@@ -84,16 +84,3 @@
     }
   }
 </script>
-<style scoped>
-  /* fade-leave-active for <2.1.8 */
-  .modal-fade-enter-active {
-    transition: all .3s ease;
-  }
-  .modal-fade-leave-active {
-    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
-  .modal-fade-enter, .modal-fade-leave-to {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-</style>

@@ -10,7 +10,7 @@
   </select>
 </template>
 <script>
-  import _input from '@/components/input/mixins/_input'
+  import _input from '../mixins/_input'
 
   export default {
     name: 'Selectbox',

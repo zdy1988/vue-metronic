@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes">
+  <div :class="classes" v-click-outside="_close">
     <slot name="before"></slot>
     <btn :color="color" :state="state" :size="size" :shape="shape" @click="_toggle">
       <fa :name="icon" v-if="icon"></fa>
@@ -7,9 +7,11 @@
       <i :class="{'fa':true,'fa-angle-down':!dropup,'fa-angle-up':!!dropup}"></i>
     </btn>
     <slot name="after"></slot>
-    <div class="dropdown-menu" v-if="open" @mouseleave="_close" @click="_close">
-      <slot></slot>
-    </div>
+    <transition name="slide-fade">
+      <div class="dropdown-menu" v-if="open" @click="_close">
+        <slot></slot>
+      </div>
+    </transition>
   </div>
 </template>
 <style scoped>

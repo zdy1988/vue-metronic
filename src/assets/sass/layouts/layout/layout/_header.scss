@@ -3,20 +3,20 @@ Page Header
 ***/
 
 .page-header.navbar {
-	width: 100%; 
+	width: 100%;
 	padding: 0 20px 0 20px;
 	margin: 0;
 	border: 0px;
-	padding: 0px; 
+	padding: 0px;
 	box-shadow: none;
-	height: $header-height; 
+	height: $header-height;
 	min-height: $header-height;
 	filter: none;
 	background-image: none;
 
 	/* Fixed header */
 	&.navbar-fixed-top {
-		z-index: $zindex-header-fixed;   
+		z-index: $zindex-header-fixed;
 	}
 
 	&.navbar-static-top {
@@ -57,9 +57,9 @@ Page Header
 		}
 	}
 
-	/* Search box */ 
+	/* Search box */
 	.search-form {
-		display: inline-block; 
+		display: inline-block;
 		width: $header-height;
 		position: relative;
 		float: left;
@@ -81,24 +81,24 @@ Page Header
 			}
 
 			.input-group-btn {
-				height: $header-height;  
+				height: $header-height;
 
 				.btn.submit {
 					margin-left: -24px;
-					padding:0;			
-					width: $header-height; 
+					padding:0;
+					width: $header-height;
 					background: none;
-					margin-top: 4px; 
+					margin-top: 4px;
 					display: block;
 
 					> i {
 						font-size: 15px;
 					}
-				}	
-			}	
+				}
+			}
 		}
 
-		
+
 		&.open {
 			transition: all 0.6s;
 			width: 300px !important;
@@ -128,8 +128,8 @@ Page Header
         @include opacity(0.7);
 		display: block;
         @include transition('opacity 0.3s');
-		
-		&:hover { 
+
+		&:hover {
             @include transition('opacity 0.3s');
 			@include opacity(1);
 		}
@@ -154,12 +154,12 @@ Page Header
 	.top-menu {
 		margin: 0;
 		padding: 0;
-		float: right; 
+		float: right;
 
 		.navbar-nav {
 			padding: 0;
 			margin-right: 20px;
-			display: block; 
+			display: block;
 
 			> li.dropdown {
 				margin: 0px;
@@ -180,10 +180,10 @@ Page Header
 					}
 
 					> i {
-						font-size: $header-top-menu-icon-font-size; 
+						font-size: $header-top-menu-icon-font-size;
 
 						&.glyphicon {
-							font-size: $header-top-menu-icon-font-size - 1; 
+							font-size: $header-top-menu-icon-font-size - 1;
 						}
 					}
 
@@ -191,7 +191,7 @@ Page Header
 						font-family: $font-family-primary;
 						position: absolute;
 						top: $header-top-menu-general-item-badge-top;
-						right: 20px; 
+						right: 20px;
 						font-weight: 300;
 						padding: 3px 6px;
 					}
@@ -239,18 +239,18 @@ Page Header
 			}
 
 			/* Extended Dropdowns */
-            > li.dropdown-extended {  
+            > li.dropdown-extended {
 
                     .dropdown-menu {
-                        min-width: 160px;                        
+                        min-width: 160px;
                         max-width: 275px;
                         width: 275px;
-                        z-index: $zindex-header-fixed;  
+                        z-index: $zindex-header-fixed;
 
-                        > li.external { 
-                            display: block;   
+                        > li.external {
+                            display: block;
                             overflow: hidden;
-                            padding: 15px 15px;  
+                            padding: 15px 15px;
                             letter-spacing: 0.5px;
 
                             @include border-radius(4px 4px 0 0);
@@ -259,7 +259,7 @@ Page Header
                                 margin: 0;
                                 padding: 0;
                                 float: left;
-                                font-size: 13px;  
+                                font-size: 13px;
                                 display: inline-block;
                             }
 
@@ -272,7 +272,7 @@ Page Header
                                 font-weight: 300;
                                 position: absolute;
                                 right: 10px;
-                                border: 0;   
+                                border: 0;
                                 margin-top: -1px;
 
                                 &:hover {
@@ -297,7 +297,7 @@ Page Header
                                     font-size: 13px;
                                     padding: 16px 15px 18px;
                                     text-shadow: none;
-                                    
+
                                     &:hover {
                                       @include opacity(1);
                                       text-decoration: none;
@@ -308,23 +308,25 @@ Page Header
                                     border-top: none;
                                 }
                             }
-                        }                        
+                        }
                     }
-            }       
-           
+            }
+
             /* Notification */
-            > li.dropdown-notification {        
+            > li.dropdown-notification {
                     .dropdown-menu {
                         .dropdown-menu-list {
                             > li {
-                                a {                        
+                                a {
                                     .details {
                                         overflow:hidden;
+                                        line-height: 24px;
 
                                         .label-icon {
+                                            padding: 4px 2px 4px 4px;
                                             margin-right: 10px;
-                                            @include border-radius(50%); 
-                                            
+                                            @include border-radius(50%);
+
                                             i {
                                                 margin-right: 2px;
                                                 margin-left: 1px;
@@ -343,7 +345,7 @@ Page Header
                                         font-size: 11px;
                                         font-weight: 400;
                                         @include opacity(0.7);
-                                        
+
                                         text-align: right;
                                         padding: 1px 5px;
                                     }
@@ -358,7 +360,7 @@ Page Header
 
                     > .dropdown-menu {
                         .dropdown-menu-list {
-                            > li {                                
+                            > li {
                                 .photo {
                                     float: left;
                                     margin: 0 6px 6px 0;
@@ -376,35 +378,34 @@ Page Header
 
                                     .from {
                                         font-size: 13px;
-                                        font-weight: 600;
                                     }
 
                                     .time {
                                         font-size: 12px;
                                         font-weight: 400;
                                         @include opacity(0.5);
-                                        float: right; 
+                                        float: right;
                                     }
                                 }
 
                                 .message {
                                     display: block !important;
                                     font-size: 12px;
-                                    line-height: 1.3;
+                                    line-height: 1.7;
                                     margin-left: 46px;
                                 }
-                            }   
+                            }
                         }
-                    }       
-            }  
-           
+                    }
+            }
+
             /* Tasks */
             > li.dropdown-tasks {
                     .dropdown-menu {
                         .dropdown-menu-list {
                             > li {
                                 .task {
-                                    margin-bottom: 5px; 
+                                    margin-bottom: 5px;
 
                                     .desc {
                                         font-size: 13px;
@@ -412,7 +413,7 @@ Page Header
                                     }
 
                                     .percent {
-                                        float: right;   
+                                        float: right;
                                         font-weight: 600;
                                         display: inline-block;
                                     }
@@ -459,13 +460,13 @@ Page Header
 						}
 					}
 
-                    .dropdown-menu {            
+                    .dropdown-menu {
                         width: 175px;
                         > li {
                             > a {
                                 font-size: $header-top-menu-user-dropdown-link-font-size;
                                 font-weight: $header-top-menu-user-dropdown-link-font-weight;
-                                
+
                                 i {
                                     width: 15px;
                                     display: inline-block;
@@ -477,17 +478,17 @@ Page Header
                                 }
                             }
                         }
-                    } 
+                    }
             }
 
             /* Language */
             > li.dropdown-language {
-                    padding-left: 0;   
-                    padding-right: 0;  
+                    padding-left: 0;
+                    padding-right: 0;
                     margin: 0;
 
                     > .dropdown-toggle {
-                        padding: $header-top-menu-language-item-padding;   
+                        padding: $header-top-menu-language-item-padding;
 
                         > img {
                             margin-bottom: 2px;
@@ -513,7 +514,7 @@ Page Header
             }
 
             /* Dark version */
-            li.dropdown-dark {  
+            li.dropdown-dark {
                     .dropdown-menu {
                         &:before {
                             border-left: none;
@@ -523,7 +524,7 @@ Page Header
                         .dropdown-menu-list {
                             > li.external {
 
-                                a {   
+                                a {
                                     background: none !important;
                                     border: none !important;
                                 }
@@ -539,7 +540,7 @@ Page Header
 @media (min-width: $screen-sm-min) {  /* 768px */
 	.page-header.navbar {
 
-		/* Search box */ 
+		/* Search box */
 		.search-form {
 			&.search-form-expanded {
 				width: 200px;
@@ -564,8 +565,8 @@ Page Header
 	}
 }
 
-/*** 
-Horizontal Menu 
+/***
+Horizontal Menu
 ***/
 
 .page-header.navbar {
@@ -598,10 +599,10 @@ Horizontal Menu
 
                     > .dropdown-menu {
                         left: auto;
-                        width: auto;   
+                        width: auto;
 
                         .mega-menu-content {
-                            font-family: $font-family-primary;  
+                            font-family: $font-family-primary;
                             padding: 15px;
                             margin: 0;
 
@@ -623,26 +624,26 @@ Horizontal Menu
 
                                     > h3 {
                                         margin-top: 5px;
-                                        padding-left: 6px;                  
+                                        padding-left: 6px;
                                         font-size: $header-hor-menu-mega-menu-header-font-size;
                                         font-weight: $header-hor-menu-mega-menu-header-font-weight;
                                     }
 
-                                    > a { 
+                                    > a {
                                         display: block;
                                         white-space: normal;
                                         font-family: $font-family-primary;
-                                        padding: 7px;  
-                                        margin: 0;                 
+                                        padding: 7px;
+                                        margin: 0;
                                         font-size:  $header-hor-menu-dropdown-menu-link-font-size;
                                         font-weight:  $header-hor-menu-dropdown-menu-link-font-weight;
 
-                                        &:hover {  
+                                        &:hover {
                                             text-decoration: none;
                                         }
 
                                         &.iconify {
-                                            padding: 7px 7px 7px 30px; 
+                                            padding: 7px 7px 7px 30px;
 
                                             > i {
                                                 position: absolute;
@@ -655,7 +656,7 @@ Horizontal Menu
 
                                         .badge,
                                         .label {
-                                            margin-left: 5px; 
+                                            margin-left: 5px;
                                         }
                                     }
                                 }
@@ -689,15 +690,15 @@ Horizontal Menu
 
                 /* Classic menu */
                 > li {
-                    > a {         
+                    > a {
                         font-size: $header-hor-menu-default-link-font-size;
                         font-weight: $header-hor-menu-default-link-font-weight;
-                        padding: $header-hor-menu-general-item-padding;  
+                        padding: $header-hor-menu-general-item-padding;
                         min-height: $header-height;
 
                         &:focus {
                             background: none !important;
-                        }        
+                        }
                     }
 
                     &.current,
@@ -714,7 +715,7 @@ Horizontal Menu
                             width: 0;
                             height:0px;
                             margin-left: -7px;
-                            margin-bottom:-6px;  
+                            margin-bottom:-6px;
                         }
                     }
 
@@ -732,7 +733,7 @@ Horizontal Menu
 
                                 .label,
                                 .badge {
-                                    font-weight: 300;  
+                                    font-weight: 300;
                                 }
                             }
                         }
@@ -742,7 +743,7 @@ Horizontal Menu
                         .dropdown-menu {
                             min-width: 195px;
                             max-width: 235px;
-                        }  
+                        }
 
                         &:hover {
                             > .dropdown-menu {
@@ -760,7 +761,7 @@ Horizontal Menu
                             top: $header-hor-menu-submenu-item-arrow-top;
                             right: 10px;
                         }
-                    }     
+                    }
                 }
             }
         }
@@ -771,8 +772,8 @@ Horizontal Menu
 @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {  /* 992px 1200px */
 	/* Boxed layout */
 	.page-boxed {
-		.page-header.navbar {  
-			/* Top menu */  
+		.page-header.navbar {
+			/* Top menu */
 			.top-menu {
 				.navbar-nav {
 					> li.dropdown-user {
@@ -793,7 +794,7 @@ Horizontal Menu
 				}
 			}
 		}
-	}	
+	}
 }
 
 @media (min-width: $screen-md-min) { /* 992px */
@@ -806,7 +807,7 @@ Horizontal Menu
 				padding: 0;
 			}
 
-			.page-sidebar-closed.page-sidebar-closed-hide-logo & { 
+			.page-sidebar-closed.page-sidebar-closed-hide-logo & {
 				width: $sidebar-collapsed-width;
 
 				.logo-default {
@@ -828,7 +829,7 @@ Horizontal Menu
 			.top-menu {
 				.navbar-nav {
 					margin-right: 0px;
-				}	
+				}
 			}
 		}
 	}
@@ -868,7 +869,7 @@ Horizontal Menu
 			padding: 0;
 			margin-right: 10px;
 			margin-left: 0px !important;
-			padding-left: 0px !important; 
+			padding-left: 0px !important;
 
 			img {
 				margin-left: 4px !important;
@@ -907,7 +908,7 @@ Horizontal Menu
 					position: absolute;
 				}
 			}
-		}	
+		}
 	}
 
 	/* Fixed header for mobile */
@@ -915,13 +916,13 @@ Horizontal Menu
 		.navbar-fixed-top {
 			position: fixed;
 		}
-	}	 
+	}
 
 	/* Boxed Layout */
 	.page-boxed .page-header.navbar {
 		> .container {
 			max-width: none !important;
-			margin: 0 !important; 
+			margin: 0 !important;
 			padding: 0 !important;
 		}
 	}
@@ -944,7 +945,7 @@ Horizontal Menu
 
 @media (max-width: $screen-xs-max) { /* 767px */
 
-	/* Page header */	
+	/* Page header */
 	.page-header.navbar {
 		padding: 0 10px 0 10px;
 
@@ -953,7 +954,7 @@ Horizontal Menu
 			width: auto;
 		}
 
-		/* Search box */ 
+		/* Search box */
 		.search-form {
 			&.open {
 				z-index: 3;
@@ -981,7 +982,7 @@ Horizontal Menu
 
 						&:after,
 						&:before {
-							margin-right: 190px;   
+							margin-right: 190px;
 						}
 					}
 				}
@@ -1054,7 +1055,7 @@ Horizontal Menu
 			clear: both;
             float: none;
 
-			.navbar-nav {				
+			.navbar-nav {
 				margin-right: 0;
 
 				> li.dropdown {
@@ -1108,7 +1109,7 @@ Pace - Page Progress
     }
 }
 
-@media (max-width: $screen-xs-min) { /* 480px */ 
+@media (max-width: $screen-xs-min) { /* 480px */
 
     .page-header-fixed .pace {
         .pace-progress {

@@ -102,8 +102,8 @@ $page-img-path:           			'/static/img/pages/' !default;
 $page-medi-path:           		'/static/media/' !default;
 
 //## Build  Image  paths
-//$global-img-path:           		'/img/global/' !default;
-//$pageimg-path:           			'/img/pages/' !default;
-//$page-media-path:           		'/media/' !default;
+$global-img-path:           		'/img/global/' !default;
+$pageimg-path:           			'/img/pages/' !default;
+$page-media-path:           		'/media/' !default;
 
 @import "_bootstrap-override";

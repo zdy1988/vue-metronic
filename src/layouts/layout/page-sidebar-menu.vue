@@ -10,7 +10,7 @@
     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
     <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
     <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-    <ul :class="menuClasses" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+    <ul :class="menuClasses">
       <page-sidebar-search></page-sidebar-search>
 
       <page-sidebar-item v-for="(sidebarItem, index) in sidebarData"

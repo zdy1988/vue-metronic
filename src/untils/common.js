@@ -67,6 +67,7 @@ export const getUniqueID = (prefix) => {
 }
 
 export const scrollTo = (el, offeset) => {
+  el = $(el)
   var pos = (el && el.size() > 0) ? el.offset().top : 0
 
   if (el) {

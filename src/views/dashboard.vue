@@ -1,11 +1,18 @@
 <template>
-  <div>this is template body</div>
+  <div>
+    <btn @click="_click">click</btn>
+  </div>
 </template>
 <script>
   export default{
     data () {
       return {
         msg: 'hello vue'
+      }
+    },
+    methods: {
+      _click () {
+        this.$store.dispatch('initMessages')
       }
     }
   }

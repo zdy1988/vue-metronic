@@ -28,14 +28,14 @@ System feeds
 
         .col1 {
             float:left;
-            width:100%;  
+            width:100%;
             clear: both;
 
             > .cont {
                 float:left;
                 margin-right:75px;
                 overflow:hidden;
-                
+
                 > .cont-col1 {
                     float:left;
                     margin-right:-100%;
@@ -57,7 +57,7 @@ System feeds
                     float:left;
                     width:100%;
 
-                    > .desc { 
+                    > .desc {
                         margin-left:35px;
                         padding-top: 4px;
                         padding-bottom: 5px;
@@ -65,7 +65,7 @@ System feeds
                     }
                 }
             }
-        } 
+        }
 
         .col2 {
             float:left;
@@ -75,7 +75,6 @@ System feeds
             > .date {
               padding: 4px 9px 5px 4px;
               text-align: right;
-              font-style: italic;
               color:#c1cbd0;
             }
         }

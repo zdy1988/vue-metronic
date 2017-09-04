@@ -1,10 +1,10 @@
 <template>
-  <animated-swing>
+  <animated-pulse>
     <div :class="classes" v-if="show">
       <button type="button" class="close" @click="$emit('update:show',false)"></button>
       <slot><span v-html="content"></span></slot>
     </div>
-  </animated-swing>
+  </animated-pulse>
 </template>
 <script>
   import {colorKeys, common} from '@/untils'

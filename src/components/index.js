@@ -8,6 +8,7 @@ import { Badge } from '@/components/badge'
 import { Btn, LinkBtn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider } from '@/components/button'
 import { Checkbox, CheckboxGroup } from '@/components/checkbox'
 import { Datepicker } from '@/components/datepicker'
+import { Dropdown, DropdownItem, DropdownDivider } from '@/components/dropdown'
 import { Masker } from '@/components/element'
 import { Formbox, FormboxGroup } from '@/components/form'
 import { Icon, Fa, FaStack } from '@/components/icon'
@@ -15,6 +16,7 @@ import { Lable } from '@/components/lable'
 import { List, ListItem } from '@/components/list'
 import { Modal } from '@/components/modal'
 import { Multiselect } from '@/components/multiselect'
+import { Navbar, NavbarHeader, NavbarNav, NavbarNavItem, NavbarNavDropdown, NavbarNavDropdownItem, NavbarNavDropdownDivider } from '@/components/navbar'
 import { Note } from '@/components/note'
 import { Pagination } from '@/components/pagination'
 import { Panel } from '@/components/panel'
@@ -46,6 +48,9 @@ const components = {
   Checkbox,
   CheckboxGroup,
   Datepicker,
+  Dropdown,
+  DropdownItem,
+  DropdownDivider,
   Masker,
   Formbox,
   FormboxGroup,
@@ -57,6 +62,13 @@ const components = {
   ListItem,
   Modal,
   Multiselect,
+  Navbar,
+  NavbarHeader,
+  NavbarNav,
+  NavbarNavItem,
+  NavbarNavDropdown,
+  NavbarNavDropdownItem,
+  NavbarNavDropdownDivider,
   Note,
   Pagination,
   Panel,

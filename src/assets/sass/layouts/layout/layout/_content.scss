@@ -42,10 +42,10 @@ Page content
 
 .page-bar {
 	padding: 0px;
-	background-color: #f1f4f7;  
+	background-color: #f1f4f7;
 	margin-bottom: 25px;
 
-    @include border-radius($general-border-radius);  
+    @include border-radius($general-border-radius);
 
 	@include clearfix();
 
@@ -88,8 +88,8 @@ Page content
 		float: right;
 		padding: 0;
 
-		.btn-fit-height { 
-			@include border-radius(0 $general-border-radius $general-border-radius 0);   
+		.btn-fit-height {
+			@include border-radius(0 $general-border-radius $general-border-radius 0);
 			padding-top: 8px;
 			padding-bottom: 8px;
 
@@ -124,7 +124,7 @@ Page content
 						font-size: 5px;
 						margin: 0 5px;
 						position: relative;
-						top: -3px;
+						top: -1px;
 						@include opacity(0.4);
 					}
 				}
@@ -152,13 +152,13 @@ Page content
 
 /* Page content */
 
-.page-content {  
-	margin-top: 0px;   
+.page-content {
+	margin-top: 0px;
 	padding: 0px;
-	background-color: #fff; 
+	background-color: #fff;
 
 	.page-container-bg-solid & {
-		background: $page-content-solid-bg-color;     
+		background: $page-content-solid-bg-color;
 	}
 
 	.page-content-white & {
@@ -171,9 +171,9 @@ Page content
 	.page-container-bg-solid.page-md & {
 		.page-bar {
 			border-radius: 0 !important;
-		} 
+		}
 	}
-	
+
 	.page-full-width & {
 		margin-left: 0px !important;
 	}
@@ -186,18 +186,18 @@ Page content
 		float: left;
 		width: 100%;
 
-		.page-content { 
-			margin-left: $sidebar-width; 
+		.page-content {
+			margin-left: $sidebar-width;
 			margin-top: 0px;
-			min-height: $page-content-min-height; 
+			min-height: $page-content-min-height;
 			padding: 25px 20px 10px 20px;
 
 			&.no-min-height {
 				min-height: auto;
-			}			
+			}
 
 			.page-sidebar-fixed.page-sidebar-hover-on & {
-				margin-left: $sidebar-collapsed-width; 
+				margin-left: $sidebar-collapsed-width;
 			}
 
 			.page-sidebar-reversed & {
@@ -210,7 +210,7 @@ Page content
 				margin-right: $sidebar-collapsed-width;
 			}
 
-			.page-sidebar-reversed.page-sidebar-closed  & {	
+			.page-sidebar-reversed.page-sidebar-closed  & {
 				margin-left: 0 !important;
 				margin-right: $sidebar-collapsed-width !important;
 			}
@@ -230,7 +230,7 @@ Page content
 			.page-full-width & {
 				margin-left: 0px !important;
 			}
-		}		
+		}
 	}
 }
 
@@ -250,7 +250,7 @@ Page content
 	}
 
 	/* Boxed page container  */
-	.page-boxed > .container { 
+	.page-boxed > .container {
  		max-width: none !important;
  		margin: 0 !important;
  		padding: 0 !important;
@@ -260,8 +260,8 @@ Page content
 	.page-content-wrapper {
 		.page-content {
 			margin: 0px !important;
-			padding: 20px 20px 20px 20px !important;  		
-			min-height: 280px; 
+			padding: 20px 20px 20px 20px !important;
+			min-height: 280px;
 		}
 	}
 
@@ -290,7 +290,7 @@ Page content
 				}
 			}
 		}
-	}	
+	}
 }
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { /*  768px & 991px */
@@ -319,7 +319,7 @@ Page content
 				}
 			}
 		}
-	}  
+	}
 }
 
 @media (max-width: $screen-xs-min) { /* 480px */
