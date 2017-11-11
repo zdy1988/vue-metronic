@@ -14,21 +14,11 @@
   </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import {Datepicker} from '@/components/datepicker'
-
   export default {
     data () {
       return {
         pickerValue: '2017-07-21'
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Datepicker
     }
   }
 </script>

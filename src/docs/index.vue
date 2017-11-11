@@ -123,8 +123,8 @@
         activeForm: 'login',
         alertShow: false,
         alertMessage: '',
-        username: '',
-        password: '',
+        username: 'xiaozhang',
+        password: '123456',
         countries: [
           {value: 'AF', name: 'Afghanistan'},
           {value: 'AL', name: 'Albania'},

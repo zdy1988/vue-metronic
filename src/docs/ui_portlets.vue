@@ -24,15 +24,11 @@
 </div>
 </template>
 <script>
-  import Portlet from '@/components/portlet/portlet'
   export default{
     data () {
       return {
         msg: 'hello vue'
       }
-    },
-    components: {
-      Portlet
     }
   }
 </script>

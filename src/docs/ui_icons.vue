@@ -39,10 +39,6 @@
 </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import {Icon, Fa} from '@/components/icon'
-  import {Tabs, TabPane} from '@/components/tabs'
-
   import {icons, faicons} from '@/untils'
 
   export default{
@@ -51,14 +47,6 @@
         icons: icons,
         faicons: faicons
       }
-    },
-    components: {
-      Row,
-      Column,
-      Icon,
-      Fa,
-      Tabs,
-      TabPane
     }
   }
 </script>

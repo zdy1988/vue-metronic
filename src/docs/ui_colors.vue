@@ -95,9 +95,6 @@
 </template>
 <script>
   import {colors, colorKeys} from '@/untils'
-  import {Row, Column} from '@/layouts/girds'
-  import {Modal} from '@/components/modal'
-  import {Tabs, TabPane} from '@/components/tabs'
 
   export default{
     data () {
@@ -114,13 +111,6 @@
           }
         )()
       }
-    },
-    components: {
-      Row,
-      Column,
-      Modal,
-      Tabs,
-      TabPane
     }
   }
 </script>

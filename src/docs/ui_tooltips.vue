@@ -144,12 +144,6 @@
   </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import {Portlet} from '@/components/portlet'
-  import Btn from '@/components/button/btn'
-  import Tooltip from '@/components/tooltip/tooltip'
-  import {Popover, Popconfirm} from '@/components/popover'
-
   export default{
     data () {
       return {
@@ -157,15 +151,6 @@
         placement: 'top',
         tooltipContent: 'Embedding content using properties is easier as well as simpler to make dynamic.'
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Btn,
-      Tooltip,
-      Popover,
-      Popconfirm
     },
     methods: {
       _success () {

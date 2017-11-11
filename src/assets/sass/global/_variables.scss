@@ -96,11 +96,6 @@ $screen-xs-max:              		($screen-sm-min- 1) !default;  // 767px
 $screen-sm-max:              		($screen-md-min - 1) !default;  // 991px
 $screen-md-max:              		($screen-lg-min - 1) !default;  // 1199px
 
-//## Dev Image  paths
-$global-img-path:           		'/static/img/global/' !default;
-$page-img-path:           			'/static/img/pages/' !default;
-$page-medi-path:           		'/static/media/' !default;
-
 //## Build  Image  paths
 $global-img-path:           		'/img/global/' !default;
 $pageimg-path:           			'/img/pages/' !default;

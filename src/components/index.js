@@ -27,6 +27,7 @@ import { Radio, RadioGroup } from '@/components/radio'
 import { Selectbox } from '@/components/selectbox'
 import { SwitchBtn, SwitchBtnGroup } from '@/components/switch'
 import { Tabs, TabPane } from '@/components/tabs'
+import { EasyTable, EasyPagination } from '@/components/table'
 import { Textbox } from '@/components/textbox'
 import { Tooltip } from '@/components/tooltip'
 import { Tree, TreeSelect } from '@/components/tree'
@@ -81,6 +82,8 @@ const components = {
   Selectbox,
   SwitchBtn,
   SwitchBtnGroup,
+  EasyTable,
+  EasyPagination,
   Tabs,
   TabPane,
   Textbox,

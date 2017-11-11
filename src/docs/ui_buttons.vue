@@ -1786,12 +1786,6 @@
   }
 </style>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import {Icon, Fa} from '@/components/icon'
-  import {Portlet} from '@/components/portlet'
-  import {Tabs, TabPane} from '@/components/tabs'
-  import {Btn, LinkBtn, BtnGroup, BtnToolbar, BtnDropdown, BtnDropdownDivider} from '@/components/button'
-
   export default{
     data () {
       return {
@@ -1809,21 +1803,6 @@
           _this.loading = false
         }, 2000)
       }
-    },
-    components: {
-      Row,
-      Column,
-      Icon,
-      Fa,
-      Portlet,
-      Tabs,
-      TabPane,
-      Btn,
-      LinkBtn,
-      BtnGroup,
-      BtnToolbar,
-      BtnDropdown,
-      BtnDropdownDivider
     }
   }
 </script>

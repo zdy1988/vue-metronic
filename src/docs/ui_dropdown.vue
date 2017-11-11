@@ -27,9 +27,7 @@
   </row>
 </template>
 <script>
-  import NavbarNavDropdownDivider from '../components/navbar/navbar-nav-dropdown-divider'
   export default {
-    components: {NavbarNavDropdownDivider},
     data () {
       return {}
     }

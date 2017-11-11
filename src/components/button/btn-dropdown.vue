@@ -14,19 +14,19 @@
     </transition>
   </div>
 </template>
-<style scoped>
-  .btn-group > div.dropdown-menu .btn {
+<style>
+  .btn-group div.dropdown-menu .btn {
     width: 100%;
     float: right;
     border: 0;
   }
-  .btn-group.btn-text-left > div.dropdown-menu .btn {
+  .btn-group.btn-text-left div.dropdown-menu .btn {
     text-align: left;
   }
-  .btn-group.btn-text-center > div.dropdown-menu .btn {
+  .btn-group.btn-text-center div.dropdown-menu .btn {
     text-align: center;
   }
-  .btn-group.btn-text-right > div.dropdown-menu .btn {
+  .btn-group.btn-text-right div.dropdown-menu .btn {
     text-align: right;
   }
 </style>

@@ -1,8 +1,8 @@
 /**
  * Created by virus_zhh on 2017/7/9.
  */
-import Pagination from './pagination'
+import {VPagination} from 'vue-easytable'
 
 export {
-  Pagination
+  VPagination as Pagination
 }

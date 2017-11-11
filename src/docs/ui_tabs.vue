@@ -168,11 +168,6 @@
   </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import {Tabs, TabPane} from '@/components/tabs'
-  import {Accordions, AccordionPane} from '@/components/accordions'
-
   export default{
     data () {
       return {
@@ -184,15 +179,6 @@
       change () {
         console.log(this.position)
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Tabs,
-      TabPane,
-      Accordions,
-      AccordionPane
     }
   }
 </script>

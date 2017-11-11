@@ -4,13 +4,10 @@ import Vue from 'vue'
 
 import App from './app'
 
+import Metronic from './index'
+
 import router from './router'
 import store from './store'
-
-import Animates from './animates'
-import Dirsctives from './directives'
-import Prototypes from './prototypes'
-import Components from './components'
 
 import './mock'
 
@@ -25,7 +22,4 @@ new Vue({
   components: { App }
 })
 
-Vue.use(Animates)
-Vue.use(Dirsctives)
-Vue.use(Prototypes)
-Vue.use(Components)
+Vue.use(Metronic)

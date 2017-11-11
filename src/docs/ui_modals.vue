@@ -96,11 +96,6 @@
 </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import Modal from '@/components/modal/modal'
-  import Btn from '@/components/button/btn'
-
   export default{
     data () {
       return {
@@ -112,13 +107,6 @@
         show6: false,
         show7: false
       }
-    },
-    components: {
-      Modal,
-      Row,
-      Column,
-      Portlet,
-      Btn
     }
   }
 </script>

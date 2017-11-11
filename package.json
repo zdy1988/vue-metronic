@@ -27,8 +27,11 @@
     "tether": "^1.4.0",
     "toastr": "^2.1.2",
     "vue": "^2.3.4",
+    "vue-easytable": "^1.5.5",
+    "vue-jstree": "^1.0.6",
     "vue-multiselect": "^2.0.2",
     "vue-router": "^2.3.0",
+    "vue-treeselect": "^1.0.3",
     "vuex": "^2.4.0"
   },
   "devDependencies": {

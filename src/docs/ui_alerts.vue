@@ -15,10 +15,6 @@
 </row>
 </template>
 <script>
-  import {Row, Column} from '@/layouts/girds'
-  import Portlet from '@/components/portlet/portlet'
-  import {Btn, BtnDropdown} from '@/components/button'
-
   export default {
     methods: {
       defaultAlert () {
@@ -43,13 +39,6 @@
           this.$dangerAlert('Sweet Alerts', 'Beautiful popup alerts')
         })
       }
-    },
-    components: {
-      Row,
-      Column,
-      Portlet,
-      Btn,
-      BtnDropdown
     }
   }
 </script>

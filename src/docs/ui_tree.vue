@@ -27,7 +27,6 @@
     </textarea>
         </column>
       </row>
-
     </column>
   </row>
 </template>

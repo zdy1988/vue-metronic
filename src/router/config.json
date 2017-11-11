@@ -207,6 +207,13 @@
     "children": []
   },
   {
+    "title": "表格",
+    "path": "/main/table",
+    "src": "pages/table.md",
+    "summary": "",
+    "children": []
+  },
+  {
     "title": "Menu Example",
     "heading": true
   },
@@ -261,6 +268,20 @@
         "children": [],
         "path": "/main/ui_dropdown",
         "src": "ui_dropdown"
+      },
+      {
+        "title": "Item 5",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_tree",
+        "src": "ui_tree"
+      },
+      {
+        "title": "Item 6",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_tables",
+        "src": "ui_tables"
       }
     ]
   }
