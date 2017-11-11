@@ -1,2 +1,0 @@
-webpackJsonp([15],{150:function(r,t,n){(function(r){!function(r){r.fn.datepicker.dates.sq={days:["E Diel","E Hënë","E Martē","E Mërkurë","E Enjte","E Premte","E Shtunë"],daysShort:["Die","Hën","Mar","Mër","Enj","Pre","Shtu"],daysMin:["Di","Hë","Ma","Më","En","Pr","Sht"],months:["Janar","Shkurt","Mars","Prill","Maj","Qershor","Korrik","Gusht","Shtator","Tetor","Nëntor","Dhjetor"],monthsShort:["Jan","Shk","Mar","Pri","Maj","Qer","Korr","Gu","Sht","Tet","Nën","Dhjet"],today:"Sot"}}(r)}).call(t,n(5))}});
-//# sourceMappingURL=15.2a5b92a76ffa0a33a883.js.map
