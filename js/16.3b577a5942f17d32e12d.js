@@ -1,0 +1,2 @@
+webpackJsonp([16],{148:function(e,o,t){(function(e){!function(e){e.fn.datepicker.dates.sl={days:["Nedelja","Ponedeljek","Torek","Sreda","Četrtek","Petek","Sobota"],daysShort:["Ned","Pon","Tor","Sre","Čet","Pet","Sob"],daysMin:["Ne","Po","To","Sr","Če","Pe","So"],months:["Januar","Februar","Marec","April","Maj","Junij","Julij","Avgust","September","Oktober","November","December"],monthsShort:["Jan","Feb","Mar","Apr","Maj","Jun","Jul","Avg","Sep","Okt","Nov","Dec"],today:"Danes",weekStart:1}}(e)}).call(o,t(6))}});
+//# sourceMappingURL=16.3b577a5942f17d32e12d.js.map
