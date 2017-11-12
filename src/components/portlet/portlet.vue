@@ -32,6 +32,14 @@
 
   export default{
     name: 'Portlet',
+    data () {
+      return {
+        collapseIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
+        configIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
+        reloadIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
+        removeIcon: require('../../../static/img/layouts/layout2/logo-default.png')
+      }
+    },
     props: {
       title: {type: String, default: '标题'},
       summary: {type: String},

@@ -2,6 +2,7 @@
  * Created by virus_zhh on 2017/9/3.
  */
 import $ from 'jquery'
+import Cookies from 'js-cookie'
 import {ajax} from '@/untils'
 
 const permission = {
@@ -18,6 +19,7 @@ const permission = {
   mutations: {
     SET_USER_INFO: (state, info) => {
       state.user = info
+      Cookies.set('current_user', JSON.stringify(info))
     }
   },
   actions: {
@@ -33,6 +35,17 @@ const permission = {
             })
           }
         })
+      }).promise()
+    },
+    checkLogin ({ commit }, userInfo) {
+      return $.Deferred(function (defer) {
+        let user = Cookies.get('current_user')
+        if (user !== undefined) {
+          commit('SET_USER_INFO', JSON.parse(user))
+          defer.resolve()
+        } else {
+          defer.reject()
+        }
       }).promise()
     }
   }

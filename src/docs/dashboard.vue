@@ -12,7 +12,7 @@
     },
     methods: {
       _click () {
-        this.$store.dispatch('initMessages')
+        this.$alert(this.msg)
       }
     }
   }

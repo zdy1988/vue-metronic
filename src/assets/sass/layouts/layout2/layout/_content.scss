@@ -37,16 +37,16 @@ Page content
 .page-bar {
 	padding: 0px;
 	background-color: #ffffff;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
 
-	@include border-radius($general-border-radius);  
+	@include border-radius($general-border-radius);
 
 	@include clearfix();
 
 	.page-breadcrumb {
 		display: inline-block;
 		float: left;
-		padding: 10px 6px;
+		padding: 10px 6px 10px 12px;
 		margin: 0;
 		list-style: none;
 
@@ -81,10 +81,10 @@ Page content
 		display: inline-block;
 		float: right;
 
-		.btn-fit-height { 
+		.btn-fit-height {
 			@include border-radius(0 $general-border-radius $general-border-radius 0);
 			padding-top: 9px;
-			padding-bottom: 9px; 
+			padding-bottom: 9px;
 
 			.page-md & {
 				padding-top: 11px;
@@ -100,7 +100,7 @@ Page content
 				color: #999;
 
 				> i {
-					color: #999; 
+					color: #999;
 				}
 			}
 
@@ -112,30 +112,30 @@ Page content
 		.btn-dashboard-daterange {
 			padding: 8px 16px 8px 16px;
 
-			> i[class^="icon-"] { 
+			> i[class^="icon-"] {
 				position: relative;
-				font-size: 20px; 
+				font-size: 20px;
 				@include opacity(0.8);
 				top: 2px;
-			} 
+			}
 
-			> i.fa-angle-down { 
-				font-size: 16px; 
+			> i.fa-angle-down {
+				font-size: 16px;
 				@include opacity(0.8);
-			} 
+			}
 		}
 	}
 }
 
 /* Page content */
 
-.page-content {  
-	margin-top: 0px;   
+.page-content {
+	margin-top: 0px;
 	padding: 0px;
-	background-color: #fff; 
+	background-color: #fff;
 
 	.page-container-bg-solid & {
-		background: $page-content-solid-bg-color;     
+		background: $page-content-solid-bg-color;
 	}
 
 	.page-full-width & {
@@ -150,18 +150,18 @@ Page content
 		float: left;
 		width: 100%;
 
-		.page-content { 
-			margin-left: $sidebar-width; 
+		.page-content {
+			margin-left: $sidebar-width;
 			margin-top: 0px;
-			min-height: $page-content-min-height; 
+			min-height: $page-content-min-height;
 			padding: 25px 20px 10px 20px;
 
 			&.no-min-height {
 				min-height: auto;
-			}			
+			}
 
 			.page-sidebar-fixed.page-sidebar-hover-on & {
-				margin-left: $sidebar-collapsed-width; 
+				margin-left: $sidebar-collapsed-width;
 			}
 
 			.page-sidebar-reversed & {
@@ -174,7 +174,7 @@ Page content
 				margin-right: $sidebar-collapsed-width;
 			}
 
-			.page-sidebar-reversed.page-sidebar-closed  & {	
+			.page-sidebar-reversed.page-sidebar-closed  & {
 				margin-left: 0 !important;
 				margin-right: $sidebar-collapsed-width !important;
 			}
@@ -194,26 +194,26 @@ Page content
 			.page-full-width & {
 				margin-left: 0px !important;
 			}
-		}		
+		}
 	}
 }
 
 @media (max-width: $screen-sm-max) { /* 991px */
 
 	/* Boxed page container  */
-	.page-boxed > .container { 
+	.page-boxed > .container {
 		width: 100%;
  		max-width: none !important;
  		margin: 0 !important;
- 		padding: 0 !important; 
+ 		padding: 0 !important;
  	}
 
  	/* Page content */
 	.page-content-wrapper {
 		.page-content {
 			margin: 0px !important;
-			padding: 20px !important;  		
-			min-height: 280px; 
+			padding: 20px !important;
+			min-height: 280px;
 		}
 	}
 }
@@ -252,7 +252,7 @@ Page content
 
 	/* Dashboard date range panel */
 	.page-content-wrapper {
-		.page-content {		
+		.page-content {
 			.page-title {
 				small {
 					display: block;
