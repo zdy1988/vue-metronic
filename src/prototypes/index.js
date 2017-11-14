@@ -1,4 +1,5 @@
 import {$alert, $successAlert, $dangerAlert, $warningAlert, $infoAlert, $confirm} from './alert'
+import {$notify, $successNotify, $warningNotify, $infoNotify, $dangerNotify} from './notify'
 
 const prototypes = {
   $alert,
@@ -6,7 +7,12 @@ const prototypes = {
   $dangerAlert,
   $warningAlert,
   $infoAlert,
-  $confirm
+  $confirm,
+  $notify,
+  $successNotify,
+  $warningNotify,
+  $infoNotify,
+  $dangerNotify
 }
 
 prototypes.install = (Vue) => {

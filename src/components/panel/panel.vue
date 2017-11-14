@@ -16,6 +16,7 @@
 </template>
 <script>
   export default {
+    name: 'Panel',
     data () {
       return {
         hasHeader: false,

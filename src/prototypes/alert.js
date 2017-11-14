@@ -1,4 +1,4 @@
-import '../../node_modules/bootstrap-sweetalert/dist/sweetalert.css'
+import 'bootstrap-sweetalert/dist/sweetalert.css'
 
 import swal from 'bootstrap-sweetalert'
 

@@ -1,5 +1,6 @@
 <template>
   <div :class="classes">
+    <slot name="ribbon"></slot>
     <div class="portlet-title">
       <div :class="caption">
         <fa :name="icon" :class="caption" v-if="icon"></fa>
@@ -34,6 +35,7 @@
     name: 'Portlet',
     data () {
       return {
+        hasRibbon: false,
         collapseIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
         configIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
         reloadIcon: require('../../../static/img/layouts/layout2/logo-default.png'),
@@ -48,6 +50,7 @@
       color: {type: String, default: 'dark', validator: value => colorKeys.indexOf(value) > -1},
       bordered: {type: Boolean},
       tools: {type: Boolean, default: true},
+      fit: {type: Boolean},
       klass: {type: String}
     },
     computed: {
@@ -57,6 +60,8 @@
           {[this.theme]: !!this.theme},
           {[this.color]: !!this.color && this.theme !== 'light'},
           {'bordered': !!this.bordered},
+          {'mt-element-ribbon portlet-fit': !!this.hasRibbon},
+          {'portlet-fit': !!this.fit},
           {[this.klass]: !!this.klass}
         ]
       },
@@ -125,6 +130,12 @@
           $el.slideDown(200)
         }
       }
+    },
+    mounted () {
+      this.hasRibbon = !!this.$slots.ribbon
+    },
+    updated () {
+      this.hasRibbon = !!this.$slots.ribbon
     },
     components: {
       Fa,

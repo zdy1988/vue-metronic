@@ -77,7 +77,7 @@
 			}
 		}
 
-		&.ribbon-border{
+		&.ribbon-border-solid{
 
 			&:after{
 				border:1px solid;
@@ -89,7 +89,7 @@
 				right:5px;
 			}
 		}
-		&.ribbon-border-vert{
+		&.ribbon-border-solid-vert{
 
 			&:after{
 				border-top:none;
@@ -104,7 +104,7 @@
 				right:5px;
 			}
 		}
-		&.ribbon-border-hor{
+		&.ribbon-border-solid-hor{
 
 			&:after{
 				border-top:1px solid;
@@ -190,8 +190,8 @@
 		    left: 0;
 
 			&.ribbon-clip{
-				
-			    &:before, 
+
+			    &:before,
 				&:after {
 				    content: '';
 				    position: absolute;
@@ -208,7 +208,7 @@
 
 				&.ribbon-right{
 
-					&:before, 
+					&:before,
 					&:after {
 					    content: '';
 					    position: absolute;
@@ -241,6 +241,13 @@
 				    position:absolute;
 				    width: 0;
 				}
+
+        @each $name, $colors in $component-colors {
+          &.bg-#{$name}:after {
+            border-left-color: map-get($colors, base) !important;
+            border-right-color: map-get($colors, base) !important;
+          }
+        }
 			}
 		}
 
@@ -298,7 +305,7 @@
 			background-color: $brand-info;
 			color:#fff;
 
-			&:after{ 
+			&:after{
 				border-color: darken($brand-info, 10%);
 			}
 			>.ribbon-sub{
@@ -314,8 +321,8 @@
 		&.ribbon-color-success{
 			background-color: $brand-success;
 			color:#fff;
-			
-			&:after{ 
+
+			&:after{
 				border-color: darken($brand-success, 10%);
 			}
 			>.ribbon-sub{
@@ -332,7 +339,7 @@
 			background-color: $brand-danger;
 			color:#fff;
 
-			&:after{ 
+			&:after{
 				border-color: darken($brand-danger, 10%);
 			}
 			>.ribbon-sub{
@@ -349,8 +356,8 @@
 			background-color: $brand-warning;
 			color:darken($brand-warning, 50%);
 
-			&:after{ 
-				border-color: darken($brand-warning, 10%);	
+			&:after{
+				border-color: darken($brand-warning, 10%);
 			}
 			>.ribbon-sub{
 				background-color: $brand-warning;

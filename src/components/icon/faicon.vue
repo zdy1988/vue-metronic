@@ -22,6 +22,7 @@
       pulse: {type: Boolean},
       spin: {type: Boolean},
       border: {type: Boolean},
+      fixedWidth: {type: Boolean},
       rotate: {type: Number, validator: value => [90, 180, 270].indexOf(value) > -1},
       flip: {type: String, validator: value => ['horizontal', 'vertical'].indexOf(value) > -1},
       klass: {type: String}
@@ -30,7 +31,7 @@
       classes () {
         return [
           {'fa': true},
-          {'fa-fw': true},
+          {'fa-fw': !!this.fixedWidth},
           {[`fa-${this.name}`]: !!this.name},
           {[`font-${this.color}`]: !!this.color},
           {[`fa-${this.size}`]: !!this.size},

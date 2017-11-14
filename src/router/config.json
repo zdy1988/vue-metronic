@@ -322,6 +322,30 @@
         "children": [],
         "path": "/main/ui_tables",
         "src": "ui_tables"
+      },
+      {
+        "title": "Item 7",
+        "icon": "puzzle",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_overlaies",
+        "src": "ui_overlaies"
+      },
+      {
+        "title": "Item 8",
+        "icon": "puzzle",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_ribbons",
+        "src": "ui_ribbons"
+      },
+      {
+        "title": "Item 9",
+        "icon": "puzzle",
+        "summary": "",
+        "children": [],
+        "path": "/main/ui_steps",
+        "src": "ui_steps"
       }
     ]
   }

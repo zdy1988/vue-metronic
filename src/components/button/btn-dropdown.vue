@@ -1,7 +1,7 @@
 <template>
   <div :class="classes" v-click-outside="_close">
     <slot name="before"></slot>
-    <btn :color="color" :state="state" :size="size" :shape="shape" @click="_toggle">
+    <btn :color="color" :state="state" :size="size" :round="round" @click="_toggle">
       <fa :name="icon" v-if="icon"></fa>
       {{text}}
       <i :class="{'fa':true,'fa-angle-down':!dropup,'fa-angle-up':!!dropup}"></i>
@@ -42,7 +42,7 @@
       text: {type: String, default: ''},
       textAlign: {type: String, default: 'left', validator: value => ['left', 'center', 'right'].indexOf(value) > -1},
       color: {type: String, validator: value => colorKeys.indexOf(value) > -1},
-      shape: {type: String, validator: value => ['circle'].indexOf(value) > -1},
+      round: {type: Boolean, default: false},
       state: {type: String, default: 'default', validator: value => ['default', 'primary', 'success', 'info', 'warning', 'danger'].indexOf(value) > -1},
       icon: {type: String, validator: value => faicons.indexOf(value) > -1},
       size: {type: String, validator: value => ['lg', 'sm', 'xs'].indexOf(value) > -1},

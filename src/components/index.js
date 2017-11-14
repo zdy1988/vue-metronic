@@ -18,13 +18,16 @@ import { Modal } from '@/components/modal'
 import { Multiselect } from '@/components/multiselect'
 import { Navbar, NavbarHeader, NavbarNav, NavbarNavItem, NavbarNavDropdown, NavbarNavDropdownItem, NavbarNavDropdownDivider } from '@/components/navbar'
 import { Note } from '@/components/note'
+import { Overlay } from '@/components/overlay'
 import { Pagination } from '@/components/pagination'
 import { Panel } from '@/components/panel'
 import { Popover, Popconfirm } from '@/components/popover'
 import { Portlet } from '@/components/portlet'
 import { ProgressBar } from '@/components/progress'
 import { Radio, RadioGroup } from '@/components/radio'
+import { RibbonPanel, Ribbon } from '@/components/ribbon'
 import { Selectbox } from '@/components/selectbox'
+import { StepPanel, Step } from '@/components/step'
 import { SwitchBtn, SwitchBtnGroup } from '@/components/switch'
 import { Tabs, TabPane } from '@/components/tabs'
 import { EasyTable, EasyPagination } from '@/components/table'
@@ -71,6 +74,7 @@ const components = {
   NavbarNavDropdownItem,
   NavbarNavDropdownDivider,
   Note,
+  Overlay,
   Pagination,
   Panel,
   Popover,
@@ -79,7 +83,11 @@ const components = {
   ProgressBar,
   Radio,
   RadioGroup,
+  RibbonPanel,
+  Ribbon,
   Selectbox,
+  StepPanel,
+  Step,
   SwitchBtn,
   SwitchBtnGroup,
   EasyTable,
